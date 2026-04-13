@@ -211,6 +211,68 @@
         .editorial-shadow {
             box-shadow: 0 20px 50px -12px rgba(120, 86, 0, 0.08);
         }
+
+        /* Scroll fade-up animation */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.65s ease, transform 0.65s ease;
+        }
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Confetti particle */
+        @keyframes confettiFall {
+            to { transform: translateY(110vh) rotate(720deg); opacity: 0; }
+        }
+
+        /* Copy tooltip */
+        .copy-toast {
+            position: fixed;
+            bottom: 80px;
+            left: 50%;
+            transform: translateX(-50%) translateY(10px);
+            background: #785600;
+            color: white;
+            padding: 8px 20px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            pointer-events: none;
+            z-index: 9999;
+        }
+        .copy-toast.show {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        /* Rate ticker glow */
+        @keyframes ratePulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(120, 86, 0, 0.15); }
+            50% { box-shadow: 0 0 0 6px rgba(120, 86, 0, 0); }
+        }
+        .rate-ticker-dot {
+            animation: ratePulse 2s infinite;
+        }
+
+        /* Step card connector line */
+        @media (min-width: 768px) {
+            .step-card:not(:last-child)::after {
+                content: '';
+                position: absolute;
+                right: -1px;
+                top: 50%;
+                width: 2px;
+                height: 30px;
+                background: #e5e2de;
+                transform: translateY(-50%);
+            }
+        }
     </style>
 </head>
 <body class="text-on-surface antialiased bg-background">
@@ -238,7 +300,21 @@
 <section class="relative pt-40 pb-24 px-8 overflow-hidden" id="home">
 <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
 <div class="lg:col-span-6 z-10">
-<span class="inline-block tracking-[0.3em] mb-8 text-[10px] font-bold text-primary uppercase border-l-2 border-primary pl-4">Exclusive Lending Solutions</span>
+<!-- Today's Rate Ticker -->
+<div class="inline-flex items-center gap-3 bg-primary/8 border border-primary/20 px-5 py-2.5 mb-8">
+  <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse flex-shrink-0"></span>
+  <span class="text-[10px] font-bold uppercase tracking-widest text-primary">今日参考利率</span>
+  <div class="flex gap-5 text-[11px] font-bold">
+    <span>30年固定: <span class="text-primary">6.875%</span></span>
+    <span class="hidden sm:inline text-stone-300">|</span>
+    <span class="hidden sm:inline">15年固定: <span class="text-primary">6.375%</span></span>
+    <span class="hidden md:inline text-stone-300">|</span>
+    <span class="hidden md:inline">ARM 5/1: <span class="text-primary">6.125%</span></span>
+  </div>
+</div>
+<div class="block mb-6">
+<span class="tracking-[0.3em] text-[10px] font-bold text-primary uppercase border-l-2 border-primary pl-4">Exclusive Lending Solutions</span>
+</div>
 <h1 class="serif-title text-6xl lg:text-8xl font-light mb-8 leading-[1.05]">
                 NDF Lending:<br/>
 <span class="text-primary italic">您的专属房贷专家</span><br/>
@@ -277,7 +353,7 @@
 <!-- Services Section -->
 <section class="py-32 bg-stone-50/50" id="services">
 <div class="max-w-7xl mx-auto px-8">
-<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8 fade-up">
 <div class="max-w-2xl">
 <h2 class="serif-title text-5xl font-light mb-6">全面房贷服务<br/><span class="text-2xl text-stone-400">Tailored Lending Strategies</span></h2>
 <p class="text-secondary font-light text-lg">针对不同身份及收入状况，我们提供灵活的贷款产品组合，确保每一笔交易都能精准落地。</p>
@@ -409,7 +485,7 @@
 <!-- Market Insights Section -->
 <section class="py-32 bg-background" id="insights">
 <div class="max-w-7xl mx-auto px-8">
-<div class="flex flex-col md:flex-row justify-between items-baseline mb-16">
+<div class="flex flex-col md:flex-row justify-between items-baseline mb-16 fade-up">
 <div>
 <h2 class="serif-title text-5xl font-light mb-4">房产房贷动态</h2>
 <p class="text-stone-400 font-medium tracking-widest text-[10px] uppercase">Market Insights &amp; Analysis</p>
@@ -427,6 +503,7 @@
 <span class="text-[10px] font-bold text-primary uppercase tracking-[0.2em] mb-4 block">2024 年 5 月 20 日</span>
 <h3 class="serif-title text-2xl font-bold mb-4 leading-tight">美联储最新利率决议：对未来房贷利率走向有何影响？</h3>
 <p class="text-secondary text-sm font-light mb-6 leading-relaxed">美联储近期维持基准利率不变，但释放了下半年可能降息的信号。这对正计划购房或重贷的客户意味着什么？</p>
+<a href="#contact" class="text-primary font-bold text-xs uppercase tracking-widest flex items-center gap-2 hover:opacity-70 transition-all">咨询详情 <span class="material-symbols-outlined text-sm">north_east</span></a>
 </article>
 <!-- News Card 2 -->
 <article>
@@ -436,6 +513,7 @@
 <span class="text-[10px] font-bold text-primary uppercase tracking-[0.2em] mb-4 block">2024 年 5 月 15 日</span>
 <h3 class="serif-title text-2xl font-bold mb-4 leading-tight">加州房产市场趋势：供应量增加，买家竞争依然激烈</h3>
 <p class="text-secondary text-sm font-light mb-6 leading-relaxed">近期加州主要城市房产供应量有所回升，但低库存状态并未完全改变。了解如何在激烈的竞价中利用 Pre-Approval 占据优势。</p>
+<a href="#contact" class="text-primary font-bold text-xs uppercase tracking-widest flex items-center gap-2 hover:opacity-70 transition-all">了解更多 <span class="material-symbols-outlined text-sm">north_east</span></a>
 </article>
 <!-- News Card 3 -->
 <article>
@@ -445,6 +523,7 @@
 <span class="text-[10px] font-bold text-primary uppercase tracking-[0.2em] mb-4 block">2024 年 5 月 10 日</span>
 <h3 class="serif-title text-2xl font-bold mb-4 leading-tight">DSCR 贷款优势解析：为什么它是投资房买家的首选？</h3>
 <p class="text-secondary text-sm font-light mb-6 leading-relaxed">无需核查个人报税收入，DSCR 贷款凭其灵活性成为众多职业投资者的心头好。本文深度解析审批流程及核心逻辑。</p>
+<a href="#loan-detail-dscr" class="text-primary font-bold text-xs uppercase tracking-widest flex items-center gap-2 hover:opacity-70 transition-all">深度解析 <span class="material-symbols-outlined text-sm">north_east</span></a>
 </article>
 </div>
 </div>
@@ -490,10 +569,88 @@
 </div>
 </div>
 </section>
+
+<!-- Stats Counter Banner -->
+<section class="py-20 bg-primary text-white" id="stats">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+<div class="fade-up">
+<div class="serif-title text-5xl lg:text-6xl font-bold mb-2"><span class="counter" data-target="500">0</span>+</div>
+<div class="text-[10px] font-bold uppercase tracking-[0.2em] text-white/60">位客户成功置业<br/>Happy Clients</div>
+</div>
+<div class="fade-up" style="transition-delay:0.1s">
+<div class="serif-title text-5xl lg:text-6xl font-bold mb-2"><span class="counter" data-target="10">0</span>+</div>
+<div class="text-[10px] font-bold uppercase tracking-[0.2em] text-white/60">年行业深耕<br/>Years of Expertise</div>
+</div>
+<div class="fade-up" style="transition-delay:0.2s">
+<div class="serif-title text-5xl lg:text-6xl font-bold mb-2">$<span class="counter" data-target="300">0</span>M+</div>
+<div class="text-[10px] font-bold uppercase tracking-[0.2em] text-white/60">累计放款总额<br/>Loans Funded</div>
+</div>
+<div class="fade-up" style="transition-delay:0.3s">
+<div class="serif-title text-5xl lg:text-6xl font-bold mb-2"><span class="counter" data-target="24">0</span>h</div>
+<div class="text-[10px] font-bold uppercase tracking-[0.2em] text-white/60">极速预审批<br/>Pre-Approval Speed</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Loan Journey - 5 Steps -->
+<section class="py-32 bg-background px-8">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-20 fade-up">
+<span class="text-[10px] font-bold text-primary uppercase tracking-[0.3em] mb-4 block">HOW IT WORKS</span>
+<h2 class="serif-title text-5xl font-light mb-4">置业五步走</h2>
+<p class="text-secondary font-light text-lg">从初次咨询到拿到钥匙，清晰透明，全程陪伴</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-5 gap-0">
+<div class="step-card fade-up relative flex flex-col items-center text-center p-8 border border-stone-200 bg-white hover:border-primary/40 hover:shadow-lg transition-all duration-300 group">
+<div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-primary group-hover:text-white transition-colors duration-300">forum</span>
+</div>
+<div class="text-[10px] font-bold text-primary uppercase tracking-widest mb-2">Step 01</div>
+<h4 class="serif-title text-lg font-semibold mb-3">免费咨询</h4>
+<p class="text-secondary text-xs leading-relaxed font-light">与 David 一对一交流，了解您的财务状况与置业目标</p>
+</div>
+<div class="step-card fade-up relative flex flex-col items-center text-center p-8 border border-stone-200 bg-white hover:border-primary/40 hover:shadow-lg transition-all duration-300 group" style="transition-delay:0.1s">
+<div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-primary group-hover:text-white transition-colors duration-300">description</span>
+</div>
+<div class="text-[10px] font-bold text-primary uppercase tracking-widest mb-2">Step 02</div>
+<h4 class="serif-title text-lg font-semibold mb-3">资料准备</h4>
+<p class="text-secondary text-xs leading-relaxed font-light">我们提供专属清单，协助您高效整理申请所需材料</p>
+</div>
+<div class="step-card fade-up relative flex flex-col items-center text-center p-8 border border-stone-200 bg-primary text-white group" style="transition-delay:0.2s">
+<div class="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-white">verified_user</span>
+</div>
+<div class="text-[10px] font-bold text-white/60 uppercase tracking-widest mb-2">Step 03</div>
+<h4 class="serif-title text-lg font-semibold mb-3">24h 预审批</h4>
+<p class="text-white/80 text-xs leading-relaxed font-light">最快 24 小时出具正式预审批信，让您在竞价中占据先机</p>
+</div>
+<div class="step-card fade-up relative flex flex-col items-center text-center p-8 border border-stone-200 bg-white hover:border-primary/40 hover:shadow-lg transition-all duration-300 group" style="transition-delay:0.3s">
+<div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-primary group-hover:text-white transition-colors duration-300">handshake</span>
+</div>
+<div class="text-[10px] font-bold text-primary uppercase tracking-widest mb-2">Step 04</div>
+<h4 class="serif-title text-lg font-semibold mb-3">签约过户</h4>
+<p class="text-secondary text-xs leading-relaxed font-light">全程中英双语陪伴，逐条解读合同条款，确保万无一失</p>
+</div>
+<div class="step-card fade-up relative flex flex-col items-center text-center p-8 border border-stone-200 bg-white hover:border-primary/40 hover:shadow-lg transition-all duration-300 group" style="transition-delay:0.4s">
+<div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-primary group-hover:text-white transition-colors duration-300">home</span>
+</div>
+<div class="text-[10px] font-bold text-primary uppercase tracking-widest mb-2">Step 05</div>
+<h4 class="serif-title text-lg font-semibold mb-3">拿到钥匙</h4>
+<p class="text-secondary text-xs leading-relaxed font-light">恭喜您！梦想之家正式属于您，我们持续售后支持</p>
+</div>
+</div>
+</div>
+</section>
+
 <!-- Loan Type Details - Professional Table Style -->
 <section class="py-32 bg-stone-50/30" id="loan-types">
 <div class="max-w-7xl mx-auto px-8">
-<div class="text-center mb-20">
+<div class="text-center mb-20 fade-up">
 <h2 class="serif-title text-4xl font-light mb-4">核心产品参数对比</h2>
 <p class="text-stone-400 tracking-widest text-[10px] uppercase font-bold">Deep Dive into Program Specifics</p>
 </div>
@@ -558,7 +715,7 @@
 <!-- Testimonials Section -->
 <section class="py-32 px-8">
 <div class="max-w-7xl mx-auto">
-<div class="flex items-center gap-6 mb-16">
+<div class="flex items-center gap-6 mb-16 fade-up">
 <h2 class="serif-title text-4xl font-light">客户口碑</h2>
 <div class="flex-grow h-px bg-stone-200"></div>
 </div>
@@ -610,24 +767,28 @@
 <div class="space-y-6">
 <div class="flex items-center gap-4">
 <span class="material-symbols-outlined text-primary">phone_iphone</span>
-<span class="text-xl font-bold serif-title">949-656-1278</span>
+<a class="text-xl font-bold serif-title hover:text-primary/80 transition-colors" href="tel:9496561278">949-656-1278</a>
 </div>
 <div class="flex items-center gap-4">
 <span class="material-symbols-outlined text-primary">alternate_email</span>
-<span class="text-base font-medium">lodaviddai@gmail.com</span>
+<a class="text-base font-medium hover:text-primary transition-colors" href="mailto:lodaviddai@gmail.com">lodaviddai@gmail.com</a>
 </div>
 <div class="flex items-center gap-4">
 <span class="material-symbols-outlined text-primary">chat</span>
 <div>
 <span class="text-xs font-bold uppercase tracking-widest text-stone-400 block">微信 WeChat</span>
-<span class="text-base font-medium">WuxiShane</span>
+<button onclick="copyToClipboard('WuxiShane', this)" class="text-base font-medium hover:text-primary transition-colors flex items-center gap-1 group">
+  WuxiShane <span class="material-symbols-outlined text-xs opacity-0 group-hover:opacity-100 transition-opacity">content_copy</span>
+</button>
 </div>
 </div>
 <div class="flex items-center gap-4">
 <span class="material-symbols-outlined text-primary">favorite</span>
 <div>
 <span class="text-xs font-bold uppercase tracking-widest text-stone-400 block">小红书 RED</span>
-<span class="text-base font-medium">Wuxshane</span>
+<button onclick="copyToClipboard('Wuxshane', this)" class="text-base font-medium hover:text-primary transition-colors flex items-center gap-1 group">
+  Wuxshane <span class="material-symbols-outlined text-xs opacity-0 group-hover:opacity-100 transition-opacity">content_copy</span>
+</button>
 </div>
 </div>
 <div class="flex items-center gap-4">
@@ -679,7 +840,7 @@
 <!-- Loan Products Detail Section -->
 <section class="py-32 bg-stone-50/50" id="loan-products">
 <div class="max-w-7xl mx-auto px-8">
-<div class="text-center mb-16">
+<div class="text-center mb-16 fade-up">
 <span class="text-[10px] font-bold text-primary uppercase tracking-[0.3em] mb-4 block">LOAN PRODUCTS</span>
 <h2 class="serif-title text-5xl font-light mb-6">贷款产品详解</h2>
 <p class="text-secondary font-light text-lg max-w-2xl mx-auto">了解每种贷款产品的特点、申请要求和适用人群，选择最适合您的方案。</p>
@@ -915,7 +1076,7 @@ H1B、OPT、EAD 等工签持有人均可申请房贷。我们熟悉各类移民�
 <!-- Loan Knowledge Section -->
 <section class="py-32 bg-background" id="loan-knowledge">
 <div class="max-w-7xl mx-auto px-8">
-<div class="text-center mb-16">
+<div class="text-center mb-16 fade-up">
 <span class="text-[10px] font-bold text-primary uppercase tracking-[0.3em] mb-4 block">EDUCATION</span>
 <h2 class="serif-title text-5xl font-light mb-6">贷款知识百科</h2>
 <p class="text-secondary font-light text-lg max-w-2xl mx-auto">了解房贷基本概念和常见问题，做明智的借贷决策。</p>
@@ -1034,11 +1195,11 @@ PMI 是首付低于 20% 时需购买的私人抵押贷款保险，保护贷款�
 <div class="flex gap-10">
 <div>
 <p class="text-[10px] font-bold text-stone-400 uppercase tracking-widest mb-2">Direct</p>
-<p class="text-sm font-semibold">949-656-1278</p>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="tel:9496561278">949-656-1278</a>
 </div>
 <div>
 <p class="text-[10px] font-bold text-stone-400 uppercase tracking-widest mb-2">Inquiries</p>
-<p class="text-sm font-semibold">lodaviddai@gmail.com</p>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="mailto:lodaviddai@gmail.com">lodaviddai@gmail.com</a>
 </div>
 <div>
 <p class="text-[10px] font-bold text-stone-400 uppercase tracking-widest mb-2">微信 WeChat</p>
@@ -1065,9 +1226,9 @@ PMI 是首付低于 20% 时需购买的私人抵押贷款保险，保护贷款�
 <span class="text-[10px] font-bold uppercase tracking-[0.3em] text-stone-400">Compliance</span>
 <p class="text-xs text-stone-400 leading-relaxed font-light">Licensed in California and select states nationwide. Competitive rates with bespoke Chinese-English bilingual consulting.</p>
 <div class="flex gap-6">
-<span class="material-symbols-outlined text-stone-400 cursor-pointer hover:text-primary transition-colors">public</span>
-<span class="material-symbols-outlined text-stone-400 cursor-pointer hover:text-primary transition-colors">mail</span>
-<span class="material-symbols-outlined text-stone-400 cursor-pointer hover:text-primary transition-colors">description</span>
+<a href="tel:9496561278" title="Call David Dai" class="material-symbols-outlined text-stone-400 cursor-pointer hover:text-primary transition-colors">phone</a>
+<a href="mailto:lodaviddai@gmail.com" title="Email David Dai" class="material-symbols-outlined text-stone-400 cursor-pointer hover:text-primary transition-colors">mail</a>
+<a href="calculator.html" title="Loan Calculator" class="material-symbols-outlined text-stone-400 cursor-pointer hover:text-primary transition-colors">calculate</a>
 </div>
 </div>
 </div>
@@ -1134,20 +1295,118 @@ PMI 是首付低于 20% 时需购买的私人抵押贷款保险，保护贷款�
 </a>
 
 <script>
-// Contact widget toggle
+// ── Contact widget toggle ──────────────────────────────────────────────
 function toggleContactWidget() {
-const widget = document.querySelector('.fixed.bottom-6.right-6.z-40:not(:has(button))');
-if (widget) widget.classList.toggle('hidden');
+  const widget = document.querySelector('.fixed.bottom-6.right-6.z-40:not(:has(button))');
+  if (widget) widget.classList.toggle('hidden');
 }
 
-// Contact form submit
+// ── Confetti burst ─────────────────────────────────────────────────────
+function triggerConfetti() {
+  const colors = ['#785600', '#f7bd48', '#ffffff', '#FFD700', '#C49A00', '#FFDEA6'];
+  for (let i = 0; i < 90; i++) {
+    const el = document.createElement('div');
+    const size = Math.random() * 8 + 4;
+    el.style.cssText = `
+      position:fixed; left:${Math.random() * 100}vw; top:-12px;
+      width:${size}px; height:${size}px;
+      background:${colors[Math.floor(Math.random() * colors.length)]};
+      border-radius:${Math.random() > 0.5 ? '50%' : '2px'};
+      animation:confettiFall ${Math.random() * 2 + 2.5}s linear ${Math.random() * 0.6}s forwards;
+      z-index:9999; pointer-events:none;`;
+    document.body.appendChild(el);
+    setTimeout(() => el.remove(), 5000);
+  }
+}
+
+// ── Contact form submit with confetti ──────────────────────────────────
 function submitContactForm(e) {
-e.preventDefault();
-alert('提交成功！David 将在 24 小时内与您联系。\n\nSubmitted! David will contact you within 24 hours.');
-e.target.reset();
+  e.preventDefault();
+  triggerConfetti();
+  showToast('🎉 提交成功！David 将在 24 小时内联系您 Submitted!');
+  e.target.reset();
 }
 
-// Loan type tabs functionality
+// ── Main contact form (action="#") ─────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  const mainForm = document.querySelector('form[action="#"]');
+  if (mainForm) {
+    mainForm.addEventListener('submit', e => {
+      e.preventDefault();
+      triggerConfetti();
+      showToast('🎉 提交成功！David 将在 24 小时内联系您 Submitted!');
+      e.target.reset();
+    });
+  }
+});
+
+// ── Toast notification ─────────────────────────────────────────────────
+let toastTimeout;
+function showToast(msg) {
+  let toast = document.getElementById('global-toast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.id = 'global-toast';
+    toast.className = 'copy-toast';
+    document.body.appendChild(toast);
+  }
+  toast.textContent = msg;
+  toast.classList.add('show');
+  clearTimeout(toastTimeout);
+  toastTimeout = setTimeout(() => toast.classList.remove('show'), 3000);
+}
+
+// ── Copy to clipboard ──────────────────────────────────────────────────
+function copyToClipboard(text, btn) {
+  navigator.clipboard.writeText(text).then(() => {
+    const orig = btn.innerHTML;
+    btn.innerHTML = `<span class="material-symbols-outlined text-sm text-primary">check_circle</span> 已复制！`;
+    showToast('已复制 ' + text + ' — Copied!');
+    setTimeout(() => { btn.innerHTML = orig; }, 2500);
+  });
+}
+
+// ── Animated counter on scroll ─────────────────────────────────────────
+function animateCounter(el) {
+  if (el.dataset.animated) return;
+  el.dataset.animated = '1';
+  const target = parseInt(el.dataset.target, 10);
+  const duration = 1800;
+  const fps = 60;
+  const steps = duration / (1000 / fps);
+  const increment = target / steps;
+  let current = 0;
+  const tick = () => {
+    current = Math.min(current + increment, target);
+    el.textContent = Math.floor(current);
+    if (current < target) requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
+}
+
+// ── Intersection Observer — fade-up + counters ─────────────────────────
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add('visible');
+    io.unobserve(entry.target);
+  });
+}, { threshold: 0.15 });
+
+const counterIO = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    animateCounter(entry.target);
+    counterIO.unobserve(entry.target);
+  });
+}, { threshold: 0.4 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
+  document.querySelectorAll('.counter').forEach(el => counterIO.observe(el));
+});
+
+// ── Loan type tabs functionality ───────────────────────────────────────
 function switchLoan(id, btn) {
   document.querySelectorAll('[id^="lp-"]').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.l-tab').forEach(t => t.classList.remove('active'));
@@ -1156,9 +1415,10 @@ function switchLoan(id, btn) {
   if (target) target.classList.add('active');
 }
 
-// Scroll to loan detail
+// ── Scroll to loan detail ──────────────────────────────────────────────
 function scrollToLoanDetail(id) {
-  document.getElementById('loan-detail-' + id).scrollIntoView({ behavior: 'smooth', block: 'center' });
+  const el = document.getElementById('loan-detail-' + id);
+  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
 }
 </script>
 </body></html>
