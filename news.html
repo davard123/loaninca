@@ -72,6 +72,15 @@
 <p class="text-secondary font-light text-lg max-w-2xl mx-auto">了解最新房贷政策变化、利率更新和市场动态，助您把握最佳贷款时机。</p>
 </div>
 
+<!-- GEO Optimized Blog Articles -->
+<div class="mb-16">
+<span class="text-[10px] font-bold text-primary uppercase tracking-[0.3em] mb-6 block">GEO 优化内容</span>
+<h3 class="serif-title text-3xl font-light mb-8">精选贷款指南</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="blog-grid">
+<!-- Blog articles are statically rendered for SEO/GEO -->
+</div>
+</div>
+
 <!-- News Grid -->
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="news-grid">
 <div class="text-center text-secondary py-12 col-span-full">加载中...</div>
@@ -116,6 +125,57 @@
 </footer>
 
 <script>
+// GEO Optimized Blog Articles
+const blogArticles = [
+  {
+    title: "H1B 工签在加州可以买房贷款吗？",
+    excerpt: "H1B 签证持有者可以在加州买房申请贷款吗？需要了解哪些条件？本文详细解答 H1B 工签购房的首付比例、利率、文件要求等关键问题。",
+    link: "blog/h1b-california-home-loan.html",
+    category: "H1B 购房"
+  },
+  {
+    title: "自雇人士在洛杉矶如何申请房贷？",
+    excerpt: "自雇人士、自由职业者、小企业主在洛杉矶申请房贷的完整指南。了解 Bank Statement Loan、资产证明贷款等特殊贷款产品的要求和利率。",
+    link: "blog/self-employed-mortgage-los-angeles.html",
+    category: "自雇贷款"
+  },
+  {
+    title: "什么是 DSCR 贷款？适合哪些人？",
+    excerpt: "DSCR 贷款详解：什么是 Debt Service Coverage Ratio 贷款？适合投资房买家、自雇人士、外国买家。无需报税、无需收入证明，仅按租金收入审批。",
+    link: "blog/what-is-dscr-loan.html",
+    category: "投资房贷款"
+  },
+  {
+    title: "2026 年洛杉矶买房需要多少首付？",
+    excerpt: "根据贷款类型不同，首付要求从 3% 到 25% 不等。洛杉矶中位房价约$85 万，实际首付从$2.5 万到$21 万不等。了解首次购房援助计划。",
+    link: "blog/los-angeles-down-payment-guide.html",
+    category: "购房指南"
+  },
+  {
+    title: "什么是 Jumbo 贷款？2026 年加州最新标准",
+    excerpt: "Jumbo 贷款是指贷款金额超过联邦合规贷款上限的房屋贷款。2026 年加州合规上限为$806,500，了解首付要求、利率、RSU 收入计算等关键问题。",
+    link: "blog/what-is-jumbo-loan-2026.html",
+    category: "大额贷款"
+  }
+];
+
+// Render blog articles
+const blogGrid = document.getElementById('blog-grid');
+if (blogGrid) {
+  blogGrid.innerHTML = blogArticles.map(article => `
+    <article class="bg-white p-6 border border-stone-200 editorial-shadow hover:shadow-lg transition-shadow">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="text-xs text-primary font-bold uppercase tracking-widest">${article.category}</span>
+      </div>
+      <h3 class="serif-title text-xl font-semibold mb-3 line-clamp-2">
+        <a href="${article.link}" class="hover:text-primary transition-colors">${article.title}</a>
+      </h3>
+      <p class="text-secondary font-light text-sm leading-relaxed mb-4 line-clamp-3">${article.excerpt}</p>
+      <a href="${article.link}" class="inline-block text-primary text-xs font-bold uppercase tracking-widest hover:underline">阅读更多 →</a>
+    </article>
+  `).join('');
+}
+
 // Load News from API
 async function loadNews() {
   try {
