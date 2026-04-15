@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NDF Lending - David Dai | 洛杉矶房贷专家</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-container": "#69686a",
+                        "surface-container-low": "#f3f3f5",
+                        "inverse-on-surface": "#f0f0f2",
+                        "on-secondary-fixed": "#1a1b1f",
+                        "surface-tint": "#005cba",
+                        "surface-bright": "#f9f9fb",
+                        "on-background": "#1a1c1d",
+                        "primary-fixed-dim": "#aac7ff",
+                        "on-surface-variant": "#414753",
+                        "on-primary-fixed-variant": "#00458e",
+                        "tertiary-fixed": "#e4e2e4",
+                        "on-primary": "#ffffff",
+                        "primary-fixed": "#d7e3ff",
+                        "error-container": "#ffdad6",
+                        "error": "#ba1a1a",
+                        "background": "#f9f9fb",
+                        "surface-container-high": "#e8e8ea",
+                        "on-tertiary-container": "#ebe8ea",
+                        "on-primary-fixed": "#001b3e",
+                        "tertiary": "#515052",
+                        "on-primary-container": "#dfe8ff",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#eeeef0",
+                        "secondary-fixed": "#e3e2e7",
+                        "outline": "#727784",
+                        "surface-variant": "#e2e2e4",
+                        "on-error": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#2f3132",
+                        "secondary": "#5e5e63",
+                        "secondary-fixed-dim": "#c7c6cb",
+                        "surface-container-highest": "#e2e2e4",
+                        "on-tertiary-fixed-variant": "#474649",
+                        "on-tertiary-fixed": "#1b1b1d",
+                        "on-secondary-fixed-variant": "#46464b",
+                        "inverse-primary": "#aac7ff",
+                        "surface": "#f9f9fb",
+                        "on-secondary-container": "#626267",
+                        "on-error-container": "#93000a",
+                        "on-surface": "#1a1c1d",
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#e0dfe4",
+                        "primary-container": "#0066cc",
+                        "primary": "#004e9f",
+                        "surface-dim": "#d9dadc",
+                        "tertiary-fixed-dim": "#c8c6c8",
+                        "outline-variant": "#c1c6d5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.5rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #f9f9fb; color: #1a1c1d; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-nav { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(24px); }
+        .hero-gradient { background: linear-gradient(135deg, #004e9f 0%, #0066cc 100%); }
+    </style>
+</head>
+<body class="antialiased selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 glass-nav shadow-sm">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-xl font-bold tracking-tighter text-on-surface">NDF Lending</div>
+<div class="hidden md:flex items-center space-x-8 font-medium text-sm tracking-tight">
+<a class="text-primary font-semibold border-b-2 border-primary pb-1 transition-all duration-300" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-all duration-300" href="#solutions">Purchase</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-all duration-300" href="#solutions">Refinance</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-all duration-300" href="#solutions">Loan Types</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-all duration-300" href="#calculators">Calculators</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-all duration-300" href="#reviews">Reviews</a>
+</div>
+<div class="flex items-center space-x-4">
+<a class="text-on-surface-variant text-sm font-medium hover:text-on-surface" href="#about">About</a>
+<a class="bg-primary text-on-primary px-5 py-2 rounded-lg text-sm font-semibold transition-transform active:scale-95 shadow-sm" href="#contact">Free Quote</a>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="pt-32 pb-20 md:pt-48 md:pb-32 px-8 overflow-hidden">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
+<div class="flex-1 space-y-8">
+<div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-surface-container-low text-primary text-xs font-semibold tracking-wider uppercase">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span>洛杉矶 · 南加州房贷专家</span>
+</div>
+<h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-on-surface leading-[1.1]">
+                    让您的美国<br/>置业梦成真
+                </h1>
+<p class="text-xl text-on-surface-variant leading-relaxed max-w-xl">
+                    David Dai (NMLS# 2454756) 为您提供专业的定制化房贷方案。无论是首次购房还是投资置业，我们都是您在南加州最可靠的金融伙伴。
+                </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<a class="hero-gradient text-on-primary px-8 py-4 rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all" href="#contact">免费预审</a>
+<a class="bg-surface-container-highest text-on-surface px-8 py-4 rounded-lg font-bold text-lg hover:bg-surface-container-high transition-all" href="#solutions">了解贷款方案</a>
+</div>
+<div class="flex items-center space-x-6 pt-8">
+<div class="flex flex-col">
+<span class="text-2xl font-bold text-on-surface">80+</span>
+<span class="text-xs text-on-surface-variant font-medium">合作银行机构</span>
+</div>
+<div class="w-px h-8 bg-outline-variant/30"></div>
+<div class="flex flex-col">
+<span class="text-2xl font-bold text-on-surface">24h</span>
+<span class="text-xs text-on-surface-variant font-medium">极速预审批</span>
+</div>
+</div>
+</div>
+<div class="flex-1 relative">
+<div class="aspect-[4/5] rounded-xl overflow-hidden shadow-2xl relative z-10">
+<img alt="David Dai Professional Headshot" class="w-full h-full object-cover" data-alt="professional portrait of a confident male mortgage broker in a crisp suit against a clean modern architectural background with soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBd36zukd48LI2QucxaEq0V3jEIyBKjybzBK0NCgJSvjbDNOX0D5MK58Fzs9NOxMnryTgbKs5NNvspGwgIIe67IU3Vm_wIB0megMywL678ql6lOoMhT0Qs8EiQjpIlaSY4ddYA4kLGKwtArEeU9DPicRyuo1xeE8Mnq_pmNO_8uhXTAkYEri5wN8vPjtDI0vqLr_STHb4ja1veUFV7PR7Tawgyjim1_l4Y7yNKUmebcTCikJKMbjwQyE7AYIoyEkonm0ijOL6WPojY"/>
+</div>
+<!-- Asymmetric background element -->
+<div class="absolute -bottom-10 -right-10 w-full h-full bg-surface-container-low rounded-xl -z-0"></div>
+</div>
+</div>
+</section>
+<!-- Loan Solutions (Bento Grid) -->
+<section class="py-24 bg-surface-container-lowest" id="solutions">
+<div class="max-w-7xl mx-auto px-8">
+<div class="mb-16">
+<h2 class="text-3xl font-bold text-on-surface tracking-tight mb-4">全面贷款方案</h2>
+<div class="h-1 w-20 bg-primary rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1: Main Purchase -->
+<div class="md:col-span-2 group relative overflow-hidden rounded-xl bg-surface p-8 transition-all hover:shadow-lg">
+<div class="flex justify-between items-start mb-12">
+<div class="space-y-2">
+<h3 class="text-2xl font-bold">购房贷款 (Home Purchase)</h3>
+<p class="text-on-surface-variant">针对全美50个州的住宅及商业房产</p>
+</div>
+<div class="text-right">
+<span class="text-xs font-bold text-on-surface-variant block uppercase">今日参考利率</span>
+<span class="text-4xl font-extrabold text-primary">6.125%</span>
+</div>
+</div>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                            最低首付仅 3.5%
+                        </li>
+<li class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                            24小时内出具 Pre-approval Letter
+                        </li>
+</ul>
+<img alt="Modern Luxury Home" class="absolute -bottom-20 -right-20 w-80 h-80 object-cover rounded-full opacity-10 group-hover:opacity-20 transition-opacity" data-alt="minimalist modern architectural home with glass walls and clean lines at dusk with warm interior lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-acWq_yCIX-ltjsWxDRmEl7GRTrbYRd65XRQ-HO-5QSbwVunkFiOeXv3DpOijg0LK_9womBOtkQQTs5x68llBdageARFEi80RyorJtaoAULs-WoKMCc72TAWuJcBeXQ2PImOwsW52V32qxaCFW-BfXyJwmOUN__5nNzjJdKfICabqQsH0YzVuT-VUXPFJvGA96bH5P9WcPZTh6YTQgrU_dMYMdYdDW1X6OPzb_suznKn_c8u7Gpwj4asxmo4T8cy69Dwmd_GzNB4"/>
+</div>
+<!-- Card 2: DSCR -->
+<div class="bg-primary text-on-primary p-8 rounded-xl shadow-lg flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined mb-4 text-4xl">domain</span>
+<h3 class="text-xl font-bold mb-2">投资房贷款 (DSCR)</h3>
+<p class="text-on-primary-container text-sm leading-relaxed">
+                            不查收入，仅看租金覆盖比例。适合想要快速扩张房产组合的投资人。
+                        </p>
+</div>
+<div class="mt-8 pt-8 border-t border-white/10">
+<span class="text-3xl font-bold">LTV 达 80%</span>
+</div>
+</div>
+<!-- Card 3: Bank Statement -->
+<div class="bg-surface-container p-8 rounded-xl hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined mb-4 text-3xl text-primary">account_balance_wallet</span>
+<h3 class="text-lg font-bold mb-2">自雇人士 (Bank Statement)</h3>
+<p class="text-on-surface-variant text-sm">
+                        无需报税单，仅凭12/24个月银行流水即可办理贷款。
+                    </p>
+</div>
+<!-- Card 4: H1B/OPT -->
+<div class="bg-surface-container p-8 rounded-xl hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined mb-4 text-3xl text-primary">badge</span>
+<h3 class="text-lg font-bold mb-2">工签买房 (H1B/OPT)</h3>
+<p class="text-on-surface-variant text-sm">
+                        深耕科技行业客户，精通 RSU、股票补偿等复杂收入计算规则。
+                    </p>
+</div>
+<!-- Card 5: Refinance -->
+<div class="bg-surface-container p-8 rounded-xl hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined mb-4 text-3xl text-primary">payments</span>
+<h3 class="text-lg font-bold mb-2">再融资 (Refinance)</h3>
+<p class="text-on-surface-variant text-sm">
+                        降低利率、缩短期限或 Cash-out，优化您的财务状况。
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Section -->
+<section class="py-24 px-8" id="about">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-20 items-center">
+<div class="flex-1 order-2 md:order-1">
+<img alt="Modern Office" class="rounded-xl shadow-xl w-full aspect-video object-cover" data-alt="luxury corporate office interior with minimalist design glass partitions and clean architectural details" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-NsTSL2ZIbJ-59YvAlfJSiPlh2OSvuSXzqNDA39fjKPw5XxLFQhIdSFlx7PINnxMmmHsUFycIr3Yzqg-3_RZ3YmIlPI13BTLn3aed5s9yRAiMPjZZMOVRUNwHMewKgOhNzoab816G2eDQJaXu_Y7UoVIM_0faawtZcJ8CN85aWXfXz7ilqnJc7sQiPwN4BoxDhiA7V4RX3R3dop72tqyEltBRxtfH0sBuBadV1GKVhTT4VhZ1LGBPC0Ol9wRHS2km39ysVKQ4oDo"/>
+</div>
+<div class="flex-1 order-1 md:order-2 space-y-10">
+<h2 class="text-4xl font-bold tracking-tight">为什么选择 David Dai?</h2>
+<div class="space-y-8">
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 bg-primary-fixed rounded-lg flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">language</span>
+</div>
+<div>
+<h4 class="font-bold text-lg">中英双语精通</h4>
+<p class="text-on-surface-variant">提供普通话、粤语及英语服务，确保在复杂的法律合同中沟通无误。</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 bg-primary-fixed rounded-lg flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">hub</span>
+</div>
+<div>
+<h4 class="font-bold text-lg">Independent Broker</h4>
+<p class="text-on-surface-variant">独立经纪人身份，可对接全美80多家贷款银行，只为帮您筛选最低利率。</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 bg-primary-fixed rounded-lg flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">monitoring</span>
+</div>
+<div>
+<h4 class="font-bold text-lg">RSU 专家</h4>
+<p class="text-on-surface-variant">擅长处理硅谷科技大厂、加州药厂员工的复杂薪酬结构，最大化您的贷款额度。</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Review Section -->
+<section class="py-24 bg-surface-container-low" id="reviews">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold mb-4">客户真实评价</h2>
+<div class="flex justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-surface-container-lowest p-10 rounded-xl shadow-sm italic text-on-surface-variant relative">
+<span class="text-6xl text-primary/10 absolute top-4 left-4 font-serif">“</span>
+<p class="relative z-10 leading-relaxed mb-6">
+                        "作为一个在加州工作的H1B持有人，我原本担心贷款会被拒。David非常专业地帮我处理了RSU的收入计算，最后只用了3周就完成了整个贷款流程。非常推荐！"
+                    </p>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-surface-variant rounded-full flex items-center justify-center font-bold text-primary">W</div>
+<span class="not-italic font-bold text-on-surface">Wei L. - Google SDE</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-10 rounded-xl shadow-sm italic text-on-surface-variant relative">
+<span class="text-6xl text-primary/10 absolute top-4 left-4 font-serif">“</span>
+<p class="relative z-10 leading-relaxed mb-6">
+                        "我在尔湾买房时找了三家银行，David给出的利率是最低的。而且他回消息特别快，周日晚上都在帮我改Pre-approval Letter。非常靠谱！"
+                    </p>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-surface-variant rounded-full flex items-center justify-center font-bold text-primary">S</div>
+<span class="not-italic font-bold text-on-surface">Sarah Z. - 尔湾首次购房者</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Form Section -->
+<section class="py-24 px-8" id="contact">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-16 items-start">
+<div class="flex-1 space-y-8">
+<h2 class="text-4xl font-bold tracking-tight">开启您的房贷申请</h2>
+<p class="text-lg text-on-surface-variant leading-relaxed">
+                    填写右侧表格，我们将在 24 小时内为您提供初步的贷款评估方案及最新利率报价。
+                </p>
+<div class="space-y-4 pt-4">
+<div class="flex items-center gap-4 group">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">call</span>
+</div>
+<span class="font-medium">949-656-1278</span>
+</div>
+<div class="flex items-center gap-4 group">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<span class="font-medium">lodaviddai@gmail.com</span>
+</div>
+<div class="flex items-center gap-4 group">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<span class="font-medium">Irvine, CA (Servicing all 50 States)</span>
+</div>
+</div>
+</div>
+<div class="flex-1 w-full bg-surface-container-lowest p-8 md:p-12 rounded-xl shadow-sm border border-outline-variant/10">
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase text-on-surface-variant">姓名</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-3 focus:ring-1 focus:ring-primary focus:bg-surface-container-lowest transition-all" placeholder="您的姓名" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase text-on-surface-variant">电话</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-3 focus:ring-1 focus:ring-primary focus:bg-surface-container-lowest transition-all" placeholder="联系电话" type="tel"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase text-on-surface-variant">贷款类型</label>
+<select class="w-full bg-surface-container-low border-none rounded-lg p-3 focus:ring-1 focus:ring-primary focus:bg-surface-container-lowest transition-all">
+<option>购房贷款 (New Purchase)</option>
+<option>再融资 (Refinance)</option>
+<option>投资房贷款 (DSCR)</option>
+<option>商业贷款 (Commercial)</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase text-on-surface-variant">备注信息</label>
+<textarea class="w-full bg-surface-container-low border-none rounded-lg p-3 focus:ring-1 focus:ring-primary focus:bg-surface-container-lowest transition-all" placeholder="请简述您的需求..." rows="4"></textarea>
+</div>
+<button class="w-full hero-gradient text-on-primary py-4 rounded-lg font-bold text-lg shadow-md hover:shadow-lg transition-all active:scale-[0.98]" type="submit">提交评估申请</button>
+</form>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-low py-16 px-8 mt-20">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+<div class="space-y-4">
+<div class="text-2xl font-bold tracking-tighter text-on-surface">NDF Lending</div>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+                        David Dai | NMLS# 2454756<br/>
+                        专业房贷经纪，为您提供最优质的贷款方案。
+                    </p>
+</div>
+<div>
+<h5 class="font-bold text-sm mb-6 uppercase tracking-wider">业务范围</h5>
+<ul class="space-y-3 text-xs text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#">全美50州房贷</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">常规贷款 (Conforming)</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">大额贷款 (Jumbo)</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">不查收入贷款</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold text-sm mb-6 uppercase tracking-wider">常用链接</h5>
+<ul class="space-y-3 text-xs text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#">贷款计算器</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">信用评分指南</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">实时利率查询</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">隐私政策</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold text-sm mb-6 uppercase tracking-wider">合规声明</h5>
+<div class="flex items-center gap-4 mb-4">
+<span class="material-symbols-outlined text-4xl text-outline-variant">house</span>
+<span class="text-[10px] text-on-surface-variant leading-tight">Equal Housing Lender. David Dai is a licensed Mortgage Loan Originator.</span>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-outline-variant/20 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-[10px] text-on-surface-variant">© 2024 NDF Lending. David Dai NMLS# 2454756. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="text-[10px] text-on-surface-variant hover:text-primary" href="#">Terms of Service</a>
+<a class="text-[10px] text-on-surface-variant hover:text-primary" href="#">Licensing</a>
+<a class="text-[10px] text-on-surface-variant hover:text-primary" href="#">Disclosures</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

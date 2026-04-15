@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Atelier Portal | David Dai - NDF Lending</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Be+Vietnam+Pro:wght@300;400;500;700&amp;family=Cormorant+Garamond:ital,wght@0,600;1,600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#ffffff",
+                        "secondary": "#745853",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed-variant": "#5d4200",
+                        "tertiary": "#085ea2",
+                        "tertiary-fixed-dim": "#a1c9ff",
+                        "secondary-container": "#fed7d0",
+                        "error-container": "#ffdad6",
+                        "surface-container-highest": "#e5e2de",
+                        "surface-bright": "#fdf9f5",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#271900",
+                        "surface": "#fdf9f5",
+                        "primary-container": "#986d00",
+                        "on-background": "#1c1c19",
+                        "on-tertiary-container": "#fdfcff",
+                        "surface-container-low": "#f7f3ef",
+                        "on-primary": "#ffffff",
+                        "inverse-surface": "#31302e",
+                        "surface-container-high": "#ebe7e4",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#4f4535",
+                        "primary": "#785600",
+                        "on-secondary-container": "#795c57",
+                        "surface-tint": "#7b5800",
+                        "on-surface": "#1c1c19",
+                        "on-secondary-fixed-variant": "#5b403c",
+                        "outline-variant": "#d3c4af",
+                        "secondary-fixed-dim": "#e3beb8",
+                        "on-tertiary-fixed-variant": "#004880",
+                        "on-tertiary-fixed": "#001c37",
+                        "primary-fixed": "#ffdea6",
+                        "primary-fixed-dim": "#f7bd48",
+                        "tertiary-container": "#3477bc",
+                        "surface-dim": "#ddd9d6",
+                        "background": "#fdf9f5",
+                        "surface-variant": "#e5e2de",
+                        "surface-container": "#f1ede9",
+                        "outline": "#817563",
+                        "on-error": "#ffffff",
+                        "inverse-primary": "#f7bd48",
+                        "inverse-on-surface": "#f4f0ec",
+                        "tertiary-fixed": "#d2e4ff",
+                        "on-secondary-fixed": "#2b1613",
+                        "on-primary-container": "#fffbff",
+                        "secondary-fixed": "#ffdad4"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Be Vietnam Pro"],
+                        "label": ["Be Vietnam Pro"],
+                        "serif-alt": ["Cormorant Garamond"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background-color: #fdf9f5;
+            color: #1c1c19;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.02'/%3E%3C/svg%3E");
+        }
+        .serif-text { font-family: 'Noto Serif', serif; }
+        .emphasis-text { font-family: 'Cormorant Garamond', serif; font-style: italic; }
+        .glass-panel { background: rgba(253, 249, 245, 0.8); backdrop-filter: blur(20px); }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<div class="flex min-h-screen">
+<!-- SideNavBar (from JSON) -->
+<aside class="hidden md:flex flex-col h-screen w-64 border-r-0 bg-stone-50 dark:bg-stone-900 transition-all duration-300 ease-in-out py-6 fixed left-0 top-0 z-50">
+<div class="px-6 mb-10">
+<div class="flex items-center gap-3 mb-1">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container-high ring-2 ring-primary/20">
+<img alt="Broker Profile" data-alt="professional portrait of an Asian male mortgage advisor in a charcoal suit, soft studio lighting, high-end editorial style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnQrz-RIdeW2dZ4Dh7cewjmFk_lZBgDyrIBYTcuMPFbuAAJreIaSNroU7MxfjFpS1UcoSFzKhisu4APbXXH5tQhIGGH4s-byAtRE_04WjwZJVeMPCoAM4GmG4X4O9597vhcRLfd8MNG2KJrTdiLEL-3noaQpnxgxDrOQqVW7Bn2ttfHPOnZR7kcQDb6QbkEYp5_FFy3FasXohhNQszFOn57yomY0ZvWV64x8krBbq33kfP9aMx45kJQfujAbiSSWvPB29sTuij6No"/>
+</div>
+<div>
+<h2 class="text-xl font-serif font-bold text-amber-900 dark:text-amber-100">Gilded Hearth</h2>
+<p class="text-[10px] uppercase tracking-widest text-secondary font-bold">Mortgage Advisory</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 space-y-1 px-4">
+<a class="flex items-center gap-3 px-4 py-3 text-amber-900 dark:text-amber-200 font-bold border-r-4 border-amber-700 transition-all duration-300 ease-in-out bg-stone-100 dark:bg-stone-800/50" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="text-sm font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-stone-600 dark:text-stone-400 hover:text-amber-800 hover:bg-stone-200/50 dark:hover:bg-stone-800 transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="person_search">person_search</span>
+<span class="text-sm font-medium">Leads</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-stone-600 dark:text-stone-400 hover:text-amber-800 hover:bg-stone-200/50 dark:hover:bg-stone-800 transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+<span class="text-sm font-medium">Visits</span>
+</a>
+</nav>
+<div class="px-4 mt-auto">
+<button class="w-full py-4 bg-primary text-on-primary rounded-lg font-bold flex items-center justify-center gap-2 shadow-lg shadow-primary/20 hover:scale-[0.98] transition-transform">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+                    New Lead
+                </button>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 md:ml-64 flex flex-col">
+<!-- TopNavBar (from JSON) -->
+<header class="flex justify-between items-center w-full px-8 py-3 h-16 bg-white/80 dark:bg-stone-900/80 backdrop-blur-md sticky top-0 z-40 shadow-sm dark:shadow-none border-b border-stone-200/20">
+<div class="flex items-center gap-8">
+<h1 class="text-lg font-serif italic text-stone-900 dark:text-stone-100 leading-none">The Atelier Portal</h1>
+<div class="relative hidden lg:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-stone-400 text-sm">search</span>
+<input class="bg-surface-container-low border-none rounded-full pl-10 pr-4 py-1.5 text-sm w-64 focus:ring-1 focus:ring-primary" placeholder="Search records..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-4 border-r border-stone-200 pr-6 mr-2">
+<button class="text-stone-500 hover:text-amber-700 transition-transform scale-95-on-click">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="text-stone-500 hover:text-amber-700 transition-transform scale-95-on-click">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+</div>
+<div class="flex items-center gap-3">
+<div class="text-right hidden sm:block">
+<p class="text-xs font-bold text-on-surface">David Dai</p>
+<p class="text-[10px] text-secondary">Principal Advisor</p>
+</div>
+<img alt="Advisor Avatar" class="w-8 h-8 rounded-full ring-1 ring-stone-200" data-alt="close-up headshot of a professional financial advisor with a friendly and confident expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzCryfmAUiOoFIW04H9lhrGXCwcKe_okws21lbdDs1ZNqlemw2FJZ3GAE14QT5qJFvTZB00smz5aJ9C6JLMfsW-R1t4KuYD2hm4tG-8S-sE2krh-aH7XXOXTgFfTjxU1CYdk2xLf5sAY3nmP-lB3KaiwG6c-__ixUJcXPdsPxPNzgIoN-mGAfYcxKbB8eF90N4Zy0JBMiJMDlO_puh-yXUvLMrhJyyaatxi2gydfBXg8-65GJZWXxsGzczyj8XNue6UGFj_UBlaDQ"/>
+</div>
+</div>
+</header>
+<!-- Dashboard Content -->
+<div class="p-8 max-w-7xl mx-auto w-full space-y-8">
+<!-- Welcome Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<p class="text-secondary label-sm mb-1 uppercase tracking-[0.2em] font-bold">Good morning, David</p>
+<h2 class="text-4xl serif-text font-bold text-on-surface tracking-tight">Dashboard Overview</h2>
+</div>
+<div class="flex gap-2">
+<button class="px-4 py-2 bg-surface-container-high rounded-lg text-sm font-medium flex items-center gap-2 hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-sm">filter_list</span> Filter
+                        </button>
+<button class="px-4 py-2 bg-surface-container-high rounded-lg text-sm font-medium flex items-center gap-2 hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-sm">download</span> Export
+                        </button>
+</div>
+</div>
+<!-- KPI Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="bg-surface-container-lowest p-6 rounded-xl border-l-4 border-primary transition-all hover:bg-surface-bright flex flex-col justify-between h-32">
+<div class="flex justify-between items-start">
+<p class="text-sm font-bold text-secondary uppercase tracking-wider">Today's New Leads</p>
+<span class="material-symbols-outlined text-primary/40">person_add</span>
+</div>
+<p class="text-4xl font-serif font-bold">12</p>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl border-l-4 border-secondary transition-all hover:bg-surface-bright flex flex-col justify-between h-32">
+<div class="flex justify-between items-start">
+<p class="text-sm font-bold text-secondary uppercase tracking-wider">Monthly Total</p>
+<span class="material-symbols-outlined text-secondary/40">trending_up</span>
+</div>
+<div class="flex items-baseline gap-2">
+<p class="text-4xl font-serif font-bold">148</p>
+<p class="text-xs text-green-600 font-bold">+18%</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl border-l-4 border-primary transition-all hover:bg-surface-bright flex flex-col justify-between h-32">
+<div class="flex justify-between items-start">
+<p class="text-sm font-bold text-secondary uppercase tracking-wider">Today's Visits</p>
+<span class="material-symbols-outlined text-primary/40">calendar_month</span>
+</div>
+<p class="text-4xl font-serif font-bold">4</p>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl border-l-4 border-secondary transition-all hover:bg-surface-bright flex flex-col justify-between h-32">
+<div class="flex justify-between items-start">
+<p class="text-sm font-bold text-secondary uppercase tracking-wider">Pending Follow-ups</p>
+<span class="material-symbols-outlined text-error/40">history</span>
+</div>
+<p class="text-4xl font-serif font-bold">9</p>
+</div>
+</div>
+<!-- Main Grid Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Chart Section: 7-Day Visit Trends -->
+<div class="lg:col-span-2 bg-surface-container-lowest p-8 rounded-xl relative overflow-hidden group">
+<div class="flex items-center justify-between mb-8">
+<div>
+<h3 class="text-2xl serif-text font-bold">Activity Trends</h3>
+<p class="text-sm text-secondary italic emphasis-text">Visits completed over the last 7 business days</p>
+</div>
+<span class="material-symbols-outlined text-stone-300">analytics</span>
+</div>
+<div class="h-64 flex items-end justify-between gap-4 px-2">
+<!-- Mon -->
+<div class="flex-1 flex flex-col items-center gap-2 group/bar">
+<div class="w-full bg-surface-container-low rounded-t-lg relative h-[40%] transition-all hover:bg-primary/20">
+<div class="absolute bottom-0 w-full bg-primary rounded-t-lg h-[60%] group-hover/bar:h-[100%] transition-all duration-500"></div>
+</div>
+<span class="text-xs font-bold text-secondary">Mon</span>
+</div>
+<!-- Tue -->
+<div class="flex-1 flex flex-col items-center gap-2 group/bar">
+<div class="w-full bg-surface-container-low rounded-t-lg relative h-[60%] transition-all hover:bg-primary/20">
+<div class="absolute bottom-0 w-full bg-primary rounded-t-lg h-[75%] group-hover/bar:h-[100%] transition-all duration-500"></div>
+</div>
+<span class="text-xs font-bold text-secondary">Tue</span>
+</div>
+<!-- Wed -->
+<div class="flex-1 flex flex-col items-center gap-2 group/bar">
+<div class="w-full bg-surface-container-low rounded-t-lg relative h-[80%] transition-all hover:bg-primary/20">
+<div class="absolute bottom-0 w-full bg-primary rounded-t-lg h-[40%] group-hover/bar:h-[100%] transition-all duration-500"></div>
+</div>
+<span class="text-xs font-bold text-secondary">Wed</span>
+</div>
+<!-- Thu -->
+<div class="flex-1 flex flex-col items-center gap-2 group/bar">
+<div class="w-full bg-surface-container-low rounded-t-lg relative h-[50%] transition-all hover:bg-primary/20">
+<div class="absolute bottom-0 w-full bg-primary rounded-t-lg h-[90%] group-hover/bar:h-[100%] transition-all duration-500"></div>
+</div>
+<span class="text-xs font-bold text-secondary">Thu</span>
+</div>
+<!-- Fri -->
+<div class="flex-1 flex flex-col items-center gap-2 group/bar">
+<div class="w-full bg-surface-container-low rounded-t-lg relative h-[95%] transition-all hover:bg-primary/20">
+<div class="absolute bottom-0 w-full bg-primary rounded-t-lg h-[80%] group-hover/bar:h-[100%] transition-all duration-500"></div>
+</div>
+<span class="text-xs font-bold text-secondary">Fri</span>
+</div>
+<!-- Sat -->
+<div class="flex-1 flex flex-col items-center gap-2 group/bar">
+<div class="w-full bg-surface-container-low rounded-t-lg relative h-[30%] transition-all hover:bg-primary/20">
+<div class="absolute bottom-0 w-full bg-primary rounded-t-lg h-[20%] group-hover/bar:h-[100%] transition-all duration-500"></div>
+</div>
+<span class="text-xs font-bold text-secondary">Sat</span>
+</div>
+<!-- Sun -->
+<div class="flex-1 flex flex-col items-center gap-2 group/bar">
+<div class="w-full bg-surface-container-low rounded-t-lg relative h-[20%] transition-all hover:bg-primary/20">
+<div class="absolute bottom-0 w-full bg-primary rounded-t-lg h-[10%] group-hover/bar:h-[100%] transition-all duration-500"></div>
+</div>
+<span class="text-xs font-bold text-secondary">Sun</span>
+</div>
+</div>
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl pointer-events-none"></div>
+</div>
+<!-- Right Column: Quick Stats / Focus -->
+<div class="flex flex-col gap-6">
+<div class="bg-surface-container-highest p-8 rounded-xl text-on-surface h-full relative overflow-hidden">
+<h3 class="text-xl serif-text font-bold mb-4">Advisory Focus</h3>
+<div class="space-y-4 relative z-10">
+<div class="p-4 bg-surface-container-lowest rounded-lg">
+<p class="text-[10px] uppercase font-bold text-primary mb-1">Top Region</p>
+<p class="text-lg font-bold">Richmond Hill</p>
+</div>
+<div class="p-4 bg-surface-container-lowest rounded-lg">
+<p class="text-[10px] uppercase font-bold text-primary mb-1">Avg. Loan Value</p>
+<p class="text-lg font-bold">$1,240,000</p>
+</div>
+<div class="p-4 bg-surface-container-lowest rounded-lg">
+<p class="text-[10px] uppercase font-bold text-primary mb-1">Conversion Rate</p>
+<p class="text-lg font-bold">24.2%</p>
+</div>
+</div>
+<div class="absolute bottom-0 right-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-8xl" style="font-variation-settings: 'FILL' 1;">account_balance</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Recent Leads Table Section -->
+<section class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm">
+<div class="px-8 py-6 flex items-center justify-between border-b border-surface-container-low">
+<h3 class="text-2xl serif-text font-bold">Recent Leads</h3>
+<a class="text-primary text-sm font-bold hover:underline" href="#">View All Leads</a>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low">
+<th class="px-8 py-4 text-xs uppercase tracking-widest font-bold text-secondary">Client Name</th>
+<th class="px-8 py-4 text-xs uppercase tracking-widest font-bold text-secondary">Status</th>
+<th class="px-8 py-4 text-xs uppercase tracking-widest font-bold text-secondary">Loan Intent</th>
+<th class="px-8 py-4 text-xs uppercase tracking-widest font-bold text-secondary">Added Date</th>
+<th class="px-8 py-4 text-xs uppercase tracking-widest font-bold text-secondary text-right">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low">
+<tr class="hover:bg-surface-bright transition-colors group">
+<td class="px-8 py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-bold text-xs">LZ</div>
+<div>
+<p class="font-bold text-sm">Li Zhang</p>
+<p class="text-xs text-secondary">li.zhang@ndf.ca</p>
+</div>
+</div>
+</td>
+<td class="px-8 py-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-800">
+                                            Follow-up Needed
+                                        </span>
+</td>
+<td class="px-8 py-4 text-sm">New Purchase / $1.2M</td>
+<td class="px-8 py-4 text-sm text-secondary">Oct 24, 2023</td>
+<td class="px-8 py-4 text-right">
+<button class="text-stone-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-bright transition-colors group">
+<td class="px-8 py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold text-xs">WW</div>
+<div>
+<p class="font-bold text-sm">Wei Wang</p>
+<p class="text-xs text-secondary">wei.w@outlook.com</p>
+</div>
+</div>
+</td>
+<td class="px-8 py-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-green-100 text-green-800">
+                                            Pre-Approved
+                                        </span>
+</td>
+<td class="px-8 py-4 text-sm">Refinance / $850K</td>
+<td class="px-8 py-4 text-sm text-secondary">Oct 23, 2023</td>
+<td class="px-8 py-4 text-right">
+<button class="text-stone-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-bright transition-colors group">
+<td class="px-8 py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center font-bold text-xs">JC</div>
+<div>
+<p class="font-bold text-sm">Jun Chen</p>
+<p class="text-xs text-secondary">chen.jun@mail.com</p>
+</div>
+</div>
+</td>
+<td class="px-8 py-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-stone-100 text-stone-600">
+                                            Initial Contact
+                                        </span>
+</td>
+<td class="px-8 py-4 text-sm">Investment / $2.4M</td>
+<td class="px-8 py-4 text-sm text-secondary">Oct 23, 2023</td>
+<td class="px-8 py-4 text-right">
+<button class="text-stone-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</div>
+<!-- Footer Branding -->
+<footer class="p-8 mt-auto border-t border-surface-container-high flex flex-col md:flex-row justify-between items-center gap-4 text-secondary text-xs font-medium">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">verified_user</span>
+                    NDF Lending Secure Administrative Portal
+                </div>
+<p>© 2023 Gilded Hearth Mortgage Advisory. All rights reserved.</p>
+</footer>
+</main>
+</div>
+</body></html>

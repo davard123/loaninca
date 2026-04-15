@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>新梦想 Lending - 专业贷款咨询</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Noto+Serif+SC:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "tertiary-fixed": "#e4e2e4",
+                "surface-container-lowest": "#ffffff",
+                "on-surface-variant": "#414753",
+                "primary": "#004e9f",
+                "on-secondary": "#ffffff",
+                "inverse-on-surface": "#f0f0f2",
+                "outline": "#727784",
+                "error-container": "#ffdad6",
+                "on-background": "#1a1c1d",
+                "on-tertiary-container": "#ebe8ea",
+                "tertiary-fixed-dim": "#c8c6c8",
+                "on-tertiary-fixed": "#1b1b1d",
+                "primary-fixed-dim": "#aac7ff",
+                "on-secondary-fixed-variant": "#46464b",
+                "error": "#ba1a1a",
+                "on-secondary-container": "#626267",
+                "primary-fixed": "#d7e3ff",
+                "on-secondary-fixed": "#1a1b1f",
+                "on-primary-container": "#dfe8ff",
+                "surface-container-high": "#e8e8ea",
+                "outline-variant": "#c1c6d5",
+                "on-error-container": "#93000a",
+                "inverse-surface": "#2f3132",
+                "background": "#f9f9fb",
+                "primary-container": "#0066cc",
+                "secondary-container": "#e0dfe4",
+                "on-primary-fixed": "#001b3e",
+                "surface-variant": "#e2e2e4",
+                "surface-container": "#eeeef0",
+                "inverse-primary": "#aac7ff",
+                "surface": "#f9f9fb",
+                "on-error": "#ffffff",
+                "surface-container-low": "#f3f3f5",
+                "secondary-fixed-dim": "#c7c6cb",
+                "tertiary-container": "#69686a",
+                "surface-tint": "#005cba",
+                "on-primary-fixed-variant": "#00458e",
+                "on-primary": "#ffffff",
+                "tertiary": "#515052",
+                "surface-dim": "#d9dadc",
+                "on-surface": "#1a1c1d",
+                "on-tertiary-fixed-variant": "#474649",
+                "on-tertiary": "#ffffff",
+                "surface-container-highest": "#e2e2e4",
+                "secondary-fixed": "#e3e2e7",
+                "surface-bright": "#f9f9fb",
+                "secondary": "#5e5e63"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.5rem",
+                "lg": "0.5rem",
+                "xl": "1.5rem",
+                "full": "9999px"
+            },
+            "fontFamily": {
+                "headline": ["Inter", "Noto Serif SC", "sans-serif"],
+                "body": ["Inter", "sans-serif"],
+                "label": ["Inter", "sans-serif"]
+            }
+          },
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+        .primary-gradient {
+            background: linear-gradient(135deg, #004e9f 0%, #0066cc 100%);
+        }
+        .asymmetric-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 2rem;
+        }
+        @media (max-width: 1024px) {
+            .asymmetric-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 glass-nav">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-bold tracking-tighter text-slate-900 dark:text-white">新梦想 Lending</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-blue-700 dark:text-blue-400 font-semibold border-b-2 border-blue-700 font-['Inter'] text-lg tracking-tight" href="#">Loan Services</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-slate-900 transition-opacity duration-300 font-['Inter'] text-lg tracking-tight" href="#">Rates</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-slate-900 transition-opacity duration-300 font-['Inter'] text-lg tracking-tight" href="#">Process</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-slate-900 transition-opacity duration-300 font-['Inter'] text-lg tracking-tight" href="#">About Us</a>
+</div>
+<button class="primary-gradient text-white px-6 py-2.5 rounded-lg font-medium scale-95 active:scale-100 transition-transform hover:opacity-90">
+                Immediate Consultation
+            </button>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="max-w-7xl mx-auto px-8 py-20 lg:py-32">
+<div class="asymmetric-grid items-center">
+<div class="space-y-8">
+<h1 class="text-6xl lg:text-8xl font-black text-on-surface leading-[1.1] tracking-tighter">
+                        让您的美国<br/><span class="text-primary">置业梦</span>成真
+                    </h1>
+<p class="text-xl lg:text-2xl text-on-surface-variant max-w-2xl leading-relaxed">
+                        新梦想 Lending 为您提供全美最专业的房屋贷款方案。无论您是首置者、高净值人士还是自雇身份，我们为您定制最优利率方案。
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="primary-gradient text-white px-8 py-4 rounded-lg text-lg font-semibold shadow-xl shadow-primary/20">
+                            立即申请贷款
+                        </button>
+<button class="bg-surface-container-highest text-on-surface px-8 py-4 rounded-lg text-lg font-semibold">
+                            查看今日利率
+                        </button>
+</div>
+</div>
+<div class="relative h-[600px] rounded-xl overflow-hidden shadow-2xl">
+<img alt="Modern luxury house architecture" class="w-full h-full object-cover" data-alt="Modern architectural house exterior at dusk with warm interior lighting and clean minimalist lines against a soft purple sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJUqs2v40MjD5uRLYP8yqaSXRVkNVns00EhrT4C66QGASsC5BOtgNOfq9syGEg2iXUJ1Mc6PcpiL3RkCSH5vsxqQSOdL9aSvSlkv0__YtawkVpV9o3vky1uxFIzWwjyrnUTYKYoYnNtutKzvdBaebg2yQEzOl1rvBIgAsWU4oMSAKkZThH0yFQcOJ7I5ndpaC_eFfo6H5xSFcGKG9TD3G158BhLDO-3qUZxs2BhW9pA_nV-XaNiTz9rarfRp7eCTR6Ny0reBL9NJg"/>
+<div class="absolute bottom-8 left-8 right-8 p-6 glass-nav rounded-xl border border-white/20">
+<div class="flex justify-between items-center">
+<div>
+<p class="text-sm font-semibold text-primary uppercase tracking-widest">今日参考利率</p>
+<p class="text-4xl font-black text-on-surface">6.125% <span class="text-lg font-medium text-on-surface-variant italic">30年固定</span></p>
+</div>
+<span class="material-symbols-outlined text-primary text-4xl">trending_down</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Section (Recessed) -->
+<section class="bg-surface-container-low py-24">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+<div class="space-y-2">
+<p class="text-5xl font-black text-primary">500+</p>
+<p class="text-lg text-on-surface-variant font-medium">成功放款案例</p>
+</div>
+<div class="space-y-2">
+<p class="text-5xl font-black text-primary">$200M+</p>
+<p class="text-lg text-on-surface-variant font-medium">累计放款金额</p>
+</div>
+<div class="space-y-2">
+<p class="text-5xl font-black text-primary">24h</p>
+<p class="text-lg text-on-surface-variant font-medium">极速预审批回复</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Bento Grid -->
+<section class="max-w-7xl mx-auto px-8 py-32">
+<div class="mb-20">
+<h2 class="text-4xl lg:text-5xl font-black text-on-surface tracking-tight mb-4">全方位贷款服务</h2>
+<p class="text-on-surface-variant text-xl">针对不同身份与需求，提供精准的金融解决方案</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Large Card -->
+<div class="md:col-span-2 group bg-surface-container-lowest rounded-xl p-10 hover:shadow-2xl transition-all duration-500 overflow-hidden relative">
+<div class="relative z-10 space-y-4">
+<span class="material-symbols-outlined text-primary text-5xl">home</span>
+<h3 class="text-3xl font-bold">购房贷款 (Home Purchase)</h3>
+<p class="text-on-surface-variant max-w-md text-lg">为您争取全美最低市场利率，提供从预审批到过户的全程贴心服务，让您的搬家过程无忧无虑。</p>
+<a class="inline-flex items-center text-primary font-bold text-lg group-hover:translate-x-2 transition-transform" href="#">
+                            了解详情 <span class="material-symbols-outlined ml-1">arrow_forward</span>
+</a>
+</div>
+<div class="absolute bottom-0 right-0 w-1/2 opacity-20 group-hover:opacity-100 transition-opacity duration-700">
+<img alt="Interior of a modern living room" class="rounded-tl-xl object-cover h-64 w-full" data-alt="Bright airy modern living room interior with floor to ceiling windows and elegant minimalist furniture in soft neutral tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2vJLH2JbgvKNsArBKJEGGtWy8pNE_0IoPhXRDp2fYf1hvYNwYkY2S7osYp6LiOKYjPLLu_D1vLVZX0Dj6mSZv6m8coHbjTGvSVwgrQ4lp1x5TaVDRpCv5ffqZQCnXTtsUedCeGuVhxoZGm7PT6XUgolrFiobqfoLlIge1Z0ut3soUcLzH9ICbDKjCqaJ6gf5S5dazNIibqN0b62ce8NB3y1inASmrZwLorNOlMbKUZsoSfbdeU9r7sPJGpbc3PfI_FvYIg7CdIVw"/>
+</div>
+</div>
+<!-- Small Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-10 hover:shadow-2xl transition-all duration-500">
+<span class="material-symbols-outlined text-primary text-5xl mb-6">currency_exchange</span>
+<h3 class="text-2xl font-bold mb-4">再融资 (Refinance)</h3>
+<p class="text-on-surface-variant mb-6">通过降低利率或套取现金，优化您的资产配置，每月节省数百美金支出。</p>
+<a class="text-primary font-bold" href="#">立即咨询</a>
+</div>
+<!-- Small Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-10 hover:shadow-2xl transition-all duration-500">
+<span class="material-symbols-outlined text-primary text-5xl mb-6">apartment</span>
+<h3 class="text-2xl font-bold mb-4">投资房贷款</h3>
+<p class="text-on-surface-variant mb-6">专业的投资房产评估方案，助力房产投资者快速扩大资产规模。</p>
+<a class="text-primary font-bold" href="#">方案咨询</a>
+</div>
+<!-- Small Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-10 hover:shadow-2xl transition-all duration-500">
+<span class="material-symbols-outlined text-primary text-5xl mb-6">badge</span>
+<h3 class="text-2xl font-bold mb-4">工签买房 (Visa/H1B)</h3>
+<p class="text-on-surface-variant mb-6">深耕海外华人市场，熟悉各类工作签证贷款政策，高效解决身份受限难题。</p>
+<a class="text-primary font-bold" href="#">了解政策</a>
+</div>
+<!-- Small Card 4 -->
+<div class="bg-surface-container-lowest rounded-xl p-10 hover:shadow-2xl transition-all duration-500">
+<span class="material-symbols-outlined text-primary text-5xl mb-6">person</span>
+<h3 class="text-2xl font-bold mb-4">自雇人士贷款</h3>
+<p class="text-on-surface-variant mb-6">针对流水及收入证明的特殊方案，即便报税不足也能轻松获得高额贷款。</p>
+<a class="text-primary font-bold" href="#">获取方案</a>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-32 bg-white">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-20">
+<h2 class="text-4xl lg:text-5xl font-black text-on-surface tracking-tight">客户信任的声音</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div class="p-12 bg-surface rounded-xl border border-outline-variant/10">
+<div class="flex gap-1 text-primary mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-xl italic text-on-surface-variant leading-relaxed mb-8">
+                            "作为第一次在美国买房的H1B持有人，我原本非常担心。新梦想 Lending 团队非常专业，他们熟悉工签政策，整个过程比我想象中要快得多！"
+                        </p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary-fixed-dim"></div>
+<div>
+<p class="font-bold">Li W.</p>
+<p class="text-sm text-on-surface-variant">软件工程师, 硅谷</p>
+</div>
+</div>
+</div>
+<div class="p-12 bg-surface rounded-xl border border-outline-variant/10">
+<div class="flex gap-1 text-primary mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-xl italic text-on-surface-variant leading-relaxed mb-8">
+                            "我的自雇收入报税比较复杂，咨询了几家银行都没办成。新梦想通过银行流水方案帮我成功买到了心仪的度假房，利率也非常满意。"
+                        </p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed-dim"></div>
+<div>
+<p class="font-bold">Chen M.</p>
+<p class="text-sm text-on-surface-variant">初创公司创始人, 西雅图</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Form Section -->
+<section class="max-w-7xl mx-auto px-8 py-32">
+<div class="bg-primary rounded-xl overflow-hidden shadow-2xl flex flex-col md:flex-row">
+<div class="md:w-1/2 p-16 text-white space-y-6">
+<h2 class="text-4xl lg:text-5xl font-black leading-tight">准备好开启您的<br/>置业之旅了吗？</h2>
+<p class="text-xl text-primary-fixed opacity-90">留下您的联系方式，我们的持牌贷款经纪人将在24小时内与您取得联系，提供免费方案评估。</p>
+<div class="space-y-4 pt-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined">call</span>
+<span>(800) 123-4567</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined">mail</span>
+<span>contact@xinmengxiang.com</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined">location_on</span>
+<span>123 Finance Plaza, Suite 888, CA 90001</span>
+</div>
+</div>
+</div>
+<div class="md:w-1/2 bg-surface-container-lowest p-16">
+<form action="#" class="space-y-6" method="POST">
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-1">
+<label class="text-sm font-bold text-on-surface-variant uppercase tracking-wider">姓名</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary/20" placeholder="张先生" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="text-sm font-bold text-on-surface-variant uppercase tracking-wider">电话</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary/20" placeholder="(123) 456-7890" type="tel"/>
+</div>
+</div>
+<div class="space-y-1">
+<label class="text-sm font-bold text-on-surface-variant uppercase tracking-wider">贷款类型</label>
+<select class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary/20">
+<option>购房贷款 (Home Purchase)</option>
+<option>再融资 (Refinance)</option>
+<option>投资房贷款</option>
+<option>其他</option>
+</select>
+</div>
+<div class="space-y-1">
+<label class="text-sm font-bold text-on-surface-variant uppercase tracking-wider">留言描述</label>
+<textarea class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary/20" placeholder="请简单描述您的贷款需求，如贷款金额、房屋所在城市等" rows="4"></textarea>
+</div>
+<button class="w-full primary-gradient text-white font-bold py-5 rounded-lg text-lg hover:shadow-lg transition-shadow" type="submit">
+                            提交申请
+                        </button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-slate-200/50 dark:border-slate-800/50 bg-slate-50 dark:bg-slate-950">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-16 w-full max-w-7xl mx-auto">
+<div class="mb-8 md:mb-0">
+<div class="text-xl font-black text-slate-900 dark:text-white mb-2">新梦想 Lending</div>
+<p class="font-['Inter'] text-sm tracking-wide text-slate-500 dark:text-slate-400">© 2024 新梦想 Lending. All rights reserved. Precision in Finance.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-['Inter'] text-sm tracking-wide text-slate-500 dark:text-slate-400 hover:text-blue-500 transition-colors opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="font-['Inter'] text-sm tracking-wide text-slate-500 dark:text-slate-400 hover:text-blue-500 transition-colors opacity-80 hover:opacity-100" href="#">Terms of Service</a>
+<a class="font-['Inter'] text-sm tracking-wide text-slate-500 dark:text-slate-400 hover:text-blue-500 transition-colors opacity-80 hover:opacity-100" href="#">Contact</a>
+<a class="font-['Inter'] text-sm tracking-wide text-slate-500 dark:text-slate-400 hover:text-blue-500 transition-colors opacity-80 hover:opacity-100" href="#">Licensing</a>
+</div>
+</div>
+</footer>
+<!-- FAB for Quick Contact -->
+<button class="fixed bottom-8 right-8 primary-gradient text-white p-4 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform z-40">
+<span class="material-symbols-outlined text-3xl">chat</span>
+</button>
+</body></html>

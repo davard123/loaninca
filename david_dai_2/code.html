@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Admin Console | David Dai</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary": "#ffffff",
+                    "primary-fixed": "#e2e2e5",
+                    "on-error-container": "#93000a",
+                    "primary-container": "#2c2e30",
+                    "surface-container-low": "#f6f3ef",
+                    "on-primary-fixed-variant": "#454749",
+                    "surface-container-highest": "#e5e2de",
+                    "secondary-container": "#f8dfbb",
+                    "secondary": "#6e5c40",
+                    "on-primary-fixed": "#1a1c1e",
+                    "on-surface-variant": "#44474a",
+                    "error": "#ba1a1a",
+                    "background": "#fcf9f5",
+                    "surface-container": "#f0ede9",
+                    "inverse-on-surface": "#f3f0ec",
+                    "surface-bright": "#fcf9f5",
+                    "tertiary-fixed-dim": "#d7c4a6",
+                    "outline": "#75777a",
+                    "on-background": "#1c1c19",
+                    "secondary-fixed-dim": "#dbc3a1",
+                    "tertiary": "#211705",
+                    "on-tertiary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "on-surface": "#1c1c19",
+                    "surface": "#fcf9f5",
+                    "on-secondary": "#ffffff",
+                    "surface-variant": "#e5e2de",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed": "#261904",
+                    "surface-tint": "#5d5e61",
+                    "tertiary-container": "#372c17",
+                    "inverse-primary": "#c6c6c9",
+                    "on-primary-container": "#949598",
+                    "on-tertiary-fixed": "#241a07",
+                    "on-tertiary-fixed-variant": "#52452e",
+                    "tertiary-fixed": "#f4e0c1",
+                    "on-error": "#ffffff",
+                    "surface-container-high": "#ebe8e4",
+                    "on-secondary-fixed-variant": "#55442a",
+                    "primary": "#17191b",
+                    "surface-dim": "#dcdad6",
+                    "primary-fixed-dim": "#c6c6c9",
+                    "outline-variant": "#c5c6ca",
+                    "inverse-surface": "#31302e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        h1, h2, h3, .serif { font-family: 'Noto Serif', serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface">
+<!-- Admin Password Overlay (Simulated Logic) -->
+<div class="fixed inset-0 z-[100] bg-primary flex items-center justify-center p-6 hidden" id="auth-overlay">
+<div class="max-w-md w-full bg-surface p-12 rounded-lg shadow-2xl">
+<h2 class="text-3xl font-headline font-bold mb-2">Security Check</h2>
+<p class="text-on-surface-variant mb-8 font-body">Please enter the administrative password to access David Dai's mortgage suite.</p>
+<input class="w-full bg-surface-container-low border-b-2 border-outline-variant p-4 focus:outline-none focus:border-secondary transition-colors mb-6" placeholder="••••••••" type="password"/>
+<button class="w-full bg-primary text-on-primary py-4 font-label uppercase tracking-widest text-sm hover:opacity-90 transition-opacity">
+                Authorize Access
+            </button>
+</div>
+</div>
+<!-- Layout Container -->
+<div class="flex min-h-screen">
+<!-- Shared SideNavBar -->
+<aside class="flex flex-col h-screen fixed left-0 top-0 py-8 bg-[#fcf9f5] dark:bg-[#17191b] h-full border-r border-[#c5c6ca]/20 w-64 z-40">
+<div class="px-6 mb-12">
+<div class="font-serif text-lg font-bold text-[#17191b] dark:text-[#fcf9f5]">Admin Console</div>
+<div class="text-xs font-sans font-medium text-[#44474a] dark:text-[#c5c6ca] uppercase tracking-widest mt-1 opacity-70">Mortgage Expert Suite</div>
+</div>
+<nav class="flex-1 px-4 space-y-2">
+<!-- Dashboard Tab (Active) -->
+<a class="flex items-center gap-3 px-4 py-3 bg-[#f0ede9] dark:bg-[#2c2e30] text-[#6e5c40] border-r-4 border-[#6e5c40] transition-all duration-200 ease-in-out font-sans font-medium text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Dashboard</span>
+</a>
+<!-- Other Tabs -->
+<a class="flex items-center gap-3 px-4 py-3 text-[#44474a] dark:text-[#c5c6ca] opacity-70 hover:bg-[#f6f3ef] dark:hover:bg-[#2c2e30] transition-all duration-200 ease-in-out font-sans font-medium text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span>Applications</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#44474a] dark:text-[#c5c6ca] opacity-70 hover:bg-[#f6f3ef] dark:hover:bg-[#2c2e30] transition-all duration-200 ease-in-out font-sans font-medium text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span>Clients</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#44474a] dark:text-[#c5c6ca] opacity-70 hover:bg-[#f6f3ef] dark:hover:bg-[#2c2e30] transition-all duration-200 ease-in-out font-sans font-medium text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="trending_up">trending_up</span>
+<span>Market Rates</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#44474a] dark:text-[#c5c6ca] opacity-70 hover:bg-[#f6f3ef] dark:hover:bg-[#2c2e30] transition-all duration-200 ease-in-out font-sans font-medium text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span>Settings</span>
+</a>
+</nav>
+<div class="px-6 pt-8 border-t border-outline-variant/10">
+<div class="flex items-center gap-3">
+<img alt="David Dai Professional Headshot" class="w-10 h-10 rounded-full object-cover grayscale" data-alt="professional headshot of a businessman in a dark suit with soft natural lighting and minimalist office background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFvD_Nd4X8hyneDcT6SO_GaJK-3Rr3Z5l10zW7wsrUHs1GqOV5JJ63rsCtk7gwNgR167oN0hdFUV_xNskJFdY62QD3Xht8fI7HQ8tJp_aqUu3O8klaJXrG6j4r2MsKJ_D81Y7_ydXTnkYOffM5mh-59qD8vLxVhtL66bw6XyLjVaRxi3Zi7GwNB53VPD9sVh0zINuSym3772YLtm2Lsx4OXYH_Enb78n_VYiBkBqK6BxxYGLOeoeiy8S7g62lYnc413ZTmt-HIGL8"/>
+<div class="flex flex-col">
+<span class="text-xs font-bold font-body">David Dai</span>
+<span class="text-[10px] text-on-surface-variant uppercase tracking-tighter">Sign Out</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 ml-64 p-12 bg-background min-h-screen">
+<!-- Header Section -->
+<header class="mb-12 flex justify-between items-end">
+<div>
+<h1 class="text-4xl font-headline font-bold text-primary tracking-tight">Performance Overview</h1>
+<p class="text-on-surface-variant font-body mt-2">Welcome back, David. Here is your portfolio activity for today.</p>
+</div>
+<div class="flex gap-4">
+<button class="bg-surface-container border border-outline-variant/20 px-6 py-2.5 font-label text-xs uppercase tracking-widest flex items-center gap-2 hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="calendar_today">calendar_today</span>
+                        This Month
+                    </button>
+<button class="bg-primary text-on-primary px-6 py-2.5 font-label text-xs uppercase tracking-widest hover:opacity-90 transition-opacity">
+                        Generate Report
+                    </button>
+</div>
+</header>
+<!-- KPI Bento Grid -->
+<section class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+<div class="bg-surface-container-low p-8 border-b-2 border-transparent hover:border-secondary transition-all group">
+<div class="flex justify-between items-start mb-4">
+<span class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant">Today's Leads</span>
+<span class="material-symbols-outlined text-secondary opacity-0 group-hover:opacity-100 transition-opacity" data-icon="north_east">north_east</span>
+</div>
+<div class="text-4xl font-headline font-semibold text-primary">12</div>
+<div class="text-xs text-secondary mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="trending_up">trending_up</span>
+<span>+15% from yesterday</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-8 border-b-2 border-transparent hover:border-secondary transition-all group">
+<div class="flex justify-between items-start mb-4">
+<span class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant">Month Total</span>
+<span class="material-symbols-outlined text-secondary opacity-0 group-hover:opacity-100 transition-opacity" data-icon="north_east">north_east</span>
+</div>
+<div class="text-4xl font-headline font-semibold text-primary">148</div>
+<div class="text-xs text-on-surface-variant mt-2">Target: 200 leads</div>
+</div>
+<div class="bg-surface-container-low p-8 border-b-2 border-transparent hover:border-secondary transition-all group">
+<div class="flex justify-between items-start mb-4">
+<span class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant">Today Visits</span>
+<span class="material-symbols-outlined text-secondary opacity-0 group-hover:opacity-100 transition-opacity" data-icon="north_east">north_east</span>
+</div>
+<div class="text-4xl font-headline font-semibold text-primary">842</div>
+<div class="text-xs text-secondary mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="trending_up">trending_up</span>
+<span>Stable traffic flow</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-8 border-b-2 border-transparent hover:border-secondary transition-all group">
+<div class="flex justify-between items-start mb-4">
+<span class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant">New Follow-ups</span>
+<span class="material-symbols-outlined text-secondary opacity-0 group-hover:opacity-100 transition-opacity" data-icon="north_east">north_east</span>
+</div>
+<div class="text-4xl font-headline font-semibold text-primary">05</div>
+<div class="text-xs text-error mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="priority_high">priority_high</span>
+<span>Requires attention</span>
+</div>
+</div>
+</section>
+<!-- Main Dashboard Area -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+<!-- Latest Leads Table -->
+<div class="lg:col-span-2">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-xl font-headline font-semibold">Latest Active Leads</h3>
+<div class="flex items-center gap-4">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg" data-icon="search">search</span>
+<input class="pl-10 pr-4 py-2 bg-surface-container-low border-none border-b border-outline-variant/30 focus:border-secondary focus:ring-0 text-sm w-64" placeholder="Search leads..." type="text"/>
+</div>
+<button class="text-secondary font-label text-[10px] uppercase tracking-widest border border-secondary/20 px-4 py-2 hover:bg-secondary-fixed transition-colors">Export CSV</button>
+</div>
+</div>
+<div class="bg-surface-container-lowest overflow-hidden shadow-sm">
+<table class="w-full text-left">
+<thead class="bg-surface-container text-[10px] font-label uppercase tracking-widest text-on-surface-variant">
+<tr>
+<th class="px-6 py-4">Client Name</th>
+<th class="px-6 py-4">Loan Type</th>
+<th class="px-6 py-4">Status</th>
+<th class="px-6 py-4">Inquiry Date</th>
+<th class="px-6 py-4 text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10 text-sm">
+<tr class="hover:bg-surface-container-low transition-colors group cursor-pointer">
+<td class="px-6 py-5 font-medium">Eleanor Shellstrop</td>
+<td class="px-6 py-5">Fixed 30-Year</td>
+<td class="px-6 py-5">
+<span class="bg-secondary-container text-on-secondary-container px-2 py-0.5 text-[10px] uppercase font-bold tracking-tighter">New</span>
+</td>
+<td class="px-6 py-5 text-on-surface-variant">2 hours ago</td>
+<td class="px-6 py-5 text-right">
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors group cursor-pointer">
+<td class="px-6 py-5 font-medium">Michael Realman</td>
+<td class="px-6 py-5">FHA Loan</td>
+<td class="px-6 py-5">
+<span class="bg-surface-container-highest text-on-surface-variant px-2 py-0.5 text-[10px] uppercase font-bold tracking-tighter">Contacted</span>
+</td>
+<td class="px-6 py-5 text-on-surface-variant">Yesterday</td>
+<td class="px-6 py-5 text-right">
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors group cursor-pointer">
+<td class="px-6 py-5 font-medium">Janet Dell-Tello</td>
+<td class="px-6 py-5">Refinance</td>
+<td class="px-6 py-5">
+<span class="bg-primary text-on-primary px-2 py-0.5 text-[10px] uppercase font-bold tracking-tighter">Qualified</span>
+</td>
+<td class="px-6 py-5 text-on-surface-variant">Oct 12, 2023</td>
+<td class="px-6 py-5 text-right">
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors group cursor-pointer">
+<td class="px-6 py-5 font-medium">Tahani Al-Jamil</td>
+<td class="px-6 py-5">Jumbo Loan</td>
+<td class="px-6 py-5">
+<span class="bg-surface-variant text-on-surface-variant px-2 py-0.5 text-[10px] uppercase font-bold tracking-tighter">Closed</span>
+</td>
+<td class="px-6 py-5 text-on-surface-variant">Oct 10, 2023</td>
+<td class="px-6 py-5 text-right">
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Visit Log / Analytics Sidebar -->
+<div class="space-y-8">
+<div>
+<h3 class="text-xl font-headline font-semibold mb-6">Recent Activity</h3>
+<div class="space-y-4">
+<div class="flex gap-4 p-4 bg-surface-container-low border-l-2 border-secondary">
+<div class="flex-shrink-0 w-8 h-8 bg-secondary-fixed rounded-full flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-sm" data-icon="ads_click">ads_click</span>
+</div>
+<div>
+<p class="text-xs font-semibold">New Visit from Google Ads</p>
+<p class="text-[10px] text-on-surface-variant mt-1">Source: utm_campaign=mortgage_2024</p>
+<p class="text-[10px] text-secondary mt-1">2 mins ago</p>
+</div>
+</div>
+<div class="flex gap-4 p-4 bg-surface-container-low border-l-2 border-outline-variant">
+<div class="flex-shrink-0 w-8 h-8 bg-surface-container-high rounded-full flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-sm" data-icon="language">language</span>
+</div>
+<div>
+<p class="text-xs font-semibold">Organic Direct Entry</p>
+<p class="text-[10px] text-on-surface-variant mt-1">User viewing: "Expertise" page</p>
+<p class="text-[10px] text-on-surface-variant mt-1">15 mins ago</p>
+</div>
+</div>
+<div class="flex gap-4 p-4 bg-surface-container-low border-l-2 border-outline-variant">
+<div class="flex-shrink-0 w-8 h-8 bg-surface-container-high rounded-full flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-sm" data-icon="share">share</span>
+</div>
+<div>
+<p class="text-xs font-semibold">Referral from LinkedIn</p>
+<p class="text-[10px] text-on-surface-variant mt-1">Referred by: linkedin.com/in/dai-partner</p>
+<p class="text-[10px] text-on-surface-variant mt-1">1 hour ago</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Visit Trend Chart Placeholder -->
+<div class="bg-primary p-6 rounded-lg text-on-primary">
+<div class="flex justify-between items-center mb-8">
+<span class="text-[10px] font-label uppercase tracking-widest opacity-60">Visits Trend (Weekly)</span>
+<span class="material-symbols-outlined text-sm" data-icon="show_chart">show_chart</span>
+</div>
+<div class="flex items-end justify-between h-24 gap-1">
+<div class="w-full bg-on-primary/20 rounded-t-sm" style="height: 40%;"></div>
+<div class="w-full bg-on-primary/20 rounded-t-sm" style="height: 60%;"></div>
+<div class="w-full bg-on-primary/20 rounded-t-sm" style="height: 35%;"></div>
+<div class="w-full bg-on-primary/20 rounded-t-sm" style="height: 80%;"></div>
+<div class="w-full bg-secondary rounded-t-sm" style="height: 95%;"></div>
+<div class="w-full bg-on-primary/20 rounded-t-sm" style="height: 70%;"></div>
+<div class="w-full bg-on-primary/20 rounded-t-sm" style="height: 55%;"></div>
+</div>
+<div class="flex justify-between mt-4 text-[9px] opacity-60 font-label tracking-tighter">
+<span>MON</span>
+<span>TUE</span>
+<span>WED</span>
+<span>THU</span>
+<span>FRI</span>
+<span>SAT</span>
+<span>SUN</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- Lead Details Side Drawer (Simulated Open State) -->
+<div class="fixed inset-y-0 right-0 w-[450px] bg-surface shadow-[-20px_0_60px_-15px_rgba(28,28,25,0.1)] z-50 transform translate-x-full transition-transform duration-300 ease-in-out border-l border-outline-variant/10" id="lead-drawer">
+<div class="h-full flex flex-col p-10">
+<div class="flex justify-between items-start mb-12">
+<button class="p-2 hover:bg-surface-container-low transition-colors rounded-full">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+<div class="flex gap-2">
+<button class="bg-surface-container-high px-4 py-2 font-label text-[10px] uppercase tracking-widest hover:bg-secondary-container transition-colors">Archive</button>
+<button class="bg-primary text-on-primary px-4 py-2 font-label text-[10px] uppercase tracking-widest hover:opacity-90">Save Changes</button>
+</div>
+</div>
+<div class="flex-1 overflow-y-auto space-y-10">
+<section>
+<span class="text-[10px] font-label uppercase tracking-widest text-secondary block mb-2">Lead Identity</span>
+<h2 class="text-3xl font-headline font-bold">Eleanor Shellstrop</h2>
+<p class="text-on-surface-variant font-body mt-1">eleanor@arizona.com • (602) 555-0199</p>
+</section>
+<section class="grid grid-cols-2 gap-6">
+<div>
+<label class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant block mb-2">Current Status</label>
+<select class="w-full bg-surface-container-low border-none border-b-2 border-outline-variant/30 focus:border-secondary focus:ring-0 text-sm py-3 px-0 cursor-pointer">
+<option selected="">New Lead</option>
+<option>Contacted</option>
+<option>Qualified</option>
+<option>Closed</option>
+<option>Lost</option>
+</select>
+</div>
+<div>
+<label class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant block mb-2">Assigned Agent</label>
+<select class="w-full bg-surface-container-low border-none border-b-2 border-outline-variant/30 focus:border-secondary focus:ring-0 text-sm py-3 px-0 cursor-pointer">
+<option selected="">David Dai</option>
+<option>Junior Associate</option>
+</select>
+</div>
+</section>
+<section>
+<label class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant block mb-2">Internal Consultant Notes</label>
+<textarea class="w-full bg-surface-container-low border-none border-b-2 border-outline-variant/30 focus:border-secondary focus:ring-0 text-sm p-4 h-48 resize-none" placeholder="Add private notes about this client's specific mortgage requirements..."></textarea>
+</section>
+<section>
+<label class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant block mb-4">Inquiry History</label>
+<div class="space-y-4">
+<div class="flex gap-4 items-start">
+<div class="w-2 h-2 rounded-full bg-secondary mt-1.5"></div>
+<div>
+<p class="text-xs font-semibold">Form Submission: Home Loan Inquiry</p>
+<p class="text-[10px] text-on-surface-variant italic">"Looking for a 30-year fixed for a first-time purchase."</p>
+<p class="text-[10px] text-secondary mt-1">Oct 14, 2023 • 02:44 PM</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+<!-- Toast Notification (Simulated) -->
+<div class="fixed bottom-8 right-8 bg-inverse-surface text-inverse-on-surface px-6 py-4 flex items-center gap-4 shadow-xl translate-y-24 opacity-0 transition-all duration-500">
+<span class="material-symbols-outlined text-secondary" data-icon="check_circle">check_circle</span>
+<span class="font-body text-sm">Dashboard data synced with David's cloud storage.</span>
+</div>
+</body></html>

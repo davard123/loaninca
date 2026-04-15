@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="min-height-100vh">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>新闻中心 | NDF Lending - 房贷最新资讯</title>
+<meta name="description" content="了解最新房贷政策、利率变化、市场动态。NDF Lending 为您提供及时的房地产和贷款新闻资讯。"/>
+<link rel="canonical" href="https://www.ndflending.com/news.html"/>
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          primary: "#785600",
+          secondary: "rgba(26,26,26,0.7)",
+          background: "#FDFBF7",
+          surface: "#FDFBF7"
+        },
+        fontFamily: {
+          serif: ["Cormorant Garamond", "Noto Serif SC", "serif"],
+          sans: ["Figtree", "sans-serif"]
+        }
+      }
+    }
+  }
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Figtree:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+  html { scroll-behavior: smooth; }
+  body { background-color: #FDFBF7; font-family: "Figtree", sans-serif; color: #1A1A1A; }
+  .serif-title { font-family: "Cormorant Garamond", "Noto Serif SC", serif; color: #1A1A1A; }
+  .glass-nav { background-color: rgba(253, 251, 247, 0.95); backdrop-filter: blur(12px); }
+  .editorial-shadow { box-shadow: 0 20px 50px -12px rgba(120, 86, 0, 0.08); }
+</style>
+</head>
+
+<body class="min-height-100vh flex flex-col">
+
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 glass-nav border-b border-stone-200/60">
+<div class="flex justify-between items-center px-8 py-5 max-w-7xl mx-auto">
+<div class="flex flex-col leading-tight">
+<span class="serif-title text-2xl font-bold text-primary tracking-tight">NDF Lending</span>
+<span class="text-[10px] font-label tracking-[0.2em] text-secondary uppercase font-semibold">David Dai | NMLS# 2454756</span>
+</div>
+<div class="hidden md:flex space-x-8 items-center">
+<a class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" href="index.html#home">首页 Home</a>
+<a class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" href="index.html#services">服务 Services</a>
+<a class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" href="index.html#loan-products">贷款产品 Products</a>
+<a class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" href="index.html#fed-rates-section">利率 Rates</a>
+<a class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" href="index.html#loan-knowledge">贷款知识 Education</a>
+<a class="text-sm font-medium text-primary font-bold" href="news.html">新闻中心 News</a>
+<a class="gold-button text-white text-xs px-6 py-2.5 rounded-none uppercase tracking-widest font-bold hover:brightness-110 transition-all" style="background-color: #785600;" href="index.html#contact">联系 Contact</a>
+</div>
+</div>
+</nav>
+
+<!-- Main Content -->
+<main class="flex-1 pt-32 pb-24 px-8">
+<div class="max-w-7xl mx-auto">
+<!-- Header -->
+<div class="text-center mb-16">
+<span class="text-[10px] font-bold text-primary uppercase tracking-[0.3em] mb-4 block">NEWS & UPDATES</span>
+<h2 class="serif-title text-5xl font-light mb-6">新闻中心</h2>
+<p class="text-secondary font-light text-lg max-w-2xl mx-auto">了解最新房贷政策变化、利率更新和市场动态，助您把握最佳贷款时机。</p>
+</div>
+
+<!-- News Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="news-grid">
+<div class="text-center text-secondary py-12 col-span-full">加载中...</div>
+</div>
+
+<!-- Back to Home -->
+<div class="text-center mt-16">
+<a href="index.html" class="inline-block text-primary text-sm font-medium hover:underline">← 返回首页</a>
+</div>
+</div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-stone-50 w-full pt-16 pb-8 border-t border-stone-200">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+<div class="md:col-span-2">
+<span class="serif-title text-xl font-bold text-primary block mb-4">NDF Lending</span>
+<p class="text-sm text-secondary leading-relaxed max-w-md">
+专业房贷服务团队，由 David Dai (NMLS# 2454756) 领导。致力于通过透明、高效的流程，帮助每一位客户实现置业安居的梦想。
+</p>
+</div>
+<div>
+<p class="text-[10px] font-bold text-stone-400 uppercase tracking-widest mb-4">联系方式</p>
+<p class="text-sm font-semibold mb-2">Direct: 949-656-1278</p>
+<p class="text-sm font-semibold mb-2">Email: lodaviddai@gmail.com</p>
+<p class="text-sm font-semibold">微信：WuxiShane</p>
+</div>
+<div>
+<p class="text-[10px] font-bold text-stone-400 uppercase tracking-widest mb-4">快速链接</p>
+<a href="index.html#home" class="block text-sm text-secondary hover:text-primary mb-2">首页</a>
+<a href="index.html#services" class="block text-sm text-secondary hover:text-primary mb-2">服务</a>
+<a href="index.html#loan-knowledge" class="block text-sm text-secondary hover:text-primary mb-2">贷款知识</a>
+<a href="news.html" class="block text-sm text-primary font-bold mb-2">新闻中心</a>
+</div>
+</div>
+<div class="border-t border-stone-200 pt-8 text-center">
+<p class="text-xs text-stone-400">© 2026 NDF Lending. All rights reserved.</p>
+<p class="text-xs text-stone-400 mt-2">NMLS# 2454756 | California DBA</p>
+</div>
+</div>
+</footer>
+
+<script>
+// Load News from API
+async function loadNews() {
+  try {
+    const res = await fetch('/api/news');
+    const news = await res.json();
+    const grid = document.getElementById('news-grid');
+
+    if (news.length === 0) {
+      grid.innerHTML = '<div class="text-center text-secondary py-12 col-span-full">暂无新闻资讯</div>';
+      return;
+    }
+
+    grid.innerHTML = news.map(item => {
+      const contentPreview = item.content.substring(0, 200) + (item.content.length > 200 ? '...' : '');
+      const date = new Date(item.published_at || item.created_at).toLocaleDateString('zh-CN', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      });
+
+      return `
+      <article class="bg-white p-8 border border-stone-200 editorial-shadow hover:shadow-lg transition-shadow">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="material-symbols-outlined text-lg text-primary">newspaper</span>
+          <span class="text-xs text-stone-400">${date}</span>
+        </div>
+        <h3 class="serif-title text-2xl font-semibold mb-4 line-clamp-2">${item.title}</h3>
+        ${item.title_en ? `<p class="text-xs text-stone-500 italic mb-4">${item.title_en}</p>` : ''}
+        <p class="text-secondary font-light text-sm leading-relaxed mb-6 line-clamp-4">${contentPreview}</p>
+        <div class="flex items-center justify-between">
+          <span class="text-xs text-primary font-bold uppercase tracking-widest">阅读更多 →</span>
+        </div>
+      </article>
+      `;
+    }).join('');
+  } catch(err) {
+    console.error('Error loading news:', err);
+    document.getElementById('news-grid').innerHTML = '<div class="text-center text-secondary py-12 col-span-full">加载失败</div>';
+  }
+}
+
+// Page load
+document.addEventListener('DOMContentLoaded', () => {
+  loadNews();
+});
+</script>
+
+</body>
+</html>

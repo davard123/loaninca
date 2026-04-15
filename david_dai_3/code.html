@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+
+<html lang="zh-Hans"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>David Dai — 洛杉矶华人房贷 | 您的在美购房贷款专家</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Noto+Serif+SC:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface-variant": "#414753",
+                        "inverse-surface": "#2f3132",
+                        "secondary-container": "#e0dfe4",
+                        "on-secondary-container": "#626267",
+                        "primary-fixed": "#d7e3ff",
+                        "surface": "#f9f9fb",
+                        "on-secondary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-surface": "#1a1c1d",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#474649",
+                        "primary-fixed-dim": "#aac7ff",
+                        "surface-variant": "#e2e2e4",
+                        "on-secondary-fixed": "#1a1b1f",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed": "#1b1b1d",
+                        "on-tertiary-container": "#ebe8ea",
+                        "on-primary-container": "#dfe8ff",
+                        "surface-container-highest": "#e2e2e4",
+                        "primary-container": "#0066cc",
+                        "tertiary-fixed-dim": "#c8c6c8",
+                        "on-primary-fixed": "#001b3e",
+                        "surface-tint": "#005cba",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#69686a",
+                        "surface-bright": "#f9f9fb",
+                        "surface-container": "#eeeef0",
+                        "surface-dim": "#d9dadc",
+                        "surface-container-high": "#e8e8ea",
+                        "background": "#f9f9fb",
+                        "on-secondary-fixed-variant": "#46464b",
+                        "outline": "#727784",
+                        "secondary": "#5e5e63",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-on-surface": "#f0f0f2",
+                        "surface-container-low": "#f3f3f5",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "on-background": "#1a1c1d",
+                        "on-primary-fixed-variant": "#00458e",
+                        "tertiary": "#515052",
+                        "secondary-fixed": "#e3e2e7",
+                        "inverse-primary": "#aac7ff",
+                        "tertiary-fixed": "#e4e2e4",
+                        "secondary-fixed-dim": "#c7c6cb",
+                        "primary": "#004e9f",
+                        "outline-variant": "#c1c6d5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.5rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter", "Noto Serif SC", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #f9f9fb; color: #1a1c1d; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; vertical-align: middle; }
+        .tonal-shift-surface { background-color: rgba(255, 255, 255, 0.8); }
+        .glass-effect { backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); }
+        .signature-gradient { background: linear-gradient(135deg, #004E9F 0%, #0066CC 100%); }
+        .asymmetric-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; }
+        @media (max-width: 768px) { .asymmetric-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body class="selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 tonal-shift-surface glass-effect">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
+<div class="text-xl font-semibold tracking-tighter text-zinc-900 flex items-center gap-2">
+<span class="text-primary font-bold">中睿房贷</span>
+<span class="text-on-surface-variant font-light">| David Dai</span>
+</div>
+<div class="hidden md:flex items-center space-gap-8 gap-8">
+<a class="text-zinc-500 hover:text-zinc-900 transition-all duration-300 font-medium text-sm" href="#solutions">贷款方案</a>
+<a class="text-zinc-500 hover:text-zinc-900 transition-all duration-300 font-medium text-sm" href="#process">申请流程</a>
+<a class="text-zinc-500 hover:text-zinc-900 transition-all duration-300 font-medium text-sm" href="#about">关于我们</a>
+<span class="material-symbols-outlined text-zinc-400 cursor-pointer hover:text-primary transition-colors">language</span>
+<a class="signature-gradient text-white px-6 py-2.5 rounded-lg text-sm font-medium hover:opacity-90 active:scale-95 transition-all" href="#contact">立即咨询</a>
+</div>
+<button class="md:hidden p-2">
+<span class="material-symbols-outlined text-zinc-900">menu</span>
+</button>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center overflow-hidden bg-surface px-8">
+<div class="max-w-7xl mx-auto w-full asymmetric-grid gap-16 items-center">
+<div class="z-10 py-20">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 bg-primary-fixed text-on-primary-fixed-variant rounded-full text-xs font-semibold mb-8 tracking-wide">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+                        专业房贷 · 中英双语 · 全力以赴
+                    </div>
+<h1 class="text-6xl md:text-8xl font-headline font-bold text-on-surface leading-[1.1] tracking-tight mb-8">
+                        您的在美购房<br/>贷款专家
+                    </h1>
+<p class="text-xl text-on-surface-variant leading-relaxed max-w-xl mb-12">
+                        David Dai 深耕洛杉矶及南加州华人社区，深谙中美财务体系差异，为您量身打造最优贷款方案，让您的美国置业之路化繁为简。
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="signature-gradient text-white px-10 py-5 rounded-lg text-lg font-semibold shadow-xl shadow-primary/20 hover:translate-y-[-2px] transition-all text-center" href="#contact">
+                            开始预审批
+                        </a>
+<a class="bg-surface-container-highest text-on-surface px-10 py-5 rounded-lg text-lg font-semibold hover:bg-surface-variant transition-all text-center" href="#solutions">
+                            浏览方案
+                        </a>
+</div>
+</div>
+<div class="relative hidden md:block">
+<div class="aspect-[4/5] rounded-xl overflow-hidden shadow-2xl relative z-10">
+<img class="w-full h-full object-cover" data-alt="ultra-modern architectural house in Los Angeles at dusk with warm interior lighting and palm tree silhouettes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCj5dBczEY7bGYPqOjhOcZI94F3fXomGT5PurErc7YyTyKJW4k2i2Q6ln7PyFZrjQOUMsxsvKr2OYE9l-Bjj9xi3xfGWFlTorGRMOF-8NyaZmsFr0SxsIsik6Jpi_Mv8JhUtjbi5oZkrDZdCeIavU8ZODcoWM4WIdS80DyJnsie11WGdgpDTcRE212jQVq0TXjz2VepUpbIm0xS_uOV6JrrkOOU5vcZvinKdARa8ujmtxOtl2_2NYjfcTEPz2s0T3myxavLgmk07e4"/>
+</div>
+<div class="absolute -bottom-10 -left-10 bg-surface-container-lowest p-8 rounded-xl shadow-xl z-20 max-w-xs border border-outline-variant/10">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<div>
+<div class="text-2xl font-bold">24h</div>
+<div class="text-xs text-on-surface-variant uppercase tracking-widest font-semibold">快速预审批</div>
+</div>
+</div>
+<p class="text-sm text-on-surface-variant leading-snug italic">"效率与专业是我们对客户的最核心承诺。"</p>
+</div>
+<!-- Decorative element -->
+<div class="absolute top-20 -right-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+</div>
+</div>
+</section>
+<!-- Stats Section -->
+<section class="py-24 bg-surface-container-lowest border-y border-outline-variant/10">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+<div class="space-y-2">
+<div class="text-5xl font-bold text-primary tracking-tighter">500+</div>
+<div class="text-sm font-semibold text-on-secondary-container uppercase tracking-widest">成功案例</div>
+</div>
+<div class="space-y-2">
+<div class="text-5xl font-bold text-primary tracking-tighter">$200M+</div>
+<div class="text-sm font-semibold text-on-secondary-container uppercase tracking-widest">累计放贷金额</div>
+</div>
+<div class="space-y-2">
+<div class="text-5xl font-bold text-primary tracking-tighter">3语</div>
+<div class="text-sm font-semibold text-on-secondary-container uppercase tracking-widest">国粤英服务</div>
+</div>
+<div class="space-y-2">
+<div class="text-5xl font-bold text-primary tracking-tighter">24h</div>
+<div class="text-sm font-semibold text-on-secondary-container uppercase tracking-widest">响应承诺</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section (Bento Grid) -->
+<section class="py-32 px-8" id="solutions">
+<div class="max-w-7xl mx-auto">
+<div class="mb-20 max-w-2xl">
+<h2 class="text-4xl font-headline font-bold mb-6">全方位房贷解决方案</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed">
+                        无论您是首次购房、海外投资，还是自雇人士，我们都能为您从数百家银行中筛选最适合的贷款产品。
+                    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Home Purchase -->
+<div class="md:col-span-2 group bg-surface-container-low rounded-xl p-10 hover:bg-primary transition-all duration-500 overflow-hidden relative">
+<div class="relative z-10 transition-colors duration-500 group-hover:text-white">
+<span class="material-symbols-outlined text-4xl mb-6 text-primary group-hover:text-white transition-colors">home_work</span>
+<h3 class="text-2xl font-bold mb-4">购房贷款 (Purchase)</h3>
+<p class="text-on-surface-variant group-hover:text-white/80 max-w-sm mb-8">涵盖常规贷款 (Conventional) 与高额贷款 (Jumbo)，支持最低 3% 首付。</p>
+<a class="inline-flex items-center gap-2 font-semibold text-primary group-hover:text-white border-b border-primary/20 group-hover:border-white/20 pb-1" href="#contact">
+                                了解详情 <span class="material-symbols-outlined">trending_flat</span>
+</a>
+</div>
+<div class="absolute right-[-10%] bottom-[-10%] w-2/3 opacity-10 group-hover:opacity-20 transition-opacity">
+<img class="w-full h-full object-contain" data-alt="abstract architectural blueprint line art with clean geometric lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ1o8uaHcpKmicuUCHdcPRcGaCOnZlAGueiZ-dpStowZ6if8IPXa8p71OypnnJWCWz1T1UJb3Tx9AgzPeOyewcITdpm2e8u0F6Ec8ACD2rjzbUUBatTlCa8flBew7k1K5aB2HU9Y9u7j3N8omKSAPXBCFXKU7_hij_XB1lwJcTiRU6mn4vq6SoePzvQlv0rp1j_UMN9yzLz8Dcm_k6ru-WhDA7juZ9UX9HPCYwSnhsTFAFjMEgALBhj_hjF5yP8gZVEUPYhk8DoRA"/>
+</div>
+</div>
+<!-- Refinance -->
+<div class="group bg-surface-container-lowest border border-outline-variant/15 rounded-xl p-10 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500">
+<span class="material-symbols-outlined text-4xl mb-6 text-primary">payments</span>
+<h3 class="text-2xl font-bold mb-4">再融资 (Refinance)</h3>
+<p class="text-on-surface-variant mb-6">降低利率、缩短期限或套现 (Cash-out) 以获取流动资金，优化您的财务支出。</p>
+</div>
+<!-- Investment -->
+<div class="group bg-surface-container-lowest border border-outline-variant/15 rounded-xl p-10 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500">
+<span class="material-symbols-outlined text-4xl mb-6 text-primary">domain</span>
+<h3 class="text-2xl font-bold mb-4">投资房贷款</h3>
+<p class="text-on-surface-variant mb-6">支持 DSCR (不查收入) 方案，仅凭房租现金流即可审批，助力资产增值。</p>
+</div>
+<!-- Special Programs -->
+<div class="md:col-span-2 bg-surface-container-high rounded-xl p-10 grid grid-cols-1 sm:grid-cols-3 gap-8">
+<div>
+<h4 class="font-bold text-lg mb-2">工签买房 (H1B/OPT)</h4>
+<p class="text-sm text-on-surface-variant">针对在美工作的华人青年，无需绿卡即可实现安家梦想。</p>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-2">自雇人士 (Bank Statement)</h4>
+<p class="text-sm text-on-surface-variant">无需税表，仅凭银行流水即可获批，适合生意人与自由职业者。</p>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-2">首次购房 (First-Time Buyer)</h4>
+<p class="text-sm text-on-surface-variant">匹配政府补贴及各类低首付优惠政策，降低入场门槛。</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Us Section (Asymmetric Editorial Style) -->
+<section class="py-32 bg-surface px-8" id="about">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-20">
+<div class="md:w-1/2 sticky top-32 h-fit">
+<h2 class="text-5xl font-headline font-bold leading-tight mb-10">
+                        为什么选择 David Dai<br/>
+<span class="text-primary">深耕华人社区的专家</span>
+</h2>
+<div class="space-y-12">
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 signature-gradient rounded-lg flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-white">translate</span>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-2">无障碍的中英双语沟通</h4>
+<p class="text-on-surface-variant">消除金融术语带来的理解障碍，确保每一个环节您都清清楚楚、明明白白。</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 signature-gradient rounded-lg flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-white">psychology</span>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-2">深谙华人收入结构</h4>
+<p class="text-on-surface-variant">熟悉海外汇款、现金收入及国内资产证明，能最大限度挖掘您的贷款能力。</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 signature-gradient rounded-lg flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-white">real_estate_agent</span>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-2">独立 Broker 优势</h4>
+<p class="text-on-surface-variant">与传统银行不同，我们可以对接全美超过 100 家贷款机构，为您争取更低利率。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="md:w-1/2">
+<div class="space-y-6">
+<div class="rounded-xl overflow-hidden shadow-xl aspect-video">
+<img class="w-full h-full object-cover" data-alt="dreamy evening view of the Los Angeles skyline with soft pastel sunset colors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWAhznKoRU-eQDrlmsQK_XGgcBfY0ObcQPdZ3LopdRYcmAq7S4efATTEXyrUaPDeJkg74M7-JUXGyNnXkcUs7QtaBccvjfhej5jc2mfCl9ALaX8NDe4dXVfqlYrmkfE7lw2lIaNtF4W4gQXQdb6ujuUi6zfOopHbJ0OjXtQZ18LCX7n66vzRxCcuDsWoI5TWevdyYdgt4S2jdywRLuntu2tnRGzkcEVSig3NgaM991qMboYAWkP2hvNBJt35T9hYO9qcvEBjF-JS0"/>
+</div>
+<div class="bg-surface-container-lowest p-10 rounded-xl shadow-sm border border-outline-variant/10">
+<h3 class="text-2xl font-bold mb-6">我们的专业资质</h3>
+<ul class="space-y-4">
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                    NMLS #123456 加州持牌房贷经纪人
+                                </li>
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                    南加州华人地产协会资深会员
+                                </li>
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                    连续三年获得最佳服务经纪人奖项
+                                </li>
+</ul>
+<div class="mt-8 pt-8 border-t border-outline-variant/10 flex items-center gap-4">
+<div class="w-16 h-16 bg-surface-container-high rounded-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="professional portrait of an Asian male in a business suit, smiling confidently, studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCHWi0apZ3JBcell8tojVSBDNjIWdQ8swqYiboOvJH-KVtmAwZdHZZfn6S5XZJdNcV2OTuIAq-szYwhMIgyqIp9SzO-J6AwMnqwvGwdfE82CEJn867ye-NRsSX3IgW9Fb2LK6BtCF2f52wYEHP1ak2VNO00ppw2pNabzRJ0na_3nHQRavLwPKb5sZwFAs1SB7rw9bCBmxJCk1GqGsH_LP5C_5dmtcRK2L49ZkWGL1WTCNAzmO1GPiC6zapOswH2sH7XIv27WIHbWA"/>
+</div>
+<div>
+<div class="font-bold">David Dai</div>
+<div class="text-sm text-on-surface-variant">您的房贷规划师</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-32 bg-surface-container-low px-8 overflow-hidden">
+<div class="max-w-7xl mx-auto">
+<div class="flex justify-between items-end mb-16">
+<div>
+<h2 class="text-4xl font-headline font-bold mb-4">客户声音</h2>
+<p class="text-on-surface-variant">每一个成功安家的背后，都是我们对专业的坚持。</p>
+</div>
+<div class="hidden md:flex gap-4">
+<button class="w-12 h-12 rounded-full border border-outline flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-all">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<button class="w-12 h-12 rounded-full border border-outline flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-all">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:translate-y-[-8px] transition-transform duration-300">
+<div class="flex text-yellow-400 mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface-variant mb-8 italic">"作为自雇人士，在主流银行申请贷款非常困难。David 帮我通过流水贷款 (Bank Statement) 顺利拿到了 30 年固定利率，首付比例也非常理想。"</p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-primary-fixed rounded-full flex items-center justify-center font-bold text-primary">L</div>
+<span class="font-semibold">李先生 (洛杉矶尔湾)</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:translate-y-[-8px] transition-transform duration-300">
+<div class="flex text-yellow-400 mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface-variant mb-8 italic">"我是 H1B 身份买房，David 非常懂签证政策。24小时就拿到了预审批信，在激烈的抢房竞争中占据了优势，最终成交非常丝滑。"</p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-primary-fixed rounded-full flex items-center justify-center font-bold text-primary">Z</div>
+<span class="font-semibold">张女士 (帕萨迪纳)</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:translate-y-[-8px] transition-transform duration-300">
+<div class="flex text-yellow-400 mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface-variant mb-8 italic">"David 的服务非常细致，他会为我们对比不同银行的 Closing Cost。不只是帮我办成了贷款，更帮我省了一大笔钱。"</p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-primary-fixed rounded-full flex items-center justify-center font-bold text-primary">W</div>
+<span class="font-semibold">王先生 (库卡蒙格牧场)</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-32 px-8" id="contact">
+<div class="max-w-7xl mx-auto flex flex-col lg:flex-row bg-surface-container-lowest rounded-3xl overflow-hidden shadow-2xl border border-outline-variant/10">
+<div class="lg:w-1/3 signature-gradient p-12 text-white relative">
+<div class="relative z-10">
+<h2 class="text-4xl font-bold mb-8">开启您的<br/>申贷之旅</h2>
+<p class="text-white/80 text-lg mb-12">
+                            填写右侧表格，David 将在 2 小时内亲自与您联系，为您提供免费的方案分析与信用预估。
+                        </p>
+<div class="space-y-8">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined opacity-70">phone_iphone</span>
+<div>
+<p class="text-xs uppercase tracking-widest text-white/60 mb-1">联系电话</p>
+<p class="font-bold text-xl">(626) 555-0188</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined opacity-70">chat</span>
+<div>
+<p class="text-xs uppercase tracking-widest text-white/60 mb-1">WeChat 微信</p>
+<p class="font-bold text-xl">DavidLoanUSA</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined opacity-70">mail</span>
+<div>
+<p class="text-xs uppercase tracking-widest text-white/60 mb-1">电子邮件</p>
+<p class="font-bold text-lg">david@zrmortgage.com</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Decorative patterns -->
+<div class="absolute bottom-0 left-0 w-full opacity-10 pointer-events-none">
+<svg fill="none" viewbox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+<circle cx="200" cy="400" r="200" stroke="white" stroke-width="2"></circle>
+<circle cx="200" cy="400" r="160" stroke="white" stroke-width="2"></circle>
+<circle cx="200" cy="400" r="120" stroke="white" stroke-width="2"></circle>
+</svg>
+</div>
+</div>
+<div class="lg:w-2/3 p-12 md:p-16">
+<form action="https://api.supabase.co/v1/functions/mortgage-lead" class="space-y-6" method="POST">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-2">姓名 *</label>
+<input class="w-full bg-surface-container-low border-0 rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" name="name" placeholder="请输入您的姓名" required="" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-2">电话号码 *</label>
+<input class="w-full bg-surface-container-low border-0 rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" name="phone" placeholder="(626) 000-0000" required="" type="tel"/>
+</div>
+</div>
+<div>
+<label class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-2">电子邮箱</label>
+<input class="w-full bg-surface-container-low border-0 rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" name="email" placeholder="example@gmail.com" type="email"/>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-2">贷款类型</label>
+<select class="w-full bg-surface-container-low border-0 rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" name="loan_type">
+<option>购房贷款</option>
+<option>再融资 (Refinance)</option>
+<option>投资房不查收入</option>
+<option>工签贷款 (H1B/OPT)</option>
+</select>
+</div>
+<div>
+<label class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-2">贷款估额 ($)</label>
+<input class="w-full bg-surface-container-low border-0 rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" name="amount" placeholder="例如: 800,000" type="text"/>
+</div>
+</div>
+<div>
+<label class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-2">备注信息</label>
+<textarea class="w-full bg-surface-container-low border-0 rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all" name="message" placeholder="请简要说明您的财务状况或购房计划" rows="4"></textarea>
+</div>
+<button class="w-full signature-gradient text-white py-5 rounded-lg text-lg font-bold shadow-xl shadow-primary/20 hover:translate-y-[-2px] active:scale-[0.98] transition-all" type="submit">
+                            提交咨询 · 获取免费评估
+                        </button>
+<p class="text-center text-xs text-on-surface-variant/60">
+                            提交信息即表示您同意我们的隐私政策。我们绝不会将您的信息分享给任何第三方。
+                        </p>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-16 px-8 mt-24 bg-zinc-50 border-t border-zinc-200">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
+<div class="space-y-6">
+<div class="text-lg font-bold text-zinc-800">中睿房贷 (Zhongrui Mortgage)</div>
+<p class="text-xs leading-relaxed text-zinc-500 max-w-sm">
+                    专业的贷款方案规划，助您在美顺利安家。我们提供定制化的金融产品，涵盖主流银行及私人借贷，确保您的财务目标得以实现。
+                </p>
+<div class="flex gap-4">
+<a class="text-zinc-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">social_leaderboard</span></a>
+<a class="text-zinc-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">groups</span></a>
+<a class="text-zinc-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div>
+<h5 class="font-semibold text-zinc-900 mb-4">快速链接</h5>
+<ul class="space-y-2 text-xs text-zinc-500">
+<li><a class="hover:text-blue-600 transition-colors" href="#">隐私政策</a></li>
+<li><a class="hover:text-blue-600 transition-colors" href="#">使用条款</a></li>
+<li><a class="hover:text-blue-600 transition-colors" href="#">牌照信息</a></li>
+<li><a class="hover:text-blue-600 transition-colors" href="#">联系我们</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<div class="p-4 bg-white rounded-lg inline-block shadow-sm">
+<img class="w-24 h-24 object-cover" data-alt="professional qr code for business account with clean minimalist border" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGAf9mymeQhPiYdjhN2HFYVRMW0KkjjLUNyNSM3c2BYTKhz8VXTuSHc0jW6lA47U5hnwGc-aLE2KvxYGcAAvHzXlwAI8NfeDJZvfMtKdqRghtsgoXu5SjUM4gZUXVf1ZUHgLmIOMiwIPFipAxKnfuCluR1BXYXI30gxpQ5xkTkNjAYEMN7udggGZuFrtZY_X1sotRNnFQKhAy-DkMcbFgc92jTy3XmTWPIWsehYed9rOVp4OBuibARgcxKmYHCJ8oU_8cup7vfao4"/>
+<p class="text-[10px] text-center mt-2 font-bold text-zinc-800">微信扫码咨询</p>
+</div>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-zinc-200 text-center">
+<p class="text-[10px] uppercase tracking-widest text-zinc-400">
+                © 2024 中睿房贷 (Zhongrui Mortgage). All Rights Reserved. NMLS #123456. Equal Housing Lender.
+            </p>
+</div>
+</footer>
+</body></html>
