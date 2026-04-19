@@ -4,10 +4,6 @@ compatibility_date = "2024-01-01"
 [site]
 bucket = "."
 
-[vars]
-TELEGRAM_BOT_TOKEN = "8771374424:AAGF-972n34zRBST1px6zWJNH95HfBYXYAg"
-TELEGRAM_CHAT_ID = "7143992999"
-
 [[d1_databases]]
 binding = "DB"
 database_name = "ndf-lending-db"
