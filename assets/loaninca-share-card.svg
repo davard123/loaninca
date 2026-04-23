@@ -1,0 +1,36 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="80" y1="40" x2="1090" y2="590" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FDFBF7"/>
+      <stop offset="1" stop-color="#F3E6CC"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#785600"/>
+      <stop offset="1" stop-color="#D6A137"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="48" y="48" width="1104" height="534" rx="30" fill="#FFFDF9" stroke="#E6D7B8" stroke-width="2"/>
+
+  <circle cx="1012" cy="128" r="96" fill="#F7E6C1" opacity="0.9"/>
+  <circle cx="1090" cy="84" r="36" fill="#EED29A" opacity="0.9"/>
+  <circle cx="154" cy="548" r="88" fill="#F7E6C1" opacity="0.65"/>
+
+  <rect x="96" y="96" width="120" height="10" rx="5" fill="#D6A137"/>
+  <text x="96" y="168" fill="#785600" font-family="Georgia, 'Times New Roman', serif" font-size="64" font-weight="700">LoanInCA</text>
+  <text x="96" y="214" fill="#8A8477" font-family="Arial, sans-serif" font-size="22" letter-spacing="6">DAVID DAI  |  NMLS# 2454756</text>
+
+  <text x="96" y="320" fill="#1A1A1A" font-family="Arial, sans-serif" font-size="54" font-weight="700">California Mortgage Guidance</text>
+  <text x="96" y="380" fill="#4A4A4A" font-family="Arial, sans-serif" font-size="30">Purchase  •  Refinance  •  DSCR  •  Jumbo  •  Self-Employed</text>
+  <text x="96" y="440" fill="#4A4A4A" font-family="Arial, sans-serif" font-size="28">Bilingual Chinese-English mortgage support across California</text>
+
+  <rect x="96" y="490" width="390" height="58" rx="29" fill="url(#gold)"/>
+  <text x="129" y="527" fill="#FFFDF9" font-family="Arial, sans-serif" font-size="26" font-weight="700">loaninca.com</text>
+
+  <rect x="760" y="252" width="316" height="180" rx="24" fill="#F8F3EA" stroke="#E3D6BD" stroke-width="2"/>
+  <text x="804" y="308" fill="#785600" font-family="Arial, sans-serif" font-size="22" font-weight="700">What Borrowers Need Most</text>
+  <text x="804" y="352" fill="#4A4A4A" font-family="Arial, sans-serif" font-size="20">• Monthly payment clarity</text>
+  <text x="804" y="388" fill="#4A4A4A" font-family="Arial, sans-serif" font-size="20">• Down payment planning</text>
+  <text x="804" y="424" fill="#4A4A4A" font-family="Arial, sans-serif" font-size="20">• Smarter loan structure</text>
+</svg>

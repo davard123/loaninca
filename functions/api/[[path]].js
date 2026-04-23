@@ -1,5 +1,11 @@
-// Cloudflare Pages Functions API for NDF Lending Admin System
+// Cloudflare Pages Functions API for LoanInCA Admin System
 // Handles: leads, visits, news, knowledge, analytics, federal reserve rates
+
+import {
+  buildDailyMarketRates,
+  buildFederalReserveRates,
+  parseFredCsvSeries
+} from './rate-utils.mjs';
 
 export async function onRequestPost({ request, env, waitUntil }) {
   const url = new URL(request.url);
@@ -10,8 +16,8 @@ export async function onRequestPost({ request, env, waitUntil }) {
 
     // Fetch and update Federal Reserve rates
     if (path[1] === 'fed-rates' && path[2] === 'update') {
-      // Fetch latest rates from FRED API or source
-      const rates = await fetchFederalReserveRates();
+      const seriesById = await fetchFredMarketSeries();
+      const rates = buildFederalReserveRates(seriesById);
 
       for (const rate of rates) {
         // Check if rate already exists
@@ -31,6 +37,8 @@ export async function onRequestPost({ request, env, waitUntil }) {
           }
         }
       }
+
+      await syncDailyRates(env, seriesById);
 
       return Response.json({ success: true, updated: rates.length });
     }
@@ -172,8 +180,13 @@ export async function onRequestGet({ request, env }) {
     if (path[1] === 'daily-rates') {
       const { results } = await env.DB.prepare('SELECT * FROM daily_rates ORDER BY display_order').all();
 
-      // Get latest effective date
-      const latestDate = results.length > 0 ? results[0].effective_date : null;
+      const latestDate = results.reduce((maxDate, rate) => {
+        if (!rate.effective_date) {
+          return maxDate;
+        }
+
+        return !maxDate || rate.effective_date > maxDate ? rate.effective_date : maxDate;
+      }, null);
 
       return Response.json({
         success: true,
@@ -199,7 +212,7 @@ export async function onRequestGet({ request, env }) {
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({
                 chat_id: env.TELEGRAM_CHAT_ID,
-                text: '✅ NDF Lending Telegram 测试消息 - ' + new Date().toLocaleString('zh-CN')
+                text: '✅ LoanInCA Telegram 测试消息 - ' + new Date().toLocaleString('zh-CN')
               })
             }
           );
@@ -323,68 +336,43 @@ export async function onRequestDelete({ request, env }) {
   }
 }
 
-// Helper function to fetch Federal Reserve rates
-async function fetchFederalReserveRates() {
-  // Using Freddie Mac Primary Mortgage Market Survey data
-  // In production, you would fetch from FRED API or other reliable source
-  const today = new Date();
-  const effectiveDate = today.toISOString().split('T')[0];
+async function fetchFredMarketSeries() {
+  const seriesIds = ['FEDFUNDS', 'MORTGAGE30US', 'MORTGAGE15US', 'DGS10'];
+  const entries = await Promise.all(seriesIds.map(async (seriesId) => {
+    const response = await fetch(`https://fred.stlouisfed.org/graph/fredgraph.csv?id=${seriesId}`);
 
-  // Simulated rates - in production, fetch from actual API
-  const rates = [
-    {
-      rate_type: 'fed_funds_rate',
-      rate_value: 4.33,
-      previous_value: 4.33,
-      change: 0,
-      change_percent: 0,
-      effective_date: effectiveDate,
-      source_url: 'https://www.federalreserve.gov',
-      notes: 'Federal Funds Target Rate Upper Bound'
-    },
-    {
-      rate_type: 'mortgage_30yr_fixed',
-      rate_value: 6.78,
-      previous_value: 6.82,
-      change: -0.04,
-      change_percent: -0.59,
-      effective_date: effectiveDate,
-      source_url: 'https://freddiemac.com/pmms',
-      notes: '30-Year Fixed Rate Mortgage Average'
-    },
-    {
-      rate_type: 'mortgage_15yr_fixed',
-      rate_value: 5.95,
-      previous_value: 6.01,
-      change: -0.06,
-      change_percent: -1.0,
-      effective_date: effectiveDate,
-      source_url: 'https://freddiemac.com/pmms',
-      notes: '15-Year Fixed Rate Mortgage Average'
-    },
-    {
-      rate_type: 'mortgage_5_1_arm',
-      rate_value: 6.12,
-      previous_value: 6.18,
-      change: -0.06,
-      change_percent: -0.97,
-      effective_date: effectiveDate,
-      source_url: 'https://freddiemac.com/pmms',
-      notes: '5/1 Adjustable Rate Mortgage Average'
-    },
-    {
-      rate_type: 'treasury_10yr',
-      rate_value: 4.25,
-      previous_value: 4.31,
-      change: -0.06,
-      change_percent: -1.39,
-      effective_date: effectiveDate,
-      source_url: 'https://treasury.gov',
-      notes: '10-Year Treasury Constant Maturity Rate'
+    if (!response.ok) {
+      throw new Error(`Failed to fetch ${seriesId} from FRED: ${response.status}`);
     }
-  ];
 
-  return rates;
+    const csvText = await response.text();
+    return [seriesId, parseFredCsvSeries(csvText)];
+  }));
+
+  return Object.fromEntries(entries);
+}
+
+async function syncDailyRates(env, seriesById) {
+  const dailyRates = buildDailyMarketRates(seriesById);
+
+  await env.DB.prepare('DELETE FROM daily_rates').run();
+
+  for (const rate of dailyRates) {
+    await env.DB.prepare(`
+      INSERT OR REPLACE INTO daily_rates (
+        id, rate_name, rate_name_cn, rate_value, apr, category, display_order, effective_date, created_at
+      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, datetime('now'))
+    `).bind(
+      rate.id,
+      rate.rate_name,
+      rate.rate_name_cn,
+      rate.rate_value,
+      rate.apr,
+      rate.category,
+      rate.display_order,
+      rate.effective_date
+    ).run();
+  }
 }
 
 // Helper function to create news article when rates change significantly
