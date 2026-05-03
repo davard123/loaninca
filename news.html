@@ -325,52 +325,69 @@ function renderArticleDetail(item) {
 
 async function loadNews() {
   try {
-    const res = await fetch('/api/news');
-    const news = await res.json();
+    const [localRes, aiRes] = await Promise.allSettled([
+      fetch('/api/news'),
+      fetch('https://ai-content-pipeline.wuxishanecnc.workers.dev/api/articles?limit=20')
+    ]);
+    let localNews = [];
+    let aiNews = [];
+    if (localRes.status === 'fulfilled' && localRes.value.ok) {
+      const data = await localRes.value.json();
+      if (Array.isArray(data)) localNews = data;
+    }
+    if (aiRes.status === 'fulfilled' && aiRes.value.ok) {
+      const data = await aiRes.value.json();
+      if (Array.isArray(data)) {
+        aiNews = data.map(a => ({
+          id: 'ai-' + a.id,
+          title: a.title_zh || a.title,
+          title_en: a.title,
+          content: [a.summary_zh, a.why_it_matters ? '
+
+' + a.why_it_matters : ''].join('').trim(),
+          published_at: a.created_at,
+          created_at: a.created_at,
+          source: a.source,
+          url: a.url,
+          _isAI: true
+        }));
+      }
+    }
+    const seenTitles = new Set(localNews.map(n => n.title));
+    const allNews = [...localNews, ...aiNews.filter(a => !seenTitles.has(a.title))]
+      .sort((a, b) => new Date(b.published_at || b.created_at) - new Date(a.published_at || a.created_at));
     const articleId = new URLSearchParams(window.location.search).get('id');
     const grid = document.getElementById('news-grid');
-
-    if (!Array.isArray(news) || news.length === 0) {
+    if (!allNews.length) {
       grid.innerHTML = '<div class="text-center text-secondary py-12 col-span-full">暂无新闻资讯</div>';
       return;
     }
-
     if (articleId) {
-      const article = news.find((item) => item.id === articleId);
-      if (article) {
-        renderArticleDetail(article);
-        return;
-      }
+      const article = allNews.find(item => item.id === articleId);
+      if (article && !article._isAI) { renderArticleDetail(article); return; }
     }
-
-    grid.innerHTML = news.map(item => {
-      const contentPreview = item.content.substring(0, 200) + (item.content.length > 200 ? '...' : '');
-      const date = new Date(item.published_at || item.created_at).toLocaleDateString('zh-CN', {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
-      });
-      const detailHref = `/news?id=${encodeURIComponent(item.id)}`;
-
-      return `
-      <article class="bg-white p-8 border border-stone-200 editorial-shadow hover:shadow-lg transition-shadow">
-        <div class="flex items-center gap-2 mb-4">
-          <span class="material-symbols-outlined text-lg text-primary">newspaper</span>
-          <span class="text-xs text-stone-400">${date}</span>
-        </div>
-        <h2 class="serif-title text-2xl font-semibold mb-4 line-clamp-2">
-          <a href="${detailHref}" class="hover:text-primary transition-colors">${escapeHtml(item.title)}</a>
-        </h2>
-        ${item.title_en ? `<p class="text-xs text-stone-500 italic mb-4">${escapeHtml(item.title_en)}</p>` : ''}
-        <p class="text-secondary font-light text-sm leading-relaxed mb-6 line-clamp-4">${escapeHtml(contentPreview)}</p>
-        <div class="flex items-center justify-between">
-          <a href="${detailHref}" class="text-xs text-primary font-bold uppercase tracking-widest hover:underline">阅读全文 →</a>
-        </div>
-      </article>
-      `;
+    grid.innerHTML = allNews.map(item => {
+      const c = item.content || '';
+      const preview = c.substring(0, 200) + (c.length > 200 ? '...' : '');
+      const date = new Date(item.published_at || item.created_at).toLocaleDateString('zh-CN', {year:'numeric',month:'long',day:'numeric'});
+      const href = item._isAI ? item.url : '/news?id=' + encodeURIComponent(item.id);
+      const target = item._isAI ? ' target="_blank" rel="noopener"' : '';
+      return '<article class="bg-white p-8 border border-stone-200 editorial-shadow hover:shadow-lg transition-shadow">' +
+        '<div class="flex items-center gap-2 mb-4">' +
+        '<span class="material-symbols-outlined text-lg text-primary">newspaper</span>' +
+        '<span class="text-xs text-stone-400">' + date + '</span>' +
+        (item.source ? '<span class="text-xs text-stone-400">· ' + escapeHtml(item.source) + '</span>' : '') +
+        '</div>' +
+        '<h2 class="serif-title text-2xl font-semibold mb-4 line-clamp-2">' +
+        '<a href="' + href + '"' + target + ' class="hover:text-primary transition-colors">' + escapeHtml(item.title) + '</a>' +
+        '</h2>' +
+        (!item._isAI && item.title_en ? '<p class="text-xs text-stone-500 italic mb-4">' + escapeHtml(item.title_en) + '</p>' : '') +
+        '<p class="text-secondary font-light text-sm leading-relaxed mb-6 line-clamp-4">' + escapeHtml(preview) + '</p>' +
+        '<a href="' + href + '"' + target + ' class="text-xs text-primary font-bold uppercase tracking-widest hover:underline">阅读全文 →</a>' +
+        '</article>';
     }).join('');
   } catch(err) {
-    console.error('Error loading news:', err);
+    console.error('loadNews error:', err);
     document.getElementById('news-grid').innerHTML = '<div class="text-center text-secondary py-12 col-span-full">加载失败</div>';
   }
 }
