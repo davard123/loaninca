@@ -87,6 +87,7 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Figtree:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/shared.css"/>
 <style>
 body{margin:0;background:#FDFBF7;color:#1A1A1A;font-family:"Figtree",sans-serif}
 .serif{font-family:"Cormorant Garamond","Noto Serif SC",serif}
@@ -140,22 +141,26 @@ th,td{padding:10px 12px;font-size:14px}
 </style>
 </head>
 <body>
-<header class="nav">
-  <div class="container nav-inner">
-    <a class="brand serif" href="/">LoanInCA</a>
-    <nav class="nav-links">
-      <a href="/">首页</a>
+<header class="shared-nav">
+  <div class="nav-inner">
+    <div class="brand-block">
+      <a class="brand-name" href="/">LoanInCA</a>
+      <span class="brand-sub">David Dai | NMLS# 2454756</span>
+    </div>
+    <nav class="nav-links" aria-label="Main">
+      <a href="/">首页 Home</a>
       <a href="/news">新闻中心</a>
       <a href="/calculator">计算器</a>
       <a href="/about">关于</a>
+      <a class="nav-cta" href="/#contact">联系咨询</a>
     </nav>
   </div>
 </header>
-<main class="container">
+<main class="container has-shared-nav">
   <section class="hero">
     <div class="eyebrow">Jumbo Loan</div>
     <h1 class="serif">加州 Jumbo 贷款指南</h1>
-    <p class="lead">Jumbo 贷款（大额贷款）是指贷款金额超过联邦合规贷款上限（Conforming Loan Limit）的房屋贷款。2026 年加州大部分地区的合规上限为 $806,500，超过这个金额即为 Jumbo 贷款。在洛杉矶、尔湾、南湾等高房价区域，许多房屋天然会进入 Jumbo 区间。本文将详细拆解 Jumbo 贷款的申请条件、利率对比、资产要求和适用场景。</p>
+    <p class="lead">Jumbo 贷款不是神秘产品，它只是贷款金额超过合规上限以后的一套审核规则。对多数买家来说，关键在首付、储备金、收入结构和资产解释，而不是单看一个利率。</p>
   </section>
 
   <section class="section">
@@ -243,7 +248,7 @@ th,td{padding:10px 12px;font-size:14px}
 
   <section class="cta">
     <h2 class="serif" style="color:white;">想先判断自己是否适合走 Jumbo</h2>
-    <p>可以先用计算器估算月供和现金需求，再联系 David Dai 结合收入、资产和目标房价一起看。</p>
+    <p>如果你已经有目标房价、首付和收入结构，可以先算月供和现金需求，再联系 David Dai 一起判断是否适合走 Jumbo。</p>
     <a href="/#contact">立即咨询</a>
   </section>
 </main>

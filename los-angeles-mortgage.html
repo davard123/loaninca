@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Los Angeles 房贷服务 | 购房、重贷、投资房贷款 | LoanInCA</title>
-<meta name="description" content="LoanInCA 提供 Los Angeles 房贷咨询，由 David Dai (NMLS# 2454756) 提供中英双语支持。适合首次购房、重贷、自雇、DSCR 投资房与 Jumbo 场景。"/>
+<title>Los Angeles 房贷 | 自住房、投资房、Jumbo 与自雇场景 | LoanInCA</title>
+<meta name="description" content="Los Angeles 房贷主干页。适合高房价自住房、投资房、Jumbo、自雇和重贷场景。David Dai，NMLS# 2454756，中英双语服务。"/>
 <meta name="author" content="LoanInCA - David Dai"/>
 <meta name="robots" content="index, follow"/>
 <meta name="theme-color" content="#785600"/>
@@ -12,33 +12,66 @@
 <meta property="og:type" content="website"/>
 <meta property="og:locale" content="zh_CN"/>
 <meta property="og:site_name" content="LoanInCA"/>
-<meta property="og:title" content="Los Angeles 房贷服务 | LoanInCA"/>
-<meta property="og:description" content="适合洛杉矶购房、重贷、投资房、自雇和 Jumbo 贷款场景的中英双语房贷咨询。"/>
+<meta property="og:title" content="Los Angeles 房贷 | LoanInCA"/>
+<meta property="og:description" content="把洛杉矶自住房、投资房、Jumbo、自雇和首付判断放在一页讲清楚。"/>
 <meta property="og:url" content="https://www.loaninca.com/los-angeles-mortgage"/>
 <meta property="og:image" content="https://www.loaninca.com/assets/loaninca-share-card.png"/>
 <meta property="twitter:card" content="summary_large_image"/>
-<meta property="twitter:title" content="Los Angeles 房贷服务 | LoanInCA"/>
-<meta property="twitter:description" content="适合洛杉矶购房、重贷、投资房、自雇和 Jumbo 贷款场景的中英双语房贷咨询。"/>
+<meta property="twitter:title" content="Los Angeles 房贷 | LoanInCA"/>
+<meta property="twitter:description" content="首付、预算、投资房、Jumbo、自雇和区域差异，一页看懂。"/>
 <meta property="twitter:image" content="https://www.loaninca.com/assets/loaninca-share-card.png"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "FinancialService",
+      "@id": "https://www.loaninca.com/#financialservice",
+      "name": "LoanInCA",
+      "url": "https://www.loaninca.com/",
+      "telephone": "+1-949-656-1278",
+      "areaServed": "California",
+      "founder": {
+        "@type": "Person",
+        "name": "David Dai",
+        "identifier": {
+          "@type": "PropertyValue",
+          "name": "NMLS",
+          "value": "2454756"
+        }
+      }
+    },
+    {
       "@type": "Service",
       "@id": "https://www.loaninca.com/los-angeles-mortgage#service",
       "name": "Los Angeles Mortgage Service",
       "serviceType": "Mortgage consultation",
       "provider": {
-        "@type": "FinancialService",
-        "name": "LoanInCA",
-        "url": "https://www.loaninca.com/"
+        "@id": "https://www.loaninca.com/#financialservice"
       },
       "areaServed": {
         "@type": "City",
         "name": "Los Angeles"
       },
-      "description": "面向洛杉矶购房者、换房家庭、投资客、自雇人士与高房价区域买家的房贷咨询服务。"
+      "description": "Mortgage guidance for Los Angeles homebuyers, move-up buyers, investors, self-employed borrowers and jumbo loan scenarios."
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.loaninca.com/los-angeles-mortgage#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.loaninca.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Los Angeles Mortgage",
+          "item": "https://www.loaninca.com/los-angeles-mortgage"
+        }
+      ]
     },
     {
       "@type": "FAQPage",
@@ -49,7 +82,7 @@
           "name": "Los Angeles 买房首付通常要准备多少？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "视贷款类型和房价而定。自住房常见会从 5% 到 20% 不等；高房价社区（如 Santa Monica、Beverly Hills）和 Jumbo 场景通常需要 20% 或更高。首次购房者还可以通过加州 HBAP 项目获得最高 $65,000 的补助贷款，有效降低首付压力。"
+            "text": "要看房价、贷款类型和收入结构。普通自住房和高房价社区的首付要求差异很大，进入 jumbo 以后通常也要准备更多现金和 reserve。"
           }
         },
         {
@@ -57,7 +90,7 @@
           "name": "洛杉矶自雇人士可以申请房贷吗？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "可以。除了传统报税收入路径，还可以根据银行流水（Bank Statement）、资产结构和业务稳定性评估合适的贷款方案。常见的自雇贷款产品包括 12 个月或 24 个月银行流水贷款、1-2 年 CPA 利润亏损表（Profit & Loss）贷款等。"
+            "text": "可以。除了传统报税收入路线，也可能考虑 bank statement、资产结构或投资房的 DSCR 路径，但 lender 对文件和收入解释要求会更细。"
           }
         },
         {
@@ -65,16 +98,9 @@
           "name": "Los Angeles 投资房适合看 DSCR 吗？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "如果房屋是投资用途、租金现金流清晰，DSCR（债务偿付覆盖率比率）往往是值得比较的路径，但仍要结合利率、首付（通常 20% 起）和储备金要求一起判断。在 LA 这样的高租金市场，DSCR 可以为自雇投资者提供一条无需个人收入验证的贷款通道。"
+            "text": "如果房屋是投资用途、租金现金流清楚，DSCR 往往值得比较。但仍然要把利率、首付、储备金和持有计划一起看。"
           }
         }
-      ]
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {"@type": "ListItem","position": 1,"name": "首页","item": "https://www.loaninca.com/"},
-        {"@type": "ListItem","position": 2,"name": "Los Angeles 房贷服务","item": "https://www.loaninca.com/los-angeles-mortgage"}
       ]
     }
   ]
@@ -82,6 +108,7 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Figtree:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/shared.css"/>
 <style>
 body{margin:0;background:#FDFBF7;color:#1A1A1A;font-family:"Figtree",sans-serif}
 .serif{font-family:"Cormorant Garamond","Noto Serif SC",serif}
@@ -93,213 +120,141 @@ body{margin:0;background:#FDFBF7;color:#1A1A1A;font-family:"Figtree",sans-serif}
 .nav-links a,.footer-links a{color:#4A4A4A;text-decoration:none;margin-left:18px;font-size:14px}
 .hero{padding:80px 0 40px}
 .eyebrow{color:#785600;letter-spacing:.25em;text-transform:uppercase;font-size:12px;font-weight:700;margin-bottom:8px}
-h1{font-size:clamp(40px,7vw,60px);line-height:1.1;margin:12px 0 20px;color:#1A1A1A}
+h1{font-size:clamp(40px,7vw,60px);line-height:1.08;margin:12px 0 20px;color:#1A1A1A}
 h2{font-size:clamp(28px,4vw,34px);margin:0 0 16px;color:#785600;line-height:1.2}
 h3{font-size:clamp(20px,3vw,22px);margin:0 0 10px;color:#785600;line-height:1.3}
 p,li{color:#4A4A4A;line-height:1.9;margin:0 0 12px}
 .lead{font-size:clamp(17px,2.5vw,19px);line-height:1.8;max-width:860px;color:#4A4A4A}
+.section{padding:40px 0 48px}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin:28px 0 0}
 .card{background:#fff;border:1px solid rgba(120,86,0,.12);padding:28px;box-shadow:0 20px 50px -12px rgba(120,86,0,.08);border-radius:2px}
 .card p{margin-bottom:0}
-.section{padding:40px 0 48px}
-.section p{margin-bottom:16px}
-table{width:100%;border-collapse:collapse;margin:20px 0}
-th,td{padding:14px 18px;text-align:left;border-bottom:1px solid rgba(120,86,0,.12);color:#4A4A4A}
-th{background:rgba(120,86,0,.06);font-weight:600}
-tr:last-child td{border-bottom:none}
-tr:hover{background:rgba(120,86,0,.03)}
+.highlight-box{background:linear-gradient(135deg,rgba(120,86,0,.06),rgba(120,86,0,.02));border-left:4px solid #785600;padding:28px 32px;margin:28px 0;border-radius:0 8px 8px 0}
 .faq-item{border-bottom:1px solid rgba(120,86,0,.12);padding:24px 0}
-.faq-item h3{margin:0 0 12px;font-size:20px;color:#1A1A1A}
-.faq-item p{margin:0}
+.faq-item h3{margin:0 0 12px;color:#1A1A1A}
 .cta{background:#785600;color:#fff;padding:40px;margin:40px 0 60px;border-radius:2px}
 .cta h2{color:#fff}
 .cta p{color:rgba(255,255,255,.9)}
-.cta a{color:#785600;background:#fff;text-decoration:none;padding:14px 24px;display:inline-block;margin-top:16px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:12px;border-radius:2px}
-.cta a:hover{background:#FDFBF7}
-.data-table{width:100%;border-collapse:collapse;margin:20px 0;background:#fff}
-.data-table th{background:#785600;color:#fff;padding:14px 16px;text-align:left;font-weight:600;font-size:15px}
-.data-table td{padding:14px 16px;border-bottom:1px solid rgba(120,86,0,.1);font-size:15px}
-.data-table tr:last-child td{border-bottom:none}
-.data-table tr:hover{background:rgba(120,86,0,.03)}
-.data-table .badge{display:inline-block;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600}
-.badge-conforming{background:#e8f5e9;color:#2e7d32}
-.badge-jumbo{background:#fff3e0;color:#e65100}
-.badge-both{background:#e3f2fd;color:#1565c0}
-.steps-list{counter-reset:step;list-style:none;padding:0}
-.steps-list li{counter-increment:step;padding:16px 0 16px 60px;position:relative;border-bottom:1px solid rgba(120,86,0,.08)}
-.steps-list li::before{content:counter(step);position:absolute;left:0;top:16px;width:36px;height:36px;background:#785600;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700}
+.cta a{color:#785600;background:#fff;text-decoration:none;padding:14px 24px;display:inline-block;margin-top:16px;margin-right:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:12px;border-radius:2px}
+.cta-secondary{background:transparent !important;color:#fff !important;border:1px solid rgba(255,255,255,.4)}
+table{width:100%;border-collapse:collapse;margin:20px 0;background:#fff}
+th,td{padding:14px 18px;text-align:left;border-bottom:1px solid rgba(120,86,0,.12);color:#4A4A4A}
+th{background:rgba(120,86,0,.06);font-weight:600}
+tr:last-child td{border-bottom:none}
 @media (max-width:800px){
 .nav-inner,.footer-inner{flex-direction:column;align-items:flex-start}
 .nav-links a,.footer-links a{margin:0 14px 0 0}
-th,td{padding:10px 12px;font-size:14px}
-.data-table{font-size:13px}
-.data-table th,.data-table td{padding:8px 10px}
 .hero{padding:60px 0 32px}
 .section{padding:32px 0 40px}
 .card{padding:20px}
+.highlight-box{padding:20px}
 .cta{padding:28px}
+th,td{padding:10px 12px;font-size:14px}
 }
 </style>
 </head>
 <body>
-<header class="nav">
-  <div class="container nav-inner">
-    <a class="brand serif" href="/">LoanInCA</a>
-    <nav class="nav-links">
-      <a href="/">首页</a>
+<header class="shared-nav">
+  <div class="nav-inner">
+    <div class="brand-block">
+      <a class="brand-name" href="/">LoanInCA</a>
+      <span class="brand-sub">David Dai | NMLS# 2454756</span>
+    </div>
+    <nav class="nav-links" aria-label="Main">
+      <a href="/">首页 Home</a>
       <a href="/news">新闻中心</a>
       <a href="/calculator">计算器</a>
       <a href="/about">关于</a>
+      <a class="nav-cta" href="/#contact">联系咨询</a>
     </nav>
   </div>
 </header>
-<main class="container">
-
-  <!-- GEO优化内容 -->
-
+<main class="container has-shared-nav">
   <section class="hero">
     <div class="eyebrow">Los Angeles Mortgage</div>
-    <h1 class="serif">Los Angeles 房贷服务</h1>
-    <p class="lead">Los Angeles 是美国最大的 mortgage 市场之一。LA 县房屋中位价约 $700,000-$800,000，而 Santa Monica、Beverly Hills、Pasadena 等高房价社区可达 $150 万-$300 万+。如果你在 Los Angeles 看房、换房、做 refinance，或者正在评估投资房与 Jumbo 贷款，关键往往不只是"能不能批"，而是你的收入结构、首付来源、月供承受能力和时间线是否匹配。LoanInCA 由 David Dai 提供中英双语支持，帮助你把洛杉矶高房价市场下的贷款路径先看清楚。</p>
+    <h1 class="serif">洛杉矶买房，真正拉开差距的往往不是一句利率，而是预算、首付和区域差异。</h1>
+    <p class="lead">简短回答：Los Angeles 常见的是高房价自住房、投资房、Jumbo、自雇和重贷场景。真正决定路线的，通常是你看的是哪一类区域、房价落在哪个区间、首付和现金储备够不够，以及是不是已经进入 jumbo 或投资房结构。</p>
   </section>
 
   <section class="section">
-    <h2 class="serif">LA 房贷关键数据（2026 年）</h2>
+    <h2 class="serif">洛杉矶最常见的 4 类场景</h2>
     <div class="grid">
       <article class="card">
-        <h2 class="serif">房屋中位价</h2>
-        <p>LA 县整体房屋中位价约 <strong>$700,000-$800,000</strong>。不同社区差异巨大，从 East LA 的 $50 万级到 Venice 的 $300 万+不等。</p>
+        <h3 class="serif">高房价自住房</h3>
+        <p>很多买家最早就会碰到预算、首付和月供承受能力的平衡，而不是简单的“能不能批”。</p>
       </article>
       <article class="card">
-        <h2 class="serif">30 年固定利率</h2>
-        <p>2026 年 30 年固定利率约 <strong>6.5%-7.5%</strong>。利率随市场浮动，信用分、首付比例和贷款类型都会影响最终报价。</p>
+        <h3 class="serif">投资房</h3>
+        <p>如果是出租或长期持有，利率、首付、租金现金流和 DSCR 可行性都会一起影响判断。</p>
       </article>
       <article class="card">
-        <h2 class="serif">合规贷款上限</h2>
-        <p>2026 年合规（Conforming）贷款上限为 <strong>$806,500</strong>（LA 县单户住宅）。超过即为 Jumbo 贷款。</p>
+        <h3 class="serif">Jumbo 路线</h3>
+        <p>很多区域一进入较高预算，就自然会转到 jumbo，信用、reserve 和收入解释要求也会随之变严。</p>
       </article>
       <article class="card">
-        <h2 class="serif">房产税</h2>
-        <p>加州房产税约 <strong>1.25%/年</strong>，受 Prop 13 限制，评估价值年增长率不超过 2%。持有越久，税负优势越明显。</p>
-      </article>
-      <article class="card">
-        <h2 class="serif">首购补助</h2>
-        <p>加州 HBAP（Home Buyer Assistance Program）提供最高 <strong>$65,000</strong> 的补助贷款，帮助符合条件的首次购房者支付首付和 closing cost。</p>
-      </article>
-      <article class="card">
-        <h2 class="serif">Closing Cost</h2>
-        <p>LA 地区平均 closing cost 约 <strong>$15,000-$35,000</strong>，包括评估费、产权保险、 escrow 费、预提税等。</p>
+        <h3 class="serif">自雇 / 替代收入</h3>
+        <p>Los Angeles 有很多自雇和小生意主，传统报税收入不够时，就要更早判断 bank statement 或其他路径。</p>
       </article>
     </div>
   </section>
 
   <section class="section">
-    <h2 class="serif">LA 各社区房价对比</h2>
-    <p>Los Angeles 幅员辽阔，不同社区的房价跨度极大。下表列出了主要社区的典型房价范围和适合的贷款类型（2026 年数据）。</p>
-    <table class="data-table">
-      <thead>
-        <tr>
-          <th>社区</th>
-          <th>典型房价范围</th>
-          <th>贷款类型</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Hollywood / East LA</td>
-          <td>$500,000 - $800,000</td>
-          <td><span class="badge badge-conforming">合规贷款为主</span></td>
-        </tr>
-        <tr>
-          <td>San Fernando Valley</td>
-          <td>$500,000 - $900,000</td>
-          <td><span class="badge badge-both">合规 / Jumbo 均有</span></td>
-        </tr>
-        <tr>
-          <td>Pasadena / Glendale</td>
-          <td>$800,000 - $1,500,000</td>
-          <td><span class="badge badge-jumbo">Jumbo 为主</span></td>
-        </tr>
-        <tr>
-          <td>South Bay (Manhattan Beach 等)</td>
-          <td>$900,000 - $2,000,000</td>
-          <td><span class="badge badge-jumbo">Jumbo 为主</span></td>
-        </tr>
-        <tr>
-          <td>Santa Monica / Venice</td>
-          <td>$1,200,000 - $3,000,000+</td>
-          <td><span class="badge badge-jumbo">Jumbo 为主</span></td>
-        </tr>
-      </tbody>
+    <h2 class="serif">看 Los Angeles 房贷时最先该确认什么</h2>
+    <table>
+      <tr><th>判断点</th><th>为什么重要</th></tr>
+      <tr><td>目标区域</td><td>不同区域房价跨度很大，贷款结构、首付和是否进入 jumbo 都会跟着变。</td></tr>
+      <tr><td>首付和 reserve</td><td>高房价市场里，除了首付本身，预留现金也会直接影响 lender 选择。</td></tr>
+      <tr><td>房屋用途</td><td>自住房和投资房的定价、首付、利率和文件要求差别很大。</td></tr>
+      <tr><td>收入结构</td><td>W2、自雇、奖金、租金或海外资产，会直接影响路线选择。</td></tr>
+      <tr><td>持有计划</td><td>如果未来几年会卖房、重贷或改成投资房，现在的结构就要一起考虑进去。</td></tr>
     </table>
-    <p>合规贷款上限为 $806,500（2026 年 LA 县单户住宅）。超过此金额即需走 Jumbo 贷款通道，通常要求更高的信用分（700+）和更低 DTI。如果你的目标社区房价在 $100 万以上，建议尽早评估 Jumbo 贷款的可行性。</p>
+    <div class="highlight-box">
+      <p><strong>最常见误区：</strong></p>
+      <p>很多人觉得洛杉矶买房最难的是审批，但更早拉开差距的，往往是区域目标、首付结构和是不是提前判断到 jumbo 或投资房路线。</p>
+    </div>
   </section>
 
   <section class="section">
-    <h2 class="serif">LA 购房全流程</h2>
-    <p>在 Los Angeles 买房，从开始准备到 closing 通常需要 45-60 天。以下是标准流程：</p>
-    <ul class="steps-list">
-      <li><strong>财务准备</strong>：检查信用报告、清理债务、准备首付和 closing cost 资金。确认是否符合 HBAP 等首购项目条件。</li>
-      <li><strong>Pre-Approval</strong>：提交收入、资产和信用文件，获得贷款机构的预批准信。这在 LA 这样的高竞争市场是出 offer 的前提。</li>
-      <li><strong>找房/看房</strong>：确定目标社区和预算范围，实地看房，了解学区、社区安全和未来增值潜力。</li>
-      <li><strong>出 Offer</strong>：在竞争激烈的 LA 市场，offer 策略（价格、escrow 期限、contingency）直接影响成功率。</li>
-      <li><strong>Escrow 阶段</strong>：接受 offer 后进入 escrow，完成房屋检查、评估、贷款审批和产权调查。整个过程约 30-45 天。</li>
-      <li><strong>Closing</strong>：签署贷款文件、支付首付和 closing cost、完成过户。拿到钥匙后正式开始 LA  homeowner 生活。</li>
+    <h2 class="serif">哪些买家更适合提前做贷款规划</h2>
+    <ul>
+      <li>预算已经接近或超过 conforming loan limit</li>
+      <li>看的是投资房或准备未来出租</li>
+      <li>自雇人士、1099 或收入结构复杂</li>
+      <li>准备换房或未来可能做 cash-out / refinance</li>
+      <li>首付或资金来源里有家庭支持、海外转款或多账户结构</li>
     </ul>
   </section>
 
   <section class="section">
-    <h2 class="serif">常见贷款场景</h2>
-    <div class="grid">
-      <article class="card">
-        <h2 class="serif">首次购房</h2>
-        <p>LA 首次购房者可以利用 FHA（最低 3.5% 首付）、常规贷款（低至 3%）和加州 HBAP 项目（最高 $65,000 补助）。关键是要提前做好信用清理和资金储备。</p>
-      </article>
-      <article class="card">
-        <h2 class="serif">学区换房</h2>
-        <p>很多 LA 家庭在孩子入学前需要换到更好的学区。这种场景涉及旧房出售和新房购买的衔接，可能需要 bridge loan 或同时 escrow 的策略。</p>
-      </article>
-      <article class="card">
-        <h2 class="serif">自雇人士 / 银行流水贷款</h2>
-        <p>LA 有大量自雇人士和自由职业者。如果报税收入偏低，可以考虑银行流水贷款（12 或 24 个月）、资产贬值贷款（ABA）或 CPA 利润亏损表贷款。</p>
-      </article>
-      <article class="card">
-        <h2 class="serif">Jumbo 大额贷款</h2>
-        <p>房价超过 $806,500 合规上限即需 Jumbo 贷款。常见于 Pasadena、Santa Monica、Beverly Hills 等高端社区。要求通常包括 700+ 信用分、20%+ 首付和 6-12 个月储备金。</p>
-      </article>
-      <article class="card">
-        <h2 class="serif">DSCR 投资房贷款</h2>
-        <p>如果房屋是投资用途，DSCR 贷款以租金收入而非个人收入作为审批核心。在 LA 这样的高租金市场，这是自雇投资者常用的贷款路径。首付通常 20% 起。</p>
-      </article>
-      <article class="card">
-        <h2 class="serif">Refinance 重贷</h2>
-        <p>评估现有贷款的利率、剩余期限和 equity 状况。无论是降低月供（rate & term）、提取 equity（cash-out refi）还是从 FHA 转常规贷款，都需要计算 break-even point。</p>
-      </article>
+    <h2 class="serif">快速问答</h2>
+    <div class="faq-item">
+      <h3>Los Angeles 买房首付通常要准备多少？</h3>
+      <p>要看房价、贷款类型和收入结构。普通自住房和高房价社区的首付要求差异很大，进入 jumbo 以后通常也要准备更多现金和 reserve。</p>
+    </div>
+    <div class="faq-item">
+      <h3>洛杉矶自雇人士可以申请房贷吗？</h3>
+      <p>可以。除了传统报税收入路线，也可能考虑 bank statement、资产结构或投资房的 DSCR 路径，但 lender 对文件和收入解释要求会更细。</p>
+    </div>
+    <div class="faq-item">
+      <h3>Los Angeles 投资房适合看 DSCR 吗？</h3>
+      <p>如果房屋是投资用途、租金现金流清楚，DSCR 往往值得比较。但仍然要把利率、首付、储备金和持有计划一起看。</p>
     </div>
   </section>
 
-  <section class="section">
-    <h2 class="serif">关于 LA 房产税</h2>
-    <p>加州 Prop 13 是购房决策中常被忽视但影响深远的因素。1978 年通过的 Prop 13 将房产税税率限制在 1%，且评估价值年增长率不超过 2%。这意味着在 LA 持有一套房子 10 年或 20 年后，实际有效税率可能远低于当前市场价对应的税率。这对长期持有者和换房时机选择都有重要影响。</p>
-    <p>此外，洛杉矶还有一些 Mello-Roos 特殊评估区（常见于新建社区），购房时需要额外考虑这部分税负。David Dai 在评估月供时会把这些因素一并纳入计算，确保你对真实的持有成本有清晰认知。</p>
-  </section>
-
-  <section class="section">
-    <h2 class="serif">快速问答</h2>
-    <div class="faq-item"><h3>Los Angeles 买房首付通常要准备多少？</h3><p>视贷款类型和房价而定。自住房常见会从 5% 到 20% 不等，高房价社区（如 Santa Monica、Beverly Hills）和 Jumbo 场景通常需要 20% 或更高。首次购房者还可以通过加州 HBAP 项目获得最高 $65,000 的补助贷款，有效降低首付压力。无论如何，尽早评估自己的首付能力和月供承受度是第一步。</p></div>
-    <div class="faq-item"><h3>洛杉矶自雇人士可以申请房贷吗？</h3><p>可以，但需要更早判断报税、银行流水和业务稳定性。除了传统报税收入路径，还可以根据银行流水（Bank Statement）、资产结构（ABA）和业务稳定性评估合适的贷款方案。LA 有大量自雇人士和自由职业者，这类贷款产品已经比较成熟，但 underwriting 要求比 W-2 员工更复杂，建议提前 2-3 个月准备文件。</p></div>
-    <div class="faq-item"><h3>Los Angeles 投资房适合看 DSCR 吗？</h3><p>如果房屋是投资用途、租金现金流清晰，DSCR 往往是值得比较的路径，但仍要结合利率、首付和储备金要求一起判断。在 LA 这样的高租金市场，DSCR 可以为自雇投资者提供一条无需个人收入验证的贷款通道。但要注意 DSCR 贷款利率通常高于自住房贷款，且首付要求更高（通常 20% 起）。</p></div>
-  </section>
-
   <section class="cta">
-    <h2 class="serif" style="color:white;">想先判断 Los Angeles 的预算和贷款路径</h2>
-    <p>可以先使用房贷计算器，或直接联系 David Dai 结合你的收入、首付、目标区域做一次初步评估。</p>
-    <a href="/#contact">立即咨询</a>
+    <h2 class="serif">想先判断洛杉矶这套预算该走哪条贷款路线</h2>
+    <p>把目标区域、预算、预计首付、房屋用途和收入结构发过来，会比单问“我能贷多少”更快找到方向。</p>
+    <a href="/#contact">直接咨询</a>
+    <a class="cta-secondary" href="/blog/los-angeles-down-payment-guide">看首付专题</a>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <p class="secondary-block disclaimer"><strong>免责声明：</strong>LoanInCA 提供房贷信息与咨询服务，具体贷款资格、利率、费用、首付、审批结果和放款条件，以 lender 审核、市场利率、信用、收入、资产、房产类型及最终 Loan Estimate / Closing Disclosure 为准。本文不构成贷款批准或利率承诺。</p>
   </section>
 </main>
 <footer class="footer">
   <div class="container footer-inner">
-    <div><a class="brand serif" href="/">LoanInCA</a><br/><small>&copy; 2026 LoanInCA. All rights reserved.</small></div>
+    <div><a class="brand serif" href="/">LoanInCA</a><br/><small>© 2026 LoanInCA. All rights reserved.</small></div>
     <div class="footer-links"><a href="/privacy">隐私政策</a><a href="/terms">使用条款</a><a href="/disclosures">执照披露</a></div>
   </div>
 </footer>

@@ -1,461 +1,303 @@
 <!DOCTYPE html>
-<html lang="zh-CN" class="min-height-100vh">
+<html lang="zh-CN">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>什么是 DSCR 贷款？适合哪些人？| LoanInCA</title>
-<meta name="description" content="DSCR 贷款详解：什么是 Debt Service Coverage Ratio 贷款？适合投资房买家、自雇人士、外国买家。无需报税、无需收入证明，仅按租金收入审批。"/>
-<meta name="author" content="David Dai | LoanInCA"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>什么是 DSCR 贷款？公式、首付、利率和适用场景 | LoanInCA</title>
+<meta name="description" content="什么是 DSCR 贷款？这页直接讲清 DSCR 公式、首付比例、利率特点、适合谁，以及投资房申请时最容易卡住的几点。David Dai，NMLS# 2454756。"/>
+<meta name="author" content="LoanInCA - David Dai"/>
 <meta name="robots" content="index, follow,max-image-preview:large"/>
 <meta name="theme-color" content="#785600"/>
-<link rel="canonical" href="https://www.loaninca.com/blog/what-is-dscr-loan.html"/>
+<link rel="canonical" href="https://www.loaninca.com/blog/what-is-dscr-loan"/>
 <meta property="og:type" content="article"/>
 <meta property="og:locale" content="zh_CN"/>
 <meta property="og:site_name" content="LoanInCA"/>
-<meta property="og:title" content="什么是 DSCR 贷款？适合哪些人？| LoanInCA"/>
-<meta property="og:description" content="解释 DSCR 投资房贷款的定义、计算方式、首付要求、利率区间与适合人群。"/>
-<meta property="og:url" content="https://www.loaninca.com/blog/what-is-dscr-loan.html"/>
+<meta property="og:title" content="什么是 DSCR 贷款？公式、首付、利率和适用场景 | LoanInCA"/>
+<meta property="og:description" content="DSCR 贷款主要看投资房租金能不能覆盖月供。这里把 DSCR 公式、1.0 和 1.25 的差别、首付和利率结构讲清楚。"/>
+<meta property="og:url" content="https://www.loaninca.com/blog/what-is-dscr-loan"/>
 <meta property="og:image" content="https://www.loaninca.com/assets/loaninca-share-card.png"/>
-<meta property="og:image:alt" content="什么是 DSCR 贷款"/>
-<meta property="article:published_time" content="2026-04-14"/>
-<meta property="article:modified_time" content="2026-04-18"/>
-<meta property="article:author" content="David Dai"/>
 <meta property="twitter:card" content="summary_large_image"/>
-<meta property="twitter:title" content="什么是 DSCR 贷款？适合哪些人？| LoanInCA"/>
-<meta property="twitter:description" content="解释 DSCR 投资房贷款的定义、计算方式、首付要求、利率区间与适合人群。"/>
+<meta property="twitter:title" content="什么是 DSCR 贷款？公式、首付、利率和适用场景 | LoanInCA"/>
+<meta property="twitter:description" content="DSCR 贷款、DSCR 公式、投资房首付和利率结构，一页看懂。"/>
 <meta property="twitter:image" content="https://www.loaninca.com/assets/loaninca-share-card.png"/>
-
-<!-- Tailwind -->
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-  tailwind.config = {
-    darkMode: "class",
-    theme: {
-      extend: {
-        colors: {
-          primary: "#785600",
-          secondary: "rgba(26,26,26,0.7)",
-          background: "#FDFBF7",
-          surface: "#FDFBF7"
-        },
-        fontFamily: {
-          serif: ["Cormorant Garamond", "Noto Serif SC", "serif"],
-          sans: ["Figtree", "sans-serif"]
-        }
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "什么是 DSCR 贷款？公式、首付、利率和适用场景",
+      "description": "解释 DSCR 投资房贷款的基本定义、公式、首付、利率和常见适用场景。",
+      "url": "https://www.loaninca.com/blog/what-is-dscr-loan",
+      "mainEntityOfPage": "https://www.loaninca.com/blog/what-is-dscr-loan",
+      "datePublished": "2026-04-14",
+      "dateModified": "2026-05-05",
+      "inLanguage": "zh-CN",
+      "author": {
+        "@type": "Person",
+        "name": "David Dai"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "LoanInCA",
+        "url": "https://www.loaninca.com/"
       }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "什么是 DSCR 贷款？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "DSCR 贷款是主要用于投资房的一类贷款，重点看目标房产的租金是否能够覆盖月供，而不是传统 W-2 或报税收入。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "DSCR 公式怎么计算？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "最常见的计算方式是：月租金收入 ÷ 月还款额(PITI)。部分 lender 还会把 HOA 一起算进分母。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "DSCR 1.0 和 1.25 分别代表什么？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1.0 代表租金大致打平月供，1.25 代表租金大致比月供高出 25%，通常更容易拿到更稳的定价和通过率。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "DSCR 贷款一定不看个人收入吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "多数 DSCR 项目重点不看传统收入证明，但 lender 仍会看信用、首付、储备金、房产类型和资产来源。"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.loaninca.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "What Is DSCR Loan",
+          "item": "https://www.loaninca.com/blog/what-is-dscr-loan"
+        }
+      ]
     }
-  }
+  ]
+}
 </script>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Figtree:wght@300;400;500&display=swap" rel="stylesheet">
-
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Figtree:wght@300;400;500;600&family=Noto+Serif+SC:wght@400;500;600&display=swap" rel="stylesheet"/>
 <style>
-  html { scroll-behavior: smooth; }
-  body { background-color: #FDFBF7; font-family: "Figtree", sans-serif; color: #1A1A1A; }
-  .serif-title { font-family: "Cormorant Garamond", "Noto Serif SC", serif; color: #1A1A1A; }
-  .glass-nav { background-color: rgba(253, 251, 247, 0.95); backdrop-filter: blur(12px); }
-  .editorial-shadow { box-shadow: 0 20px 50px -12px rgba(120, 86, 0, 0.08); }
-  .faq-item { border-bottom: 1px solid #e5e0d8; }
-  .faq-question { cursor: pointer; transition: color 0.2s; }
-  .faq-question:hover { color: #785600; }
+body{margin:0;background:#FDFBF7;color:#1A1A1A;font-family:"Figtree",sans-serif}
+.serif{font-family:"Cormorant Garamond","Noto Serif SC",serif}
+.container{max-width:1080px;margin:0 auto;padding:0 24px}
+.nav,.footer{background:rgba(253,251,247,.94);backdrop-filter:blur(12px)}
+.nav{position:sticky;top:0;border-bottom:1px solid rgba(120,86,0,.1);z-index:50}
+.nav-inner,.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:20px 0}
+.brand{color:#785600;text-decoration:none;font-weight:700;font-size:30px}
+.nav-links a,.footer-links a{color:#4A4A4A;text-decoration:none;margin-left:18px;font-size:14px}
+.hero{padding:80px 0 40px}
+.eyebrow{color:#785600;letter-spacing:.25em;text-transform:uppercase;font-size:12px;font-weight:700;margin-bottom:8px}
+h1{font-size:clamp(40px,7vw,60px);line-height:1.08;margin:12px 0 20px;color:#1A1A1A}
+h2{font-size:clamp(28px,4vw,34px);margin:0 0 16px;color:#785600;line-height:1.2}
+h3{font-size:clamp(20px,3vw,22px);margin:0 0 10px;color:#785600;line-height:1.3}
+p,li{color:#4A4A4A;line-height:1.9;margin:0 0 12px}
+.lead{font-size:clamp(17px,2.5vw,19px);line-height:1.8;max-width:860px;color:#4A4A4A}
+.section{padding:40px 0 48px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin:28px 0 0}
+.card{background:#fff;border:1px solid rgba(120,86,0,.12);padding:28px;box-shadow:0 20px 50px -12px rgba(120,86,0,.08);border-radius:2px}
+.card p{margin-bottom:0}
+.highlight-box{background:linear-gradient(135deg,rgba(120,86,0,.06),rgba(120,86,0,.02));border-left:4px solid #785600;padding:28px 32px;margin:28px 0;border-radius:0 8px 8px 0}
+.faq-item{border-bottom:1px solid rgba(120,86,0,.12);padding:24px 0}
+.faq-item h3{margin:0 0 12px;color:#1A1A1A}
+.cta{background:#785600;color:#fff;padding:40px;margin:40px 0 60px;border-radius:2px}
+.cta h2{color:#fff}
+.cta p{color:rgba(255,255,255,.9)}
+.cta a{color:#785600;background:#fff;text-decoration:none;padding:14px 24px;display:inline-block;margin-top:16px;margin-right:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:12px;border-radius:2px}
+.cta-secondary{background:transparent !important;color:#fff !important;border:1px solid rgba(255,255,255,.4)}
+table{width:100%;border-collapse:collapse;margin:20px 0;background:#fff}
+th,td{padding:14px 18px;text-align:left;border-bottom:1px solid rgba(120,86,0,.12);color:#4A4A4A}
+th{background:rgba(120,86,0,.06);font-weight:600}
+tr:last-child td{border-bottom:none}
+@media (max-width:800px){
+.nav-inner,.footer-inner{flex-direction:column;align-items:flex-start}
+.nav-links a,.footer-links a{margin:0 14px 0 0}
+.hero{padding:60px 0 32px}
+.section{padding:32px 0 40px}
+.card{padding:20px}
+.highlight-box{padding:20px}
+.cta{padding:28px}
+th,td{padding:10px 12px;font-size:14px}
+}
 </style>
 
-<!-- FAQPage Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "什么是 DSCR 贷款？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "DSCR 贷款（Debt Service Coverage Ratio）是一种投资房贷款，仅根据房产的租金收入评估还款能力，无需借款人提供收入证明、W-2 或税表。适合投资客、自雇人士和外国买家。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "DSCR 贷款需要多少首付？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "通常需要 20%-25% 首付。DSCR>1.25 可获最佳利率，1.0-1.24 利率略高。首付 25%+ 可申请超过$500 万的贷款。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "DSCR 贷款利率比普通房贷高吗？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "是的，通常高 0.5%-1.25%。但无需报税的优势对于高收入自雇人士或外国买家来说可能超过利率成本。信用分数 740+ 可获得更优惠利率。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "DSCR 贷款适合哪些人？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "1) 投资房买家 2) 自雇人士/自由职业者 3) 外国买家 4) 有多处房产的投资者 5) 希望保护隐私的高净值人士 6) 退休人士有资产但无固定收入"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "DSCR 如何计算？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "DSCR = 月租金收入 ÷ 月还款额 (PITI)。例如：月租金$5,000 ÷ 月还款$3,500 = 1.43。DSCR>1.0 表示租金可覆盖还款，>1.25 为优质。"
-      }
-    }
-  ]
-}
-</script>
-
-<!-- Article Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "什么是 DSCR 贷款？适合哪些人？",
-  "description": "解释 DSCR 投资房贷款的定义、计算方式、首付要求、利率区间与适合人群。",
-  "url": "https://www.loaninca.com/blog/what-is-dscr-loan.html",
-  "mainEntityOfPage": "https://www.loaninca.com/blog/what-is-dscr-loan.html",
-  "image": "https://www.loaninca.com/assets/loaninca-share-card.png",
-  "author": {
-    "@type": "Person",
-    "name": "David Dai",
-    "jobTitle": "Loan Officer",
-    "sameAs": "https://www.loaninca.com"
-  },
-  "datePublished": "2026-04-14",
-  "dateModified": "2026-04-18",
-  "inLanguage": "zh-CN",
-  "publisher": {
-    "@type": "Organization",
-    "name": "LoanInCA",
-    "url": "https://www.loaninca.com",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://www.loaninca.com/assets/loaninca-share-card.png"
-    }
-  }
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "首页",
-      "item": "https://www.loaninca.com/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "新闻中心",
-      "item": "https://www.loaninca.com/news"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "什么是 DSCR 贷款？适合哪些人？",
-      "item": "https://www.loaninca.com/blog/what-is-dscr-loan.html"
-    }
-  ]
-}
-</script>
+<link rel="stylesheet" href="/assets/shared.css"/>
 </head>
-
-<body class="min-height-100vh flex flex-col">
-
-<!-- Navigation -->
-<nav class="fixed top-0 w-full z-50 glass-nav border-b border-stone-200/60">
-<div class="flex justify-between items-center px-8 py-5 max-w-7xl mx-auto">
-<div class="flex flex-col leading-tight">
-<span class="serif-title text-2xl font-bold text-primary tracking-tight">LoanInCA</span>
-<span class="text-[10px] font-label tracking-[0.2em] text-secondary uppercase font-semibold">David Dai | NMLS# 2454756</span>
-</div>
-<div class="hidden md:flex space-x-8 items-center">
-<a class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" href="/#home">首页 Home</a>
-<a class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" href="/#services">服务 Services</a>
-<a class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" href="/#loan-products">贷款产品 Products</a>
-<a class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" href="/#fed-rates-section">利率 Rates</a>
-<a class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" href="/#loan-knowledge">贷款知识 Education</a>
-<a class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" href="/news">新闻中心 News</a>
-<a class="gold-button text-white text-xs px-6 py-2.5 rounded-none uppercase tracking-widest font-bold hover:brightness-110 transition-all" style="background-color: #785600;" href="/#contact">联系 Contact</a>
-</div>
-</div>
-</nav>
-
-<!-- Main Content -->
-<main class="flex-1 pt-32 pb-24 px-8">
-<article class="max-w-4xl mx-auto">
-<!-- Header -->
-<header class="mb-12">
-<div class="flex items-center gap-3 mb-4">
-<span class="text-xs text-primary font-bold uppercase tracking-widest">GEO 优化内容</span>
-<span class="text-xs text-stone-400">|</span>
-<span class="text-xs text-stone-500">2026 年 4 月更新</span>
-</div>
-<h1 class="serif-title text-4xl md:text-5xl font-light mb-6">什么是 DSCR 贷款？适合哪些人？</h1>
-<p class="text-lg text-secondary leading-relaxed">
-<span class="font-semibold text-primary">简短回答：</span>DSCR 贷款是一种投资房贷款，仅根据房产的租金收入评估还款能力，<span class="font-semibold">无需提供收入证明、W-2 或税表</span>。适合投资客、自雇人士和外国买家。
-</p>
+<body>
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand serif" href="/">LoanInCA</a>
+    <nav class="nav-links">
+      <a href="/">首页</a>
+      <a href="/news">新闻中心</a>
+      <a href="/calculator">计算器</a>
+      <a href="/about">关于</a>
+    </nav>
+  </div>
 </header>
+<main class="container">
+  <section class="hero">
+    <div class="eyebrow">DSCR Loan Guide</div>
+    <h1 class="serif">什么是 DSCR 贷款，重点不是术语，而是这笔投资房贷款到底怎么批。</h1>
+    <p class="lead">简短回答：DSCR 贷款主要看目标房产的租金能不能覆盖月供。它最常被拿来处理投资房、报税收入不够、或者不想走传统收入审核的场景。你真正要先看的是 <strong>DSCR 公式、1.0 和 1.25 的差别、首付比例、储备金和房产类型</strong>，而不是只问一句“能不能做”。</p>
+  </section>
 
-<!-- Quick Answer Box -->
-<div class="bg-white border-l-4 border-primary p-6 mb-12 editorial-shadow">
-<h3 class="serif-title text-xl font-semibold mb-4">快速答案</h3>
-<ul class="space-y-3 text-secondary">
-<li><span class="text-primary font-bold">✓</span> 无需收入证明，仅按租金收入审批</li>
-<li><span class="text-primary font-bold">✓</span> 首付通常需 20%-25%</li>
-<li><span class="text-primary font-bold">✓</span> 利率比普通房贷高 0.5%-1.25%</li>
-<li><span class="text-primary font-bold">✓</span> DSCR>1.25 可获最佳利率</li>
-</ul>
-</div>
+  <section class="section">
+    <h2 class="serif">先看这 4 个判断点</h2>
+    <div class="grid">
+      <article class="card">
+        <h3 class="serif">先看租金，不先看工资</h3>
+        <p>多数 DSCR 项目重点看租金覆盖月供的能力，而不是 W-2、pay stub 或两年报税收入。</p>
+      </article>
+      <article class="card">
+        <h3 class="serif">更像投资房贷款</h3>
+        <p>这类贷款通常围绕 non-owner occupied 投资房设计，不是拿来做普通自住房主力方案。</p>
+      </article>
+      <article class="card">
+        <h3 class="serif">首付和储备金更关键</h3>
+        <p>很多时候卡点不在收入，而在首付比例、credit score、储备金和房产本身的租金表现。</p>
+      </article>
+      <article class="card">
+        <h3 class="serif">不同 lender 口径差很多</h3>
+        <p>有的 lender 用 market rent，有的看 lease；有的把 HOA 算进分母，有的没有，这会直接影响结果。</p>
+      </article>
+    </div>
+  </section>
 
-<!-- Main Content -->
-<div class="prose prose-lg max-w-none">
-<h2 class="serif-title text-3xl font-semibold mb-6">一、什么是 DSCR？</h2>
-<div class="text-secondary leading-relaxed mb-8">
-<p>DSCR（Debt Service Coverage Ratio，债务保障比率）是衡量投资房还款能力的关键指标：</p>
-<div class="bg-primary/5 p-6 my-6 border-l-4 border-primary">
-<p class="font-semibold text-lg mb-2">计算公式：</p>
-<p class="text-xl font-bold text-primary">DSCR = 月租金收入 ÷ 月还款额 (PITI)</p>
-<p class="text-sm text-stone-500 mt-4">PITI = Principal（本金）+ Interest（利息）+ Tax（房产税）+ Insurance（保险）</p>
-</div>
-<div class="bg-surface p-6 my-6 border border-stone-200">
-<table class="w-full text-sm">
-<thead>
-<tr class="border-b border-stone-300">
-<th class="text-left py-3 font-semibold">DSCR 范围</th>
-<th class="text-left py-3 font-semibold">含义</th>
-<th class="text-left py-3 font-semibold">利率影响</th>
-</tr>
-</thead>
-<tbody>
-<tr class="border-b border-stone-200">
-<td class="py-3">< 1.0</td>
-<td class="py-3">租金不足以覆盖还款</td>
-<td class="py-3">通常不批</td>
-</tr>
-<tr class="border-b border-stone-200">
-<td class="py-3">1.0 - 1.19</td>
-<td class="py-3">勉强覆盖，风险较高</td>
-<td class="py-3">利率 +0.75%-1.25%</td>
-</tr>
-<tr class="border-b border-stone-200">
-<td class="py-3">1.20 - 1.49</td>
-<td class="py-3">健康水平</td>
-<td class="py-3">标准利率</td>
-</tr>
-<tr>
-<td class="py-3">1.50+</td>
-<td class="py-3">非常健康</td>
-<td class="py-3">可能获优惠利率</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
+  <section class="section">
+    <h2 class="serif">DSCR 公式怎么理解</h2>
+    <div class="highlight-box">
+      <p><strong>最常见公式：</strong></p>
+      <p><strong>DSCR = 月租金收入 ÷ 月还款额 (PITI)</strong></p>
+      <p>PITI 一般包括本金、利息、房产税和房屋保险。部分项目还会把 HOA 一起算进去，所以正式审批前要先确认 lender 的口径。</p>
+    </div>
+    <table>
+      <tr><th>DSCR 数值</th><th>常见理解</th><th>实际影响</th></tr>
+      <tr><td>0.95 - 0.99</td><td>租金略低于月供</td><td>可做空间会明显变窄，通常要更高首付或更强资产条件</td></tr>
+      <tr><td>1.00</td><td>租金大致打平月供</td><td>是很多人最常问的门槛，但不代表一定最好做</td></tr>
+      <tr><td>1.20</td><td>租金高于月供约 20%</td><td>通常更从容，选择空间和定价会更稳</td></tr>
+      <tr><td>1.25+</td><td>现金流更健康</td><td>更容易谈到好一点的结构，也更适合长期持有</td></tr>
+    </table>
+    <p>如果你想直接算具体项目，可以接着看 <a href="/blog/dscr-formula-california">DSCR 公式页</a>，或者直接去 <a href="/calculator">计算器</a> 做初步判断。</p>
+  </section>
 
-<h2 class="serif-title text-3xl font-semibold mb-6">二、DSCR 贷款 vs 传统贷款</h2>
-<div class="text-secondary leading-relaxed mb-8">
-<div class="bg-surface p-6 my-6 border border-stone-200">
-<table class="w-full">
-<tbody>
-<tr class="border-b border-stone-300">
-<td class="py-3 font-semibold">收入证明</td>
-<td class="py-3">传统贷款：需要 W-2/税表</td>
-<td class="py-3">DSCR 贷款：不需要</td>
-</tr>
-<tr class="border-b border-stone-200">
-<td class="py-3 font-semibold">DTI 要求</td>
-<td class="py-3">传统贷款：DTI<43%</td>
-<td class="py-3">DSCR 贷款：不计算 DTI</td>
-</tr>
-<tr class="border-b border-stone-200">
-<td class="py-3 font-semibold">首付要求</td>
-<td class="py-3">传统贷款：10%-20%</td>
-<td class="py-3">DSCR 贷款：20%-25%</td>
-</tr>
-<tr class="border-b border-stone-200">
-<td class="py-3 font-semibold">利率</td>
-<td class="py-3">传统贷款：标准利率</td>
-<td class="py-3">DSCR 贷款：+0.5%-1.25%</td>
-</tr>
-<tr>
-<td class="py-3 font-semibold">适合人群</td>
-<td class="py-3">有稳定 W-2 收入者</td>
-<td class="py-3">投资者、自雇人士、外国买家</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
+  <section class="section">
+    <h2 class="serif">DSCR 贷款更适合哪些人</h2>
+    <div class="grid">
+      <article class="card">
+        <h3 class="serif">投资房买家</h3>
+        <p>最典型。重点不是个人工资，而是目标房产本身能不能撑住贷款结构。</p>
+      </article>
+      <article class="card">
+        <h3 class="serif">自雇人士</h3>
+        <p>如果报税收入压得比较低，但资产、首付和租金逻辑都不错，DSCR 往往比传统报税路径更顺。</p>
+      </article>
+      <article class="card">
+        <h3 class="serif">多套房持有者</h3>
+        <p>名下已经有房、再扩投资房时，DSCR 常常比把所有收入债务都压进传统 DTI 更灵活。</p>
+      </article>
+      <article class="card">
+        <h3 class="serif">更重视现金流的人</h3>
+        <p>如果你的判断核心是 monthly cash flow，而不是单纯追求最低利率，这类结构更值得先看。</p>
+      </article>
+    </div>
+  </section>
 
-<h2 class="serif-title text-3xl font-semibold mb-6">三、DSCR 贷款适合哪些人？</h2>
-<div class="bg-white p-6 editorial-shadow mb-8">
-<ul class="space-y-4 text-secondary">
-<li><span class="font-semibold text-primary">✓ 投资房买家：</span> 购买出租物业，用租金覆盖还款</li>
-<li><span class="font-semibold text-primary">✓ 自雇人士/自由职业者：</span> 税表收入较低但现金流充足</li>
-<li><span class="font-semibold text-primary">✓ 外国买家：</span> 无美国收入，但有资金购买投资房</li>
-<li><span class="font-semibold text-primary">✓ 多房产投资者：</span> 已有多个房产，传统贷款受限</li>
-<li><span class="font-semibold text-primary">✓ 高净值人士：</span> 希望保护财务隐私，不愿提供税表</li>
-<li><span class="font-semibold text-primary">✓ 退休人士：</span> 有资产但无固定退休收入</li>
-</ul>
-</div>
+  <section class="section">
+    <h2 class="serif">申请时最容易卡住的几点</h2>
+    <ul>
+      <li>把 market rent 和实际可接受租金想得太乐观。</li>
+      <li>没有把 HOA、税、保险一起算进月供。</li>
+      <li>首付够了，但储备金准备不够。</li>
+      <li>房产类型特殊，例如短租、condotel、混合用途物业。</li>
+      <li>信用分数和资产来源解释不完整。</li>
+    </ul>
+    <p>所以真正有用的做法不是先问“最低能做到多少”，而是把 <strong>租金、月供、首付、储备金、房产类型</strong> 一起摆出来看。</p>
+  </section>
 
-<h2 class="serif-title text-3xl font-semibold mb-6">四、DSCR 贷款基本要求</h2>
-<div class="text-secondary leading-relaxed mb-8">
-<ul class="list-disc pl-6 space-y-3">
-<li><span class="font-semibold">信用分数：</span> 最低 640，推荐 700+ 获最佳利率</li>
-<li><span class="font-semibold">首付：</span> 20%-25%，取决于 DSCR 和信用分数</li>
-<li><span class="font-semibold">DSCR 要求：</span> 最低 1.0，推荐 1.25+</li>
-<li><span class="font-semibold">现金储备：</span> 通常需 6 个月还款额</li>
-<li><span class="font-semibold">房产类型：</span> 独栋住宅、公寓、2-4 单元住宅</li>
-<li><span class="font-semibold">贷款额度：</span> 最高可达$500 万+</li>
-</ul>
-</div>
+  <section class="section">
+    <h2 class="serif">相关页面</h2>
+    <div class="grid">
+      <article class="card">
+        <h3 class="serif"><a href="/blog/dscr-formula-california">DSCR 公式怎么算？</a></h3>
+        <p>如果你现在搜的是 DSCR 公式、DSCR 计算方法，这页会更直接。</p>
+      </article>
+      <article class="card">
+        <h3 class="serif"><a href="/bank-statement-loan-california">Bank Statement Loan California</a></h3>
+        <p>如果你是自雇人士，也可以同时比较一下报税路径和流水路径的差别。</p>
+      </article>
+      <article class="card">
+        <h3 class="serif"><a href="/blog/mortgage-document-checklist-2026">2026 房贷材料清单</a></h3>
+        <p>准备做投资房贷款前，先把材料范围看清楚会快很多。</p>
+      </article>
+    </div>
+  </section>
 
-<h2 class="serif-title text-3xl font-semibold mb-6">五、常见问题解答 (FAQ)</h2>
-<div class="space-y-4 mb-8">
-<div class="faq-item bg-white p-6 editorial-shadow">
-<div class="faq-question flex justify-between items-center" onclick="toggleFaq(this)">
-<h4 class="font-semibold text-primary">Q1: DSCR 贷款的利率是多少？</h4>
-<span class="text-2xl text-primary">+</span>
-</div>
-<div class="faq-answer hidden mt-4 text-secondary">
-<p>2026 年 DSCR 贷款利率约为基准利率 +0.5%-1.25%。例如，若传统贷款利率为 6.5%，DSCR 贷款约为 7.0%-7.75%。具体取决于：</p>
-<ul class="list-disc pl-6 mt-2 space-y-1">
-<li>DSCR 比率（越高利率越低）</li>
-<li>信用分数（740+ 获最佳利率）</li>
-<li>首付比例（25%+ 可获优惠）</li>
-<li>贷款额度</li>
-</ul>
-</div>
-</div>
+  <section class="section">
+    <h2 class="serif">常见问题</h2>
+    <div class="faq-item">
+      <h3>DSCR 贷款一定不看个人收入吗？</h3>
+      <p>多数项目重点不看传统收入文件，但 lender 还是会看信用、资产、首付、储备金和房产条件。不是“完全不审核”，而是审核重点不同。</p>
+    </div>
+    <div class="faq-item">
+      <h3>DSCR 低于 1 还能做吗？</h3>
+      <p>有可能，但空间通常会明显缩小。你可能需要更高首付、更强信用，或者接受更保守的定价。</p>
+    </div>
+    <div class="faq-item">
+      <h3>DSCR 贷款利率会比普通自住房高吗？</h3>
+      <p>通常会高一些，因为它更接近投资房和非传统收入结构。真正该比较的是总成本、现金流和持有计划，而不是只看一个数字。</p>
+    </div>
+  </section>
 
-<div class="faq-item bg-white p-6 editorial-shadow">
-<div class="faq-question flex justify-between items-center" onclick="toggleFaq(this)">
-<h4 class="font-semibold text-primary">Q2: 可以申请 DSCR 贷款买自住房吗？</h4>
-<span class="text-2xl text-primary">+</span>
-</div>
-<div class="faq-answer hidden mt-4 text-secondary">
-<p>不能。DSCR 贷款仅适用于投资房（非自住房）。贷款机构需要评估租金收入，因此房产必须是出租性质。如果您计划自住，需要申请传统贷款或 FHA 贷款。</p>
-</div>
-</div>
+  <section class="cta">
+    <h2 class="serif">先把租金、月供和首付摆在一起看，判断会快很多。</h2>
+    <p>如果你手上已经有目标房产、预估租金或贷款额度，我们可以先把 DSCR 结构算清楚，再决定走哪条路更合适。</p>
+    <a href="/#contact">直接咨询</a>
+    <a class="cta-secondary" href="/calculator">先算月供</a>
+  </section>
 
-<div class="faq-item bg-white p-6 editorial-shadow">
-<div class="faq-question flex justify-between items-center" onclick="toggleFaq(this)">
-<h4 class="font-semibold text-primary">Q3: 如何证明租金收入？</h4>
-<span class="text-2xl text-primary">+</span>
-</div>
-<div class="faq-answer hidden mt-4 text-secondary">
-<p>贷款机构会要求：</p>
-<ul class="list-disc pl-6 mt-2 space-y-1">
-<li>现有出租房产：提供租约和银行流水证明租金入账</li>
-<li>新购房产：使用评估报告中的市场租金评估</li>
-<li>部分机构接受周边同类房产的租金对比分析</li>
-</ul>
-</div>
-</div>
-
-<div class="faq-item bg-white p-6 editorial-shadow">
-<div class="faq-question flex justify-between items-center" onclick="toggleFaq(this)">
-<h4 class="font-semibold text-primary">Q4: 外国公民可以申请 DSCR 贷款吗？</h4>
-<span class="text-2xl text-primary">+</span>
-</div>
-<div class="faq-answer hidden mt-4 text-secondary">
-<p>可以。DSCR 贷款是外国买家最常用的美国房贷产品之一。需要：</p>
-<ul class="list-disc pl-6 mt-2 space-y-1">
-<li>有效护照</li>
-<li>美国银行账户</li>
-<li>首付 25%-30%</li>
-<li>证明资金来源合法性</li>
-</ul>
-<p class="mt-3">无需 SSN、无需美国信用记录、无需美国税表。</p>
-</div>
-</div>
-
-<div class="faq-item bg-white p-6 editorial-shadow">
-<div class="faq-question flex justify-between items-center" onclick="toggleFaq(this)">
-<h4 class="font-semibold text-primary">Q5: DSCR 贷款可以 refinance 吗？</h4>
-<span class="text-2xl text-primary">+</span>
-</div>
-<div class="faq-answer hidden mt-4 text-secondary">
-<p>可以。已有 DSCR 贷款的房产可以申请 refinance，条件是：</p>
-<ul class="list-disc pl-6 mt-2 space-y-1">
-<li>当前 DSCR>1.0</li>
-<li>信用分数无明显下降</li>
-<li>房产价值未大幅下跌</li>
-</ul>
-<p class="mt-3">Refinance 可以用于降低利率、套现、或从 DSCR 贷款转为传统贷款（如收入情况改善）。</p>
-</div>
-</div>
-</div>
-
-<h2 class="serif-title text-3xl font-semibold mb-6">六、联系我们</h2>
-<div class="bg-primary text-white p-8 editorial-shadow">
-<p class="mb-4">David Dai (NMLS# 2454756) 专长帮助投资客和外国买家获得 DSCR 贷款。我们熟悉洛杉矶和尔湾房地产市场，可为您提供准确的租金评估和贷款方案。</p>
-<p class="font-semibold">📞 电话：949-656-1278</p>
-<p class="font-semibold">📧 邮箱：lodaviddai@gmail.com</p>
-<p class="font-semibold">📱 微信：WuxiShane</p>
-<a href="/#contact" class="inline-block mt-6 bg-white text-primary px-8 py-3 font-bold uppercase tracking-widest hover:bg-surface transition-colors">预约免费咨询</a>
-</div>
-</div>
-
-<!-- Back to News -->
-<div class="mt-16 text-center">
-<a href="/news" class="text-primary text-sm font-medium hover:underline">← 返回新闻中心</a>
-</div>
-</article>
+  <section class="section">
+    <p class="secondary-block disclaimer"><strong>免责声明：</strong>LoanInCA 提供房贷信息与咨询服务，具体贷款资格、利率、费用、首付、审批结果和放款条件，以 lender 审核、市场利率、信用、收入、资产、房产类型及最终 Loan Estimate / Closing Disclosure 为准。本文不构成贷款批准或利率承诺。</p>
+    <p><strong>更新日期：</strong>2026-05-05</p>
+  </section>
 </main>
-
-<!-- Footer -->
-<footer class="bg-stone-50 w-full pt-16 pb-8 border-t border-stone-200">
-<div class="max-w-7xl mx-auto px-8">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-<div class="md:col-span-2">
-<span class="serif-title text-xl font-bold text-primary block mb-4">LoanInCA</span>
-<p class="text-sm text-secondary leading-relaxed max-w-md">
-专业房贷服务团队，由 David Dai (NMLS# 2454756) 领导。致力于通过透明、高效的流程，帮助每一位客户实现置业安居的梦想。
-</p>
-</div>
-<div>
-<p class="text-[10px] font-bold text-stone-400 uppercase tracking-widest mb-4">联系方式</p>
-<p class="text-sm font-semibold mb-2">Direct: 949-656-1278</p>
-<p class="text-sm font-semibold mb-2">Email: lodaviddai@gmail.com</p>
-<p class="text-sm font-semibold">微信：WuxiShane</p>
-</div>
-<div>
-<p class="text-[10px] font-bold text-stone-400 uppercase tracking-widest mb-4">快速链接</p>
-<a href="/#home" class="block text-sm text-secondary hover:text-primary mb-2">首页</a>
-<a href="/#services" class="block text-sm text-secondary hover:text-primary mb-2">服务</a>
-<a href="/#loan-knowledge" class="block text-sm text-secondary hover:text-primary mb-2">贷款知识</a>
-<a href="/news" class="block text-sm text-primary font-bold mb-2">新闻中心</a>
-<a href="/about" class="block text-sm text-secondary hover:text-primary mb-2">关于</a>
-<a href="/privacy" class="block text-sm text-secondary hover:text-primary mb-2">隐私政策</a>
-</div>
-</div>
-<div class="border-t border-stone-200 pt-8 text-center">
-<p class="text-xs text-stone-400">© 2026 LoanInCA. All rights reserved.</p>
-<p class="text-xs text-stone-400 mt-2">NMLS# 2454756 | California DBA</p>
-</div>
-</div>
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>
+      <a class="brand serif" href="/">LoanInCA</a>
+      <p>David Dai | NMLS# 2454756</p>
+    </div>
+    <nav class="footer-links">
+      <a href="/privacy">Privacy</a>
+      <a href="/terms">Terms</a>
+      <a href="/disclosures">Disclosures</a>
+    </nav>
+  </div>
 </footer>
-
-<script>
-function toggleFaq(element) {
-  const answer = element.nextElementSibling;
-  const icon = element.querySelector('span');
-  answer.classList.toggle('hidden');
-  icon.textContent = answer.classList.contains('hidden') ? '+' : '−';
-}
-</script>
-
 </body>
 </html>

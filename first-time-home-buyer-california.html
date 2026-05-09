@@ -79,6 +79,7 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Figtree:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/shared.css"/>
 <style>
 body{margin:0;background:#FDFBF7;color:#1A1A1A;font-family:"Figtree",sans-serif}
 .serif{font-family:"Cormorant Garamond","Noto Serif SC",serif}
@@ -132,22 +133,26 @@ th,td{padding:10px 12px;font-size:14px}
 </style>
 </head>
 <body>
-<header class="nav">
-  <div class="container nav-inner">
-    <a class="brand serif" href="/">LoanInCA</a>
-    <nav class="nav-links">
-      <a href="/">首页</a>
+<header class="shared-nav">
+  <div class="nav-inner">
+    <div class="brand-block">
+      <a class="brand-name" href="/">LoanInCA</a>
+      <span class="brand-sub">David Dai | NMLS# 2454756</span>
+    </div>
+    <nav class="nav-links" aria-label="Main">
+      <a href="/">首页 Home</a>
       <a href="/news">新闻中心</a>
       <a href="/calculator">计算器</a>
       <a href="/about">关于</a>
+      <a class="nav-cta" href="/#contact">联系咨询</a>
     </nav>
   </div>
 </header>
-<main class="container">
+<main class="container has-shared-nav">
   <section class="hero">
     <div class="eyebrow">First-Time Buyer</div>
     <h1 class="serif">加州首次购房贷款指南</h1>
-    <p class="lead">在加州首次购房，最大的挑战往往是首付、月供、贷款利率和 closing cost 的综合计算。2026 年加州房屋中位价约为 $750,000-$850,000，意味着即使只有 5% 首付，也需要准备 $37,500-$42,500。本文将详细拆解贷款类型对比、首付方案、预批流程、补贴项目，以及从准备到 closing 的完整步骤。</p>
+    <p class="lead">第一次在加州买房，最容易卡住的通常是预算、首付、月供和 closing cost 放在一起之后到底吃不吃得消。这个页面不是讲概念，而是把买房前最常见的计算和步骤摆在一起。</p>
   </section>
 
   <section class="section">
@@ -227,7 +232,7 @@ th,td{padding:10px 12px;font-size:14px}
 
   <section class="cta">
     <h2 class="serif" style="color:white;">想先看自己大概能买到什么价位</h2>
-    <p>可以先用计算器估算月供和首付，再联系 David Dai 做一版更贴近你收入和目标区域的初步判断。</p>
+    <p>可以先算月供和首付；如果已经在看具体区域，再联系 David Dai 会更容易往下走。</p>
     <a href="/#contact">立即咨询</a>
   </section>
 </main>
