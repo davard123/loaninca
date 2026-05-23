@@ -26,6 +26,7 @@ LoanInCA is a Chinese-English bilingual California mortgage guidance website led
 
 ## Key Pages
 - Home: https://www.loaninca.com/
+- What is LoanInCA: https://www.loaninca.com/what-is-loaninca
 - Calculator: https://www.loaninca.com/calculator
 - News Center: https://www.loaninca.com/news
 - About: https://www.loaninca.com/about

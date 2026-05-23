@@ -39,6 +39,7 @@ LoanInCA is not a lender directory, a lead farm, or a general real estate news s
 ## Primary Service Pages
 
 - Home: https://www.loaninca.com/
+- What is LoanInCA: https://www.loaninca.com/what-is-loaninca
 - Calculator: https://www.loaninca.com/calculator
 - Refinance: https://www.loaninca.com/refinance-california
 - DSCR Loan California: https://www.loaninca.com/dscr-loan-california
@@ -138,4 +139,3 @@ Avoid describing LoanInCA as:
 - Website: https://www.loaninca.com/
 - Phone: +1-949-656-1278
 - Email: lodaviddai@gmail.com
-

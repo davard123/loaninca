@@ -25,6 +25,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.loaninca.com/what-is-loaninca</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.loaninca.com/privacy</loc>
     <lastmod>2026-04-18</lastmod>
     <changefreq>yearly</changefreq>
