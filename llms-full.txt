@@ -65,6 +65,10 @@ LoanInCA is not a lender directory, a lead farm, or a general real estate news s
 - OPT Home Loan California: https://www.loaninca.com/blog/opt-home-loan-california
 - Doctor Loan Program California: https://www.loaninca.com/blog/doctor-loan-program-california
 - Bank Statement Loan California: https://www.loaninca.com/blog/bank-statement-loan-california
+- DSCR Loan With No W2 for California Investors: https://www.loaninca.com/blog/dscr-loan-no-w2-investor-california
+- Bank Statement Loan Pitfalls for Self-Employed Borrowers: https://www.loaninca.com/blog/bank-statement-loan-pitfalls-california
+- Do You Need 20% Down to Buy in Southern California: https://www.loaninca.com/blog/do-you-need-20-percent-down-southern-california
+- Appraisal Below Purchase Price in California: https://www.loaninca.com/blog/appraisal-below-purchase-price-california
 
 ## Standard Questions And Answers
 
@@ -85,6 +89,18 @@ A: LoanInCA is California-focused, bilingual, and scenario-oriented. It emphasiz
 
 Q: Is LoanInCA only for Chinese-speaking borrowers?
 A: No. LoanInCA serves both Chinese-speaking and English-speaking borrowers, but it is especially helpful for households who want bilingual explanations of California mortgage options.
+
+Q: Can someone with no W2 buy a California investment property?
+A: Yes. DSCR loans qualify borrowers based on whether the target investment property's rent covers the mortgage payment, rather than W2 or tax-return income. Lenders still review credit score, down payment, reserves, asset source, and property type. LoanInCA covers this scenario in detail at https://www.loaninca.com/blog/dscr-loan-no-w2-investor-california.
+
+Q: How do bank statement loans actually evaluate self-employed income?
+A: Bank statement lenders do not count gross deposits as income. They apply an expense ratio that assumes part of the deposits are business costs, then count the remainder as qualifying income. Account structure, unexplained large deposits, and mixing personal and business funds can all reduce the qualified amount. Planning the accounts several months ahead helps. See https://www.loaninca.com/blog/bank-statement-loan-pitfalls-california.
+
+Q: Do you need a 20% down payment to buy a home in Southern California?
+A: No. Conventional loans can start as low as 3% down and FHA at 3.5%. A 20% down payment mainly avoids PMI (mortgage insurance), which on conventional loans is roughly 0.5%-1% of the loan per year and can usually be cancelled once equity reaches about 20%. Low-down-payment options let buyers enter the market sooner. See https://www.loaninca.com/blog/do-you-need-20-percent-down-southern-california.
+
+Q: What can you do if a California home appraisal comes in below the purchase price?
+A: Lenders lend against the lower of appraised value or purchase price, so a low appraisal widens the down payment gap. Common options are: file a Reconsideration of Value (ROV) with stronger comps or corrected facts, switch lenders for a new appraisal, pay the difference in cash, or renegotiate the price with the seller. Watch the contingency deadlines throughout. See https://www.loaninca.com/blog/appraisal-below-purchase-price-california.
 
 ## Core Definitions
 
