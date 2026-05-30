@@ -120,6 +120,94 @@ export async function onRequestPost({ request, env, waitUntil }) {
         await sendTelegram();
       }
 
+      // Send auto-reply email if client provided an email address
+      if (data.email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email) && env.RESEND_API_KEY) {
+        const sendAutoReply = async () => {
+          const inquiryType = leadData.inquiry_type || '房贷咨询'
+          const loanAmount = leadData.loan_amount ? `<br>贷款金额：${leadData.loan_amount}` : ''
+          const noteRow = leadData.note && leadData.note !== '无' ? `<br>备注：${leadData.note}` : ''
+          const html = `<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body style="margin:0;padding:0;background:#f7f4f0;font-family:'Helvetica Neue',Arial,sans-serif;">
+<table width="100%" cellpadding="0" cellspacing="0" style="background:#f7f4f0;padding:32px 0;">
+  <tr><td align="center">
+    <table width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#fff;border-radius:4px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.06);">
+      <tr>
+        <td style="background:#0d1117;padding:28px 40px;text-align:center;">
+          <p style="margin:0;color:#c8a96e;font-size:13px;letter-spacing:.3em;text-transform:uppercase;font-weight:500;">LoanInCA</p>
+          <p style="margin:4px 0 0;color:#888;font-size:11px;letter-spacing:.15em;">David Dai · NMLS# 2454756</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="padding:40px;">
+          <p style="margin:0 0 4px;color:#999;font-size:12px;letter-spacing:.2em;text-transform:uppercase;">咨询确认</p>
+          <h1 style="margin:0 0 24px;font-size:22px;font-weight:400;color:#0d1117;">已收到您的房贷咨询</h1>
+          <p style="margin:0 0 16px;color:#444;font-size:15px;line-height:1.8;">${leadData.name} 您好，</p>
+          <p style="margin:0 0 16px;color:#666;font-size:14px;line-height:1.8;">
+            我已收到您关于 <strong>${inquiryType}</strong> 的咨询请求，将在 1 个工作日内与您联系。
+          </p>
+          <table cellpadding="0" cellspacing="0" style="width:100%;background:#faf8f5;border:1px solid #ede8e0;border-radius:3px;margin-bottom:24px;">
+            <tr><td style="padding:12px 20px;border-bottom:1px solid #ede8e0;">
+              <span style="color:#999;font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-right:12px;">咨询类型</span>
+              <span style="color:#333;font-size:14px;">${inquiryType}</span>
+            </td></tr>
+            ${leadData.loan_amount ? `<tr><td style="padding:12px 20px;border-bottom:1px solid #ede8e0;">
+              <span style="color:#999;font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-right:12px;">贷款金额</span>
+              <span style="color:#333;font-size:14px;">${leadData.loan_amount}</span>
+            </td></tr>` : ''}
+            <tr><td style="padding:12px 20px;">
+              <span style="color:#999;font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-right:12px;">联系电话</span>
+              <span style="color:#333;font-size:14px;">${leadData.phone}</span>
+            </td></tr>
+          </table>
+          <p style="margin:0 0 16px;color:#666;font-size:14px;line-height:1.8;">
+            如需更快响应，欢迎直接微信或电话联系 David：
+            <strong style="color:#0d1117;">NMLS# 2454756</strong>
+          </p>
+          <p style="margin:24px 0 0;text-align:center;">
+            <a href="https://www.loaninca.com/#contact" style="display:inline-block;background:#0d1117;color:#fff;text-decoration:none;font-size:12px;letter-spacing:.2em;padding:12px 32px;text-transform:uppercase;">访问 LoanInCA</a>
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td style="background:#faf8f5;padding:20px 40px;text-align:center;border-top:1px solid #ede8e0;">
+          <p style="margin:0;color:#999;font-size:11px;line-height:1.6;">
+            此邮件由 <a href="https://www.loaninca.com" style="color:#c8a96e;text-decoration:none;">loaninca.com</a> 自动发送。
+            David Dai · NMLS# 2454756 · Universal Elite Realty
+          </p>
+        </td>
+      </tr>
+    </table>
+  </td></tr>
+</table>
+</body>
+</html>`
+
+          await fetch('https://api.resend.com/emails', {
+            method: 'POST',
+            headers: {
+              Authorization: `Bearer ${env.RESEND_API_KEY}`,
+              'Content-Type': 'application/json; charset=utf-8',
+            },
+            body: JSON.stringify({
+              from: env.RESEND_FROM || 'onboarding@resend.dev',
+              to: data.email,
+              subject: `已收到您的房贷咨询 | LoanInCA`,
+              html,
+            }),
+          })
+        }
+        if (waitUntil) {
+          waitUntil(sendAutoReply())
+        } else {
+          await sendAutoReply()
+        }
+      }
+
       return Response.json({ success: true, id });
     }
 
