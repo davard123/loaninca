@@ -3,3 +3,7 @@
 
 /robots.txt
   Content-Type: text/plain; charset=utf-8
+
+/api/*
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-store
