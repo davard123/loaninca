@@ -38,10 +38,9 @@
 <meta property="twitter:image:alt" content="LoanInCA - David Dai 房贷专家"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Figtree:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="/assets/shared.css?v=2"/>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700;800&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="/assets/home-redesign.css?v=20260531-2"/>
+<link rel="stylesheet" href="/assets/shared.css?v=2"/>
+<link rel="stylesheet" href="/assets/home-redesign.css?v=20260531-3"/>
 
 <meta name="geo.region" content="US-CA"/>
 <meta name="geo.placename" content="Los Angeles"/>
@@ -280,9 +279,9 @@
                     "full": "9999px"
             },
             "fontFamily": {
-                    "headline": ["Cormorant Garamond", "Noto Serif SC", "serif"],
-                    "body": ["Figtree", "sans-serif"],
-                    "label": ["Figtree", "sans-serif"]
+                    "headline": ["Noto Sans SC", "PingFang SC", "serif"],
+                    "body": ["Manrope", "sans-serif"],
+                    "label": ["Manrope", "sans-serif"]
             }
           },
         }
@@ -295,18 +294,18 @@
         }
         body {
             background-color: #FDFBF7;
-            font-family: "Figtree", sans-serif;
+            font-family: "Manrope", sans-serif;
             color: #1A1A1A;
         }
         .serif-title {
-            font-family: "Cormorant Garamond", "Noto Serif SC", serif;
+            font-family: "Noto Sans SC", "PingFang SC", serif;
             color: #1A1A1A;
         }
         .hero-heading-shell {
             max-width: 760px;
         }
         .hero-heading-main {
-            font-family: "Noto Serif SC", "Cormorant Garamond", serif;
+            font-family: "PingFang SC", "Noto Sans SC", serif;
             font-size: clamp(3rem, 5.9vw, 5.75rem);
             line-height: 1.02;
             font-weight: 600;
@@ -321,7 +320,7 @@
         .hero-heading-programs {
             display: block;
             margin-top: 18px;
-            font-family: "Figtree", sans-serif;
+            font-family: "Manrope", sans-serif;
             font-size: clamp(1.02rem, 1.55vw, 1.42rem);
             line-height: 1.6;
             letter-spacing: 0.08em;
@@ -332,7 +331,7 @@
         .hero-heading-name {
             display: block;
             margin-top: 18px;
-            font-family: "Cormorant Garamond", serif;
+            font-family: "Noto Sans SC", serif;
             font-size: clamp(2.5rem, 3.8vw, 4rem);
             line-height: 1;
             font-weight: 600;
@@ -375,7 +374,7 @@
             border: 1px solid rgba(120, 86, 0, 0.2);
         }
         .rate-checker-title {
-            font-family: "Cormorant Garamond", serif;
+            font-family: "Noto Sans SC", serif;
             font-size: 28px;
             font-weight: 600;
             color: #1A1A1A;
@@ -406,7 +405,7 @@
             border: 1px solid #d3c4af;
             border-radius: 12px;
             font-size: 15px;
-            font-family: "Figtree", sans-serif;
+            font-family: "Manrope", sans-serif;
             background: #FDFBF7;
             transition: all 0.2s;
             outline: none;
@@ -491,7 +490,7 @@
             align-items: center;
         }
         .modal-title {
-            font-family: "Cormorant Garamond", serif;
+            font-family: "Noto Sans SC", serif;
             font-size: 24px;
             font-weight: 600;
             color: #1A1A1A;
@@ -1016,222 +1015,272 @@
   ]
 }
 </script>
-<style>
-body.home-redesign #services,
-body.home-redesign #calculator-feature,
-body.home-redesign #about,
-body.home-redesign #specialty-programs,
-body.home-redesign #loan-types,
-body.home-redesign #contact,
-body.home-redesign #loan-knowledge,
-body.home-redesign #city-guides,
-body.home-redesign #topic-guides,
-body.home-redesign #fed-rates-section,
-body.home-redesign #news-preview {
-  scroll-margin-top: 92px;
-}
-</style>
 </head>
-<body class="home-redesign">
-<body class="home-redesign">
-<header class="home-header">
-  <div class="home-shell home-header-inner">
-    <a class="home-brand" href="/">
-      <span class="home-brand-mark">LI</span>
-      <span class="home-brand-copy">
-        <strong>LoanInCA</strong>
-        <small>Mortgage help for Chinese families living in the U.S.</small>
-      </span>
-    </a>
-    <nav class="home-nav" aria-label="主导航">
-      <a href="#paths">先看哪种情况</a>
-      <a href="#approach">我是怎么帮你看的</a>
-      <a href="/calculator">贷款计算器</a>
-      <a href="/about">关于 David</a>
-      <a href="#contact">联系我</a>
-    </nav>
-    <a class="header-cta" href="#contact">先聊一聊</a>
-  </div>
-</header>
+<body class="text-on-surface antialiased bg-background">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 glass-nav border-b border-stone-200/60">
+<div class="flex justify-between items-center px-8 py-5 max-w-7xl mx-auto">
+<div class="flex flex-col leading-tight">
+<span class="serif-title text-2xl font-bold text-primary tracking-tight">LoanInCA</span>
+<span class="text-[10px] font-label tracking-[0.2em] text-secondary uppercase font-semibold">David Dai | NMLS# 2454756</span>
+</div>
+<div class="hidden md:flex space-x-8 items-center">
+<a class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" href="#home">首页 Home</a>
+<a class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" href="#services">服务 Services</a>
+<a class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" href="#loan-products">贷款产品 Products</a>
+<a class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" href="#fed-rates-section">利率 Rates</a>
+<a class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" href="#city-guides">城市 Guides</a>
+<a class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" href="#topic-guides">专题 Topics</a>
+<a class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" href="#loan-knowledge">贷款知识 Education</a>
+<a class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" href="/news">新闻中心 News</a>
+<a class="gold-button text-white text-xs px-6 py-2.5 rounded-none uppercase tracking-widest font-bold hover:brightness-110 transition-all" href="/calculator">贷款专用计算器</a>
+<a class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" href="#contact">联系 Contact</a>
+</div>
+<div class="md:hidden flex items-center gap-2">
+<a class="text-[11px] font-bold uppercase tracking-[0.16em] bg-primary text-white px-3 py-2" href="/calculator">计算器</a>
+<button onclick="toggleMobileMenu()" aria-label="打开导航菜单" aria-expanded="false" id="mobileMenuToggle" class="w-10 h-10 flex items-center justify-center border border-stone-300 text-on-surface-variant">
+<span class="material-symbols-outlined" id="mobileMenuIcon">menu</span>
+</button>
+</div>
+</div>
+<!-- Mobile Menu Panel -->
+<div class="md:hidden hidden border-t border-stone-200 bg-background" id="mobileMenu">
+<div class="px-6 py-4 space-y-1 max-h-[calc(100vh-80px)] overflow-y-auto">
+<a class="block py-3 text-base font-medium text-on-surface border-b border-stone-100" href="#home" onclick="closeMobileMenu()">首页 <span class="text-secondary text-sm">Home</span></a>
+<a class="block py-3 text-base font-medium text-on-surface border-b border-stone-100" href="#services" onclick="closeMobileMenu()">服务 <span class="text-secondary text-sm">Services</span></a>
+<a class="block py-3 text-base font-medium text-on-surface border-b border-stone-100" href="#loan-products" onclick="closeMobileMenu()">贷款产品 <span class="text-secondary text-sm">Products</span></a>
+<a class="block py-3 text-base font-medium text-on-surface border-b border-stone-100" href="#fed-rates-section" onclick="closeMobileMenu()">利率 <span class="text-secondary text-sm">Rates</span></a>
+<a class="block py-3 text-base font-medium text-on-surface border-b border-stone-100" href="#city-guides" onclick="closeMobileMenu()">城市 <span class="text-secondary text-sm">Guides</span></a>
+<a class="block py-3 text-base font-medium text-on-surface border-b border-stone-100" href="#topic-guides" onclick="closeMobileMenu()">专题 <span class="text-secondary text-sm">Topics</span></a>
+<a class="block py-3 text-base font-medium text-on-surface border-b border-stone-100" href="#loan-knowledge" onclick="closeMobileMenu()">贷款知识 <span class="text-secondary text-sm">Education</span></a>
+<a class="block py-3 text-base font-medium text-on-surface border-b border-stone-100" href="/news" onclick="closeMobileMenu()">新闻中心 <span class="text-secondary text-sm">News</span></a>
+<a class="block py-3 text-base font-medium text-on-surface" href="#contact" onclick="closeMobileMenu()">联系 <span class="text-secondary text-sm">Contact</span></a>
+<a class="block mt-4 mb-2 text-center bg-primary text-white text-xs font-bold uppercase tracking-widest py-3" href="/calculator" onclick="closeMobileMenu()">贷款专用计算器 →</a>
+</div>
+</div>
+</nav>
+<script>
+function toggleMobileMenu(){
+  const menu=document.getElementById('mobileMenu');
+  const icon=document.getElementById('mobileMenuIcon');
+  const btn=document.getElementById('mobileMenuToggle');
+  const open=menu.classList.toggle('hidden');
+  icon.textContent=open?'menu':'close';
+  btn.setAttribute('aria-expanded', String(!open));
+}
+function closeMobileMenu(){
+  const menu=document.getElementById('mobileMenu');
+  if(!menu.classList.contains('hidden')){
+    menu.classList.add('hidden');
+    document.getElementById('mobileMenuIcon').textContent='menu';
+    document.getElementById('mobileMenuToggle').setAttribute('aria-expanded','false');
+  }
+}
+</script>
+<!-- Hero Section -->
+<section class="relative pt-40 pb-24 px-8 overflow-hidden" id="home">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+<!-- Rate Checker Card - Left Side -->
+<div class="lg:col-span-5 relative order-first">
+<!-- Rate Checker Card -->
+<div class="rate-checker-card">
+<div class="mb-6">
+<h3 class="rate-checker-title">查看您的利率</h3>
+<p class="rate-checker-subtitle">只需 30 秒，获取您的专属房贷利率方案</p>
+</div>
+<form class="rate-checker-form" onsubmit="openRateCheckerModal(event)">
+<div class="form-row">
+<label for="rc-purpose">贷款用途</label>
+<select id="rc-purpose" required>
+<option value="">请选择...</option>
+<option value="purchase">购房贷款 Purchase</option>
+<option value="refinance">重贷 Refinance</option>
+<option value="dscr">投资房 DSCR</option>
+<option value="jumbo">大额贷款 Jumbo</option>
+<option value="h1b">H1B/OPT 工签</option>
+<option value="self-employed">自雇人士</option>
+</select>
+</div>
+<div class="form-row">
+<label for="rc-price">房屋价格 / 贷款金额</label>
+<input type="text" id="rc-price" placeholder="例如：$800,000" required/>
+</div>
+<div class="form-row">
+<label for="rc-downpayment">首付比例</label>
+<select id="rc-downpayment" required>
+<option value="">请选择...</option>
+<option value="3">3% - 首次购房优惠</option>
+<option value="5">5% - 低首付</option>
+<option value="10">10% - 中等首付</option>
+<option value="20">20% - 标准首付</option>
+<option value="30">30%+ - 高首付</option>
+</select>
+</div>
+<div class="form-row">
+<label for="rc-creditscore">信用分数范围</label>
+<select id="rc-creditscore" required>
+<option value="">请选择...</option>
+<option value="740+">740+ - 优秀</option>
+<option value="700-739">700-739 - 良好</option>
+<option value="660-699">660-699 - 一般</option>
+<option value="620-659">620-659 - 需要改善</option>
+<option value="620 以下">620 以下 - 需要帮助</option>
+</select>
+</div>
+<button type="submit" class="rate-checker-btn">
+<span>🔍</span> 查看我的利率
+</button>
+</form>
+<div class="rate-checker-features">
+<div class="rate-checker-feature">
+<span class="check-icon">✓</span>
+<span>不影响信用分数</span>
+</div>
+<div class="rate-checker-feature">
+<span class="check-icon">✓</span>
+<span>24 小时内获得初步贷款方向评估</span>
+</div>
+<div class="rate-checker-feature">
+<span class="check-icon">✓</span>
+<span>中英双语服务</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Title and Description - Right Side -->
+<div class="lg:col-span-7 z-10">
+<span class="inline-block tracking-[0.3em] mb-8 text-[10px] font-bold text-primary uppercase border-l-2 border-primary pl-4">California Mortgage Service</span>
+<h1 class="hero-heading-shell mb-8">
+<span class="hero-heading-main">加州华人<span class="accent">房贷咨询</span></span>
+<span class="hero-heading-programs">Purchase, Refinance, DSCR, H1B, Self-Employed, Jumbo</span>
+<span class="hero-heading-name">David Dai</span>
+</h1>
+<p class="hero-intro mb-10 font-light">
+                购房、重贷、投资房、工签贷款和自雇人士贷款，都会遇到不一样的材料和审批重点。
+            </p>
+<div class="flex flex-col sm:flex-row gap-6">
+<a class="gold-button text-white px-10 py-5 rounded-none font-bold tracking-widest text-xs uppercase shadow-xl hover:translate-y-[-2px] transition-all" href="#contact">
+                    直接咨询
+                </a>
+<a class="bg-transparent text-on-surface px-10 py-5 rounded-none font-bold tracking-widest text-xs uppercase flex items-center justify-center hover:bg-stone-100 transition-all border border-stone-300" href="#services">
+                    查看贷款场景
+                </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Doctor + FHA/VA specialty programs moved to after Why-Choose section -->
 
-<main>
-  <section class="hero-section">
-    <div class="home-shell hero-grid">
-      <div class="hero-copy">
-        <p class="hero-kicker">给在美国生活的华人家庭做房贷，中英文材料都可以一起看</p>
-        <h1 class="hero-title">先别急着问利率，<br />先看你现在能不能做</h1>
-        <p class="hero-lead">很多华人客户一上来都会先问利率，这很正常。可真正卡住的，很多时候不是利率，是收入怎么算、材料够不够、你现在适合走哪一种贷款。你先把情况发过来，我先帮你看个大概。</p>
-        <div class="hero-actions">
-          <a class="btn-pill btn-primary" href="#paths">先看看我属于哪种情况</a>
-          <a class="btn-pill btn-secondary" href="#contact">直接微信聊</a>
-        </div>
-        <ul class="hero-trust">
-          <li>NMLS# 2454756</li>
-          <li>Purchase / Refinance / DSCR / Jumbo</li>
-          <li>中文沟通，英文材料也可以一起看</li>
-        </ul>
-        <div class="hero-quick-grid">
-          <div>我现在能不能贷</div>
-          <div>月供大概会到哪里</div>
-          <div>先预批还是先补材料</div>
-          <div>这次重贷划不划算</div>
-        </div>
-        <div class="hero-inline-card">
-          <img src="/assets/loaninca-neighborhood-home.png" alt="南加州住宅社区环境" />
-          <div class="hero-side-copy">
-            <span class="eyebrow">Southern California living</span>
-            <p>住进去以后每个月过得舒不舒服，很多家庭其实比单纯看一个数字更在意。</p>
-          </div>
-        </div>
-      </div>
-      <div class="hero-panel">
-        <div class="hero-side-card">
-          <img src="/assets/loaninca-advisor-home.jpg" alt="LoanInCA 顾问 David Dai" />
-          <div class="hero-badge">
-            <span class="eyebrow">先把情况看明白</span>
-            <strong>再决定这单怎么做，会更稳</strong>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<!-- Rate Checker Modal -->
+<div class="modal-overlay" id="rateCheckerModal">
+<div class="modal-container">
+<div class="modal-header">
+<h3 class="modal-title">🔍 查看您的专属利率</h3>
+<button class="modal-close" onclick="closeRateCheckerModal()">×</button>
+</div>
+<div class="modal-body">
+<div class="step-indicator">
+<div class="step-dot active" id="dot-1"></div>
+<div class="step-dot" id="dot-2"></div>
+<div class="step-dot" id="dot-3"></div>
+</div>
 
-  <section class="section-block section-soft" id="paths">
-    <div class="home-shell">
-      <div class="section-heading">
-        <span class="eyebrow">先看哪种情况</span>
-        <h2>大部分客户，基本都在这三种情况里</h2>
-        <p>你不用一上来就把所有贷款产品看完，先看自己更接近哪一种，后面再细分会简单很多。</p>
-      </div>
-      <div class="path-grid">
-        <article class="path-card path-card-featured">
-          <span class="path-label">准备买房</span>
-          <h3>先看预算能到哪里，月供大概多少，预批要不要先做</h3>
-          <p>如果你是准备买自住房、学区房，或者想换房升级，最先要搞清楚的通常不是产品名字，而是你大概买到什么区间会比较舒服。</p>
-          <ul>
-            <li>常见问题：首付够不够，月供会不会太吃力</li>
-            <li>容易卡住：DTI、身份、储备金、收入证明</li>
-            <li>下一步：先做预算和预批判断</li>
-          </ul>
-          <a class="path-card-link" href="/first-time-home-buyer-california.html">看看买房贷款怎么开始</a>
-        </article>
-        <article class="path-card">
-          <span class="path-label">想做重贷</span>
-          <h3>先别急着做，先算一下每个月能省多少，多久回本</h3>
-          <p>不是利率低一点就一定值得做。很多人做 refinance，最后真正决定要不要做的，是 closing cost、月供差多少、多久回本。</p>
-          <ul>
-            <li>常见问题：现在做值不值，会不会做完没省多少</li>
-            <li>容易卡住：cost、income docs、appraisal</li>
-            <li>下一步：先看 break-even</li>
-          </ul>
-          <a class="path-card-link" href="/refinance-california.html">看看重贷适不适合我</a>
-        </article>
-        <article class="path-card">
-          <span class="path-label">收入情况比较复杂</span>
-          <h3>自雇、1099、银行流水、H1B 这类情况，重点不是套模板</h3>
-          <p>这种情况最怕的不是产品少，是走错路。很多时候先把收入怎么认、材料怎么准备弄清楚，比一开始看利率更重要。</p>
-          <ul>
-            <li>常见问题：银行到底认不认我这种收入</li>
-            <li>容易卡住：income calculation、reserves、rental income</li>
-            <li>下一步：先看能走哪一类产品</li>
-          </ul>
-          <a class="path-card-link" href="/self-employed-mortgage-california.html">看看我更适合哪类贷款</a>
-        </article>
-      </div>
-      <div class="story-band">
-        <div class="story-band-image">
-          <img src="/assets/loaninca-family-home.png" alt="华人家庭在美国新居里的生活场景" />
-        </div>
-        <div class="story-band-copy">
-          <span class="eyebrow eyebrow-light">很多人真正想要的，其实不是一个最低数字</span>
-          <h3>说到底，大家想要的是房子买完以后，日子还能过得舒服</h3>
-          <p>所以我一般会先帮你把预算、月供、风险点看一遍。不是为了把话说复杂，而是怕你后面住进去以后压力太大。</p>
-          <a class="story-band-link" href="#contact">把你的情况发我，我先帮你看一眼</a>
-        </div>
-      </div>
-    </div>
-  </section>
+<!-- Step 1: 基本信息 -->
+<div class="step-content active" id="step-1">
+<h4 class="step-title">基本信息</h4>
+<p class="step-subtitle">让我们先了解您的基本情况</p>
+<div class="form-row">
+<label for="step-purpose">贷款用途</label>
+<select id="step-purpose" onchange="selectOption(this.value, 'purpose')">
+<option value="">请选择...</option>
+<option value="purchase">购房贷款 Purchase</option>
+<option value="refinance">重贷 Refinance</option>
+<option value="dscr">投资房 DSCR</option>
+<option value="jumbo">大额贷款 Jumbo</option>
+<option value="h1b">H1B/OPT 工签</option>
+<option value="self-employed">自雇人士</option>
+</select>
+</div>
+<div class="form-row">
+<label for="step-price">房屋价格 / 贷款金额</label>
+<input type="text" id="step-price" placeholder="例如：$800,000" onchange="updateFormData('price', this.value)"/>
+</div>
+<div class="step-actions">
+<button class="step-btn step-btn-next" style="flex:1" onclick="nextStep(2)">下一步 →</button>
+</div>
+</div>
 
-  <section class="section-block" id="approach">
-    <div class="home-shell approach-grid">
-      <div class="approach-left-rail">
-        <div class="approach-visual">
-          <img src="/assets/loaninca-consulting-home.png" alt="房贷顾问与客户沟通场景" />
-        </div>
-        <div class="approach-step-callout">
-          <strong>1. 先看你现在到底想解决什么</strong>
-          <p>你是想买房，想把月供降下来，还是想把 equity 拿一点出来，这个会直接影响后面的判断。</p>
-        </div>
-      </div>
-      <div class="approach-content">
-        <div class="approach-intro">
-          <span class="eyebrow">我是怎么帮你看的</span>
-          <h2>很多人最关心的是利率，但真正决定能不能顺利做下来，通常是前面这一步</h2>
-          <p>说白了，很多客户不是不愿意准备材料，是根本不知道自己现在该往哪边准备。所以我一般不会一上来就只跟你讲利率，我会先把你这单大概怎么判断，先讲明白。</p>
-        </div>
-        <div class="approach-steps">
-          <article>
-            <strong>2. 再看你现在手上的条件</strong>
-            <p>身份、收入、首付、信用、储备金，这些都不一样，能走的贷款也会不一样。</p>
-          </article>
-          <article>
-            <strong>3. 然后才看更适合哪种产品</strong>
-            <p>Conventional、Jumbo、DSCR、Bank Statement、Doctor Loan，不是每个人都该从同一个入口进去。</p>
-          </article>
-          <article>
-            <strong>4. 路走对了，再谈预批、锁利率和 closing</strong>
-            <p>前面看清楚了，后面准备材料和推进的过程会省掉很多来回。</p>
-          </article>
-        </div>
-      </div>
-    </div>
-  </section>
+<!-- Step 2: 财务信息 -->
+<div class="step-content" id="step-2">
+<h4 class="step-title">财务信息</h4>
+<p class="step-subtitle">帮助我们为您匹配最佳利率</p>
+<div class="form-row">
+<label for="step-downpayment">首付比例</label>
+<select id="step-downpayment" onchange="updateFormData('downpayment', this.value)">
+<option value="">请选择...</option>
+<option value="3">3% - 首次购房优惠</option>
+<option value="5">5% - 低首付</option>
+<option value="10">10% - 中等首付</option>
+<option value="20">20% - 标准首付</option>
+<option value="30">30%+ - 高首付</option>
+</select>
+</div>
+<div class="form-row">
+<label for="step-creditscore">信用分数范围</label>
+<select id="step-creditscore" onchange="updateFormData('creditscore', this.value)">
+<option value="">请选择...</option>
+<option value="740+">740+ - 优秀</option>
+<option value="700-739">700-739 - 良好</option>
+<option value="660-699">660-699 - 一般</option>
+<option value="620-659">620-659 - 需要改善</option>
+<option value="620 以下">620 以下 - 需要帮助</option>
+</select>
+</div>
+<div class="step-actions">
+<button class="step-btn step-btn-back" onclick="prevStep(1)">← 上一步</button>
+<button class="step-btn step-btn-next" style="flex:1" onclick="nextStep(3)">下一步 →</button>
+</div>
+</div>
 
-  <section class="section-block section-soft" id="tools">
-    <div class="home-shell">
-      <div class="section-heading">
-        <span class="eyebrow">先自己算一遍</span>
-        <h2>你也可以先自己算一遍，再来问我</h2>
-        <p>你先大概算一下预算、月供、回本时间、DSCR，心里会更有数。算完以后，如果你不确定靠不靠谱，再发给我一起看。</p>
-      </div>
-      <div class="tool-grid">
-        <article class="tool-card">
-          <h3>买房月供计算</h3>
-          <p>先看你想买的房子，每个月大概要付多少，不只看贷款本身，也把税和保险一起算进去。</p>
-        </article>
-        <article class="tool-card">
-          <h3>重贷回本时间</h3>
-          <p>你先算一下 closing cost 和 break-even，大概就知道这次重贷值不值得现在做。</p>
-        </article>
-        <article class="tool-card">
-          <h3>DSCR 粗算</h3>
-          <p>投资房先看租金大概能不能撑住贷款，别一开始就把节奏推得太快。</p>
-        </article>
-      </div>
-      <div class="tool-cta-row" style="margin-top:24px;">
-        <a class="btn-pill btn-primary" href="/calculator">打开贷款专用计算器</a>
-      </div>
-    </div>
-  </section>
+<!-- Step 3: 联系方式 -->
+<div class="step-content" id="step-3">
+<h4 class="step-title">联系方式</h4>
+<p class="step-subtitle">David 将在 24 小时内给您初步回复</p>
+<div class="form-row">
+<label for="step-name">姓名</label>
+<input type="text" id="step-name" placeholder="您的姓名" onchange="updateFormData('name', this.value)"/>
+</div>
+<div class="form-row">
+<label for="step-phone">电话</label>
+<input type="tel" id="step-phone" placeholder="(123) 456-7890" onchange="updateFormData('phone', this.value)"/>
+</div>
+<div class="form-row">
+<label for="step-email">邮箱</label>
+<input type="email" id="step-email" placeholder="your@email.com" onchange="updateFormData('email', this.value)"/>
+</div>
+<div class="step-actions">
+<button class="step-btn step-btn-back" onclick="prevStep(2)">← 上一步</button>
+<button class="step-btn step-btn-next" style="flex:1; background: linear-gradient(135deg, #3d9970 0%, #2e7d5a 100%);" onclick="submitLead()">提交申请</button>
+</div>
+</div>
 
-  <section class="section-block">
-    <div class="home-shell">
-      <div class="section-heading">
-        <span class="eyebrow">专题入口</span>
-        <h2>如果你已经知道自己属于哪一类，也可以直接走专题</h2>
-        <p>这些专题页会更集中地讲同一种贷款场景，适合已经知道自己大概属于哪类客户的人。</p>
-      </div>
-      <div class="topic-pills">
-        <a href="/first-time-home-buyer-california.html">首次购房</a>
-        <a href="/dscr-loan-california.html">DSCR 投资房</a>
-        <a href="/self-employed-mortgage-california.html">自雇 / 1099</a>
-        <a href="/jumbo-loan-california.html">Jumbo 大额贷款</a>
-        <a href="/doctor-loan-california.html">Doctor Loan</a>
-        <a href="/bank-statement-loan-california.html">Bank Statement</a>
-      </div>
-    </div>
-  </section>
-
+<!-- Success Step -->
+<div class="step-content" id="step-success">
+<div class="success-icon">✓</div>
+<h4 class="step-title" style="text-align:center">申请已提交！</h4>
+<p class="step-subtitle" style="text-align:center">
+David 将在 24 小时内给您初步回复。<br/>
+后续方案仍需结合收入、资产、信用和房产信息进一步判断。
+</p>
+<div style="text-align:center; margin-top:24px;">
+<a href="/calculator" class="gold-button text-white px-8 py-3 rounded-none font-bold tracking-widest text-xs uppercase" style="display:inline-block;">
+打开完整计算器
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
 
 <!-- Services Section -->
 <section class="py-32 bg-stone-50/50" id="services">
@@ -3093,3 +3142,4 @@ async function loadDailyRates(marketRatesData) {
 
 
 </body></html>
+
