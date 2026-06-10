@@ -7,3 +7,17 @@
 /disclosures.html /disclosures 301
 /terms.html /terms 301
 /index.html / 301
+# Service pages — prevent .html duplicate URLs from being indexed
+/what-is-loaninca.html /what-is-loaninca 301
+/irvine-mortgage.html /irvine-mortgage 301
+/los-angeles-mortgage.html /los-angeles-mortgage 301
+/san-jose-mortgage.html /san-jose-mortgage 301
+/orange-county-mortgage.html /orange-county-mortgage 301
+/first-time-home-buyer-california.html /first-time-home-buyer-california 301
+/self-employed-mortgage-california.html /self-employed-mortgage-california 301
+/jumbo-loan-california.html /jumbo-loan-california 301
+/dscr-loan-california.html /dscr-loan-california 301
+/refinance-california.html /refinance-california 301
+/doctor-loan-california.html /doctor-loan-california 301
+/opt-home-loan-california.html /opt-home-loan-california 301
+/bank-statement-loan-california.html /bank-statement-loan-california 301
