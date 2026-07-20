@@ -20,6 +20,50 @@ enum PurchaseLoanType: String, CaseIterable, Identifiable {
         case .va: return "VA"
         }
     }
+
+    func title(for language: AppLanguage) -> String {
+        switch self {
+        case .conventional: return localized(language, zh: "常规贷款", en: "Conventional")
+        case .nonQM: return localized(language, zh: "非 QM", en: "Non-QM")
+        case .dscr: return "DSCR"
+        case .bankStatement: return localized(language, zh: "银行流水", en: "Bank Statement")
+        case .fha: return "FHA"
+        case .va: return "VA"
+        }
+    }
+}
+
+enum MortgageRateStructure: String, CaseIterable, Identifiable {
+    case fixed
+    case arm
+
+    var id: String { rawValue }
+
+    func title(for language: AppLanguage) -> String {
+        switch self {
+        case .fixed: return localized(language, zh: "固定利率", en: "Fixed")
+        case .arm: return localized(language, zh: "浮动利率 ARM", en: "Adjustable ARM")
+        }
+    }
+}
+
+enum ARMProgram: String, CaseIterable, Identifiable {
+    case fiveSix = "5/6"
+    case sevenSix = "7/6"
+    case tenSix = "10/6"
+
+    var id: String { rawValue }
+
+    func explanation(for language: AppLanguage) -> String {
+        switch self {
+        case .fiveSix:
+            return localized(language, zh: "前 5 年固定，之后通常每 6 个月调整一次。", en: "Fixed for 5 years, then typically adjusts every 6 months.")
+        case .sevenSix:
+            return localized(language, zh: "前 7 年固定，之后通常每 6 个月调整一次。", en: "Fixed for 7 years, then typically adjusts every 6 months.")
+        case .tenSix:
+            return localized(language, zh: "前 10 年固定，之后通常每 6 个月调整一次。", en: "Fixed for 10 years, then typically adjusts every 6 months.")
+        }
+    }
 }
 
 enum RefinanceMode: String, CaseIterable, Identifiable {
@@ -32,6 +76,13 @@ enum RefinanceMode: String, CaseIterable, Identifiable {
         switch self {
         case .rateTerm: return "Rate / Term"
         case .cashOut: return "Cash-Out"
+        }
+    }
+
+    func title(for language: AppLanguage) -> String {
+        switch self {
+        case .rateTerm: return localized(language, zh: "降息/改期限", en: "Rate / Term")
+        case .cashOut: return localized(language, zh: "套现重贷", en: "Cash-Out")
         }
     }
 }
@@ -52,6 +103,15 @@ enum PayPeriod: String, CaseIterable, Identifiable {
         case .annually: return "年薪"
         }
     }
+
+    func title(for language: AppLanguage) -> String {
+        switch self {
+        case .monthly: return localized(language, zh: "月薪", en: "Monthly")
+        case .biweekly: return localized(language, zh: "双周", en: "Biweekly")
+        case .weekly: return localized(language, zh: "周薪", en: "Weekly")
+        case .annually: return localized(language, zh: "年薪", en: "Annual")
+        }
+    }
 }
 
 enum JobIncomeType: String, CaseIterable, Identifiable {
@@ -66,6 +126,13 @@ enum JobIncomeType: String, CaseIterable, Identifiable {
         case .hourly: return "时薪"
         }
     }
+
+    func title(for language: AppLanguage) -> String {
+        switch self {
+        case .w2: return "W-2"
+        case .hourly: return localized(language, zh: "时薪", en: "Hourly")
+        }
+    }
 }
 
 enum SelfEmploymentMethod: String, CaseIterable, Identifiable {
@@ -75,6 +142,13 @@ enum SelfEmploymentMethod: String, CaseIterable, Identifiable {
     var id: String { rawValue }
 
     var title: String {
+        switch self {
+        case .du: return "DU"
+        case .lp: return "LP"
+        }
+    }
+
+    func title(for language: AppLanguage) -> String {
         switch self {
         case .du: return "DU"
         case .lp: return "LP"
@@ -105,6 +179,8 @@ struct RefinanceResult {
     let monthlySavings: Double
     let breakEvenMonths: Int
     let cashOut: Double
+    let closingCostsFinanced: Double
+    let fiveYearPaymentChange: Double
 }
 
 struct IncomeSummary {
@@ -171,7 +247,23 @@ struct PolicyNewsItem: Codable, Identifiable {
     let date: String
     let title: String
     let summary: String
+    let titleZh: String?
+    let summaryZh: String?
     let url: String
 
     var id: String { "\(source)-\(date)-\(title)" }
+
+    enum CodingKeys: String, CodingKey {
+        case source, date, title, summary, url
+        case titleZh = "title_zh"
+        case summaryZh = "summary_zh"
+    }
+
+    func localizedTitle(for language: AppLanguage) -> String {
+        language == .zhHans ? (titleZh ?? title) : title
+    }
+
+    func localizedSummary(for language: AppLanguage) -> String {
+        language == .zhHans ? (summaryZh ?? summary) : summary
+    }
 }

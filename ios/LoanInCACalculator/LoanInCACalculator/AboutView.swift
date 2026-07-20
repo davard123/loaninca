@@ -1,48 +1,64 @@
 import SwiftUI
 
 struct AboutView: View {
+    @Environment(\.appLanguage) private var language
+
     var body: some View {
         List {
             Section {
-                VStack(alignment: .leading, spacing: 10) {
-                    Text("LoanInCA Calculator")
-                        .font(.title2.bold())
-                    Text("这是把 `calculator.html` 原生迁移到 iOS 的第一版。")
-                        .foregroundStyle(.secondary)
+                CalculatorIntro(
+                    title: localized(language, zh: "全能贷款计算器", en: "All-in-One Loan Calculator"),
+                    subtitle: localized(language, zh: "面向美国华人购房者的本地房贷预算助手。", en: "A local mortgage budgeting assistant for homebuyers in the United States."),
+                    icon: "house.and.flag.fill",
+                    accent: LoanInCATheme.brand
+                )
+            }
+
+            Section(localized(language, zh: "关于 LoanInCA.com", en: "About LoanInCA.com")) {
+                Text(localized(language, zh: "LoanInCA.com 全能贷款计算器把负担能力、每月持有成本、交割现金、重贷回本和投资房现金流串成一套清晰的购房决策路径。", en: "The LoanInCA.com all-in-one calculator brings affordability, monthly ownership cost, cash to close, refinance break-even, and rental cash flow into one clear homebuying path."))
+            }
+
+            Section(localized(language, zh: "隐私说明", en: "Privacy")) {
+                Text(localized(language, zh: "房价、收入、债务和租金等计算内容只在你的设备上处理，不会发送给 LoanInCA.com。", en: "Home price, income, debt, rent, and other calculator entries are processed on your device and are not sent to LoanInCA.com."))
+                Link(destination: URL(string: "https://www.loaninca.com/privacy")!) {
+                    Label(localized(language, zh: "查看隐私政策", en: "View Privacy Policy"), systemImage: "lock.fill")
                 }
-                .padding(.vertical, 4)
             }
 
-            Section("当前已经迁移") {
-                Text("Buy / Sell 月供计算")
-                Text("等额本息 / 等额本金对比")
-                Text("Refinance 重贷对比")
-                Text("Income 收入估算")
-                Text("Closing Cost 过户费拆分")
-                Text("购房税费速算")
-                Text("理财收益对比")
-                Text("政策资讯展示")
+            Section(localized(language, zh: "免责声明", en: "Disclaimer")) {
+                Text(localized(language, zh: "结果用于预算参考，不是贷款报价、审批承诺，也不是税务、法律或投资建议。实际条件取决于贷款机构、房屋、信用、收入、资产和市场。", en: "Results are budgeting references, not a loan quote, approval commitment, or tax, legal, or investment advice. Actual terms depend on the lender, property, credit, income, assets, and market."))
             }
 
-            Section("后续建议") {
-                Text("把 FHA 州县限额数据拆到 JSON 资源文件")
-                Text("把 VA 区域规则做成独立服务")
-                Text("增加本地持久化和分享导出")
-                Text("补充单元测试与模拟器验收")
+            Section(localized(language, zh: "数据来源与更新时间", en: "Data Sources and Updates")) {
+                ResultRow(localized(language, zh: "计算公式", en: "Calculation formulas"), value: localized(language, zh: "标准摊还公式与简化预算假设", en: "Standard amortization and simplified assumptions"))
+                ResultRow(localized(language, zh: "资讯来源", en: "Insights sources"), value: localized(language, zh: "公开市场与政策资料", en: "Public market and policy references"))
+                ResultRow(localized(language, zh: "资讯更新时间", en: "Insights updated"), value: localized(language, zh: "见资讯页", en: "Shown in Insights"))
             }
 
-            Section("来源") {
-                Text("原始网页: loaninca-repo/calculator.html")
-                Text("迁移策略: 保留核心公式，先做轻量原生 MVP，再继续补齐大数据模块。")
-                    .foregroundStyle(.secondary)
+            Section(localized(language, zh: "联系支持", en: "Contact Support")) {
+                Link(destination: URL(string: "mailto:lodaviddai@gmail.com")!) {
+                    Label("lodaviddai@gmail.com", systemImage: "envelope.fill")
+                }
+                Link(destination: URL(string: "tel:9496561278")!) {
+                    Label("949-656-1278", systemImage: "phone.fill")
+                }
+                Link(destination: URL(string: "https://www.loaninca.com")!) {
+                    Label("loaninca.com", systemImage: "globe")
+                }
+            }
+
+            Section(localized(language, zh: "语言支持", en: "Languages")) {
+                Text(localized(language, zh: "简体中文和英文", en: "Simplified Chinese and English"))
             }
         }
-        .navigationTitle("关于")
+        .calculatorFormStyle(accent: LoanInCATheme.brand)
+        .navigationTitle(localized(language, zh: "关于", en: "About"))
     }
 }
 
 #Preview {
     NavigationStack {
         AboutView()
+            .environment(\.appLanguage, .zhHans)
     }
 }

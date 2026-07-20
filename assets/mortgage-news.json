@@ -1,55 +1,42 @@
 {
-  "generated_at": "2026-05-02T15:05:00Z",
-  "notes": "Curated mortgage and housing market headlines for the LoanInCA news page.",
+  "generated_at": "2026-07-19T16:00:00Z",
+  "notes": "Mortgage and housing updates from primary public sources.",
   "items": [
     {
       "source": "Freddie Mac",
-      "date": "2026-04-30",
-      "title": "Freddie Mac said the average 30-year fixed mortgage rate was 6.30%",
-      "summary": "Freddie Mac said the average 30-year fixed rate edged up to 6.30% for the week ending April 30 from 6.23% the week before, while purchase applications stayed more than 20% above a year earlier, showing buyers are still active when rates settle near this range.",
-      "url": "https://freddiemac.gcs-web.com/news-releases/news-release-details/mortgage-rates-average-630"
-    },
-    {
-      "source": "BEA",
-      "date": "2026-04-30",
-      "title": "March inflation data stayed firm even as incomes and spending increased",
-      "summary": "The Bureau of Economic Analysis said personal income rose 0.6% in March and consumer spending rose 0.9%, while the PCE price index increased 0.7% from February and 3.5% from a year earlier, a combination that can keep mortgage rates sensitive to inflation releases.",
-      "url": "https://www.bea.gov/news/2026/personal-income-and-outlays-march-2026"
-    },
-    {
-      "source": "Redfin",
-      "date": "2026-04-30",
-      "title": "Redfin saw pending sales improve as rates eased from early-April highs",
-      "summary": "Redfin said pending U.S. home sales rose 2.7% from a year earlier in the four weeks ending April 26, new listings rose 2.2%, and the median monthly payment fell 2.2% as the weekly average mortgage rate moved down to 6.23%.",
-      "url": "https://www.redfin.com/news/housing-market-update-homebuying-demand-picks-up-spring/"
-    },
-    {
-      "source": "MBA",
-      "date": "2026-04-29",
-      "title": "MBA reported a small weekly pullback in applications, with purchase demand still solid",
-      "summary": "MBA said total mortgage applications fell 1.6% for the week ending April 24, refinance applications dropped 4%, and purchase applications still rose 1% from the prior week and 21% from a year earlier.",
-      "url": "https://www.mba.org/news-and-research/newsroom/news/2026/04/29/mortgage-applications-decrease-in-latest-mba-weekly-survey"
-    },
-    {
-      "source": "FHFA",
-      "date": "2026-04-28",
-      "title": "FHFA said national home prices were flat in February",
-      "summary": "FHFA reported that its seasonally adjusted national house price index was unchanged in February and up 1.7% from a year earlier, reinforcing the view that home-price growth is cooling instead of re-accelerating.",
-      "url": "https://www.fhfa.gov/news/news-release/fhfa-house-price-index-unchanged-in-february-up-1.7-percent-from-last-year"
-    },
-    {
-      "source": "HUD",
-      "date": "2026-04-22",
-      "title": "HUD expanded the credit score models allowed for FHA-insured underwriting",
-      "summary": "HUD said FHA will allow VantageScore 4.0 and FICO 10T for FHA-insured mortgage underwriting, while Fannie Mae and Freddie Mac are also moving ahead with the same newer score models, a change aimed at expanding borrower access.",
-      "url": "https://www.hud.gov/news/hud-no-26-026"
+      "date": "2026-07-16",
+      "title": "The average 30-year fixed mortgage rate rose to 6.55%",
+      "title_zh": "30 年固定房贷全国平均利率升至 6.55%",
+      "summary": "Freddie Mac's PMMS reported a 6.55% average for the week of July 16, up from 6.49% the week before. The 15-year fixed average was 5.93%. These are national averages, not individual quotes.",
+      "summary_zh": "Freddie Mac 的 PMMS 显示，7 月 16 日当周 30 年固定房贷平均利率为 6.55%，高于前一周的 6.49%；15 年固定房贷平均利率为 5.93%。这是全国平均值，不是个人报价。",
+      "url": "https://www.freddiemac.com/pmms"
     },
     {
       "source": "Fannie Mae",
-      "date": "2026-04-13",
-      "title": "Fannie Mae kept its 2026 mortgage-rate outlook near 6.2%",
-      "summary": "Fannie Mae's April housing forecast still pointed to a 6.2% average 30-year fixed mortgage rate for 2026, about 4.80 million total home sales this year, and roughly $2.34 trillion in single-family mortgage originations.",
-      "url": "https://www.fanniemae.com/media/56816/display"
+      "date": "2026-07-01",
+      "title": "Fannie Mae published its July economic and housing outlook",
+      "title_zh": "Fannie Mae 发布 7 月经济与住房展望",
+      "summary": "Fannie Mae's ESR group updated its outlook for mortgage rates, home sales, prices, housing starts, and mortgage originations. Forecasts can change with new economic data and are not individual loan quotes.",
+      "summary_zh": "Fannie Mae 的 ESR 团队更新了房贷利率、房屋销售、房价、开工和贷款发放量预测。预测会随经济数据变化，不应视为个人贷款报价。",
+      "url": "https://www.fanniemae.com/data-and-insights/forecast/forecast-monthly-archive"
+    },
+    {
+      "source": "FHFA",
+      "date": "2026-06-30",
+      "title": "U.S. home prices fell 0.1% in April and rose 2.0% year over year",
+      "title_zh": "美国 4 月房价环比下降 0.1%，同比上涨 2.0%",
+      "summary": "FHFA's monthly HPI reported a 0.1% national decline in April and a 2.0% increase from April 2025. The Pacific division increased 0.2% year over year.",
+      "summary_zh": "FHFA 月度房价指数显示，美国独栋住宅价格 4 月环比下降 0.1%，较 2025 年 4 月上涨 2.0%；Pacific 分区同比上涨 0.2%。",
+      "url": "https://www.fhfa.gov/document/d/hpi/fhfa-hpi-monthly-june-2026"
+    },
+    {
+      "source": "HUD",
+      "date": "2026-06-23",
+      "title": "HUD announced 14 FHA single-family policy changes",
+      "title_zh": "HUD 公布 14 项 FHA 单户住房政策调整",
+      "summary": "HUD said the changes cover appraisal reviews, Limited 203(k), lender quality control, and closing documents, with the goal of reducing duplicate requirements and process costs.",
+      "summary_zh": "HUD 表示，新调整涉及评估复核、Limited 203(k)、贷款机构质量控制和部分交割文件，目标是减少重复要求并降低 FHA 贷款流程成本。",
+      "url": "https://www.hud.gov/news/hud-no-26-051"
     }
   ]
 }

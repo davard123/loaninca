@@ -99,16 +99,19 @@ enum CalculatorEngine {
         homeValue: Double,
         balance: Double,
         currentRate: Double,
+        currentRemainingTerm: Int = 30,
         newRate: Double,
         newTerm: Int,
         closingCosts: Double,
+        financeClosingCosts: Bool = false,
         mode: RefinanceMode,
         desiredCashOut: Double
     ) -> RefinanceResult {
-        let currentPayment = mortgagePayment(principal: max(balance, 0), annualRate: currentRate, years: 30)
+        let currentPayment = mortgagePayment(principal: max(balance, 0), annualRate: currentRate, years: currentRemainingTerm)
+        let financedClosingCosts = financeClosingCosts ? max(closingCosts, 0) : 0
         let newLoan = mode == .cashOut
-            ? max(balance, 0) + max(desiredCashOut, 0) + max(closingCosts, 0)
-            : max(balance, 0)
+            ? max(balance, 0) + max(desiredCashOut, 0) + financedClosingCosts
+            : max(balance, 0) + financedClosingCosts
         let newPayment = mortgagePayment(principal: newLoan, annualRate: newRate, years: newTerm)
         let newLtv = homeValue == 0 ? 0 : (newLoan / homeValue) * 100
         let monthlySavings = currentPayment - newPayment
@@ -121,7 +124,9 @@ enum CalculatorEngine {
             newPayment: newPayment,
             monthlySavings: monthlySavings,
             breakEvenMonths: breakEvenMonths,
-            cashOut: mode == .cashOut ? max(desiredCashOut, 0) : 0
+            cashOut: mode == .cashOut ? max(desiredCashOut, 0) : 0,
+            closingCostsFinanced: financedClosingCosts,
+            fiveYearPaymentChange: monthlySavings * 60
         )
     }
 

@@ -22,10 +22,28 @@
 		A1000001000000000000000D /* InvestmentComparisonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000011000000000000000D /* InvestmentComparisonView.swift */; };
 		A1000001000000000000000E /* PolicyNewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000011000000000000000E /* PolicyNewsView.swift */; };
 		A1000001000000000000000F /* mortgage-news.json in Resources */ = {isa = PBXBuildFile; fileRef = A1000011000000000000000F /* mortgage-news.json */; };
+		A10000010000000000000010 /* CalculatorEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000110000000000000011 /* CalculatorEngineTests.swift */; };
+		A10000010000000000000011 /* CalculatorEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000110000000000000004 /* CalculatorEngine.swift */; };
+		A10000010000000000000012 /* CalculatorModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000110000000000000003 /* CalculatorModels.swift */; };
+		A10000010000000000000013 /* AppLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000110000000000000012 /* AppLanguage.swift */; };
+		A10000010000000000000014 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = A10000110000000000000013 /* Localizable.xcstrings */; };
+		A10000010000000000000015 /* AppLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000110000000000000012 /* AppLanguage.swift */; };
+		A10000010000000000000016 /* SavedPlans.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000110000000000000014 /* SavedPlans.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A10000800000000000000001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A10000500000000000000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A10000400000000000000001;
+			remoteInfo = LoanInCACalculator;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		A10000100000000000000001 /* LoanInCACalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoanInCACalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A10000100000000000000002 /* LoanInCACalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoanInCACalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A10000110000000000000001 /* LoanInCACalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanInCACalculatorApp.swift; sourceTree = "<group>"; };
 		A10000110000000000000002 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		A10000110000000000000003 /* CalculatorModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorModels.swift; sourceTree = "<group>"; };
@@ -41,10 +59,22 @@
 		A1000011000000000000000D /* InvestmentComparisonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentComparisonView.swift; sourceTree = "<group>"; };
 		A1000011000000000000000E /* PolicyNewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolicyNewsView.swift; sourceTree = "<group>"; };
 		A1000011000000000000000F /* mortgage-news.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "mortgage-news.json"; sourceTree = "<group>"; };
+		A10000110000000000000010 /* LoanInCACalculatorTests */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LoanInCACalculatorTests; sourceTree = "<group>"; };
+		A10000110000000000000011 /* CalculatorEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorEngineTests.swift; sourceTree = "<group>"; };
+		A10000110000000000000012 /* AppLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLanguage.swift; sourceTree = "<group>"; };
+		A10000110000000000000013 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		A10000110000000000000014 /* SavedPlans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPlans.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		A10000200000000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A10000200000000000000004 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -58,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				A10000300000000000000002 /* LoanInCACalculator */,
+				A10000300000000000000004 /* LoanInCACalculatorTests */,
 				A10000300000000000000003 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,6 +98,8 @@
 			children = (
 				A10000110000000000000001 /* LoanInCACalculatorApp.swift */,
 				A10000110000000000000002 /* AppView.swift */,
+				A10000110000000000000012 /* AppLanguage.swift */,
+				A10000110000000000000014 /* SavedPlans.swift */,
 				A10000110000000000000003 /* CalculatorModels.swift */,
 				A10000110000000000000004 /* CalculatorEngine.swift */,
 				A10000110000000000000005 /* Formatting.swift */,
@@ -79,6 +112,7 @@
 				A1000011000000000000000D /* InvestmentComparisonView.swift */,
 				A1000011000000000000000E /* PolicyNewsView.swift */,
 				A1000011000000000000000F /* mortgage-news.json */,
+				A10000110000000000000013 /* Localizable.xcstrings */,
 				A1000011000000000000000C /* Assets.xcassets */,
 			);
 			path = LoanInCACalculator;
@@ -88,8 +122,17 @@
 			isa = PBXGroup;
 			children = (
 				A10000100000000000000001 /* LoanInCACalculator.app */,
+				A10000100000000000000002 /* LoanInCACalculatorTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		A10000300000000000000004 /* LoanInCACalculatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				A10000110000000000000011 /* CalculatorEngineTests.swift */,
+			);
+			path = LoanInCACalculatorTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +155,24 @@
 			productReference = A10000100000000000000001 /* LoanInCACalculator.app */;
 			productType = "com.apple.product-type.application";
 		};
+		A10000400000000000000002 /* LoanInCACalculatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A10000600000000000000003 /* Build configuration list for PBXNativeTarget "LoanInCACalculatorTests" */;
+			buildPhases = (
+				A10000200000000000000005 /* Sources */,
+				A10000200000000000000004 /* Frameworks */,
+				A10000200000000000000006 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A10000900000000000000001 /* PBXTargetDependency */,
+			);
+			name = LoanInCACalculatorTests;
+			productName = LoanInCACalculatorTests;
+			productReference = A10000100000000000000002 /* LoanInCACalculatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -125,6 +186,10 @@
 					A10000400000000000000001 = {
 						CreatedOnToolsVersion = 16.0;
 					};
+					A10000400000000000000002 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = A10000400000000000000001;
+					};
 				};
 			};
 			buildConfigurationList = A10000600000000000000002 /* Build configuration list for PBXProject "LoanInCACalculator" */;
@@ -133,6 +198,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				"zh-Hans",
 				Base,
 			);
 			mainGroup = A10000300000000000000001;
@@ -141,6 +207,7 @@
 			projectRoot = "";
 			targets = (
 				A10000400000000000000001 /* LoanInCACalculator */,
+				A10000400000000000000002 /* LoanInCACalculatorTests */,
 			);
 		};
 /* End PBXProject section */
@@ -151,7 +218,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1000001000000000000000C /* Assets.xcassets in Resources */,
+				A10000010000000000000014 /* Localizable.xcstrings in Resources */,
 				A1000001000000000000000F /* mortgage-news.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A10000200000000000000006 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1000001000000000000000A /* AboutView.swift in Sources */,
+				A10000010000000000000013 /* AppLanguage.swift in Sources */,
 				A10000010000000000000002 /* AppView.swift in Sources */,
 				A10000010000000000000004 /* CalculatorEngine.swift in Sources */,
 				A10000010000000000000003 /* CalculatorModels.swift in Sources */,
@@ -174,11 +250,31 @@
 				A1000001000000000000000E /* PolicyNewsView.swift in Sources */,
 				A10000010000000000000006 /* PurchaseCalculatorView.swift in Sources */,
 				A10000010000000000000007 /* RefinanceCalculatorView.swift in Sources */,
+				A10000010000000000000016 /* SavedPlans.swift in Sources */,
 				A1000001000000000000000B /* SharedViews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A10000200000000000000005 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000010000000000000011 /* CalculatorEngine.swift in Sources */,
+				A10000010000000000000012 /* CalculatorModels.swift in Sources */,
+				A10000010000000000000015 /* AppLanguage.swift in Sources */,
+				A10000010000000000000010 /* CalculatorEngineTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A10000900000000000000001 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A10000400000000000000001 /* LoanInCACalculator */;
+			targetProxy = A10000800000000000000001 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		A10000700000000000000001 /* Debug */ = {
@@ -294,13 +390,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"LoanInCACalculator/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = LoanInCA;
+				INFOPLIST_KEY_CFBundleDisplayName = LoanInCA.com;
+				INFOPLIST_KEY_CFBundleIconName = AppIcon;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = NO;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -310,8 +408,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.loaninca.calculator;
+				MARKETING_VERSION = 1.0.4;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lodaviddai.mortgagecalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -326,13 +424,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"LoanInCACalculator/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = LoanInCA;
+				INFOPLIST_KEY_CFBundleDisplayName = LoanInCA.com;
+				INFOPLIST_KEY_CFBundleIconName = AppIcon;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = NO;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -342,12 +442,54 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.loaninca.calculator;
+				MARKETING_VERSION = 1.0.4;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lodaviddai.mortgagecalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A10000700000000000000005 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.loaninca.calculatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A10000700000000000000006 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.loaninca.calculatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -370,6 +512,15 @@
 			buildConfigurations = (
 				A10000700000000000000001 /* Debug */,
 				A10000700000000000000002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A10000600000000000000003 /* Build configuration list for PBXNativeTarget "LoanInCACalculatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A10000700000000000000005 /* Debug */,
+				A10000700000000000000006 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

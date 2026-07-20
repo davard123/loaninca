@@ -20,6 +20,14 @@ enum LoanFormatter {
         currency.string(from: NSNumber(value: value)) ?? "$0"
     }
 
+    static func currencyRoundedString(_ value: Double) -> String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.locale = Locale(identifier: "en_US")
+        formatter.maximumFractionDigits = 0
+        return formatter.string(from: NSNumber(value: value)) ?? "$0"
+    }
+
     static func percentString(_ value: Double) -> String {
         "\(String(format: "%.2f", value))%"
     }

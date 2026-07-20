@@ -14,3 +14,10 @@ Thumbs.db
 # Environment files
 .env
 .env.local
+
+# Local Xcode release and visual QA output
+DerivedData/
+*.xcarchive/
+*.xcresult/
+ios/LoanInCACalculator/archives/
+ios/LoanInCACalculator/artifacts/
