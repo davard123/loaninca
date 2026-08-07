@@ -1,16 +1,16 @@
 # V2 topic consolidation
-/dscr-loan-california /mortgage/dscr 301
-/dscr-loan-california.html /mortgage/dscr 301
-/jumbo-loan-california /mortgage/jumbo 301
-/jumbo-loan-california.html /mortgage/jumbo 301
-/refinance-california /mortgage/refinance 301
-/refinance-california.html /mortgage/refinance 301
-/self-employed-mortgage-california /mortgage/self-employed 301
-/self-employed-mortgage-california.html /mortgage/self-employed 301
-/bank-statement-loan-california /mortgage/self-employed 301
-/bank-statement-loan-california.html /mortgage/self-employed 301
-/opt-home-loan-california /mortgage/h1b-opt 301
-/opt-home-loan-california.html /mortgage/h1b-opt 301
+/dscr-loan-california /mortgage/dscr/ 301
+/dscr-loan-california.html /mortgage/dscr/ 301
+/jumbo-loan-california /mortgage/jumbo/ 301
+/jumbo-loan-california.html /mortgage/jumbo/ 301
+/refinance-california /mortgage/refinance/ 301
+/refinance-california.html /mortgage/refinance/ 301
+/self-employed-mortgage-california /mortgage/self-employed/ 301
+/self-employed-mortgage-california.html /mortgage/self-employed/ 301
+/bank-statement-loan-california /mortgage/self-employed/ 301
+/bank-statement-loan-california.html /mortgage/self-employed/ 301
+/opt-home-loan-california /mortgage/h1b-opt/ 301
+/opt-home-loan-california.html /mortgage/h1b-opt/ 301
 # Strip .html extension — canonical clean URLs
 /blog/:slug.html /blog/:slug 301
 /about.html /about 301
@@ -42,10 +42,10 @@
 /questions.html /questions 301
 /glossary.html /glossary 301
 /scenarios.html /scenarios 301
-/mortgage-dscr.html /mortgage/dscr 301
-/mortgage-h1b-opt.html /mortgage/h1b-opt 301
-/mortgage-self-employed.html /mortgage/self-employed 301
-/mortgage-jumbo.html /mortgage/jumbo 301
-/mortgage-refinance.html /mortgage/refinance 301
+/mortgage-dscr.html /mortgage/dscr/ 301
+/mortgage-h1b-opt.html /mortgage/h1b-opt/ 301
+/mortgage-self-employed.html /mortgage/self-employed/ 301
+/mortgage-jumbo.html /mortgage/jumbo/ 301
+/mortgage-refinance.html /mortgage/refinance/ 301
 /san-diego-mortgage.html /california/san-diego-mortgage 301
 /bay-area-mortgage.html /california/bay-area-mortgage 301
