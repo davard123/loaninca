@@ -1,3 +1,16 @@
+# V2 topic consolidation
+/dscr-loan-california /mortgage/dscr 301
+/dscr-loan-california.html /mortgage/dscr 301
+/jumbo-loan-california /mortgage/jumbo 301
+/jumbo-loan-california.html /mortgage/jumbo 301
+/refinance-california /mortgage/refinance 301
+/refinance-california.html /mortgage/refinance 301
+/self-employed-mortgage-california /mortgage/self-employed 301
+/self-employed-mortgage-california.html /mortgage/self-employed 301
+/bank-statement-loan-california /mortgage/self-employed 301
+/bank-statement-loan-california.html /mortgage/self-employed 301
+/opt-home-loan-california /mortgage/h1b-opt 301
+/opt-home-loan-california.html /mortgage/h1b-opt 301
 # Strip .html extension — canonical clean URLs
 /blog/:slug.html /blog/:slug 301
 /about.html /about 301
