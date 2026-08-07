@@ -1,0 +1,146 @@
+[
+  {
+    "route": "/",
+    "status": 200,
+    "title": "加州华人房贷决策与工具 | LoanInCA David Dai",
+    "h1": 1,
+    "canonical": "https://www.loaninca.com/",
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "route": "/about.html",
+    "status": 200,
+    "title": "关于 LoanInCA | 加州华人房贷决策平台",
+    "h1": 1,
+    "canonical": "https://www.loaninca.com/about",
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "route": "/david-dai.html",
+    "status": 200,
+    "title": "David Dai, Mortgage Advisor | NMLS# 2454756 | LoanInCA",
+    "h1": 1,
+    "canonical": "https://www.loaninca.com/david-dai",
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "route": "/loan-finder.html",
+    "status": 200,
+    "title": "贷款方向判断工具 | Loan Scenario Finder | LoanInCA",
+    "h1": 1,
+    "canonical": "https://www.loaninca.com/loan-finder",
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "route": "/mortgage.html",
+    "status": 200,
+    "title": "加州房贷指南 | Mortgage Hub | LoanInCA",
+    "h1": 1,
+    "canonical": "https://www.loaninca.com/mortgage",
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "route": "/calculators.html",
+    "status": 200,
+    "title": "加州房贷计算器平台 | LoanInCA",
+    "h1": 1,
+    "canonical": "https://www.loaninca.com/calculators",
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "route": "/questions.html",
+    "status": 200,
+    "title": "房贷常见问题 | LoanInCA",
+    "h1": 1,
+    "canonical": "https://www.loaninca.com/questions",
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "route": "/glossary.html",
+    "status": 200,
+    "title": "Mortgage Glossary 房贷术语 | LoanInCA",
+    "h1": 1,
+    "canonical": "https://www.loaninca.com/glossary",
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "route": "/scenarios.html",
+    "status": 200,
+    "title": "贷款 Example Scenarios | LoanInCA",
+    "h1": 1,
+    "canonical": "https://www.loaninca.com/scenarios",
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "route": "/mortgage/dscr/",
+    "status": 200,
+    "title": "加州 DSCR Loan 完整指南 | LoanInCA",
+    "h1": 1,
+    "canonical": "https://www.loaninca.com/mortgage/dscr",
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "route": "/mortgage/h1b-opt/",
+    "status": 200,
+    "title": "H1B / OPT 加州房贷指南 | LoanInCA",
+    "h1": 1,
+    "canonical": "https://www.loaninca.com/mortgage/h1b-opt",
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "route": "/mortgage/self-employed/",
+    "status": 200,
+    "title": "加州自雇与 1099 房贷指南 | LoanInCA",
+    "h1": 1,
+    "canonical": "https://www.loaninca.com/mortgage/self-employed",
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "route": "/mortgage/jumbo/",
+    "status": 200,
+    "title": "加州 Jumbo Loan 决策指南 | LoanInCA",
+    "h1": 1,
+    "canonical": "https://www.loaninca.com/mortgage/jumbo",
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "route": "/mortgage/refinance/",
+    "status": 200,
+    "title": "加州 Refinance 决策指南 | LoanInCA",
+    "h1": 1,
+    "canonical": "https://www.loaninca.com/mortgage/refinance",
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "route": "/california/san-diego-mortgage/",
+    "status": 200,
+    "title": "San Diego 华人房贷指南 | LoanInCA",
+    "h1": 1,
+    "canonical": "https://www.loaninca.com/california/san-diego-mortgage",
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "route": "/california/bay-area-mortgage/",
+    "status": 200,
+    "title": "旧金山湾区华人房贷指南 | LoanInCA",
+    "h1": 1,
+    "canonical": "https://www.loaninca.com/california/bay-area-mortgage",
+    "overflow": false,
+    "errors": []
+  }
+]
