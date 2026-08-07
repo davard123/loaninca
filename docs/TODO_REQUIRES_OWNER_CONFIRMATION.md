@@ -36,3 +36,6 @@ These matches are not automatically wrong, but each must be checked against curr
 - blog/what-is-jumbo-loan-2026.html: 最低首付 10%-20%；DTI 不超过 43%；通常要求 6-12 个月现金储备
 - blog/what-is-jumbo-loan-2026.html: 最低首付、信用分、储备金，以及 RSU 或股票收入能不能算进去
 - blog/what-is-jumbo-loan-2026.html: 最低首付：10% 至 20%
+## 2026-08-07 consolidation
+
+The public DSCR, Jumbo, refinance, self-employed, bank-statement, and OPT legacy service URLs now redirect to reviewed V2 topic guides. Their old claim strings remain in repository source only for history and are no longer canonical public content. Remaining city, first-time buyer, doctor-loan, and supporting blog claims still require review.
