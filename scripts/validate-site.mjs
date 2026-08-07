@@ -55,6 +55,7 @@ function normalizeTarget(fromFile, target) {
     : path.normalize(path.join(path.dirname(fromFile), cleanPath));
 
   if (!resolved.includes('.')) {
+    if (exists(path.join(resolved, 'index.html'))) return path.join(resolved, 'index.html');
     return `${resolved}.html`;
   }
 

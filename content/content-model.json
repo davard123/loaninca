@@ -1,0 +1,28 @@
+{
+  "fields": {
+    "topic": "string",
+    "intent": "education | decision",
+    "audience": [
+      "string"
+    ],
+    "relatedCalculators": [
+      "string"
+    ],
+    "relatedArticles": [
+      "string"
+    ],
+    "relatedServices": [
+      "string"
+    ],
+    "davidNotes": "TODO_REQUIRES_OWNER_CONFIRMATION",
+    "contentStatus": "draft | review | verified | published",
+    "datePublished": "manual",
+    "dateModified": "manual"
+  },
+  "qualityGate": [
+    "factual review",
+    "compliance review",
+    "source review",
+    "human readability review"
+  ]
+}
