@@ -39,3 +39,7 @@ These matches are not automatically wrong, but each must be checked against curr
 ## 2026-08-07 consolidation
 
 The public DSCR, Jumbo, refinance, self-employed, bank-statement, and OPT legacy service URLs now redirect to reviewed V2 topic guides. Their old claim strings remain in repository source only for history and are no longer canonical public content. Remaining city, first-time buyer, doctor-loan, and supporting blog claims still require review.
+
+## 2026-08-07 city and buyer batch
+
+Irvine, Orange County, Los Angeles, San Jose, first-time buyer, and Doctor Loan public pages were rewritten without unsupported rate, credit-score, down-payment, PMI, timeline, or program guarantees. Remaining matches in old supporting blog articles still require review.
