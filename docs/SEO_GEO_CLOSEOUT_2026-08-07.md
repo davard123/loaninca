@@ -13,7 +13,7 @@
 
 - Site validation passed.
 - Automated tests passed (3/3).
-- Latest deployed sitemap crawl covered 36 URLs; the two redirecting city URLs found by that crawl were corrected in the final change set.
+- Final Cloudflare deployment audit covered 35 canonical sitemap URLs with 0 bad pages, 0 broken internal links, and 0 risky-claim hits.
 - Internal-link crawl found 40 unique internal destinations and no broken links.
 - The last public risky-claim hit was on the duplicate `/what-is-loaninca` page; that URL is now consolidated into `/about`.
 - Browser verification confirmed `calculator_started` and `calculator_completed` are emitted to both `dataLayer` and the first-party analytics endpoint with a stable anonymous session ID.
