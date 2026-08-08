@@ -1,0 +1,290 @@
+[
+  {
+    "path": "/",
+    "status": 200,
+    "location": null,
+    "title": "加州华人房贷决策与工具 | LoanInCA David Dai",
+    "canonical": "https://www.loaninca.com/",
+    "h1": 1
+  },
+  {
+    "path": "/calculator",
+    "status": 200,
+    "location": null,
+    "title": "LoanInCA 贷款计算器套件 | NMLS# 2454756",
+    "canonical": "https://www.loaninca.com/calculator",
+    "h1": 1
+  },
+  {
+    "path": "/news",
+    "status": 200,
+    "location": null,
+    "title": "LoanInCA 新闻中心 | 房贷最新资讯",
+    "canonical": "https://www.loaninca.com/news",
+    "h1": 1
+  },
+  {
+    "path": "/about",
+    "status": 200,
+    "location": null,
+    "title": "关于 LoanInCA | 加州华人房贷决策平台",
+    "canonical": "https://www.loaninca.com/about",
+    "h1": 1
+  },
+  {
+    "path": "/what-is-loaninca",
+    "status": 200,
+    "location": null,
+    "title": "LoanInCA 是什么网站？| 加州双语房贷咨询平台",
+    "canonical": "https://www.loaninca.com/what-is-loaninca",
+    "h1": 1
+  },
+  {
+    "path": "/privacy",
+    "status": 200,
+    "location": null,
+    "title": "LoanInCA 隐私政策",
+    "canonical": "https://www.loaninca.com/privacy",
+    "h1": 1
+  },
+  {
+    "path": "/terms",
+    "status": 200,
+    "location": null,
+    "title": "LoanInCA 使用条款",
+    "canonical": "https://www.loaninca.com/terms",
+    "h1": 1
+  },
+  {
+    "path": "/disclosures",
+    "status": 200,
+    "location": null,
+    "title": "LoanInCA 执照与披露",
+    "canonical": "https://www.loaninca.com/disclosures",
+    "h1": 1
+  },
+  {
+    "path": "/los-angeles-mortgage",
+    "status": 200,
+    "location": null,
+    "title": "Los Angeles 买房贷款：自住房、Duplex 和投资房怎么选？ | LoanInCA",
+    "canonical": "https://www.loaninca.com/los-angeles-mortgage",
+    "h1": 1
+  },
+  {
+    "path": "/irvine-mortgage",
+    "status": 200,
+    "location": null,
+    "title": "在 Irvine 买房，贷款预算该怎么定？ | LoanInCA",
+    "canonical": "https://www.loaninca.com/irvine-mortgage",
+    "h1": 1
+  },
+  {
+    "path": "/san-jose-mortgage",
+    "status": 200,
+    "location": null,
+    "title": "San Jose 买房，RSU、Bonus 和 Jumbo 怎么算？ | LoanInCA",
+    "canonical": "https://www.loaninca.com/san-jose-mortgage",
+    "h1": 1
+  },
+  {
+    "path": "/orange-county-mortgage",
+    "status": 200,
+    "location": null,
+    "title": "Orange County 买房，先把首付和月供算到一起 | LoanInCA",
+    "canonical": "https://www.loaninca.com/orange-county-mortgage",
+    "h1": 1
+  },
+  {
+    "path": "/first-time-home-buyer-california",
+    "status": 200,
+    "location": null,
+    "title": "第一次在加州买房，贷款要从哪里开始？ | LoanInCA",
+    "canonical": "https://www.loaninca.com/first-time-home-buyer-california",
+    "h1": 1
+  },
+  {
+    "path": "/doctor-loan-california",
+    "status": 200,
+    "location": null,
+    "title": "加州 Doctor Loan：医生买房前应该比较什么？ | LoanInCA",
+    "canonical": "https://www.loaninca.com/doctor-loan-california",
+    "h1": 1
+  },
+  {
+    "path": "/blog/dscr-formula-california",
+    "status": 200,
+    "location": null,
+    "title": "DSCR 公式怎么计算？用一组数字算清楚 | LoanInCA",
+    "canonical": "https://www.loaninca.com/blog/dscr-formula-california",
+    "h1": 1
+  },
+  {
+    "path": "/blog/mortgage-document-checklist-2026",
+    "status": 200,
+    "location": null,
+    "title": "申请房贷要准备哪些材料？按收入类型整理 | LoanInCA",
+    "canonical": "https://www.loaninca.com/blog/mortgage-document-checklist-2026",
+    "h1": 1
+  },
+  {
+    "path": "/blog/how-to-compare-loan-estimates",
+    "status": 200,
+    "location": null,
+    "title": "拿到 Loan Estimate 后，应该比较哪几个数字？ | LoanInCA",
+    "canonical": "https://www.loaninca.com/blog/how-to-compare-loan-estimates",
+    "h1": 1
+  },
+  {
+    "path": "/blog/home-buying-process-california-2026",
+    "status": 200,
+    "location": null,
+    "title": "在加州买房，从准备贷款到 Closing 要做什么？ | LoanInCA",
+    "canonical": "https://www.loaninca.com/blog/home-buying-process-california-2026",
+    "h1": 1
+  },
+  {
+    "path": "/blog/dscr-loan-no-w2-investor-california",
+    "status": 200,
+    "location": null,
+    "title": "没有 W2 买投资房，1007 市场租金会影响什么？ | LoanInCA",
+    "canonical": "https://www.loaninca.com/blog/dscr-loan-no-w2-investor-california",
+    "h1": 1
+  },
+  {
+    "path": "/blog/bank-statement-loan-pitfalls-california",
+    "status": 200,
+    "location": null,
+    "title": "Bank Statement Loan 最容易踩的几个坑 | LoanInCA",
+    "canonical": "https://www.loaninca.com/blog/bank-statement-loan-pitfalls-california",
+    "h1": 1
+  },
+  {
+    "path": "/blog/do-you-need-20-percent-down-southern-california",
+    "status": 200,
+    "location": null,
+    "title": "在南加州买房，一定要准备 20% 首付吗？ | LoanInCA",
+    "canonical": "https://www.loaninca.com/blog/do-you-need-20-percent-down-southern-california",
+    "h1": 1
+  },
+  {
+    "path": "/blog/appraisal-below-purchase-price-california",
+    "status": 200,
+    "location": null,
+    "title": "房屋估价低于买价，接下来该怎么办？ | LoanInCA",
+    "canonical": "https://www.loaninca.com/blog/appraisal-below-purchase-price-california",
+    "h1": 1
+  },
+  {
+    "path": "/david-dai",
+    "status": 200,
+    "location": null,
+    "title": "David Dai, Mortgage Advisor | NMLS# 2454756 | LoanInCA",
+    "canonical": "https://www.loaninca.com/david-dai",
+    "h1": 1
+  },
+  {
+    "path": "/loan-finder",
+    "status": 200,
+    "location": null,
+    "title": "贷款方向判断工具 | Loan Scenario Finder | LoanInCA",
+    "canonical": "https://www.loaninca.com/loan-finder",
+    "h1": 1
+  },
+  {
+    "path": "/mortgage",
+    "status": 200,
+    "location": null,
+    "title": "加州房贷指南 | Mortgage Hub | LoanInCA",
+    "canonical": "https://www.loaninca.com/mortgage",
+    "h1": 1
+  },
+  {
+    "path": "/calculators",
+    "status": 200,
+    "location": null,
+    "title": "加州房贷计算器平台 | LoanInCA",
+    "canonical": "https://www.loaninca.com/calculators",
+    "h1": 1
+  },
+  {
+    "path": "/questions",
+    "status": 200,
+    "location": null,
+    "title": "房贷常见问题 | LoanInCA",
+    "canonical": "https://www.loaninca.com/questions",
+    "h1": 1
+  },
+  {
+    "path": "/glossary",
+    "status": 200,
+    "location": null,
+    "title": "Mortgage Glossary 房贷术语 | LoanInCA",
+    "canonical": "https://www.loaninca.com/glossary",
+    "h1": 1
+  },
+  {
+    "path": "/scenarios",
+    "status": 200,
+    "location": null,
+    "title": "贷款 Example Scenarios | LoanInCA",
+    "canonical": "https://www.loaninca.com/scenarios",
+    "h1": 1
+  },
+  {
+    "path": "/mortgage/dscr/",
+    "status": 200,
+    "location": null,
+    "title": "加州 DSCR 贷款：买投资房时，银行主要看什么？ | LoanInCA",
+    "canonical": "https://www.loaninca.com/mortgage/dscr/",
+    "h1": 1
+  },
+  {
+    "path": "/mortgage/h1b-opt/",
+    "status": 200,
+    "location": null,
+    "title": "H1B、OPT 在加州买房，贷款会看哪些文件？ | LoanInCA",
+    "canonical": "https://www.loaninca.com/mortgage/h1b-opt/",
+    "h1": 1
+  },
+  {
+    "path": "/mortgage/self-employed/",
+    "status": 200,
+    "location": null,
+    "title": "自雇或 1099 买房，银行到底怎么算收入？ | LoanInCA",
+    "canonical": "https://www.loaninca.com/mortgage/self-employed/",
+    "h1": 1
+  },
+  {
+    "path": "/mortgage/jumbo/",
+    "status": 200,
+    "location": null,
+    "title": "在加州买高价房，什么时候会用到 Jumbo 贷款？ | LoanInCA",
+    "canonical": "https://www.loaninca.com/mortgage/jumbo/",
+    "h1": 1
+  },
+  {
+    "path": "/mortgage/refinance/",
+    "status": 200,
+    "location": null,
+    "title": "现在重贷划不划算？先算清楚多久回本 | LoanInCA",
+    "canonical": "https://www.loaninca.com/mortgage/refinance/",
+    "h1": 1
+  },
+  {
+    "path": "/california/san-diego-mortgage",
+    "status": 308,
+    "location": "/california/san-diego-mortgage/",
+    "title": "",
+    "canonical": "",
+    "h1": 0
+  },
+  {
+    "path": "/california/bay-area-mortgage",
+    "status": 308,
+    "location": "/california/bay-area-mortgage/",
+    "title": "",
+    "canonical": "",
+    "h1": 0
+  }
+]

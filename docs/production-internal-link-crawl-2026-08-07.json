@@ -1,0 +1,202 @@
+[
+  {
+    "path": "/assets/loaninca-share-card.svg",
+    "status": 200,
+    "location": null
+  },
+  {
+    "path": "/assets/site-v2.css",
+    "status": 200,
+    "location": null
+  },
+  {
+    "path": "/",
+    "status": 200,
+    "location": null
+  },
+  {
+    "path": "/mortgage",
+    "status": 200,
+    "location": null
+  },
+  {
+    "path": "/loan-finder",
+    "status": 200,
+    "location": null
+  },
+  {
+    "path": "/calculators",
+    "status": 200,
+    "location": null
+  },
+  {
+    "path": "/questions",
+    "status": 200,
+    "location": null
+  },
+  {
+    "path": "/news",
+    "status": 200,
+    "location": null
+  },
+  {
+    "path": "/about",
+    "status": 200,
+    "location": null
+  },
+  {
+    "path": "/david-dai",
+    "status": 200,
+    "location": null
+  },
+  {
+    "path": "/first-time-home-buyer-california",
+    "status": 200,
+    "location": null
+  },
+  {
+    "path": "/mortgage/h1b-opt",
+    "status": 308,
+    "location": "/mortgage/h1b-opt/"
+  },
+  {
+    "path": "/mortgage/self-employed",
+    "status": 308,
+    "location": "/mortgage/self-employed/"
+  },
+  {
+    "path": "/mortgage/dscr",
+    "status": 308,
+    "location": "/mortgage/dscr/"
+  },
+  {
+    "path": "/mortgage/jumbo",
+    "status": 308,
+    "location": "/mortgage/jumbo/"
+  },
+  {
+    "path": "/mortgage/refinance",
+    "status": 308,
+    "location": "/mortgage/refinance/"
+  },
+  {
+    "path": "/disclosures",
+    "status": 200,
+    "location": null
+  },
+  {
+    "path": "/privacy",
+    "status": 200,
+    "location": null
+  },
+  {
+    "path": "/terms",
+    "status": 200,
+    "location": null
+  },
+  {
+    "path": "/blog/h1b-california-home-loan",
+    "status": 301,
+    "location": "/mortgage/h1b-opt/"
+  },
+  {
+    "path": "/blog/self-employed-mortgage-los-angeles",
+    "status": 301,
+    "location": "/mortgage/self-employed/"
+  },
+  {
+    "path": "/blog/what-is-dscr-loan",
+    "status": 301,
+    "location": "/mortgage/dscr/"
+  },
+  {
+    "path": "/blog/los-angeles-down-payment-guide",
+    "status": 301,
+    "location": "/blog/do-you-need-20-percent-down-southern-california"
+  },
+  {
+    "path": "/blog/what-is-jumbo-loan-2026",
+    "status": 301,
+    "location": "/mortgage/jumbo/"
+  },
+  {
+    "path": "/blog/h1b-california-home-loan.html",
+    "status": 301,
+    "location": "/mortgage/h1b-opt/"
+  },
+  {
+    "path": "/blog/self-employed-mortgage-los-angeles.html",
+    "status": 301,
+    "location": "/mortgage/self-employed/"
+  },
+  {
+    "path": "/blog/what-is-dscr-loan.html",
+    "status": 301,
+    "location": "/mortgage/dscr/"
+  },
+  {
+    "path": "/assets/shared.css",
+    "status": 200,
+    "location": null
+  },
+  {
+    "path": "/calculator",
+    "status": 200,
+    "location": null
+  },
+  {
+    "path": "/refinance-california",
+    "status": 301,
+    "location": "/mortgage/refinance/"
+  },
+  {
+    "path": "/dscr-loan-california",
+    "status": 301,
+    "location": "/mortgage/dscr/"
+  },
+  {
+    "path": "/jumbo-loan-california",
+    "status": 301,
+    "location": "/mortgage/jumbo/"
+  },
+  {
+    "path": "/self-employed-mortgage-california",
+    "status": 301,
+    "location": "/mortgage/self-employed/"
+  },
+  {
+    "path": "/bank-statement-loan-california",
+    "status": 301,
+    "location": "/mortgage/self-employed/"
+  },
+  {
+    "path": "/opt-home-loan-california",
+    "status": 301,
+    "location": "/mortgage/h1b-opt/"
+  },
+  {
+    "path": "/doctor-loan-california",
+    "status": 200,
+    "location": null
+  },
+  {
+    "path": "/mortgage/dscr/",
+    "status": 200,
+    "location": null
+  },
+  {
+    "path": "/mortgage/h1b-opt/",
+    "status": 200,
+    "location": null
+  },
+  {
+    "path": "/mortgage/self-employed/",
+    "status": 200,
+    "location": null
+  },
+  {
+    "path": "/mortgage/refinance/",
+    "status": 200,
+    "location": null
+  }
+]

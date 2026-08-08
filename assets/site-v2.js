@@ -1,5 +1,5 @@
-
 window.dataLayer=window.dataLayer||[];
-function track(name,detail={}){window.dataLayer.push({event:name,...detail});document.dispatchEvent(new CustomEvent('loaninca:'+name,{detail}));}
+function analyticsSession(){try{let id=sessionStorage.getItem('loaninca_session');if(!id){id=crypto.randomUUID?crypto.randomUUID():'s-'+Date.now()+'-'+Math.random().toString(36).slice(2);sessionStorage.setItem('loaninca_session',id)}return id}catch{return ''}}
+function track(name,detail={}){const safe={event:name,path:location.pathname,...detail};window.dataLayer.push(safe);document.dispatchEvent(new CustomEvent('loaninca:'+name,{detail:safe}));const q=new URLSearchParams(location.search);const payload={calculator_type:name,input_data:{path:location.pathname},result_data:{},session_id:analyticsSession(),utm_source:q.get('utm_source')||'',utm_medium:q.get('utm_medium')||'',utm_campaign:q.get('utm_campaign')||''};try{fetch('/api/analytics',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(payload),keepalive:true}).catch(()=>{})}catch{}}
 document.addEventListener('DOMContentLoaded',()=>{const b=document.querySelector('.menu-btn'),n=document.querySelector('.nav-links');if(b&&n)b.addEventListener('click',()=>{const o=n.classList.toggle('open');b.setAttribute('aria-expanded',String(o))});document.querySelectorAll('[data-track]').forEach(el=>el.addEventListener('click',()=>track(el.dataset.track,{path:location.pathname})));});
 window.LoanInCA={track};
