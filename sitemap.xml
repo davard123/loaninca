@@ -24,12 +24,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://www.loaninca.com/what-is-loaninca</loc>
-    <lastmod>2026-05-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+
   <url>
     <loc>https://www.loaninca.com/privacy</loc>
     <lastmod>2026-04-18</lastmod>
@@ -220,13 +215,13 @@
     <priority>.9</priority>
   </url>
   <url>
-    <loc>https://www.loaninca.com/california/san-diego-mortgage</loc>
+    <loc>https://www.loaninca.com/california/san-diego-mortgage/</loc>
     <lastmod>2026-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>.7</priority>
   </url>
   <url>
-    <loc>https://www.loaninca.com/california/bay-area-mortgage</loc>
+    <loc>https://www.loaninca.com/california/bay-area-mortgage/</loc>
     <lastmod>2026-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>.7</priority>
