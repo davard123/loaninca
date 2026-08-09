@@ -6,6 +6,7 @@ import {
   buildFederalReserveRates,
   parseFredCsvSeries
 } from './rate-utils.mjs';
+import { escapeHtml, validateLead } from './lead-utils.mjs';
 
 export async function onRequestPost({ request, env, waitUntil }) {
   const url = new URL(request.url);
@@ -44,6 +45,15 @@ export async function onRequestPost({ request, env, waitUntil }) {
     }
 
     if (path[1] === 'leads') {
+      const validation = validateLead(data);
+      if (!validation.ok) {
+        return Response.json({ success: false, error: validation.error }, { status: 400 });
+      }
+      if (validation.spam) {
+        return Response.json({ success: true });
+      }
+      Object.assign(data, validation.lead);
+
       const id = 'lead-' + Date.now() + '-' + Math.random().toString(36).substr(2, 9);
       await env.DB.prepare(`
         INSERT INTO leads (id, name, phone, email, inquiry_type, loan_amount, note, source_url, utm_source, utm_medium, utm_campaign, status, created_at)
@@ -123,9 +133,9 @@ export async function onRequestPost({ request, env, waitUntil }) {
       // Send auto-reply email if client provided an email address
       if (data.email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email) && env.RESEND_API_KEY) {
         const sendAutoReply = async () => {
-          const inquiryType = leadData.inquiry_type || '房贷咨询'
-          const loanAmount = leadData.loan_amount ? `<br>贷款金额：${leadData.loan_amount}` : ''
-          const noteRow = leadData.note && leadData.note !== '无' ? `<br>备注：${leadData.note}` : ''
+          const inquiryType = escapeHtml(leadData.inquiry_type || '房贷咨询')
+          const loanAmount = leadData.loan_amount ? `<br>贷款金额：${escapeHtml(leadData.loan_amount)}` : ''
+          const noteRow = leadData.note && leadData.note !== '无' ? `<br>备注：${escapeHtml(leadData.note)}` : ''
           const html = `<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -146,7 +156,7 @@ export async function onRequestPost({ request, env, waitUntil }) {
         <td style="padding:40px;">
           <p style="margin:0 0 4px;color:#999;font-size:12px;letter-spacing:.2em;text-transform:uppercase;">咨询确认</p>
           <h1 style="margin:0 0 24px;font-size:22px;font-weight:400;color:#0d1117;">已收到您的房贷咨询</h1>
-          <p style="margin:0 0 16px;color:#444;font-size:15px;line-height:1.8;">${leadData.name} 您好，</p>
+          <p style="margin:0 0 16px;color:#444;font-size:15px;line-height:1.8;">${escapeHtml(leadData.name)} 您好，</p>
           <p style="margin:0 0 16px;color:#666;font-size:14px;line-height:1.8;">
             我已收到您关于 <strong>${inquiryType}</strong> 的咨询请求，将在 1 个工作日内与您联系。
           </p>
