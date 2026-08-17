@@ -1,0 +1,12 @@
+name: IndexNow
+
+on:
+  push:
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify IndexNow
+        run: |
+          curl -sS -X POST "https://api.indexnow.org/indexnow" -H "Content-Type: application/json; charset=utf-8" --data '{"host":"www.loaninca.com","key":"8436564b6171657c7863c26d8829a084","keyLocation":"https://www.loaninca.com/8436564b6171657c7863c26d8829a084.txt","urlList":["https://www.loaninca.com/sitemap.xml"]}'
