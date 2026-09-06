@@ -28,7 +28,7 @@ for (let n=1;n<=attempts;n++) {
     for (const item of expected.items) if (!html.includes(escapeHtml(item.title_zh))) throw new Error('Production HTML is not synchronized with the feed');
     if (!html.includes('/assets/news.mjs')) throw new Error('Production still has the legacy news renderer');
     console.log(`PASS: ${verifiedHost} news HTML and ${expected.items.length} source records match this revision`);
-    process.exit(0);
+    break; // Let fetch handles close normally, including on Windows.
   } catch(error) {
     if(n===attempts) throw error;
     console.log(`Awaiting production verification (${n}/${attempts}): ${error.message}`);
