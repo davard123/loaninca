@@ -2,7 +2,7 @@ import { readFile, writeFile } from 'node:fs/promises';
 import { renderFeed } from '../assets/news-utils.mjs';
 const feed = JSON.parse(await readFile('assets/mortgage-news.json','utf8'));
 const file = 'news.html';
-const source = await readFile(file,'utf8');
+const source = (await readFile(file,'utf8')).replace(/\r\n/g, '\n');
 const marker = /<!-- MARKET_NEWS_START -->[\s\S]*?<!-- MARKET_NEWS_END -->/;
 if (!marker.test(source)) throw new Error('Missing news rendering markers');
 const output = source.replace(marker, `<!-- MARKET_NEWS_START -->\n${renderFeed(feed)}\n<!-- MARKET_NEWS_END -->`);
