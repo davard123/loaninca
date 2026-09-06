@@ -34,3 +34,6 @@
 
 .menu-btn { display:none; }
 @media(max-width:900px) { .menu-btn { display:inline-flex; } }
+
+/* Keep the real advisor's face inside circular portrait crops. */
+img[src*='david-headshot'] { object-position: center top; }
