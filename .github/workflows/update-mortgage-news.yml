@@ -1,6 +1,16 @@
 name: Update mortgage news
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/update-mortgage-news.yml"
+      - "scripts/update-mortgage-news.mjs"
+      - "scripts/lib/pmms.mjs"
+      - "scripts/render-news.mjs"
+      - "scripts/verify-news-live.mjs"
+      - "assets/news*.mjs"
+      - "tests/news.test.mjs"
   schedule:
     - cron: "30 17 * * 4"
     - cron: "30 21 * * 4"
