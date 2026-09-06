@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-03T19:59:50.708Z",
+  "generated_at": "2026-09-06T16:03:41.561286Z",
   "notes": "Mortgage and housing updates from primary public sources.",
   "items": [
     {
@@ -12,22 +12,22 @@
       "url": "https://www.freddiemac.com/pmms"
     },
     {
-      "source": "Fannie Mae",
-      "date": "2026-07-01",
-      "title": "Fannie Mae published its July economic and housing outlook",
-      "title_zh": "Fannie Mae 发布 7 月经济与住房展望",
-      "summary": "Fannie Mae's ESR group updated its outlook for mortgage rates, home sales, prices, housing starts, and mortgage originations. Forecasts can change with new economic data and are not individual loan quotes.",
-      "summary_zh": "Fannie Mae 的 ESR 团队更新了房贷利率、房屋销售、房价、开工和贷款发放量预测。预测会随经济数据变化，不应视为个人贷款报价。",
-      "url": "https://www.fanniemae.com/data-and-insights/forecast/forecast-monthly-archive"
+      "source": "FHFA",
+      "date": "2026-08-25",
+      "title": "FHFA reports second-quarter U.S. home price growth of 2.1% year over year",
+      "title_zh": "FHFA：美国二季度房价同比上涨 2.1%",
+      "summary": "The Q2 report shows national prices up 2.1% year over year and 0.3% quarter over quarter. These national figures do not determine an individual home value.",
+      "summary_zh": "FHFA 二季度报告显示，全美房价同比上涨 2.1%、环比上涨 0.3%；经季节调整的 6 月月度指数与 5 月持平。这是全国统计，不代表某一城市或房屋的估值。",
+      "url": "https://www.fhfa.gov/reports/house-price-index/2026/Q2"
     },
     {
-      "source": "FHFA",
-      "date": "2026-06-30",
-      "title": "U.S. home prices fell 0.1% in April and rose 2.0% year over year",
-      "title_zh": "美国 4 月房价环比下降 0.1%，同比上涨 2.0%",
-      "summary": "FHFA's monthly HPI reported a 0.1% national decline in April and a 2.0% increase from April 2025. The Pacific division increased 0.2% year over year.",
-      "summary_zh": "FHFA 月度房价指数显示，美国独栋住宅价格 4 月环比下降 0.1%，较 2025 年 4 月上涨 2.0%；Pacific 分区同比上涨 0.2%。",
-      "url": "https://www.fhfa.gov/document/d/hpi/fhfa-hpi-monthly-june-2026"
+      "source": "Fannie Mae",
+      "date": "2026-08-13",
+      "title": "Fannie Mae releases its August housing forecast",
+      "title_zh": "Fannie Mae 发布 8 月住房预测",
+      "summary": "The August forecast covers home sales, starts, mortgage rates and originations. Projections are assumptions-based and may change; they are not rate offers.",
+      "summary_zh": "8 月预测列出了住房销售、开工、房贷利率和贷款发放量的预期。预测会随假设和数据变化，不是未来利率承诺，也不是今天的个人贷款报价。",
+      "url": "https://www.fanniemae.com/media/document/pdf/housing-forecast-082026"
     },
     {
       "source": "HUD",

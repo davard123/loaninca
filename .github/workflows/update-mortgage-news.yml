@@ -3,6 +3,8 @@ name: Update mortgage news
 on:
   schedule:
     - cron: "30 17 * * 4"
+    - cron: "30 21 * * 4"
+    - cron: "30 17 * * 5"
   workflow_dispatch:
 
 permissions:
@@ -11,6 +13,10 @@ permissions:
 jobs:
   update:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
+    concurrency:
+      group: mortgage-news-update
+      cancel-in-progress: false
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -18,14 +24,23 @@ jobs:
           node-version: "22"
       - name: Fetch the latest Freddie Mac PMMS
         run: node scripts/update-mortgage-news.mjs
+      - name: Render and validate the public news page
+        run: |
+          node scripts/render-news.mjs
+          node scripts/render-news.mjs --check
+          node scripts/validate-site.mjs
+          node --test tests/*.test.mjs
       - name: Publish changed data
         run: |
-          if git diff --quiet -- assets/mortgage-news.json ios/LoanInCACalculator/LoanInCACalculator/mortgage-news.json; then
+          if git diff --quiet -- assets/mortgage-news.json ios/LoanInCACalculator/LoanInCACalculator/mortgage-news.json news.html; then
             echo "No mortgage news changes"
             exit 0
           fi
           git config user.name "loaninca-news-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add assets/mortgage-news.json ios/LoanInCACalculator/LoanInCACalculator/mortgage-news.json
+          git add assets/mortgage-news.json ios/LoanInCACalculator/LoanInCACalculator/mortgage-news.json news.html
           git commit -m "chore: refresh weekly mortgage news"
+          git pull --rebase origin main
           git push
+      - name: Verify the published feed and public HTML
+        run: node scripts/verify-news-live.mjs
