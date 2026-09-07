@@ -7,8 +7,8 @@
       "date": "2026-09-03",
       "title": "The average 30-year fixed mortgage rate was 6.71%",
       "title_zh": "30 年固定房贷全国平均利率为 6.71%",
-      "summary": "Freddie Mac's PMMS reported a 6.71% average, up from 6.66% the week before. The 15-year fixed average was 6.04%. These are national averages, not individual quotes.",
-      "summary_zh": "Freddie Mac 的 PMMS 显示，30 年固定房贷平均利率为 6.71%，高于前一周的 6.66%；15 年固定房贷平均利率为 6.04%。这是全国平均值，不是个人报价。",
+      "summary": "Freddie Mac's PMMS reported a 6.71% average, up from 6.66% the week before. The 15-year fixed average was 6.04%.",
+      "summary_zh": "Freddie Mac 的 PMMS 显示，30 年固定房贷平均利率为 6.71%，高于前一周的 6.66%；15 年固定房贷平均利率为 6.04%。",
       "url": "https://www.freddiemac.com/pmms"
     },
     {
@@ -16,8 +16,8 @@
       "date": "2026-08-25",
       "title": "FHFA reports second-quarter U.S. home price growth of 2.1% year over year",
       "title_zh": "FHFA：美国二季度房价同比上涨 2.1%",
-      "summary": "The Q2 report shows national prices up 2.1% year over year and 0.3% quarter over quarter. These national figures do not determine an individual home value.",
-      "summary_zh": "FHFA 二季度报告显示，全美房价同比上涨 2.1%、环比上涨 0.3%；经季节调整的 6 月月度指数与 5 月持平。这是全国统计，不代表某一城市或房屋的估值。",
+      "summary": "The Q2 report shows national prices up 2.1% year over year and 0.3% quarter over quarter.",
+      "summary_zh": "FHFA 二季度报告显示，全美房价同比上涨 2.1%、环比上涨 0.3%；经季节调整的 6 月月度指数与 5 月持平。",
       "url": "https://www.fhfa.gov/reports/house-price-index/2026/Q2"
     },
     {
@@ -25,8 +25,8 @@
       "date": "2026-08-13",
       "title": "Fannie Mae releases its August housing forecast",
       "title_zh": "Fannie Mae 发布 8 月住房预测",
-      "summary": "The August forecast covers home sales, starts, mortgage rates and originations. Projections are assumptions-based and may change; they are not rate offers.",
-      "summary_zh": "8 月预测列出了住房销售、开工、房贷利率和贷款发放量的预期。预测会随假设和数据变化，不是未来利率承诺，也不是今天的个人贷款报价。",
+      "summary": "The August forecast covers home sales, starts, mortgage rates and originations.",
+      "summary_zh": "8 月预测列出了住房销售、开工、房贷利率和贷款发放量的预期。",
       "url": "https://www.fanniemae.com/media/document/pdf/housing-forecast-082026"
     },
     {

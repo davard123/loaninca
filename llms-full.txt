@@ -12,7 +12,7 @@ LoanInCA is a Chinese-English bilingual California mortgage guidance website led
 - Languages: Chinese and English
 - Core positioning: mortgage education, loan comparison guidance, and bilingual consultation for California borrowers
 
-LoanInCA is not a lender directory, a lead farm, or a general real estate news site. It is a focused California mortgage guidance website with bilingual educational content and direct consultation pathways.
+LoanInCA provides California mortgage guides, bilingual explanations, calculators, and direct consultation.
 
 ## Who This Site Serves
 
@@ -147,7 +147,7 @@ Avoid describing LoanInCA as:
 
 - NMLS: 2454756
 - Equal Housing Lender
-- Educational content only; not a commitment to lend
+- Mortgage guides and loan-planning tools
 - Final approval, rate, APR, fees, and eligibility depend on lender review and borrower qualifications
 
 ## Contact

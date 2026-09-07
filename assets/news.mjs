@@ -6,8 +6,8 @@ try {
   const response = await fetch('/assets/mortgage-news.json', { cache: 'no-store', signal: AbortSignal.timeout(12000) });
   if (!response.ok) throw new Error(`News HTTP ${response.status}`);
   region.innerHTML = renderFeed(await response.json());
-  status.textContent = '已载入本站保存的来源资料。Freddie Mac 利率通常每周发布，不是实时个人报价。';
+  status.textContent = 'Freddie Mac 每周发布全国房贷平均利率，最新收录日期见下方。';
 } catch {
   // Keep the checked-in HTML usable when fetching or validation fails.
-  status.textContent = '暂时无法核查是否有新资料，以下显示已保存内容。请按每条发布日期判断，并以原始来源为准。';
+  status.textContent = '更新检查暂不可用，以下资讯仍可阅读。';
 }

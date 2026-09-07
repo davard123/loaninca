@@ -10,7 +10,7 @@ export function parsePmms(html, now = new Date()) {
   const prior = text.match(/30-year fixed-rate mortgage averaged [0-9.]+%[\s\S]{0,160}?when it averaged ([0-9.]+)%/i)?.[1];
   const comparisonZh = !prior ? '' : Number(rate30)===Number(prior) ? `，与前一周的 ${prior}% 持平` : `，${Number(rate30)>Number(prior)?'高于':'低于'}前一周的 ${prior}%`;
   const comparisonEn = !prior ? '' : Number(rate30)===Number(prior) ? `, unchanged from ${prior}% the week before` : `, ${Number(rate30)>Number(prior)?'up':'down'} from ${prior}% the week before`;
-  return {source:'Freddie Mac', date, title:`The average 30-year fixed mortgage rate was ${rate30}%`, title_zh:`30 年固定房贷全国平均利率为 ${rate30}%`, summary:`Freddie Mac's PMMS reported a ${rate30}% average${comparisonEn}. The 15-year fixed average was ${rate15}%. These are national averages, not individual quotes.`, summary_zh:`Freddie Mac 的 PMMS 显示，30 年固定房贷平均利率为 ${rate30}%${comparisonZh}；15 年固定房贷平均利率为 ${rate15}%。这是全国平均值，不是个人报价。`, url:'https://www.freddiemac.com/pmms'};
+  return {source:'Freddie Mac', date, title:`The average 30-year fixed mortgage rate was ${rate30}%`, title_zh:`30 年固定房贷全国平均利率为 ${rate30}%`, summary:`Freddie Mac's PMMS reported a ${rate30}% average${comparisonEn}. The 15-year fixed average was ${rate15}%.`, summary_zh:`Freddie Mac 的 PMMS 显示，30 年固定房贷平均利率为 ${rate30}%${comparisonZh}；15 年固定房贷平均利率为 ${rate15}%。`, url:'https://www.freddiemac.com/pmms'};
 }
 export function mergePmms(feed, item, now = new Date()) {
   const old = feed.items.find(x=>x.source==='Freddie Mac');

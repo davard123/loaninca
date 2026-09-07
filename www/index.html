@@ -261,7 +261,7 @@
             padding: 6px 0;
             padding-bottom: max(6px, env(safe-area-inset-bottom, 0));
         }
-        
+
         .bottom-nav-items {
             display: flex;
             justify-content: space-between;
@@ -270,7 +270,7 @@
             max-width: 500px;
             margin: 0 auto;
         }
-        
+
         .bottom-nav-btn {
             display: flex;
             flex-direction: column;
@@ -285,13 +285,13 @@
             transition: all 0.2s ease;
             gap: 3px;
         }
-        
+
         .bottom-nav-btn .nav-icon {
             font-size: 20px;
             line-height: 1;
             margin-bottom: 2px;
         }
-        
+
         .bottom-nav-btn .nav-label {
             font-size: 10px;
             font-weight: 500;
@@ -302,23 +302,23 @@
             overflow: hidden;
             text-overflow: ellipsis;
         }
-        
+
         .bottom-nav-btn.active {
             background: transparent;
             transform: none;
             box-shadow: none;
         }
-        
+
         .bottom-nav-btn.active .nav-icon,
         .bottom-nav-btn.active .nav-label {
             color: var(--primary-blue);
         }
-        
+
         .bottom-nav-btn:hover:not(.active) {
             background: rgba(0, 122, 255, 0.05);
             border-radius: 8px;
         }
-        
+
         /* 手机端内容底部留白，防止被导航栏遮挡 */
         .bottom-nav-spacer {
             height: 70px;
@@ -330,8 +330,8 @@
             body {
                 padding-bottom: 70px;
             }
-            .tab-nav { 
-                gap: 6px; 
+            .tab-nav {
+                gap: 6px;
                 padding: 6px;
                 display: none !important; /* 手机端隐藏顶部标签 */
             }
@@ -340,7 +340,7 @@
             .form-grid { grid-template-columns: 1fr; gap: 16px; }
             .results-content { padding: 20px; width: 95%; max-height: 85vh; }
             .language-selector { position: static; margin-bottom: 16px; text-align: center; }
-            
+
             /* 手机端显示底部导航 */
             .bottom-nav {
                 display: block;
@@ -405,7 +405,7 @@
         <div id="buy-sell" class="calculator-container active">
             <div class="calculator-card">
                 <h2 data-i18n="buySellTitle">🏡 买卖房地产计算器</h2>
-                
+
                 <form id="buy-sell-form">
                     <div class="form-group" style="margin-bottom: 24px;">
                         <label for="bs-loan-type" data-i18n="loanType">贷款类型</label>
@@ -554,7 +554,7 @@
                             </select>
                         </div>
                         <div class="form-grid" id="bs-va-data" style="margin-top: 16px;"></div>
-                        
+
                         <div class="section-title" style="margin-top: 24px;" data-i18n="vaComparison">VA Loan Eligibility</div>
                         <div class="form-grid" id="bs-va-comparison">
                             <div class="form-group">
@@ -676,7 +676,7 @@
                         <div class="job-header">
                             <span class="job-title" data-i18n="job1">工作 1 (必填)</span>
                         </div>
-                        
+
                         <div class="radio-group">
                             <label class="radio-option">
                                 <input type="radio" name="job1-type" value="w2" checked onclick="toggleJobType('job1')">
@@ -734,7 +734,7 @@
                             <span class="job-title" data-i18n="job2">工作 2 (选填)</span>
                             <button type="button" class="remove-job-btn" onclick="removeJob2()" data-i18n="removeJob">移除</button>
                         </div>
-                        
+
                         <div class="radio-group">
                             <label class="radio-option">
                                 <input type="radio" name="job2-type" value="w2" checked onclick="toggleJobType('job2')">
@@ -1016,9 +1016,9 @@
                     </tr>
                 </table>
 
-                <div class="section-title" data-i18n="disclaimerSection">免责声明 / Disclaimer</div>
-                <p style="color: var(--text-secondary); font-size: 14px; line-height: 1.8;" data-i18n="disclaimerZh">本计算器仅供参考，不构成贷款建议或承诺。实际贷款条款以贷款机构批准为准。利率、费用等可能因个人信用、地区、贷款机构而异。请在做出财务决策前咨询专业贷款顾问。</p>
-                <p style="color: var(--text-secondary); font-size: 14px; line-height: 1.8; margin-top: 8px;" data-i18n="disclaimerEn">This calculator is for reference only and does not constitute loan advice or commitment. Actual loan terms are subject to lender approval. Interest rates, fees, etc. may vary based on individual credit, location, and lender. Please consult a professional loan advisor before making financial decisions.</p>
+                <div class="section-title" data-i18n="disclaimerSection">计算说明 / Notes</div>
+                <p style="color: var(--text-secondary); font-size: 14px; line-height: 1.8;" data-i18n="disclaimerZh">计算结果依据你输入的贷款金额、利率、期限和费用。调整这些参数，可以比较不同方案的月供与总成本。</p>
+                <p style="color: var(--text-secondary); font-size: 14px; line-height: 1.8; margin-top: 8px;" data-i18n="disclaimerEn">Results use the loan amount, rate, term and costs you enter. Adjust these inputs to compare monthly payments and total costs.</p>
             </div>
 
             <div class="ad-banner-bottom">
@@ -1033,7 +1033,7 @@
                     <a href="#" onclick="showHelp()" data-i18n="footerHelp">使用说明</a>
                     <a href="mailto:daviddairealty@gmail.com" data-i18n="footerContact">联系我们</a>
                     <a href="#" onclick="showVersion()" data-i18n="footerVersion">版本历史</a>
-                    <a href="#" onclick="showDisclaimer()" data-i18n="footerDisclaimer">免责声明</a>
+                    <a href="#" onclick="showDisclaimer()" data-i18n="footerDisclaimer">网站披露</a>
                 </div>
                 <p data-i18n="footerCopyright">&copy; 2026 Loan Calculator Suite. All rights reserved.</p>
                 <p data-i18n="footerVersionText">Version 1.0.1 | Last Updated: 2026-03-21</p>
@@ -1045,7 +1045,7 @@
         <div class="results-content">
             <button class="close-modal" onclick="closeModal()">×</button>
             <h3 id="modal-title" data-i18n="modalTitle">计算结果</h3>
-            
+
             <div class="ad-banner-middle">
                 <p data-i18n="adBannerMiddle">📢 广告位 - 精准触达贷款客户</p>
             </div>
@@ -1095,9 +1095,9 @@
                 'helpClosingCost': '详细计算购房交易的各项费用，包括 Lender Fees、第三方费用、预付费用等。',
                 'contactSection': '联系方式 / Contact', 'contactEmail': '联系邮件：daviddairealty@gmail.com', 'adEmail': '广告邮件：daviddairealty@gmail.com', 'helpEmail': '如有问题，请发送邮件至：daviddairealty@gmail.com',
                 'versionSection': '版本历史 / Revision History', 'version1': 'v1.0.1', 'version1Desc': '2026-03-21 - 添加 DSCR 租金计算、VA 对比、收入计算重构', 'version1Old': 'v1.0.0', 'version1OldDesc': '2026-03-21 - 初始版本，5 大核心功能',
-                'disclaimerSection': '免责声明 / Disclaimer', 'disclaimerZh': '本计算器仅供参考，不构成贷款建议或承诺。实际贷款条款以贷款机构批准为准。利率、费用等可能因个人信用、地区、贷款机构而异。请在做出财务决策前咨询专业贷款顾问。',
-                'disclaimerEn': 'This calculator is for reference only and does not constitute loan advice or commitment. Actual loan terms are subject to lender approval. Interest rates, fees, etc. may vary based on individual credit, location, and lender. Please consult a professional loan advisor before making financial decisions.',
-                'footerHelp': '使用说明', 'footerContact': '联系我们', 'footerVersion': '版本历史', 'footerDisclaimer': '免责声明', 'footerCopyright': '© 2026 Loan Calculator Suite. All rights reserved.', 'footerVersionText': 'Version 1.0.1 | Last Updated: 2026-03-21',
+                'disclaimerSection': '计算说明 / Notes', 'disclaimerZh': '计算结果依据你输入的贷款金额、利率、期限和费用。调整这些参数，可以比较不同方案的月供与总成本。',
+                'disclaimerEn': 'Results use the loan amount, rate, term and costs you enter. Adjust these inputs to compare monthly payments and total costs.',
+                'footerHelp': '使用说明', 'footerContact': '联系我们', 'footerVersion': '版本历史', 'footerDisclaimer': '网站披露', 'footerCopyright': '© 2026 Loan Calculator Suite. All rights reserved.', 'footerVersionText': 'Version 1.0.1 | Last Updated: 2026-03-21',
                 'modalTitle': '计算结果',
                 'resultMonthlyPayment': '月供总数', 'resultLoanAmount': '贷款总额', 'resultLtv': 'LTV', 'resultPI': 'P&I', 'resultPrincipalInterest': 'Principal & Interest', 'resultPropertyTax': 'Property Tax', 'resultHomeInsurance': 'Home Insurance', 'resultPmi': 'PMI', 'resultHoa': 'HOA', 'resultOtherDebts': '其他负债', 'resultOtherProperties': '其他房产', 'resultPitiTotal': 'PITI + 其他',
                 'requiredIncomeTitle': '需要的月收入', 'requiredIncomeDesc': '根据 DTI 标准，您需要达到以下月收入才能获批贷款：', 'dti36Conservative': '36% DTI (保守)', 'dti43Standard': '43% DTI (标准)', 'dti50Aggressive': '50% DTI (较高)',
@@ -1106,7 +1106,7 @@
                 'resultDownPayment': 'Down Payment', 'resultTotalCost': '总费用', 'resultLenderFeesSubtotal': 'Lender Fees 小计', 'resultThirdPartySubtotal': 'Third Party 小计', 'resultPrepaidSubtotal': 'Prepaid 小计', 'resultTotalClosingCost': '总 Closing Cost', 'daysText': '天',
                 'alertHelpTitle': '使用说明：', 'alertHelpContent': '\n\n1. 买卖房地产：输入房价、首付、利率等，计算月供和 DTI\n2. 重贷：比较新旧贷款，计算节省和回本时间\n3. 收入计算：汇总各类收入来源\n4. Closing Cost：详细计算交易费用\n\n如有问题请联系：daviddairealty@gmail.com',
                 'alertVersionTitle': '版本历史：', 'alertVersionContent': '\n\nv1.0.1 (2026-03-21)\n- 添加 DSCR 租金收入计算\n- 添加 VA 贷款对比功能\n- 重构收入计算逻辑\n- 支持多份工作收入\n\nv1.0.0 (2026-03-21)\n- 初始版本\n- 5 大核心功能上线\n- 苹果风格 UI 设计',
-                'alertDisclaimerTitle': '免责声明：', 'alertDisclaimerContent': '\n\n本计算器仅供参考，不构成贷款建议或承诺。实际贷款条款以贷款机构批准为准。请在做出财务决策前咨询专业贷款顾问。',
+                'alertDisclaimerTitle': '计算说明：', 'alertDisclaimerContent': '\n\n结果按你输入的参数计算；规划住房预算时，请把房产税、保险和 HOA 一并计入。',
                 'alertLanguageDeveloping': '语言切换功能开发中...\n当前选择：'
             },
             en: {
@@ -1147,8 +1147,8 @@
                 'helpClosingCost': 'Detailed calculation of home purchase transaction fees, including Lender Fees, third-party fees, prepaid fees, etc.',
                 'contactSection': 'Contact / Contact Information', 'contactEmail': 'Contact Email: daviddairealty@gmail.com', 'adEmail': 'Advertising Email: daviddairealty@gmail.com', 'helpEmail': 'For questions, please email: daviddairealty@gmail.com',
                 'versionSection': 'Version History / Revision History', 'version1': 'v1.0.1', 'version1Desc': '2026-03-21 - Added DSCR rental calculation, VA comparison, income calculation refactoring', 'version1Old': 'v1.0.0', 'version1OldDesc': '2026-03-21 - Initial release, 5 core features',
-                'disclaimerSection': 'Disclaimer / Disclaimer', 'disclaimerZh': '本计算器仅供参考，不构成贷款建议或承诺。实际贷款条款以贷款机构批准为准。利率、费用等可能因个人信用、地区、贷款机构而异。请在做出财务决策前咨询专业贷款顾问。',
-                'disclaimerEn': 'This calculator is for reference only and does not constitute loan advice or commitment. Actual loan terms are subject to lender approval. Interest rates, fees, etc. may vary based on individual credit, location, and lender. Please consult a professional loan advisor before making financial decisions.',
+                'disclaimerSection': 'Disclaimer / Disclaimer', 'disclaimerZh': '计算结果依据你输入的贷款金额、利率、期限和费用。调整这些参数，可以比较不同方案的月供与总成本。',
+                'disclaimerEn': 'Results use the loan amount, rate, term and costs you enter. Adjust these inputs to compare monthly payments and total costs.',
                 'footerHelp': 'Help', 'footerContact': 'Contact Us', 'footerVersion': 'Version History', 'footerDisclaimer': 'Disclaimer', 'footerCopyright': '© 2026 Loan Calculator Suite. All rights reserved.', 'footerVersionText': 'Version 1.0.1 | Last Updated: 2026-03-21',
                 'modalTitle': 'Calculation Results',
                 'resultMonthlyPayment': 'Total Monthly Payment', 'resultLoanAmount': 'Total Loan Amount', 'resultLtv': 'LTV', 'resultPI': 'P&I', 'resultPrincipalInterest': 'Principal & Interest', 'resultPropertyTax': 'Property Tax', 'resultHomeInsurance': 'Home Insurance', 'resultPmi': 'PMI', 'resultHoa': 'HOA', 'resultOtherDebts': 'Other Debts', 'resultOtherProperties': 'Other Properties', 'resultPitiTotal': 'PITI + Others',
@@ -1158,7 +1158,7 @@
                 'resultDownPayment': 'Down Payment', 'resultTotalCost': 'Total Cost', 'resultLenderFeesSubtotal': 'Lender Fees Subtotal', 'resultThirdPartySubtotal': 'Third Party Subtotal', 'resultPrepaidSubtotal': 'Prepaid Subtotal', 'resultTotalClosingCost': 'Total Closing Cost', 'daysText': ' days',
                 'alertHelpTitle': 'Help:', 'alertHelpContent': '\n\n1. Buy/Sell: Enter home price, down payment, rate, etc. to calculate monthly payment and DTI\n2. Refinance: Compare loans, calculate savings and break-even time\n3. Income: Summarize all income sources\n4. Closing Cost: Detailed transaction fee calculation\n\nContact: daviddairealty@gmail.com',
                 'alertVersionTitle': 'Version History:', 'alertVersionContent': '\n\nv1.0.1 (2026-03-21)\n- Added DSCR rental income calculation\n- Added VA loan comparison\n- Refactored income calculation logic\n- Support multiple jobs income\n\nv1.0.0 (2026-03-21)\n- Initial release\n- 5 core features launched\n- Apple-style UI design',
-                'alertDisclaimerTitle': 'Disclaimer:', 'alertDisclaimerContent': '\n\nThis calculator is for reference only and does not constitute loan advice. Actual loan terms are subject to lender approval. Please consult a professional loan advisor before making financial decisions.',
+                'alertDisclaimerTitle': 'Notes:', 'alertDisclaimerContent': '\n\nResults use your inputs; include property taxes, insurance and any HOA dues in your housing budget.',
                 'alertLanguageDeveloping': 'Language switching feature in development...\nCurrent selection: '
             },
             es: {
@@ -1199,9 +1199,9 @@
                 'helpClosingCost': 'Cálculo detallado de las tarifas de transacción de compra de vivienda, incluyendo Comisiones del Prestamista, tarifas de terceros, tarifas prepagas, etc.',
                 'contactSection': 'Contacto / Información de Contacto', 'contactEmail': 'Correo de contacto: daviddairealty@gmail.com', 'adEmail': 'Correo de publicidad: daviddairealty@gmail.com', 'helpEmail': 'Para preguntas, envíe un correo a: daviddairealty@gmail.com',
                 'versionSection': 'Historial de Versiones / Historial de Revisiones', 'version1': 'v1.0.1', 'version1Desc': '2026-03-21 - Agregado cálculo de alquiler DSCR, comparación VA, refactorización de cálculo de ingresos', 'version1Old': 'v1.0.0', 'version1OldDesc': '2026-03-21 - Lanzamiento inicial, 5 funciones principales',
-                'disclaimerSection': 'Descargo de Responsabilidad / Descargo de Responsabilidad', 'disclaimerEs': 'Esta calculadora es solo para referencia y no constituye asesoramiento de préstamo. Los términos reales del préstamo están sujetos a la aprobación del prestamista. Las tasas de interés, comisiones, etc. pueden variar según el crédito personal, la ubicación y el prestamista. Consulte a un asesor profesional antes de tomar decisiones financieras.',
-                'disclaimerEn': 'This calculator is for reference only and does not constitute loan advice or commitment. Actual loan terms are subject to lender approval. Interest rates, fees, etc. may vary based on individual credit, location, and lender. Please consult a professional loan advisor before making financial decisions.',
-                'footerHelp': 'Ayuda', 'footerContact': 'Contáctenos', 'footerVersion': 'Historial de Versiones', 'footerDisclaimer': 'Descargo de Responsabilidad', 'footerCopyright': '© 2026 Loan Calculator Suite. Todos los derechos reservados.', 'footerVersionText': 'Versión 1.0.1 | Última Actualización: 2026-03-21',
+                'disclaimerSection': 'Notas / Notes', 'disclaimerEs': 'Los resultados usan el monto, la tasa, el plazo y los costos que ingreses. Ajusta estos datos para comparar el pago mensual y el costo total.',
+                'disclaimerEn': 'Results use the loan amount, rate, term and costs you enter. Adjust these inputs to compare monthly payments and total costs.',
+                'footerHelp': 'Ayuda', 'footerContact': 'Contáctenos', 'footerVersion': 'Historial de Versiones', 'footerDisclaimer': 'Información del sitio', 'footerCopyright': '© 2026 Loan Calculator Suite. Todos los derechos reservados.', 'footerVersionText': 'Versión 1.0.1 | Última Actualización: 2026-03-21',
                 'modalTitle': 'Resultados del Cálculo',
                 'resultMonthlyPayment': 'Pago Mensual Total', 'resultLoanAmount': 'Monto Total del Préstamo', 'resultLtv': 'LTV', 'resultPI': 'P&I', 'resultPrincipalInterest': 'Principal e Interés', 'resultPropertyTax': 'Impuesto Predial', 'resultHomeInsurance': 'Seguro del Hogar', 'resultPmi': 'PMI', 'resultHoa': 'HOA', 'resultOtherDebts': 'Otras Deudas', 'resultOtherProperties': 'Otras Propiedades', 'resultPitiTotal': 'PITI + Otros',
                 'requiredIncomeTitle': 'Ingreso Mensual Requerido', 'requiredIncomeDesc': 'Según los estándares DTI, necesita alcanzar el siguiente ingreso mensual para calificar para el préstamo:', 'dti36Conservative': '36% DTI (Conservador)', 'dti43Standard': '43% DTI (Estándar)', 'dti50Aggressive': '50% DTI (Agresivo)',
@@ -1210,7 +1210,7 @@
                 'resultDownPayment': 'Pago Inicial', 'resultTotalCost': 'Costo Total', 'resultLenderFeesSubtotal': 'Subtotal de Comisiones del Prestamista', 'resultThirdPartySubtotal': 'Subtotal de Terceros', 'resultPrepaidSubtotal': 'Subtotal de Prepagos', 'resultTotalClosingCost': 'Costo Total de Cierre', 'daysText': ' días',
                 'alertHelpTitle': 'Ayuda:', 'alertHelpContent': '\n\n1. Comprar/Vender: Ingrese precio de la casa, pago inicial, tasa, etc. para calcular pago mensual y DTI\n2. Refinanciar: Compare préstamos, calcule ahorro y tiempo de recuperación\n3. Ingresos: Resuma todas las fuentes de ingresos\n4. Costos de Cierre: Cálculo detallado de tarifas de transacción\n\nContacto: daviddairealty@gmail.com',
                 'alertVersionTitle': 'Historial de Versiones:', 'alertVersionContent': '\n\nv1.0.1 (2026-03-21)\n- Agregado cálculo de ingresos por alquiler DSCR\n- Agregada comparación de préstamo VA\n- Refactorizada lógica de cálculo de ingresos\n- Soporte para ingresos de múltiples trabajos\n\nv1.0.0 (2026-03-21)\n- Lanzamiento inicial\n- 5 funciones principales lanzadas\n- Diseño de UI estilo Apple',
-                'alertDisclaimerTitle': 'Descargo de Responsabilidad:', 'alertDisclaimerContent': '\n\nEsta calculadora es solo para referencia y no constituye asesoramiento de préstamo. Los términos reales del préstamo están sujetos a la aprobación del prestamista. Consulte a un asesor profesional antes de tomar decisiones financieras.',
+                'alertDisclaimerTitle': 'Notas:', 'alertDisclaimerContent': '\n\nLos resultados usan los datos introducidos; incluye impuestos, seguro y cuotas de HOA en tu presupuesto.',
                 'alertLanguageDeveloping': 'Función de cambio de idioma en desarrollo...\nSelección actual: '
             }
         };
@@ -1224,7 +1224,7 @@
                     el.textContent = translations[lang][key];
                 }
             });
-            
+
             // 更新所有带 data-i18n-placeholder 的元素
             document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
                 const key = el.getAttribute('data-i18n-placeholder');
@@ -1232,7 +1232,7 @@
                     el.placeholder = translations[lang][key];
                 }
             });
-            
+
             // 更新所有 option 元素的文本
             document.querySelectorAll('option[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
@@ -1240,26 +1240,26 @@
                     el.textContent = translations[lang][key];
                 }
             });
-            
+
             // 保存到 localStorage
             localStorage.setItem('selectedLang', lang);
-            
+
             // 同步所有语言选择器
             const topSelect = document.getElementById('language-select');
             const aboutSelect = document.getElementById('about-language');
             if (topSelect) topSelect.value = lang;
             if (aboutSelect) aboutSelect.value = lang;
-            
+
             // 如果 VA 字段已显示，重新更新 VA 数据（使用新语言）
             if (document.getElementById('bs-va-fields')?.style.display === 'block') {
                 updateVAData();
             }
-            
+
             // 如果 FHA 字段已显示，重新更新 FHA 数据（使用新语言）
             if (document.getElementById('bs-fha-fields')?.style.display === 'block') {
                 updateFHAData();
             }
-            
+
             // 重新渲染动态生成的内容（如负债字段、房产字段的 placeholder）
             document.querySelectorAll('.bs-debt-input, .bs-property-input').forEach(el => {
                 if (el && translations[lang] && translations[lang]['extraDebt']) {
@@ -1289,7 +1289,7 @@
                     b.classList.add('active');
                 }
             });
-            
+
             // 更新底部导航状态
             document.querySelectorAll('.bottom-nav-btn').forEach(b => {
                 b.classList.remove('active');
@@ -1297,15 +1297,15 @@
                     b.classList.add('active');
                 }
             });
-            
+
             // 切换内容区域
             document.querySelectorAll('.calculator-container').forEach(c => c.classList.remove('active'));
             document.getElementById(tabId).classList.add('active');
-            
+
             // 滚动到顶部
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
-        
+
         document.querySelectorAll('.tab-btn').forEach(btn => {
             btn.addEventListener('click', () => {
                 const tabId = btn.getAttribute('data-tab');
@@ -1377,12 +1377,12 @@
         function calculateJobIncome(jobNum) {
             const type = document.querySelector(`input[name="${jobNum}-type"]:checked`)?.value;
             const monthlyTotal = document.getElementById(`${jobNum}-monthly-total`);
-            
+
             // 如果 job card 不存在或未显示，跳过计算
             if (!monthlyTotal && jobNum === 'job2' && document.getElementById('job2-card').style.display === 'none') {
                 return;
             }
-            
+
             try {
                 if (type === 'w2') {
                     const period = document.getElementById(`${jobNum}-w2-period`);
@@ -1437,9 +1437,9 @@
             const homePrice = document.getElementById(homePriceId);
             const downPayment = document.getElementById(downPaymentId);
             const downPercent = document.getElementById(downPercentId);
-            
+
             if (!homePrice || !downPayment || !downPercent) return;
-            
+
             function syncPayment() {
                 if (homePrice.value && downPercent.value) {
                     downPayment.value = (homePrice.value * downPercent.value / 100).toFixed(2);
@@ -1450,12 +1450,12 @@
                     downPercent.value = ((downPayment.value / homePrice.value) * 100).toFixed(2);
                 }
             }
-            
+
             homePrice.addEventListener('input', syncPayment);
             downPayment.addEventListener('input', syncPercent);
             downPercent.addEventListener('input', syncPayment);
         }
-        
+
         setupDownPaymentSync('bs-home-price', 'bs-down-payment', 'bs-down-percent');
         setupDownPaymentSync('cc-home-price', 'cc-down-payment', 'cc-down-percent');
 
@@ -1494,7 +1494,7 @@
             document.getElementById('modal-title').textContent = title;
             document.getElementById('modal-body').innerHTML = content;
             document.getElementById('results-modal').classList.add('active');
-            
+
             // 应用当前语言翻译到模态框内容
             const lang = localStorage.getItem('selectedLang') || 'zh';
             const modalBody = document.getElementById('modal-body');
@@ -1719,7 +1719,7 @@
             "PR": { name: "Puerto Rico", counties: { "Statewide": { "1": 498257, "2": 637950, "3": 771125, "4": 958350 } } },
             "VI": { name: "Virgin Islands", counties: { "Territory": { "1": 498257, "2": 637950, "3": 771125, "4": 958350 } } }
         };
-        
+
         function initFhaStates() {
             const stateSelect = document.getElementById('bs-fha-state');
             if (!stateSelect) return;
@@ -1732,7 +1732,7 @@
                 stateSelect.appendChild(option);
             });
         }
-        
+
         document.getElementById('bs-fha-state')?.addEventListener('change', function() {
             const countySelect = document.getElementById('bs-fha-county');
             const unitsSelect = document.getElementById('bs-fha-units');
@@ -1789,12 +1789,12 @@
         function updateVAData() {
             const regionSelect = document.getElementById('bs-va-region');
             const vaDataDiv = document.getElementById('bs-va-data');
-            
+
             if (!regionSelect?.value) {
                 if (vaDataDiv) vaDataDiv.innerHTML = '';
                 return;
             }
-            
+
             const vaData = {
                 'south': { limit: 766550, bonus: 0, funding: 2.2, maxLtv: 100, rate: 6.5 },
                 'northeast': { limit: 766550, bonus: 0, funding: 2.2, maxLtv: 100, rate: 6.5 },
@@ -1802,19 +1802,19 @@
                 'west': { limit: 766550, bonus: 0, funding: 2.2, maxLtv: 100, rate: 6.5 }
             };
             const data = vaData[regionSelect.value];
-            
+
             // 自动计算贷款金额和资格判断
             const homePrice = parseFloat(document.getElementById('bs-home-price').value) || 300000;
             const downPayment = parseFloat(document.getElementById('bs-down-payment').value) || 0; // VA 允许 0 首付
             const loanAmount = homePrice - downPayment;
             const ltv = (loanAmount / homePrice) * 100;
-            
+
             // VA Loan Limit (自动从地区读取)
             const vaLimit = data.limit;
-            
+
             // 资格判断：贷款金额 vs VA Limit
             const isEligible = loanAmount <= vaLimit;
-            
+
             // VA Funding Fee 计算 (可以计入贷款总额)
             // 首次使用：2.2% (首付<5%), 1.65% (首付>=5% 且<10%), 1.4% (首付>=10%)
             // 多次使用：3.6% (首付<5%), 2.15% (首付>=5% 且<10%), 1.65% (首付>=10%)
@@ -1825,13 +1825,13 @@
                 fundingFeeRate = 1.65;
             }
             const vaFundingFee = loanAmount * (fundingFeeRate / 100);
-            
+
             // VA 总贷款 = 房价 + VA Funding Fee (可以融资)
             const totalVALoan = loanAmount + vaFundingFee;
-            
+
             // Conventional PMI (月付) - 如果 LTV > 80%
             const conventionalPmiMonthly = ltv > 80 ? (loanAmount * 0.005) / 12 : 0;
-            
+
             // 更新 VA 数据显示区域
             if (vaDataDiv) {
                 const lang = localStorage.getItem('selectedLang') || 'zh';
@@ -1841,7 +1841,7 @@
                     es: { limit: 'Límite de Préstamo VA', bonus: 'Derecho de Bono', funding: 'Tarifa de Financiamiento (%)', ltv: 'Máximo LTV' }
                 };
                 const lbl = labels[lang] || labels.zh;
-                
+
                 vaDataDiv.innerHTML = `
                     <div class="form-group"><label>${lbl.limit}</label><input type="text" value="${formatCurrency(data.limit)}" readonly></div>
                     <div class="form-group"><label>${lbl.bonus}</label><input type="text" value="${formatCurrency(data.bonus)}" readonly></div>
@@ -1849,7 +1849,7 @@
                     <div class="form-group"><label>${lbl.ltv}</label><input type="text" value="100% (VA 允许 0 首付)" readonly style="background: rgba(0, 122, 255, 0.1);"></div>
                 `;
             }
-            
+
             // 资格判断状态文本
             const lang = localStorage.getItem('selectedLang') || 'zh';
             const eligibilityText = {
@@ -1860,7 +1860,7 @@
             const eligText = eligibilityText[lang] || eligibilityText.zh;
             const eligibilityStatus = isEligible ? eligText.eligible : eligText.notEligible;
             const eligibilityColor = isEligible ? 'var(--success-green)' : 'var(--danger-red)';
-            
+
             // VA vs Conventional 对比文本
             const comparisonText = {
                 zh: { fundingFee: 'VA Funding Fee (可计入贷款)', pmi: '常规 PMI (月付)', benefit: '退伍军人福利：0 首付 + 无 PMI', ltv: 'LTV (自动计算)', totalLoan: 'VA 总贷款 (含 Funding Fee)' },
@@ -1868,7 +1868,7 @@
                 es: { fundingFee: 'Tarifa de Financiamiento VA (puede financiarse)', pmi: 'PMI Convencional (mensual)', benefit: 'Beneficio de Veteranos: 0% Inicial + Sin PMI', ltv: 'LTV (Cálculo Automático)', totalLoan: 'Préstamo VA Total (incl. Tarifa)' }
             };
             const compText = comparisonText[lang] || comparisonText.zh;
-            
+
             // 更新对比区域
             const vaLimitDisplay = document.getElementById('va-limit-display');
             const vaLoanAmount = document.getElementById('va-loan-amount');
@@ -1877,7 +1877,7 @@
             const conventionalPmiDisplay = document.getElementById('conventional-pmi');
             const vaBenefitDisplay = document.getElementById('va-benefit-display');
             const vaMaxLtvDisplay = document.getElementById('va-max-ltv');
-            
+
             if (vaLimitDisplay) vaLimitDisplay.value = formatCurrency(vaLimit);
             if (vaLoanAmount) vaLoanAmount.value = formatCurrency(loanAmount);
             if (vaEligibilityStatus) {
@@ -1889,30 +1889,30 @@
             if (vaBenefitDisplay) vaBenefitDisplay.value = lang === 'en' ? '0% Down + No PMI' : lang === 'es' ? '0% Inicial + Sin PMI' : '0 首付 + 无 PMI';
             if (vaMaxLtvDisplay) vaMaxLtvDisplay.value = ltv.toFixed(2) + '%';
         }
-        
+
         document.getElementById('bs-va-region')?.addEventListener('change', updateVAData);
-        
+
         // 监听房价和首付变化，实时更新 VA 计算
         document.getElementById('bs-home-price')?.addEventListener('input', function() {
             if (document.getElementById('bs-va-fields')?.style.display === 'block') {
                 updateVAData();
             }
         });
-        
+
         document.getElementById('bs-down-payment')?.addEventListener('input', function() {
             if (document.getElementById('bs-va-fields')?.style.display === 'block') {
                 updateVAData();
             }
         });
-        
+
         document.getElementById('bs-down-percent')?.addEventListener('input', function() {
             if (document.getElementById('bs-va-fields')?.style.display === 'block') {
                 updateVAData();
             }
         });
-        
+
         initFhaStates();
-        
+
         document.getElementById('bs-loan-type')?.addEventListener('change', function() {
             const fhaFields = document.getElementById('bs-fha-fields');
             const vaFields = document.getElementById('bs-va-fields');
@@ -1920,7 +1920,7 @@
             fhaFields.style.display = this.value === 'fha' ? 'block' : 'none';
             vaFields.style.display = this.value === 'va' ? 'block' : 'none';
             dscrFields.style.display = this.value === 'dscr' ? 'block' : 'none';
-            
+
             // 如果选择 VA 贷款，立即更新 VA 数据
             if (this.value === 'va') {
                 setTimeout(updateVAData, 100);
@@ -1939,7 +1939,7 @@
         // ==================== 计算器逻辑 ====================
         document.getElementById('buy-sell-form')?.addEventListener('submit', function(e) {
             e.preventDefault();
-            
+
             const homePrice = parseFloat(document.getElementById('bs-home-price').value) || 0;
             const downPayment = parseFloat(document.getElementById('bs-down-payment').value) || 0;
             const interestRate = parseFloat(document.getElementById('bs-interest-rate').value) || 6.5;
@@ -1949,24 +1949,24 @@
             let pmi = parseFloat(document.getElementById('bs-pmi').value) || 0;
             const hoa = parseFloat(document.getElementById('bs-hoa').value) || 0;
             const loanType = document.getElementById('bs-loan-type').value;
-            
+
             let totalDebts = 0;
             document.querySelectorAll('.bs-debt-input').forEach(input => { totalDebts += parseFloat(input.value) || 0; });
-            
+
             let totalProperties = 0;
             document.querySelectorAll('.bs-property-input').forEach(input => { totalProperties += parseFloat(input.value) || 0; });
-            
+
             const loanAmount = homePrice - downPayment;
             const ltv = (loanAmount / homePrice) * 100;
-            
+
             if (ltv > 80 && pmi === 0) { pmi = (loanAmount * 0.005) / 12; }
-            
+
             const principalInterest = calculateMortgagePayment(loanAmount, interestRate, loanTerm);
             const propertyTaxMonthly = propertyTax / 12;
             const insuranceMonthly = insurance / 12;
-            
+
             let totalMonthly = principalInterest + propertyTaxMonthly + insuranceMonthly + hoa + pmi + totalDebts + totalProperties;
-            
+
             // DSCR 计算
             let dscrContent = '';
             if (loanType === 'dscr') {
@@ -1975,9 +1975,9 @@
                 const dscr = rentalIncome / monthlyDebt;
                 const dscrStatus = dscr >= 1.2 ? '达标 ✅' : dscr >= 1.0 ? '正现金流 ⚠️' : '负现金流 ❌';
                 const dscrClass = dscr >= 1.2 ? 'highlight' : dscr >= 1.0 ? 'warning' : 'danger';
-                
+
                 document.getElementById('bs-dscr-result').value = dscr.toFixed(2) + ' (' + dscrStatus + ')';
-                
+
                 dscrContent = `
                     <div class="section-title">DSCR 计算结果</div>
                     <div class="result-grid">
@@ -1997,15 +1997,15 @@
                     <p style="text-align: center; color: var(--text-secondary); margin-top: 16px;">${dscr >= 1.2 ? '✅ DSCR 达标 (>1.2)，可通过贷款审批' : dscr >= 1.0 ? '⚠️ DSCR > 1.0，有正现金流但可能不达标' : '❌ DSCR < 1.0，负现金流，需要补足收入'}</p>
                 `;
             }
-            
+
             // 计算月债务总额
             const totalMonthlyDebt = principalInterest + propertyTaxMonthly + insuranceMonthly + hoa + pmi + totalDebts + totalProperties;
-            
+
             // 反推需要的月收入
             const requiredIncome36 = totalMonthlyDebt / 0.36;
             const requiredIncome43 = totalMonthlyDebt / 0.43;
             const requiredIncome50 = totalMonthlyDebt / 0.50;
-            
+
             const content = `
                 ${dscrContent}
                 <div class="result-grid">
@@ -2026,7 +2026,7 @@
                         <div class="value">${formatCurrency(principalInterest)}</div>
                     </div>
                 </div>
-                
+
                 <table class="detail-table">
                     <tr><td>Principal & Interest</td><td>${formatCurrency(principalInterest)}</td></tr>
                     <tr><td>Property Tax</td><td>${formatCurrency(propertyTaxMonthly)}</td></tr>
@@ -2037,7 +2037,7 @@
                     <tr><td data-i18n="resultOtherProperties">其他房产</td><td>${formatCurrency(totalProperties)}</td></tr>
                     <tr class="total"><td data-i18n="resultPitiTotal">PITI + 其他</td><td>${formatCurrency(totalMonthly)}</td></tr>
                 </table>
-                
+
                 <div class="section-title" data-i18n="requiredIncomeTitle">需要的月收入</div>
                 <p style="text-align: center; color: var(--text-secondary); margin: 16px 0; font-size: 14px;" data-i18n="requiredIncomeDesc">
                     根据 DTI 标准，您需要达到以下月收入才能获批贷款：
@@ -2048,41 +2048,41 @@
                     <div class="result-item"><div class="label" data-i18n="dti50Aggressive">50% DTI (较高)</div><div class="value">${formatCurrency(requiredIncome50)}</div></div>
                 </div>
             `;
-            
+
             openModal('🏡 买卖房地产 - 计算结果', content);
         });
 
         document.getElementById('refinance-form')?.addEventListener('submit', function(e) {
             e.preventDefault();
-            
+
             const homeValue = parseFloat(document.getElementById('rf-home-value').value) || 0;
             const balance = parseFloat(document.getElementById('rf-balance').value) || 0;
             const currentRate = parseFloat(document.getElementById('rf-current-rate').value) || 7.0;
             const newRate = parseFloat(document.getElementById('rf-new-rate').value) || 6.0;
             const newTerm = parseInt(document.getElementById('rf-new-term').value) || 30;
             const closingCosts = parseFloat(document.getElementById('rf-closing-costs').value) || 0;
-            
+
             const isCashOut = document.querySelector('.sub-tab-btn[data-subtab="cash-out"]').classList.contains('active');
             const desiredCash = parseFloat(document.getElementById('rf-desired-cash').value) || 0;
-            
+
             const currentPayment = calculateMortgagePayment(balance, currentRate, 30);
             document.getElementById('rf-current-payment').value = currentPayment.toFixed(2);
-            
+
             let newLoan = balance;
             let cashOut = 0;
-            
+
             if (isCashOut) {
                 newLoan = balance + desiredCash + closingCosts;
                 cashOut = desiredCash;
             }
-            
+
             const newLtv = (newLoan / homeValue) * 100;
             const newPayment = calculateMortgagePayment(newLoan, newRate, newTerm);
             const monthlySavings = currentPayment - newPayment;
             const breakEven = monthlySavings > 0 ? Math.ceil(closingCosts / monthlySavings) : 0;
-            
+
             let content = '';
-            
+
             if (isCashOut) {
                 content = `
                     <div class="result-grid">
@@ -2104,13 +2104,13 @@
                     </div>
                 `;
             }
-            
+
             openModal('💰 重贷计算结果', content);
         });
 
         document.getElementById('income-form')?.addEventListener('submit', function(e) {
             e.preventDefault();
-            
+
             // 工作 1 收入
             const job1Type = document.querySelector('input[name="job1-type"]:checked')?.value;
             let job1Monthly = 0;
@@ -2129,7 +2129,7 @@
                 const bonus = parseFloat(document.getElementById('job1-bonus').value) || 0;
                 job1Monthly = (rate * hours * 52 / 12) + (bonus / 12);
             }
-            
+
             // 工作 2 收入
             let job2Monthly = 0;
             if (document.getElementById('job2-card').style.display !== 'none') {
@@ -2150,7 +2150,7 @@
                     job2Monthly = (rate * hours * 52 / 12) + (bonus / 12);
                 }
             }
-            
+
             // Self-Employed 收入
             const ownership = parseFloat(document.getElementById('inc-ownership').value) || 100;
             const year1Income = parseFloat(document.getElementById('inc-year1-income').value) || 0;
@@ -2166,17 +2166,17 @@
                 // LP (Loan Prospector - Freddie Mac): (最近 1 年 Net Income + Depreciation) ÷ 12
                 selfEmployedMonthly = ((year1Income + year1Depreciation) / 12) * (ownership / 100);
             }
-            
+
             // Rental 收入
             const rentalMonthlyVal = parseFloat(document.getElementById('inc-rental-monthly').value.replace(/[^0-9.-]+/g,'')) || 0;
-            
+
             // 其他收入
             const childSupport = parseFloat(document.getElementById('inc-child-support').value) || 0;
             const socialSecurity = parseFloat(document.getElementById('inc-social-security').value) || 0;
             const other = parseFloat(document.getElementById('inc-other').value) || 0;
-            
+
             const totalMonthly = job1Monthly + job2Monthly + selfEmployedMonthly + rentalMonthlyVal + childSupport + socialSecurity + other;
-            
+
             const content = `
                 <table class="detail-table">
                     <tr><td data-i18n="resultW2Income">工作 1 月收入</td><td>${formatCurrency(job1Monthly)}</td></tr>
@@ -2189,21 +2189,21 @@
                     <tr class="total"><td data-i18n="resultTotalIncome">总收入</td><td>${formatCurrency(totalMonthly)}</td></tr>
                 </table>
             `;
-            
+
             openModal('💵 收入计算结果', content);
         });
 
         document.getElementById('closing-cost-form')?.addEventListener('submit', function(e) {
             e.preventDefault();
-            
+
             const homePrice = parseFloat(document.getElementById('cc-home-price').value) || 0;
             const downPayment = parseFloat(document.getElementById('cc-down-payment').value) || 0;
-            
+
             const processing = parseFloat(document.getElementById('cc-processing').value) || 0;
             const underwriting = parseFloat(document.getElementById('cc-underwriting').value) || 0;
             const points = parseFloat(document.getElementById('cc-points').value) || 0;
             const lenderFees = processing + underwriting + points;
-            
+
             const appraisal = parseFloat(document.getElementById('cc-appraisal').value) || 0;
             const creditReport = parseFloat(document.getElementById('cc-credit-report').value) || 0;
             const titleInsurance = parseFloat(document.getElementById('cc-title-insurance').value) || 0;
@@ -2212,33 +2212,33 @@
             const transferTax = parseFloat(document.getElementById('cc-transfer-tax').value) || 0;
             const misc = parseFloat(document.getElementById('cc-misc').value) || 0;
             const thirdPartyFees = appraisal + creditReport + titleInsurance + settlement + recording + transferTax + misc;
-            
+
             const prepaidTax = parseFloat(document.getElementById('cc-prepaid-tax').value) || 0;
             const escrowMonths = parseFloat(document.getElementById('cc-escrow-months').value) || 6;
             const monthlyTax = prepaidTax / 12;
             const escrowAmount = monthlyTax * escrowMonths;
             const prepaidSubtotal = prepaidTax + escrowAmount;
             document.getElementById('cc-prepaid-subtotal').value = formatCurrency(prepaidSubtotal);
-            
+
             const lenderCredit = parseFloat(document.getElementById('cc-lender-credit').value) || 0;
             const sellerCredit = parseFloat(document.getElementById('cc-seller-credit').value) || 0;
             const totalCredits = lenderCredit + sellerCredit;
-            
+
             const totalClosingCosts = lenderFees + thirdPartyFees + prepaidSubtotal - totalCredits;
-            
+
             const content = `
                 <div class="result-grid">
                     <div class="result-item"><div class="label" data-i18n="resultDownPayment">Down Payment</div><div class="value">${formatCurrency(downPayment)}</div></div>
                     <div class="result-item"><div class="label" data-i18n="resultTotalCost">总费用</div><div class="value highlight">${formatCurrency(totalClosingCosts)}</div></div>
                 </div>
-                
+
                 <table class="detail-table">
                     <tr><td colspan="2" style="font-weight: 600; color: var(--primary-blue);">Lender Fees</td></tr>
                     <tr><td>Processing</td><td>${formatCurrency(processing)}</td></tr>
                     <tr><td>Underwriting</td><td>${formatCurrency(underwriting)}</td></tr>
                     <tr><td>Points</td><td>${formatCurrency(points)}</td></tr>
                     <tr class="total"><td data-i18n="resultLenderFeesSubtotal">Lender Fees 小计</td><td>${formatCurrency(lenderFees)}</td></tr>
-                    
+
                     <tr><td colspan="2" style="font-weight: 600; color: var(--primary-blue); margin-top: 16px;">Third Party + Title</td></tr>
                     <tr><td>Appraisal</td><td>${formatCurrency(appraisal)}</td></tr>
                     <tr><td>Credit Report</td><td>${formatCurrency(creditReport)}</td></tr>
@@ -2248,19 +2248,19 @@
                     <tr><td>Transfer Tax</td><td>${formatCurrency(transferTax)}</td></tr>
                     <tr><td data-i18n="misc">杂项</td><td>${formatCurrency(misc)}</td></tr>
                     <tr class="total"><td data-i18n="resultThirdPartySubtotal">Third Party 小计</td><td>${formatCurrency(thirdPartyFees)}</td></tr>
-                    
+
                     <tr><td colspan="2" style="font-weight: 600; color: var(--primary-blue);">Prepaid</td></tr>
                     <tr><td data-i18n="prepaidTax">预付地税</td><td>${formatCurrency(prepaidTax)}</td></tr>
                     <tr><td>Escrow</td><td>${formatCurrency(escrowAmount)} (<span data-i18n="escrowMonths">Escrow 月份</span>: ${escrowMonths})</td></tr>
                     <tr class="total"><td data-i18n="resultPrepaidSubtotal">Prepaid 小计</td><td>${formatCurrency(prepaidSubtotal)}</td></tr>
-                    
+
                     <tr><td colspan="2" style="font-weight: 600; color: var(--success-green);">Credits</td></tr>
                     <tr><td>Lender Credit</td><td style="color: var(--success-green);">-${formatCurrency(lenderCredit)}</td></tr>
                     <tr><td>Seller Credit</td><td style="color: var(--success-green);">-${formatCurrency(sellerCredit)}</td></tr>
                     <tr class="total"><td data-i18n="resultTotalClosingCost">总 Closing Cost</td><td>${formatCurrency(totalClosingCosts)}</td></tr>
                 </table>
             `;
-            
+
             openModal('📋 Closing Cost 计算结果', content);
         });
 

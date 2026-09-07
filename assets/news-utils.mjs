@@ -31,8 +31,8 @@ export function renderFeed(feed, now = new Date()) {
   const pmms = items.find(x => x.source === 'Freddie Mac');
   const stale = !pmms || age(pmms.date) > 10;
   const cards = list => list.map(x => `<article class="news-item"><p class="news-meta">${escapeHtml(x.source)} · 来源发布于 <time datetime="${x.date}">${x.date}</time></p><h3><a href="${escapeHtml(sourceUrl(x.url))}" target="_blank" rel="noopener noreferrer">${escapeHtml(x.title_zh)}</a></h3><p>${escapeHtml(x.summary_zh)}</p><a class="news-source" href="${escapeHtml(sourceUrl(x.url))}" target="_blank" rel="noopener noreferrer">阅读 ${escapeHtml(x.source)} 原文 ↗</a></article>`).join('\n');
-  return `<p class="status">最新收录的来源发布日期：${items[0].date}。各条资讯以自身发布日期为准。</p>
-${stale ? '<p class="news-warning" role="status">本地保存的周度利率资料已超过 10 天或暂不可用，请先查看 <a href="https://www.freddiemac.com/pmms">Freddie Mac 最新发布</a>；不要把旧利率当作今日报价。</p>' : ''}
+  return `<p class="status">最新来源日期：${items[0].date}。</p>
+${stale ? '<p class="news-warning" role="status">周度利率资料已超过 10 天或暂不可用，查看 <a href="https://www.freddiemac.com/pmms">Freddie Mac 最新发布</a>。</p>' : ''}
 <div class="news-list">${recent.length ? cards(recent) : '<p>暂没有近 45 天内的已核实资讯，下面保留历史资料。</p>'}</div>
-${archive.length ? `<details class="news-archive"><summary>较早资料（${archive.length} 条，非当前政策或报价）</summary>${cards(archive)}</details>` : ''}`;
+${archive.length ? `<details class="news-archive"><summary>较早资料（${archive.length} 条）</summary>${cards(archive)}</details>` : ''}`;
 }
