@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-06T16:03:41.561286Z",
+  "generated_at": "2026-09-08T15:03:42.885Z",
   "notes": "Mortgage and housing updates from primary public sources.",
   "items": [
     {
@@ -10,6 +10,15 @@
       "summary": "Freddie Mac's PMMS reported a 6.71% average, up from 6.66% the week before. The 15-year fixed average was 6.04%.",
       "summary_zh": "Freddie Mac 的 PMMS 显示，30 年固定房贷平均利率为 6.71%，高于前一周的 6.66%；15 年固定房贷平均利率为 6.04%。",
       "url": "https://www.freddiemac.com/pmms"
+    },
+    {
+      "source": "HUD",
+      "date": "2026-09-01",
+      "title": "HUD takes action to make housing more affordable",
+      "title_zh": "HUD 调整公平住房法相关指引，称将降低住房建设成本",
+      "summary": "HUD rescinded prior guidance on the Fair Housing Act statute of limitations for design and construction claims. The agency said the change is intended to reduce unnecessary liability and costs passed on to homebuyers and renters.",
+      "summary_zh": "HUD 撤销了关于《公平住房法》设计和施工索赔诉讼时效的既有指引。该机构表示，此举旨在减少不必要的责任与可能转嫁给购房者和租房者的成本。",
+      "url": "https://www.hud.gov/news/hud-no-26-063"
     },
     {
       "source": "FHFA",
