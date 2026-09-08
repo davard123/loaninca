@@ -37,3 +37,37 @@
 
 /* Keep the real advisor's face inside circular portrait crops. */
 img[src*='david-headshot'] { object-position: center top; }
+
+/* Homepage prototype: scenario-first entry points for a national Chinese audience. */
+.hero-route-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 22px;
+}
+.hero-route-grid a {
+  min-height: 112px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5px;
+  padding: 13px 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(255,255,255,.78);
+  color: var(--ink);
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(19,47,43,.06);
+  transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+.hero-route-grid a:hover,
+.hero-route-grid a:focus-visible {
+  transform: translateY(-3px);
+  border-color: var(--brand);
+  box-shadow: 0 10px 22px rgba(19,47,43,.12);
+}
+.hero-route-grid strong { font-size: .92rem; line-height: 1.35; }
+.hero-route-grid small { color: var(--ink-2); font-size: .76rem; line-height: 1.45; }
+.hero-route-grid b { color: var(--brand); font-size: .76rem; }
+@media(max-width:900px) { .hero-route-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 620px; } }
+@media(max-width:600px) { .hero-route-grid { grid-template-columns: 1fr 1fr; gap: 8px; } .hero-route-grid a { min-height: 100px; padding: 12px; } }
