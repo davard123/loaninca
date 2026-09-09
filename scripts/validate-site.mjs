@@ -105,6 +105,40 @@ if (sitemap.includes('ndflending.com')) {
   errors.push('sitemap.xml: still references ndflending.com');
 }
 
+// GEO knowledge files should point to the same canonical URLs as the sitemap.
+// This catches stale redirect paths before they are copied into public llms files.
+const sitemapUrls = new Set(
+  [...sitemap.matchAll(/<loc>(https:\/\/www\.loaninca\.com\/[^<]+)<\/loc>/g)].map(
+    (match) => match[1],
+  ),
+);
+for (const file of ['llms.txt', 'llms-full.txt']) {
+  if (!exists(file)) {
+    errors.push(`${file}: file is missing`);
+    continue;
+  }
+
+  const content = read(file);
+  for (const match of content.matchAll(/https:\/\/www\.loaninca\.com\/[^\s>]+/g)) {
+    const url = match[0].replace(/[.,;:!?)]$/, '');
+    if (!sitemapUrls.has(url)) {
+      errors.push(`${file}: URL is not listed as a sitemap canonical URL ${url}`);
+    }
+  }
+}
+
+const news = read('news.html');
+const newsTitle = news.match(/<title>([^<]+)<\/title>/i)?.[1];
+const newsDescription = news.match(/<meta name="description" content="([^"]+)"/i)?.[1];
+const newsOgTitle = news.match(/<meta property="og:title" content="([^"]+)"/i)?.[1];
+const newsOgDescription = news.match(/<meta property="og:description" content="([^"]+)"/i)?.[1];
+if (newsTitle && newsOgTitle && newsTitle !== newsOgTitle) {
+  errors.push('news.html: og:title does not match the page title');
+}
+if (newsDescription && newsOgDescription && newsDescription !== newsOgDescription) {
+  errors.push('news.html: og:description does not match the page description');
+}
+
 for (const page of ['about', 'privacy', 'terms', 'disclosures']) {
   if (!sitemap.includes(`https://www.loaninca.com/${page}`)) {
     errors.push(`sitemap.xml: missing ${page}`);
