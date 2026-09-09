@@ -1,6 +1,6 @@
 {
-  "auditedAt": "2026-08-08T05:18:06.907Z",
-  "base": "https://loaninca.pages.dev",
+  "auditedAt": "2026-09-09T04:55:50.328Z",
+  "base": "https://www.loaninca.com",
   "sitemapUrlCount": 35,
   "pages": [
     {
@@ -19,13 +19,13 @@
       "path": "/news",
       "status": 200,
       "canonical": "https://www.loaninca.com/news",
-      "h1": "新闻中心"
+      "h1": "房贷与住房资讯"
     },
     {
       "path": "/about",
       "status": 200,
       "canonical": "https://www.loaninca.com/about",
-      "h1": "让复杂房贷先变得可以理解"
+      "h1": "房贷拿不准，直接问我"
     },
     {
       "path": "/privacy",
@@ -85,7 +85,7 @@
       "path": "/blog/dscr-formula-california",
       "status": 200,
       "canonical": "https://www.loaninca.com/blog/dscr-formula-california",
-      "h1": "DSCR 公式怎么计算？用一组数字算清楚"
+      "h1": "DSCR 公式怎么算？$5,000 租金演示一遍"
     },
     {
       "path": "/blog/mortgage-document-checklist-2026",
@@ -169,7 +169,7 @@
       "path": "/scenarios",
       "status": 200,
       "canonical": "https://www.loaninca.com/scenarios",
-      "h1": "贷款 Example Scenarios"
+      "h1": "三个贷款计算与准备示例"
     },
     {
       "path": "/mortgage/dscr/",
@@ -214,7 +214,12 @@
       "h1": "旧金山湾区华人房贷指南"
     }
   ],
-  "internalLinkCount": 32,
-  "brokenLinks": [],
+  "internalLinkCount": 23,
+  "brokenLinks": [
+    {
+      "path": "/cdn-cgi/l/email-protection",
+      "status": 404
+    }
+  ],
   "claimHits": []
 }
