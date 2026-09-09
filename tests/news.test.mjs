@@ -40,3 +40,10 @@ test('news page is statically readable and has no old broken API pipeline',()=>{
   assert.match(html,/assets\/news.mjs/);
   assert.doesNotMatch(html,/ai-content-pipeline|fetch\('\/api\/news/);
 });
+test('weekly news workflow has one scheduled run plus manual and code-change triggers',()=>{
+  const workflow=readFileSync('.github/workflows/update-mortgage-news.yml','utf8');
+  const schedules=[...workflow.matchAll(/^\s*- cron:\s*"([^"]+)"\s*$/gm)].map(match=>match[1]);
+  assert.deepEqual(schedules,['30 17 * * 4']);
+  assert.match(workflow,/^\s*workflow_dispatch:\s*$/m);
+  assert.match(workflow,/^\s*push:\s*$/m);
+});

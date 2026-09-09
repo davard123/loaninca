@@ -12,9 +12,8 @@ on:
       - "assets/news*.mjs"
       - "tests/news.test.mjs"
   schedule:
+    # Freddie Mac PMMS publishes once a week; run once after the Thursday release.
     - cron: "30 17 * * 4"
-    - cron: "30 21 * * 4"
-    - cron: "30 17 * * 5"
   workflow_dispatch:
 
 permissions:
