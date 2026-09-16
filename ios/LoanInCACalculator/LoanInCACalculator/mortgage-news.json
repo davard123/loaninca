@@ -1,7 +1,25 @@
 {
-  "generated_at": "2026-09-10T19:55:03.150Z",
+  "generated_at": "2026-09-16T15:03:41.809Z",
   "notes": "Mortgage and housing updates from primary public sources.",
   "items": [
+    {
+      "source": "MBA",
+      "date": "2026-09-15",
+      "title": "August new-home purchase mortgage applications decreased 5.5 percent",
+      "title_zh": "MBA：8 月新建房购房抵押贷款申请同比下降 5.5%",
+      "summary": "MBA’s Builder Application Survey reported that August applications for new-home purchases fell 5.5% year over year and 6% from July, before seasonal adjustment. MBA estimated new single-family home sales at a 664,000 seasonally adjusted annual rate; that is an MBA estimate, not the Census Bureau’s official release.",
+      "summary_zh": "MBA 的建商申请调查显示，8 月新建房购房抵押贷款申请同比下降 5.5%、较 7 月下降 6%（未季调）。MBA 估算新建独栋房销售的季调年率为 66.4 万套；这是基于其调查的估算，不是美国人口普查局的官方发布。",
+      "url": "https://www.mba.org/news-and-research/newsroom/news/2026/09/15/august-new-home-purchase-mortgage-applications-decreased-5.5-percent"
+    },
+    {
+      "source": "Fannie Mae",
+      "date": "2026-09-15",
+      "title": "Fannie Mae publishes September 2026 Economic and Housing Outlook",
+      "title_zh": "房利美发布 2026 年 9 月经济与住房展望",
+      "summary": "Fannie Mae’s Economic and Strategic Research Group published its monthly economic and housing outlook, covering current conditions and forecasts for measures including rates, home sales, prices, starts and mortgage originations. The outlook is a forecast, not a lender quote or guarantee.",
+      "summary_zh": "房利美经济与战略研究组发布月度经济与住房展望，涵盖利率、房屋销售、房价、开工和房贷发放等指标的现状与预测。该展望属于预测，并非贷款机构报价或保证。",
+      "url": "https://www.fanniemae.com/data-and-insights/forecast"
+    },
     {
       "source": "Freddie Mac",
       "date": "2026-09-10",
