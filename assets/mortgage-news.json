@@ -1,7 +1,25 @@
 {
-  "generated_at": "2026-09-16T15:03:41.809Z",
+  "generated_at": "2026-09-17T16:28:25.161Z",
   "notes": "Mortgage and housing updates from primary public sources.",
   "items": [
+    {
+      "source": "Freddie Mac",
+      "date": "2026-09-17",
+      "title": "The average 30-year fixed mortgage rate was 6.95%",
+      "title_zh": "30 年固定房贷全国平均利率为 6.95%",
+      "summary": "Freddie Mac's PMMS reported a 6.95% average, up from 6.76% the week before. The 15-year fixed average was 6.26%.",
+      "summary_zh": "Freddie Mac 的 PMMS 显示，30 年固定房贷平均利率为 6.95%，高于前一周的 6.76%；15 年固定房贷平均利率为 6.26%。",
+      "url": "https://www.freddiemac.com/pmms"
+    },
+    {
+      "source": "MBA",
+      "date": "2026-09-16",
+      "title": "Mortgage applications decrease in latest MBA weekly survey",
+      "title_zh": "MBA：最新周度调查显示抵押贷款申请下降",
+      "summary": "MBA reported that total mortgage applications fell 4.1% on a seasonally adjusted basis for the week ending September 11. Its survey’s average 30-year conforming contract rate rose to 6.97%; this is a survey average, not an individual lender quote.",
+      "summary_zh": "MBA 表示，截至 9 月 11 日当周的抵押贷款申请总量经季调后下降 4.1%。其调查中的 30 年期合规贷款平均合同利率升至 6.97%；这是调查平均值，并非个人可获得的贷款报价。",
+      "url": "https://www.mba.org/news-and-research/newsroom/news/2026/09/16/mortgage-applications-decrease-in-latest-mba-weekly-survey"
+    },
     {
       "source": "MBA",
       "date": "2026-09-15",
@@ -19,15 +37,6 @@
       "summary": "Fannie Mae’s Economic and Strategic Research Group published its monthly economic and housing outlook, covering current conditions and forecasts for measures including rates, home sales, prices, starts and mortgage originations. The outlook is a forecast, not a lender quote or guarantee.",
       "summary_zh": "房利美经济与战略研究组发布月度经济与住房展望，涵盖利率、房屋销售、房价、开工和房贷发放等指标的现状与预测。该展望属于预测，并非贷款机构报价或保证。",
       "url": "https://www.fanniemae.com/data-and-insights/forecast"
-    },
-    {
-      "source": "Freddie Mac",
-      "date": "2026-09-10",
-      "title": "The average 30-year fixed mortgage rate was 6.76%",
-      "title_zh": "30 年固定房贷全国平均利率为 6.76%",
-      "summary": "Freddie Mac's PMMS reported a 6.76% average, up from 6.71% the week before. The 15-year fixed average was 6.09%.",
-      "summary_zh": "Freddie Mac 的 PMMS 显示，30 年固定房贷平均利率为 6.76%，高于前一周的 6.71%；15 年固定房贷平均利率为 6.09%。",
-      "url": "https://www.freddiemac.com/pmms"
     },
     {
       "source": "HUD",
