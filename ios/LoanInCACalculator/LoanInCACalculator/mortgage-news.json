@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-17T16:28:25.161Z",
+  "generated_at": "2026-09-18T15:02:03.413Z",
   "notes": "Mortgage and housing updates from primary public sources.",
   "items": [
     {
@@ -10,6 +10,15 @@
       "summary": "Freddie Mac's PMMS reported a 6.95% average, up from 6.76% the week before. The 15-year fixed average was 6.26%.",
       "summary_zh": "Freddie Mac 的 PMMS 显示，30 年固定房贷平均利率为 6.95%，高于前一周的 6.76%；15 年固定房贷平均利率为 6.26%。",
       "url": "https://www.freddiemac.com/pmms"
+    },
+    {
+      "source": "U.S. Census Bureau and HUD",
+      "date": "2026-09-17",
+      "title": "August new residential construction: housing starts at a 1.275 million annual rate",
+      "title_zh": "美国 8 月住宅开工季调年率为 127.5 万套",
+      "summary": "The Census Bureau and HUD reported that August housing starts were at a seasonally adjusted annual rate of 1.275 million, down 2.6% from the revised July estimate and down 1.2% from August 2025. Single-family starts rose 7.6% month over month to a 918,000 annual rate.",
+      "summary_zh": "美国人口普查局与 HUD 报告称，8 月私人住宅开工的季调年率为 127.5 万套，较修正后的 7 月下降 2.6%，较 2025 年 8 月下降 1.2%；其中独栋住宅开工季调年率为 91.8 万套，环比上升 7.6%。",
+      "url": "https://www.census.gov/construction/nrc/current/"
     },
     {
       "source": "MBA",
@@ -64,15 +73,6 @@
       "summary": "The August forecast covers home sales, starts, mortgage rates and originations.",
       "summary_zh": "8 月预测列出了住房销售、开工、房贷利率和贷款发放量的预期。",
       "url": "https://www.fanniemae.com/media/document/pdf/housing-forecast-082026"
-    },
-    {
-      "source": "HUD",
-      "date": "2026-06-23",
-      "title": "HUD announced 14 FHA single-family policy changes",
-      "title_zh": "HUD 公布 14 项 FHA 单户住房政策调整",
-      "summary": "HUD said the changes cover appraisal reviews, Limited 203(k), lender quality control, and closing documents, with the goal of reducing duplicate requirements and process costs.",
-      "summary_zh": "HUD 表示，新调整涉及评估复核、Limited 203(k)、贷款机构质量控制和部分交割文件，目标是减少重复要求并降低 FHA 贷款流程成本。",
-      "url": "https://www.hud.gov/news/hud-no-26-051"
     }
   ]
 }
