@@ -3,6 +3,24 @@
   "notes": "Mortgage and housing updates from primary public sources.",
   "items": [
     {
+      "source": "Redfin",
+      "date": "2026-09-18",
+      "title": "Redfin reports seller concessions in 44.7% of August U.S. home sales",
+      "title_zh": "Redfin：8 月美国 44.7% 的房屋成交含卖方让利",
+      "summary": "Redfin reported that sellers made concessions in 44.7% of August U.S. home sales, up from 42.6% a year earlier. Its analysis defines concessions as seller help with buyer costs, such as repairs, closing costs or mortgage-rate buydowns; it does not include price reductions.",
+      "summary_zh": "Redfin 报告称，8 月美国房屋成交中有 44.7% 包含卖方让利，高于一年前的 42.6%。该分析将让利定义为卖方帮助承担维修、过户成本或房贷利率买断等购房成本，不包括直接降价。",
+      "url": "https://www.redfin.com/news/home-seller-concessions-august-2026/"
+    },
+    {
+      "source": "Redfin",
+      "date": "2026-09-17",
+      "title": "Redfin reports U.S. pending home sales fell 3.5% week over week",
+      "title_zh": "Redfin：美国待成交房屋销售环比下降 3.5%",
+      "summary": "For the four weeks ending September 13, Redfin reported seasonally adjusted pending sales of 299,126, down 3.5% from the prior week and 5.4% year over year. Redfin said its national metrics cover more than 900 U.S. metro areas and are subject to revision.",
+      "summary_zh": "截至 9 月 13 日的四周，Redfin 报告的季调待成交房屋销售为 299,126 套，较前一周下降 3.5%、同比下降 5.4%。Redfin 表示其全国指标覆盖 900 多个美国都会区，数据可能修订。",
+      "url": "https://www.redfin.com/news/housing-market-update-pending-sales-lowest-level-since-2023/"
+    },
+    {
       "source": "Freddie Mac",
       "date": "2026-09-17",
       "title": "The average 30-year fixed mortgage rate was 6.95%",
@@ -55,24 +73,6 @@
       "summary": "HUD rescinded prior guidance on the Fair Housing Act statute of limitations for design and construction claims. The agency said the change is intended to reduce unnecessary liability and costs passed on to homebuyers and renters.",
       "summary_zh": "HUD 撤销了关于《公平住房法》设计和施工索赔诉讼时效的既有指引。该机构表示，此举旨在减少不必要的责任与可能转嫁给购房者和租房者的成本。",
       "url": "https://www.hud.gov/news/hud-no-26-063"
-    },
-    {
-      "source": "FHFA",
-      "date": "2026-08-25",
-      "title": "FHFA reports second-quarter U.S. home price growth of 2.1% year over year",
-      "title_zh": "FHFA：美国二季度房价同比上涨 2.1%",
-      "summary": "The Q2 report shows national prices up 2.1% year over year and 0.3% quarter over quarter.",
-      "summary_zh": "FHFA 二季度报告显示，全美房价同比上涨 2.1%、环比上涨 0.3%；经季节调整的 6 月月度指数与 5 月持平。",
-      "url": "https://www.fhfa.gov/reports/house-price-index/2026/Q2"
-    },
-    {
-      "source": "Fannie Mae",
-      "date": "2026-08-13",
-      "title": "Fannie Mae releases its August housing forecast",
-      "title_zh": "Fannie Mae 发布 8 月住房预测",
-      "summary": "The August forecast covers home sales, starts, mortgage rates and originations.",
-      "summary_zh": "8 月预测列出了住房销售、开工、房贷利率和贷款发放量的预期。",
-      "url": "https://www.fanniemae.com/media/document/pdf/housing-forecast-082026"
     }
   ]
 }
