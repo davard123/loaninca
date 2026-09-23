@@ -1,7 +1,34 @@
 {
-  "generated_at": "2026-09-18T15:02:03.413Z",
+  "generated_at": "2026-09-23T15:08:53.545Z",
   "notes": "Mortgage and housing updates from primary public sources.",
   "items": [
+    {
+      "source": "MBA",
+      "date": "2026-09-23",
+      "title": "Mortgage applications decrease in latest MBA weekly survey",
+      "title_zh": "MBA：最新周度调查显示抵押贷款申请下降",
+      "summary": "MBA reported that total mortgage applications fell 1.5% on a seasonally adjusted basis for the week ending September 18. The refinance index fell 3% and the purchase index fell 1%. Its average 30-year conforming contract rate rose to 7.12% from 6.97%; this is a survey average for specified loans, not an individual lender quote.",
+      "summary_zh": "MBA 表示，截至 9 月 18 日当周的抵押贷款申请总量经季调后下降 1.5%，再融资申请下降 3%，购房申请下降 1%。其调查中的 30 年期合规贷款平均合同利率由 6.97% 升至 7.12%；这是特定贷款条件下的调查平均值，并非个人可获得的贷款报价。",
+      "url": "https://www.mba.org/news-and-research/newsroom/news/2026/09/23/mortgage-applications-decrease-in-latest-mba-weekly-survey"
+    },
+    {
+      "source": "Redfin",
+      "date": "2026-09-22",
+      "title": "Redfin reports U.S. home prices rose 0.25% from a month earlier in August",
+      "title_zh": "Redfin：美国 8 月房价环比上涨 0.25%",
+      "summary": "Redfin’s Home Price Index reported seasonally adjusted U.S. single-family home prices rose 0.25% in August from July and 3.7% from a year earlier. The index uses a repeat-sales method, and its August reading covers the three months ending August 31.",
+      "summary_zh": "Redfin 房价指数显示，经季调后美国独栋住宅价格在 8 月环比上涨 0.25%、同比上涨 3.7%。该指数采用重复交易法计算，8 月读数覆盖截至 8 月 31 日的三个月。",
+      "url": "https://www.redfin.com/news/press-releases/redfin-reports-u-s-home-prices-rose-0-25-from-a-month-earlier-in-august/"
+    },
+    {
+      "source": "HUD / FHA",
+      "date": "2026-09-22",
+      "title": "FHA seeks feedback on proposed changes to single-family minimum property requirements",
+      "title_zh": "FHA 就单户住房最低物业要求拟议调整征求意见",
+      "summary": "FHA posted proposed updates to its single-family Minimum Property Requirements, saying it would reorganize and refine standards to reflect current industry practices. Feedback is due November 6, 2026. The proposal is not official policy and cannot be used for FHA-insured mortgages unless finalized.",
+      "summary_zh": "FHA 发布单户住房最低物业要求的拟议更新，称将重组和完善相关标准以贴合当前行业实践，意见征集截止至 2026 年 11 月 6 日。该草案尚非正式政策，在最终定稿前不能用于 FHA 承保贷款。",
+      "url": "https://www.hud.gov/hud-partners/single-family-policy-drafts"
+    },
     {
       "source": "Redfin",
       "date": "2026-09-18",
@@ -46,33 +73,6 @@
       "summary": "MBA reported that total mortgage applications fell 4.1% on a seasonally adjusted basis for the week ending September 11. Its survey’s average 30-year conforming contract rate rose to 6.97%; this is a survey average, not an individual lender quote.",
       "summary_zh": "MBA 表示，截至 9 月 11 日当周的抵押贷款申请总量经季调后下降 4.1%。其调查中的 30 年期合规贷款平均合同利率升至 6.97%；这是调查平均值，并非个人可获得的贷款报价。",
       "url": "https://www.mba.org/news-and-research/newsroom/news/2026/09/16/mortgage-applications-decrease-in-latest-mba-weekly-survey"
-    },
-    {
-      "source": "MBA",
-      "date": "2026-09-15",
-      "title": "August new-home purchase mortgage applications decreased 5.5 percent",
-      "title_zh": "MBA：8 月新建房购房抵押贷款申请同比下降 5.5%",
-      "summary": "MBA’s Builder Application Survey reported that August applications for new-home purchases fell 5.5% year over year and 6% from July, before seasonal adjustment. MBA estimated new single-family home sales at a 664,000 seasonally adjusted annual rate; that is an MBA estimate, not the Census Bureau’s official release.",
-      "summary_zh": "MBA 的建商申请调查显示，8 月新建房购房抵押贷款申请同比下降 5.5%、较 7 月下降 6%（未季调）。MBA 估算新建独栋房销售的季调年率为 66.4 万套；这是基于其调查的估算，不是美国人口普查局的官方发布。",
-      "url": "https://www.mba.org/news-and-research/newsroom/news/2026/09/15/august-new-home-purchase-mortgage-applications-decreased-5.5-percent"
-    },
-    {
-      "source": "Fannie Mae",
-      "date": "2026-09-15",
-      "title": "Fannie Mae publishes September 2026 Economic and Housing Outlook",
-      "title_zh": "房利美发布 2026 年 9 月经济与住房展望",
-      "summary": "Fannie Mae’s Economic and Strategic Research Group published its monthly economic and housing outlook, covering current conditions and forecasts for measures including rates, home sales, prices, starts and mortgage originations. The outlook is a forecast, not a lender quote or guarantee.",
-      "summary_zh": "房利美经济与战略研究组发布月度经济与住房展望，涵盖利率、房屋销售、房价、开工和房贷发放等指标的现状与预测。该展望属于预测，并非贷款机构报价或保证。",
-      "url": "https://www.fanniemae.com/data-and-insights/forecast"
-    },
-    {
-      "source": "HUD",
-      "date": "2026-09-01",
-      "title": "HUD takes action to make housing more affordable",
-      "title_zh": "HUD 调整公平住房法相关指引，称将降低住房建设成本",
-      "summary": "HUD rescinded prior guidance on the Fair Housing Act statute of limitations for design and construction claims. The agency said the change is intended to reduce unnecessary liability and costs passed on to homebuyers and renters.",
-      "summary_zh": "HUD 撤销了关于《公平住房法》设计和施工索赔诉讼时效的既有指引。该机构表示，此举旨在减少不必要的责任与可能转嫁给购房者和租房者的成本。",
-      "url": "https://www.hud.gov/news/hud-no-26-063"
     }
   ]
 }
