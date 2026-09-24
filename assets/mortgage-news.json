@@ -1,7 +1,16 @@
 {
-  "generated_at": "2026-09-23T15:08:53.545Z",
+  "generated_at": "2026-09-24T15:02:38.010Z",
   "notes": "Mortgage and housing updates from primary public sources.",
   "items": [
+    {
+      "source": "Redfin",
+      "date": "2026-09-24",
+      "title": "Las Vegas and Florida are America’s hottest destinations for relocating house hunters",
+      "title_zh": "Redfin：拉斯维加斯与佛州是跨都会区找房者最热门目的地",
+      "summary": "Redfin’s Q2 migration analysis found Las Vegas had the largest net inflow of Redfin.com home searchers (9,581), while Los Angeles had the largest net outflow (-28,652); Florida led states with a 38,922 net inflow. These figures measure Redfin.com users’ search behavior—not closed sales—and may include vacation or investment-property searches.",
+      "summary_zh": "Redfin 对 2026 年第二季度跨都会区找房行为的分析显示，拉斯维加斯的净流入最多（9,581 名 Redfin.com 找房者），洛杉矶的净流出最多（-28,652 名）；佛州以 38,922 名净流入居各州首位。这些数字衡量的是网站用户的搜索行为，并非已成交房屋，且可能包含度假屋或投资房搜索。",
+      "url": "https://www.redfin.com/news/migration-q2-2026/"
+    },
     {
       "source": "MBA",
       "date": "2026-09-23",
@@ -64,15 +73,6 @@
       "summary": "The Census Bureau and HUD reported that August housing starts were at a seasonally adjusted annual rate of 1.275 million, down 2.6% from the revised July estimate and down 1.2% from August 2025. Single-family starts rose 7.6% month over month to a 918,000 annual rate.",
       "summary_zh": "美国人口普查局与 HUD 报告称，8 月私人住宅开工的季调年率为 127.5 万套，较修正后的 7 月下降 2.6%，较 2025 年 8 月下降 1.2%；其中独栋住宅开工季调年率为 91.8 万套，环比上升 7.6%。",
       "url": "https://www.census.gov/construction/nrc/current/"
-    },
-    {
-      "source": "MBA",
-      "date": "2026-09-16",
-      "title": "Mortgage applications decrease in latest MBA weekly survey",
-      "title_zh": "MBA：最新周度调查显示抵押贷款申请下降",
-      "summary": "MBA reported that total mortgage applications fell 4.1% on a seasonally adjusted basis for the week ending September 11. Its survey’s average 30-year conforming contract rate rose to 6.97%; this is a survey average, not an individual lender quote.",
-      "summary_zh": "MBA 表示，截至 9 月 11 日当周的抵押贷款申请总量经季调后下降 4.1%。其调查中的 30 年期合规贷款平均合同利率升至 6.97%；这是调查平均值，并非个人可获得的贷款报价。",
-      "url": "https://www.mba.org/news-and-research/newsroom/news/2026/09/16/mortgage-applications-decrease-in-latest-mba-weekly-survey"
     }
   ]
 }
