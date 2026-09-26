@@ -1,6 +1,7 @@
 /*
  * 节日祝福横幅（loaninca / rentalinca 共用，两站各放一份同样的文件）
- * 按访客本地日期，在节日前 2 天至节日后 2 天显示在页面最上方；显示期重叠时新节日顶掉旧节日。
+ * 按访客本地日期，在节日前 2 天至节日后 2 天显示在页面最上方。
+ * 多个节日同时在显示期内：当天正是某个节日的优先；否则日期最晚的新节日顶掉旧节日。
  * 可关闭，关闭后这个节日不再出现。
  * 用法：<script src="/festival-banner.js" data-qr="/assets/wechat-qr.jpg"
  *         data-sign="房产校长 David" data-art="/assets/festivals/" defer></script>
@@ -13,15 +14,26 @@
   var SIGN = script.getAttribute('data-sign') || 'David';
   var ART = script.getAttribute('data-art') || '/';
 
-  // 农历节日日期由 lunar-javascript 计算（2026–2035）
+  // 日期由 lunar-javascript 计算（2026–2035）；春节为除夕前 2 天至正月初七
   var FESTIVALS = [
-    {
-      key: 'mid-autumn',
-      text: '中秋快乐，愿您阖家团圆',
-      image: 'mid-autumn-2026-1200.webp',
-      dates: ['2026-09-25', '2027-09-15', '2028-10-03', '2029-09-22', '2030-09-12',
-        '2031-10-01', '2032-09-19', '2033-09-08', '2034-09-27', '2035-09-16'],
-    },
+    { key: 'spring', text: '新春快乐，祝您阖家安康、万事顺意', image: 'spring-2026-1200.webp', before: 3, after: 6,
+      dates: ['2026-02-17', '2027-02-06', '2028-01-26', '2029-02-13', '2030-02-03', '2031-01-23', '2032-02-11', '2033-01-31', '2034-02-19', '2035-02-08'] },
+    { key: 'lantern', text: '元宵快乐，祝您团团圆圆、前程光明', image: 'lantern-2026-1200.webp', before: 2, after: 2,
+      dates: ['2026-03-03', '2027-02-20', '2028-02-09', '2029-02-27', '2030-02-17', '2031-02-06', '2032-02-25', '2033-02-14', '2034-03-05', '2035-02-22'] },
+    { key: 'duanwu', text: '端午安康，祝您和家人平安健康', image: 'duanwu-2026-1200.webp', before: 2, after: 2,
+      dates: ['2026-06-19', '2027-06-09', '2028-05-28', '2029-06-16', '2030-06-05', '2031-06-24', '2032-06-12', '2033-06-01', '2034-06-20', '2035-06-10'] },
+    { key: 'mid-autumn', text: '中秋快乐，愿您阖家团圆', image: 'mid-autumn-2026-1200.webp', before: 2, after: 2,
+      dates: ['2026-09-25', '2027-09-15', '2028-10-03', '2029-09-22', '2030-09-12', '2031-10-01', '2032-09-19', '2033-09-08', '2034-09-27', '2035-09-16'] },
+    { key: 'newyear', text: '新年快乐，祝您新的一年心想事成', image: 'newyear-2026-1200.webp', before: 2, after: 2,
+      dates: ['2026-01-01', '2027-01-01', '2028-01-01', '2029-01-01', '2030-01-01', '2031-01-01', '2032-01-01', '2033-01-01', '2034-01-01', '2035-01-01'] },
+    { key: 'mothers', text: '母亲节快乐，祝天下妈妈健康平安', image: 'mothers-2026-1200.webp', before: 2, after: 2,
+      dates: ['2026-05-10', '2027-05-09', '2028-05-14', '2029-05-13', '2030-05-12', '2031-05-11', '2032-05-09', '2033-05-08', '2034-05-14', '2035-05-13'] },
+    { key: 'fathers', text: '父亲节快乐，祝天下爸爸身体健康', image: 'fathers-2026-1200.webp', before: 2, after: 2,
+      dates: ['2026-06-21', '2027-06-20', '2028-06-18', '2029-06-17', '2030-06-16', '2031-06-15', '2032-06-20', '2033-06-19', '2034-06-18', '2035-06-17'] },
+    { key: 'july4', text: 'Happy 4th of July，祝您假期愉快', image: 'july4-2026-1200.webp', before: 2, after: 2,
+      dates: ['2026-07-04', '2027-07-04', '2028-07-04', '2029-07-04', '2030-07-04', '2031-07-04', '2032-07-04', '2033-07-04', '2034-07-04', '2035-07-04'] },
+    { key: 'thanksgiving', text: '感恩节快乐，谢谢您一路以来的信任', image: 'thanksgiving-2026-1200.webp', before: 2, after: 2,
+      dates: ['2026-11-26', '2027-11-25', '2028-11-23', '2029-11-22', '2030-11-28', '2031-11-27', '2032-11-25', '2033-11-24', '2034-11-23', '2035-11-22'] },
   ];
 
   function pad(n) { return (n < 10 ? '0' : '') + n; }
@@ -34,14 +46,15 @@
   var preview = (location.search.match(/[?&]festival-date=(\d{4}-\d{2}-\d{2})/) || [])[1];
   var today = preview || ymd(new Date());
 
-  // 重叠时取日期最晚的：新节日一进入显示期就替换旧节日
+  // 当天正是某个节日的优先；否则取日期最晚的（新节日一进入显示期就替换旧节日）
   var active = null;
   for (var i = 0; i < FESTIVALS.length; i++) {
-    for (var j = 0; j < FESTIVALS[i].dates.length; j++) {
-      var date = FESTIVALS[i].dates[j];
-      if (shift(date, -2) <= today && today <= shift(date, 2) && (!active || date > active.date)) {
-        active = { f: FESTIVALS[i], date: date };
-      }
+    var f = FESTIVALS[i];
+    for (var j = 0; j < f.dates.length; j++) {
+      var date = f.dates[j];
+      if (shift(date, -f.before) > today || today > shift(date, f.after)) continue;
+      var better = !active || date === today || (active.date !== today && date > active.date);
+      if (better) active = { f: f, date: date };
     }
   }
   if (!active) return;
