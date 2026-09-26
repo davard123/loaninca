@@ -1,6 +1,7 @@
 /*
  * 节日祝福横幅（loaninca / rentalinca 共用，两站各放一份同样的文件）
- * 按访客本地日期，在节日前 2 天至节日当天显示在页面最上方；可关闭，关闭后当年不再出现。
+ * 按访客本地日期，在节日前 2 天至节日后 2 天显示在页面最上方；显示期重叠时新节日顶掉旧节日。
+ * 可关闭，关闭后这个节日不再出现。
  * 用法：<script src="/festival-banner.js" data-qr="/assets/wechat-qr.jpg"
  *         data-sign="房产校长 David" data-art="/assets/festivals/" defer></script>
  * 预览其他日期：网址后加 ?festival-date=2026-09-25
@@ -33,11 +34,14 @@
   var preview = (location.search.match(/[?&]festival-date=(\d{4}-\d{2}-\d{2})/) || [])[1];
   var today = preview || ymd(new Date());
 
+  // 重叠时取日期最晚的：新节日一进入显示期就替换旧节日
   var active = null;
-  for (var i = 0; i < FESTIVALS.length && !active; i++) {
+  for (var i = 0; i < FESTIVALS.length; i++) {
     for (var j = 0; j < FESTIVALS[i].dates.length; j++) {
       var date = FESTIVALS[i].dates[j];
-      if (shift(date, -2) <= today && today <= date) { active = { f: FESTIVALS[i], date: date }; break; }
+      if (shift(date, -2) <= today && today <= shift(date, 2) && (!active || date > active.date)) {
+        active = { f: FESTIVALS[i], date: date };
+      }
     }
   }
   if (!active) return;
