@@ -232,4 +232,22 @@
     <changefreq>monthly</changefreq>
     <priority>.8</priority>
   </url>
+  <url>
+    <loc>https://www.loaninca.com/blog/h1b-layoff-mortgage-guide</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>.8</priority>
+  </url>
+  <url>
+    <loc>https://www.loaninca.com/blog/calhfa-first-time-buyer-guide</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>.8</priority>
+  </url>
+  <url>
+    <loc>https://www.loaninca.com/blog/primary-vs-investment-property-loan</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>.8</priority>
+  </url>
 </urlset>
