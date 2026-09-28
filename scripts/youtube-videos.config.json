@@ -1,0 +1,8 @@
+{
+  "template": "templates/videos.html",
+  "output": "videos.html",
+  "pageUrl": "https://www.loaninca.com/videos",
+  "title": "加州房贷与买房视频：评估价、重贷、HELOC、首付 | David Dai",
+  "description": "David Dai 的中文房贷视频：评估价低了怎么办、重贷和 HELOC 怎么选、首付不够怎么办、验房报告哪些问题会让银行不放款。几分钟讲清一件事。",
+  "topics": ["mortgage", "buying", "market"]
+}

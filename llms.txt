@@ -23,6 +23,7 @@ LoanInCA 是由 David Dai（NMLS# 2454756）维护的中英双语加州房贷指
 - 房贷术语：https://www.loaninca.com/glossary
 - 买房场景：https://www.loaninca.com/scenarios
 - 贷款知识与官方资料：https://www.loaninca.com/news
+- David Dai 房贷与买房视频（YouTube，按主题分类）：https://www.loaninca.com/videos
 - David Dai：https://www.loaninca.com/david-dai
 - 关于 LoanInCA：https://www.loaninca.com/about
 
