@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-24T20:37:31.173Z",
+  "generated_at": "2026-09-28T18:38:04.293Z",
   "notes": "Mortgage and housing updates from primary public sources.",
   "items": [
     {
@@ -19,6 +19,15 @@
       "summary": "Redfin’s Q2 migration analysis found Las Vegas had the largest net inflow of Redfin.com home searchers (9,581), while Los Angeles had the largest net outflow (-28,652); Florida led states with a 38,922 net inflow. These figures measure Redfin.com users’ search behavior—not closed sales—and may include vacation or investment-property searches.",
       "summary_zh": "Redfin 对 2026 年第二季度跨都会区找房行为的分析显示，拉斯维加斯的净流入最多（9,581 名 Redfin.com 找房者），洛杉矶的净流出最多（-28,652 名）；佛州以 38,922 名净流入居各州首位。这些数字衡量的是网站用户的搜索行为，并非已成交房屋，且可能包含度假屋或投资房搜索。",
       "url": "https://www.redfin.com/news/migration-q2-2026/"
+    },
+    {
+      "source": "U.S. Census Bureau and HUD",
+      "date": "2026-09-24",
+      "title": "August new home sales ran at a 684,000 annual rate",
+      "title_zh": "美国 8 月新建独栋住宅销售季调年率为 68.4 万套",
+      "summary": "The Census Bureau and HUD reported that August sales of new single-family houses were at a seasonally adjusted annual rate of 684,000, up 6.4% from July and down 2.0% from August 2025. The estimated inventory was 483,000 new homes, equal to an 8.5-month supply at the current sales rate.",
+      "summary_zh": "美国人口普查局与 HUD 报告称，8 月新建独栋住宅销售季调年率为 68.4 万套，较 7 月上升 6.4%，较 2025 年 8 月下降 2.0%。待售新房估计为 48.3 万套，按当前销售速度计算相当于 8.5 个月供应量。",
+      "url": "https://www.census.gov/construction/nrs/current/"
     },
     {
       "source": "MBA",
@@ -64,15 +73,6 @@
       "summary": "For the four weeks ending September 13, Redfin reported seasonally adjusted pending sales of 299,126, down 3.5% from the prior week and 5.4% year over year. Redfin said its national metrics cover more than 900 U.S. metro areas and are subject to revision.",
       "summary_zh": "截至 9 月 13 日的四周，Redfin 报告的季调待成交房屋销售为 299,126 套，较前一周下降 3.5%、同比下降 5.4%。Redfin 表示其全国指标覆盖 900 多个美国都会区，数据可能修订。",
       "url": "https://www.redfin.com/news/housing-market-update-pending-sales-lowest-level-since-2023/"
-    },
-    {
-      "source": "U.S. Census Bureau and HUD",
-      "date": "2026-09-17",
-      "title": "August new residential construction: housing starts at a 1.275 million annual rate",
-      "title_zh": "美国 8 月住宅开工季调年率为 127.5 万套",
-      "summary": "The Census Bureau and HUD reported that August housing starts were at a seasonally adjusted annual rate of 1.275 million, down 2.6% from the revised July estimate and down 1.2% from August 2025. Single-family starts rose 7.6% month over month to a 918,000 annual rate.",
-      "summary_zh": "美国人口普查局与 HUD 报告称，8 月私人住宅开工的季调年率为 127.5 万套，较修正后的 7 月下降 2.6%，较 2025 年 8 月下降 1.2%；其中独栋住宅开工季调年率为 91.8 万套，环比上升 7.6%。",
-      "url": "https://www.census.gov/construction/nrc/current/"
     }
   ]
 }
