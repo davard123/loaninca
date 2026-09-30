@@ -1,7 +1,25 @@
 {
-  "generated_at": "2026-09-28T18:38:04.293Z",
+  "generated_at": "2026-09-30T15:03:34.723Z",
   "notes": "Mortgage and housing updates from primary public sources.",
   "items": [
+    {
+      "source": "Redfin",
+      "date": "2026-09-30",
+      "title": "Price-drop rate ticks up to record September rate amid strong buyer’s market",
+      "title_zh": "Redfin：9 月降价挂牌占比创同期纪录，买方市场仍强",
+      "summary": "Redfin’s MLS-data analysis found that 21.1% of U.S. active listings had an asking-price cut in the four weeks ending September 20, up from 19.8% a year earlier and the highest rate for this time of year in its records since 2022. This measures listing price cuts, not closed-sale prices or individual seller outcomes.",
+      "summary_zh": "Redfin 对 MLS 数据的分析显示，截至 9 月 20 日的四周内，美国活跃挂牌中有 21.1% 下调要价，高于一年前的 19.8%，且为其自 2022 年有记录以来的同期最高水平。这衡量的是挂牌降价，并非成交价或任何个别卖家的结果。",
+      "url": "https://www.redfin.com/news/price-drop-rate-ticks-up/"
+    },
+    {
+      "source": "FHFA",
+      "date": "2026-09-29",
+      "title": "U.S. house prices rose 0.3% in July, FHFA says",
+      "title_zh": "FHFA：美国 7 月房价环比上涨 0.3%",
+      "summary": "FHFA’s seasonally adjusted monthly House Price Index reported U.S. house prices rose 0.3% in July from June and 2.6% from July 2025 to July 2026. The index is a repeat-sales measure based on single-family mortgage transactions purchased or securitized by Fannie Mae and Freddie Mac, not a measure of every home sale.",
+      "summary_zh": "FHFA 的季调月度房价指数显示，美国房价 7 月较 6 月上涨 0.3%，较 2025 年 7 月上涨 2.6%。该指数以房利美和房地美购买或证券化的独户住宅重复交易为基础，并不衡量所有房屋成交。",
+      "url": "https://www.fhfa.gov/reports/house-price-index/2026/9"
+    },
     {
       "source": "Freddie Mac",
       "date": "2026-09-24",
@@ -55,24 +73,6 @@
       "summary": "FHA posted proposed updates to its single-family Minimum Property Requirements, saying it would reorganize and refine standards to reflect current industry practices. Feedback is due November 6, 2026. The proposal is not official policy and cannot be used for FHA-insured mortgages unless finalized.",
       "summary_zh": "FHA 发布单户住房最低物业要求的拟议更新，称将重组和完善相关标准以贴合当前行业实践，意见征集截止至 2026 年 11 月 6 日。该草案尚非正式政策，在最终定稿前不能用于 FHA 承保贷款。",
       "url": "https://www.hud.gov/hud-partners/single-family-policy-drafts"
-    },
-    {
-      "source": "Redfin",
-      "date": "2026-09-18",
-      "title": "Redfin reports seller concessions in 44.7% of August U.S. home sales",
-      "title_zh": "Redfin：8 月美国 44.7% 的房屋成交含卖方让利",
-      "summary": "Redfin reported that sellers made concessions in 44.7% of August U.S. home sales, up from 42.6% a year earlier. Its analysis defines concessions as seller help with buyer costs, such as repairs, closing costs or mortgage-rate buydowns; it does not include price reductions.",
-      "summary_zh": "Redfin 报告称，8 月美国房屋成交中有 44.7% 包含卖方让利，高于一年前的 42.6%。该分析将让利定义为卖方帮助承担维修、过户成本或房贷利率买断等购房成本，不包括直接降价。",
-      "url": "https://www.redfin.com/news/home-seller-concessions-august-2026/"
-    },
-    {
-      "source": "Redfin",
-      "date": "2026-09-17",
-      "title": "Redfin reports U.S. pending home sales fell 3.5% week over week",
-      "title_zh": "Redfin：美国待成交房屋销售环比下降 3.5%",
-      "summary": "For the four weeks ending September 13, Redfin reported seasonally adjusted pending sales of 299,126, down 3.5% from the prior week and 5.4% year over year. Redfin said its national metrics cover more than 900 U.S. metro areas and are subject to revision.",
-      "summary_zh": "截至 9 月 13 日的四周，Redfin 报告的季调待成交房屋销售为 299,126 套，较前一周下降 3.5%、同比下降 5.4%。Redfin 表示其全国指标覆盖 900 多个美国都会区，数据可能修订。",
-      "url": "https://www.redfin.com/news/housing-market-update-pending-sales-lowest-level-since-2023/"
     }
   ]
 }
