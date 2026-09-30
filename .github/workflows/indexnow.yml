@@ -19,6 +19,7 @@ jobs:
           INDEXNOW_HOST: www.loaninca.com
           INDEXNOW_KEY: 8436564b6171657c7863c26d8829a084
           INDEXNOW_ALL: ""
+          SITEMAP_FILE: sitemap.xml
           BEFORE: ${{ github.event.before }}
         run: |
           if git cat-file -e "$BEFORE" 2>/dev/null; then
