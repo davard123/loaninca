@@ -1,7 +1,16 @@
 {
-  "generated_at": "2026-09-30T15:03:34.723Z",
+  "generated_at": "2026-10-01T21:53:53.469Z",
   "notes": "Mortgage and housing updates from primary public sources.",
   "items": [
+    {
+      "source": "Freddie Mac",
+      "date": "2026-10-01",
+      "title": "The average 30-year fixed mortgage rate was 7.28%",
+      "title_zh": "30 年固定房贷全国平均利率为 7.28%",
+      "summary": "Freddie Mac's PMMS reported a 7.28% average, up from 7.03% the week before. The 15-year fixed average was 6.60%.",
+      "summary_zh": "Freddie Mac 的 PMMS 显示，30 年固定房贷平均利率为 7.28%，高于前一周的 7.03%；15 年固定房贷平均利率为 6.60%。",
+      "url": "https://www.freddiemac.com/pmms"
+    },
     {
       "source": "Redfin",
       "date": "2026-09-30",
@@ -19,15 +28,6 @@
       "summary": "FHFA’s seasonally adjusted monthly House Price Index reported U.S. house prices rose 0.3% in July from June and 2.6% from July 2025 to July 2026. The index is a repeat-sales measure based on single-family mortgage transactions purchased or securitized by Fannie Mae and Freddie Mac, not a measure of every home sale.",
       "summary_zh": "FHFA 的季调月度房价指数显示，美国房价 7 月较 6 月上涨 0.3%，较 2025 年 7 月上涨 2.6%。该指数以房利美和房地美购买或证券化的独户住宅重复交易为基础，并不衡量所有房屋成交。",
       "url": "https://www.fhfa.gov/reports/house-price-index/2026/9"
-    },
-    {
-      "source": "Freddie Mac",
-      "date": "2026-09-24",
-      "title": "The average 30-year fixed mortgage rate was 7.03%",
-      "title_zh": "30 年固定房贷全国平均利率为 7.03%",
-      "summary": "Freddie Mac's PMMS reported a 7.03% average, up from 6.95% the week before. The 15-year fixed average was 6.42%.",
-      "summary_zh": "Freddie Mac 的 PMMS 显示，30 年固定房贷平均利率为 7.03%，高于前一周的 6.95%；15 年固定房贷平均利率为 6.42%。",
-      "url": "https://www.freddiemac.com/pmms"
     },
     {
       "source": "Redfin",
