@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-01T21:53:53.469Z",
+  "generated_at": "2026-10-08T22:15:27.360Z",
   "notes": "Mortgage and housing updates from primary public sources.",
   "items": [
     {
       "source": "Freddie Mac",
-      "date": "2026-10-01",
-      "title": "The average 30-year fixed mortgage rate was 7.28%",
-      "title_zh": "30 年固定房贷全国平均利率为 7.28%",
-      "summary": "Freddie Mac's PMMS reported a 7.28% average, up from 7.03% the week before. The 15-year fixed average was 6.60%.",
-      "summary_zh": "Freddie Mac 的 PMMS 显示，30 年固定房贷平均利率为 7.28%，高于前一周的 7.03%；15 年固定房贷平均利率为 6.60%。",
+      "date": "2026-10-08",
+      "title": "The average 30-year fixed mortgage rate was 7.40%",
+      "title_zh": "30 年固定房贷全国平均利率为 7.40%",
+      "summary": "Freddie Mac's PMMS reported a 7.40% average, up from 7.28% the week before. The 15-year fixed average was 6.73%.",
+      "summary_zh": "Freddie Mac 的 PMMS 显示，30 年固定房贷平均利率为 7.40%，高于前一周的 7.28%；15 年固定房贷平均利率为 6.73%。",
       "url": "https://www.freddiemac.com/pmms"
     },
     {
