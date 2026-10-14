@@ -9,7 +9,7 @@
 <!-- Cloudflare D1 API Configuration -->
 <script>
   window.API_BASE = '/api';
-  window.ADMIN_PASSWORD = 'david2025!';
+  // 管理员密钥不写在页面里：登录时输入，由服务器（Pages secret ADMIN_KEY）验证
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -430,18 +430,25 @@ let currentNewsId = null;
 let currentKnowledgeId = null;
 
 // ── AUTH ──
-function doLogin() {
-  const pwd = document.getElementById('pwd-input').value;
-  if (pwd === window.ADMIN_PASSWORD) {
+function adminHeaders(extra) {
+  return Object.assign({'x-admin-key': sessionStorage.getItem('adminKey') || ''}, extra || {});
+}
+async function doLogin() {
+  const key = document.getElementById('pwd-input').value;
+  sessionStorage.setItem('adminKey', key);
+  const res = await fetch(window.API_BASE + '/leads', { headers: adminHeaders() });
+  if (res.ok) {
     document.getElementById('login-screen').style.display = 'none';
     document.getElementById('app').style.display = 'flex';
     loadAll();
     startClock();
   } else {
+    sessionStorage.removeItem('adminKey');
     document.getElementById('login-err').style.display = 'block';
   }
 }
 function doLogout() {
+  sessionStorage.removeItem('adminKey');
   document.getElementById('app').style.display = 'none';
   document.getElementById('login-screen').style.display = 'flex';
   document.getElementById('pwd-input').value = '';
@@ -456,14 +463,14 @@ function startClock() {
 
 // ── API HELPERS ──
 async function apiGet(endpoint) {
-  const res = await fetch(window.API_BASE + endpoint);
+  const res = await fetch(window.API_BASE + endpoint, { headers: adminHeaders() });
   if (!res.ok) throw new Error('API error: ' + res.status);
   return res.json();
 }
 async function apiPost(endpoint, data) {
   const res = await fetch(window.API_BASE + endpoint, {
     method: 'POST',
-    headers: {'Content-Type': 'application/json'},
+    headers: adminHeaders({'Content-Type': 'application/json'}),
     body: JSON.stringify(data)
   });
   if (!res.ok) throw new Error('API error: ' + res.status);
@@ -472,14 +479,14 @@ async function apiPost(endpoint, data) {
 async function apiPut(endpoint, data) {
   const res = await fetch(window.API_BASE + endpoint, {
     method: 'PUT',
-    headers: {'Content-Type': 'application/json'},
+    headers: adminHeaders({'Content-Type': 'application/json'}),
     body: JSON.stringify(data)
   });
   if (!res.ok) throw new Error('API error: ' + res.status);
   return res.json();
 }
 async function apiDelete(endpoint) {
-  const res = await fetch(window.API_BASE + endpoint, { method: 'DELETE' });
+  const res = await fetch(window.API_BASE + endpoint, { method: 'DELETE', headers: adminHeaders() });
   if (!res.ok) throw new Error('API error: ' + res.status);
   return res.json();
 }

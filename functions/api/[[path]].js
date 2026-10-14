@@ -8,9 +8,28 @@ import {
 } from './rate-utils.mjs';
 import { escapeHtml, validateLead } from './lead-utils.mjs';
 
+// 管理接口鉴权：请求头 x-admin-key 必须等于 Pages secret ADMIN_KEY。
+// 没设置 ADMIN_KEY（或太短）时一律拒绝——默认锁死，避免客户资料被公开读取。
+function isAdmin(request, env) {
+  const expected = env.ADMIN_KEY || '';
+  const got = request.headers.get('x-admin-key') || '';
+  if (expected.length < 16 || got.length !== expected.length) return false;
+  let diff = 0;
+  for (let i = 0; i < expected.length; i++) diff |= expected.charCodeAt(i) ^ got.charCodeAt(i);
+  return diff === 0;
+}
+
+const unauthorized = () => Response.json({ error: 'Unauthorized' }, { status: 401 });
+
+// 访客可以调用的公开接口：只有提交询问和计算器统计（POST），以及读取利率
+const PUBLIC_POST = new Set(['leads', 'analytics', 'visits']);
+const PUBLIC_GET = new Set(['fed-rates', 'daily-rates']);
+
 export async function onRequestPost({ request, env, waitUntil }) {
   const url = new URL(request.url);
   const path = url.pathname.split('/').filter(Boolean);
+
+  if (!PUBLIC_POST.has(path[1]) && !isAdmin(request, env)) return unauthorized();
 
   try {
     const data = await request.json();
@@ -267,6 +286,8 @@ export async function onRequestGet({ request, env }) {
   const url = new URL(request.url);
   const path = url.pathname.split('/').filter(Boolean);
 
+  if (!PUBLIC_GET.has(path[1]) && !isAdmin(request, env)) return unauthorized();
+
   try {
     // Federal Reserve Rates - Get latest rates
     if (path[1] === 'fed-rates') {
@@ -297,7 +318,6 @@ export async function onRequestGet({ request, env }) {
     if (path[1] === 'test-telegram') {
       const hasToken = !!env.TELEGRAM_BOT_TOKEN;
       const hasChatId = !!env.TELEGRAM_CHAT_ID;
-      const tokenPreview = env.TELEGRAM_BOT_TOKEN ? env.TELEGRAM_BOT_TOKEN.substring(0, 15) + '...' : 'none';
 
       // Try to send test message
       let testResult = 'not attempted';
@@ -325,8 +345,6 @@ export async function onRequestGet({ request, env }) {
         success: true,
         hasToken,
         hasChatId,
-        tokenPreview,
-        chatId: env.TELEGRAM_CHAT_ID || 'none',
         testResult
       });
     }
@@ -336,8 +354,6 @@ export async function onRequestGet({ request, env }) {
       return Response.json({
         hasTelegramToken: !!env.TELEGRAM_BOT_TOKEN,
         hasChatId: !!env.TELEGRAM_CHAT_ID,
-        tokenPrefix: env.TELEGRAM_BOT_TOKEN ? env.TELEGRAM_BOT_TOKEN.substring(0, 10) + '...' : 'none',
-        chatId: env.TELEGRAM_CHAT_ID || 'none'
       });
     }
 
@@ -380,6 +396,8 @@ export async function onRequestGet({ request, env }) {
 export async function onRequestPut({ request, env }) {
   const url = new URL(request.url);
   const path = url.pathname.split('/').filter(Boolean);
+
+  if (!isAdmin(request, env)) return unauthorized();
   const id = path[2];
 
   try {
@@ -415,6 +433,8 @@ export async function onRequestPut({ request, env }) {
 export async function onRequestDelete({ request, env }) {
   const url = new URL(request.url);
   const path = url.pathname.split('/').filter(Boolean);
+
+  if (!isAdmin(request, env)) return unauthorized();
   const id = path[2];
 
   try {
