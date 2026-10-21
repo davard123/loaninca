@@ -289,29 +289,15 @@ export async function onRequestGet({ request, env }) {
   if (!PUBLIC_GET.has(path[1]) && !isAdmin(request, env)) return unauthorized();
 
   try {
-    // Federal Reserve Rates - Get latest rates
-    if (path[1] === 'fed-rates') {
-      const { results } = await env.DB.prepare('SELECT * FROM federal_reserve_rates ORDER BY last_updated DESC').all();
-      return Response.json(results);
-    }
-
-    // Daily Rates Table - Get latest daily rates
-    if (path[1] === 'daily-rates') {
-      const { results } = await env.DB.prepare('SELECT * FROM daily_rates ORDER BY display_order').all();
-
-      const latestDate = results.reduce((maxDate, rate) => {
-        if (!rate.effective_date) {
-          return maxDate;
-        }
-
-        return !maxDate || rate.effective_date > maxDate ? rate.effective_date : maxDate;
-      }, null);
-
-      return Response.json({
-        success: true,
-        effective_date: latestDate,
-        rates: results
-      });
+    // 利率接口改读 assets/market-rates.json：GitHub Actions 每周从 FRED 公开数据刷新。
+    // 原来读 D1 里手填的报价，2026-04 之后再没人更新，接口一直返回旧数字。
+    if (path[1] === 'fed-rates' || path[1] === 'daily-rates') {
+      const res = await env.ASSETS.fetch(new URL('/assets/market-rates.json', request.url));
+      if (!res.ok) return Response.json({ success: false, error: 'Rates unavailable' }, { status: 503 });
+      const market = await res.json();
+      const headers = { 'cache-control': 'public, max-age=3600' };
+      if (path[1] === 'fed-rates') return Response.json(market.fed_rates, { headers });
+      return Response.json({ ...market.daily_rates, generated_at: market.generated_at, source: market.source }, { headers });
     }
 
     // Test endpoint for Telegram

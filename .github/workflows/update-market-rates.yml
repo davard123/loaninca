@@ -1,0 +1,44 @@
+name: Update market rates
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/update-market-rates.yml"
+      - "scripts/update-market-rates.mjs"
+      - "functions/api/rate-utils.mjs"
+  schedule:
+    # FRED posts the Freddie Mac weekly averages on Thursday; run after that.
+    - cron: "45 18 * * 4"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    concurrency:
+      group: market-rates-update
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Fetch the latest FRED series
+        run: node scripts/update-market-rates.mjs
+      - name: Publish changed rates
+        run: |
+          # generated_at changes on every run; only publish when a rate or date moved.
+          if git diff -U0 -- assets/market-rates.json | grep -E '^[+-] ' | grep -vqE '"(generated_at|last_updated|created_at)"'; then
+            git config user.name "loaninca-rates-bot"
+            git config user.email "actions@users.noreply.github.com"
+            git add assets/market-rates.json
+            git commit -m "chore: refresh weekly market rates"
+            git pull --rebase origin main
+            git push
+          else
+            echo "No market rate changes"
+          fi
