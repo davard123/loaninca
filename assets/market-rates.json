@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-21T02:16:45.112Z",
+  "generated_at": "2026-10-22T21:56:18.251Z",
   "source": "FRED public CSV data",
   "fed_rates": [
     {
@@ -12,70 +12,70 @@
       "source_url": "https://fred.stlouisfed.org/series/FEDFUNDS",
       "notes": "Federal Funds Effective Rate",
       "id": "market-fed_funds_rate",
-      "last_updated": "2026-10-21T02:16:45.112Z"
+      "last_updated": "2026-10-22T21:56:18.251Z"
     },
     {
       "rate_type": "mortgage_30yr_fixed",
-      "rate_value": 7.4,
+      "rate_value": 7.32,
       "previous_value": 7.4,
-      "change": 0,
-      "change_percent": 0,
-      "effective_date": "2026-10-15",
+      "change": -0.08,
+      "change_percent": -1.08,
+      "effective_date": "2026-10-22",
       "source_url": "https://fred.stlouisfed.org/series/MORTGAGE30US",
       "notes": "30-Year Fixed Rate Mortgage Average",
       "id": "market-mortgage_30yr_fixed",
-      "last_updated": "2026-10-21T02:16:45.112Z"
+      "last_updated": "2026-10-22T21:56:18.251Z"
     },
     {
       "rate_type": "mortgage_15yr_fixed",
-      "rate_value": 6.71,
-      "previous_value": 6.73,
-      "change": -0.02,
-      "change_percent": -0.3,
-      "effective_date": "2026-10-15",
+      "rate_value": 6.68,
+      "previous_value": 6.71,
+      "change": -0.03,
+      "change_percent": -0.45,
+      "effective_date": "2026-10-22",
       "source_url": "https://fred.stlouisfed.org/series/MORTGAGE15US",
       "notes": "15-Year Fixed Rate Mortgage Average",
       "id": "market-mortgage_15yr_fixed",
-      "last_updated": "2026-10-21T02:16:45.112Z"
+      "last_updated": "2026-10-22T21:56:18.251Z"
     },
     {
       "rate_type": "treasury_10yr",
-      "rate_value": 5.15,
-      "previous_value": 5.09,
-      "change": 0.06,
-      "change_percent": 1.18,
-      "effective_date": "2026-10-19",
+      "rate_value": 5.13,
+      "previous_value": 5.12,
+      "change": 0.01,
+      "change_percent": 0.2,
+      "effective_date": "2026-10-21",
       "source_url": "https://fred.stlouisfed.org/series/DGS10",
       "notes": "10-Year Treasury Constant Maturity Rate",
       "id": "market-treasury_10yr",
-      "last_updated": "2026-10-21T02:16:45.112Z"
+      "last_updated": "2026-10-22T21:56:18.251Z"
     }
   ],
   "daily_rates": {
     "success": true,
-    "effective_date": "2026-10-19",
+    "effective_date": "2026-10-22",
     "rates": [
       {
         "id": "daily-market-30yr",
         "rate_name": "30 Year Fixed",
         "rate_name_cn": "30 年固定利率",
-        "rate_value": 7.4,
-        "apr": 7.4,
+        "rate_value": 7.32,
+        "apr": 7.32,
         "category": "market",
         "display_order": 1,
-        "effective_date": "2026-10-15",
-        "created_at": "2026-10-21T02:16:45.112Z"
+        "effective_date": "2026-10-22",
+        "created_at": "2026-10-22T21:56:18.251Z"
       },
       {
         "id": "daily-market-15yr",
         "rate_name": "15 Year Fixed",
         "rate_name_cn": "15 年固定利率",
-        "rate_value": 6.71,
-        "apr": 6.71,
+        "rate_value": 6.68,
+        "apr": 6.68,
         "category": "market",
         "display_order": 2,
-        "effective_date": "2026-10-15",
-        "created_at": "2026-10-21T02:16:45.112Z"
+        "effective_date": "2026-10-22",
+        "created_at": "2026-10-22T21:56:18.251Z"
       },
       {
         "id": "daily-market-fedfunds",
@@ -86,18 +86,18 @@
         "category": "benchmark",
         "display_order": 3,
         "effective_date": "2026-09-01",
-        "created_at": "2026-10-21T02:16:45.112Z"
+        "created_at": "2026-10-22T21:56:18.251Z"
       },
       {
         "id": "daily-market-10yr",
         "rate_name": "10 Year Treasury",
         "rate_name_cn": "10 年国债收益率",
-        "rate_value": 5.15,
+        "rate_value": 5.13,
         "apr": null,
         "category": "benchmark",
         "display_order": 4,
-        "effective_date": "2026-10-19",
-        "created_at": "2026-10-21T02:16:45.112Z"
+        "effective_date": "2026-10-21",
+        "created_at": "2026-10-22T21:56:18.251Z"
       }
     ]
   }
