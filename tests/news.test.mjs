@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { parsePmms, mergePmms } from '../scripts/lib/pmms.mjs';
+import { newsPageLastmod, updateNewsSitemapLastmod } from '../scripts/lib/news-sitemap.mjs';
 import { validateFeed, renderFeed, sourceUrl } from '../assets/news-utils.mjs';
 const now = new Date('2026-09-06T16:00:00Z');
 const sample = prior => `U.S. weekly mortgage rate averages as of 09/03/2026 <b>30-year Fixed-Rate Mortgage</b> 6.71% 15-year Fixed-Rate Mortgage 6.04% The 30-year fixed-rate mortgage averaged 6.71%, when it averaged ${prior}%`;
@@ -20,6 +21,26 @@ test('unchanged data does not fake a new publication and older releases cannot r
   const feed={generated_at:'2026-09-03T20:00:00Z',items:[item]};
   assert.strictEqual(mergePmms(feed,item,now),feed);
   assert.throws(()=>mergePmms(feed,{...item,date:'2026-08-27'},now));
+});
+test('news sitemap uses the feed content update timestamp, not the source publication date',()=>{
+  const feed={generated_at:'2026-10-23T03:04:05.000Z',items:[{date:'2026-10-22'}]};
+  const sitemap='<url>\n  <loc>https://www.loaninca.com/news</loc>\n  <lastmod>2026-05-05</lastmod>\n</url>';
+  const result=updateNewsSitemapLastmod(sitemap,feed);
+  assert.equal(newsPageLastmod(feed),'2026-10-23');
+  assert.equal(result.lastmod,'2026-10-23');
+  assert.match(result.content,/<lastmod>2026-10-23<\/lastmod>/);
+  assert.equal(result.changed,true);
+});
+test('news sitemap update is stable when the feed content is unchanged',()=>{
+  const feed={generated_at:'2026-10-23T03:04:05.000Z',items:[{date:'2026-10-22'}]};
+  const sitemap='<url><loc>https://www.loaninca.com/news</loc><lastmod>2026-10-23</lastmod></url>';
+  const result=updateNewsSitemapLastmod(sitemap,feed);
+  assert.equal(result.changed,false);
+  assert.equal(result.content,sitemap);
+});
+test('news sitemap rejects a source date or a missing news entry',()=>{
+  assert.throws(()=>newsPageLastmod({generated_at:'2026-10-22'}),/ISO timestamp/);
+  assert.throws(()=>updateNewsSitemapLastmod('<url><loc>https://www.loaninca.com/</loc></url>',{generated_at:'2026-10-23T03:04:05.000Z'}),/missing the \/news entry/);
 });
 test('feed validation rejects unsafe URLs, future dates and duplicate items',()=>{
   for(const url of ['javascript:alert(1)','https://freddiemac.com.evil.test','https://evil.test']) assert.throws(()=>sourceUrl(url));
@@ -46,4 +67,7 @@ test('weekly news workflow has one scheduled run plus manual and code-change tri
   assert.deepEqual(schedules,['30 17 * * 4']);
   assert.match(workflow,/^\s*workflow_dispatch:\s*$/m);
   assert.match(workflow,/^\s*push:\s*$/m);
+  assert.match(workflow,/node scripts\/update-news-sitemap\.mjs/);
+  assert.match(workflow,/news\.html sitemap\.xml/);
+  assert.match(workflow,/git add .*news\.html sitemap\.xml/);
 });

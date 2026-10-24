@@ -13,9 +13,9 @@
 ## 执行
 1. 从 origin/main 建干净临时 worktree，保留用户原目录未提交内容。每次重新 fetch，不从旧工作树打包上线。
 2. `node scripts/update-mortgage-news.mjs` 核查周度 PMMS。其他来源需实际阅读原文再摘要，按日期倒序，保留不超过 8 条。
-3. 同步 iOS JSON；`node scripts/render-news.mjs`。
+3. 同步 iOS JSON；`node scripts/render-news.mjs`；再运行 `node scripts/update-news-sitemap.mjs`。该步骤使用 feed 的 `generated_at`（新闻页面内容实际生成/改变的时间），不使用文章来源日期；`mergePmms` 在没有内容变化时保留原值，因此不会每天刷新 `lastmod`。
 4. `node scripts/render-news.mjs --check`、`node scripts/validate-site.mjs`、`node --test tests/*.test.mjs`。
-5. 只提交本次新闻数据及生成的 news.html；正常 fast-forward 推送 main。若并发改动冲突则停止并报告，禁止 force push。
+5. 只提交本次新闻数据、生成的 `news.html` 及 `sitemap.xml`；正常 fast-forward 推送 main。若并发改动冲突则停止并报告，禁止 force push。
 6. 原 Git 集成发布 Cloudflare Pages `loaninca`。`node scripts/verify-news-live.mjs` 核对生产 JSON 与 HTML，不用脏工作目录直接 wrangler 上传。
 
 GitHub 周四更新并在周四稍晚、周五补查 PMMS；Codex 已有每日任务负责更广泛来源，运行依赖本机可用。两者不能互相假冒更新成功。不要创建重复自动化或新增付费接口。
