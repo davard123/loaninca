@@ -1,0 +1,89 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/assets/loaninca-icon-20260908.svg" type="image/svg+xml"><title>能买多少钱的房？30 秒估算你在加州的买房预算 | LoanInCA</title><meta name="description" content="输入家庭收入、每月已有还款和首付，马上估算在加州能买多少钱的房、月供多少。不用留电话，不查信用。持牌华人房贷顾问 David Dai 制作。"><meta name="author" content="David Dai, NMLS# 2454756"><meta name="robots" content="index,follow,max-image-preview:large"><link rel="canonical" href="https://www.loaninca.com/afford/"><meta property="og:type" content="website"><meta property="og:site_name" content="LoanInCA"><meta property="og:title" content="能买多少钱的房？30 秒估算你的买房预算"><meta property="og:description" content="输入家庭收入、每月已有还款和首付，马上估算在加州能买多少钱的房、月供多少。不用留电话，不查信用。"><meta property="og:url" content="https://www.loaninca.com/afford/"><meta property="og:image" content="https://www.loaninca.com/assets/loaninca-share-20260906.png"><meta name="twitter:card" content="summary_large_image"><link rel="stylesheet" href="/assets/site-v2.css?v=20260906-images1"><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"加州买房预算估算","url":"https://www.loaninca.com/afford/","applicationCategory":"FinanceApplication","operatingSystem":"Any","inLanguage":"zh-CN","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Person","@id":"https://www.loaninca.com/david-dai#person","name":"David Dai"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://www.loaninca.com/"},{"@type":"ListItem","position":2,"name":"能买多少钱的房","item":"https://www.loaninca.com/afford/"}]}]}</script>
+<style>
+.af-form{display:grid;gap:14px;margin:18px 0}
+.af-form label{display:grid;gap:6px;font-weight:600}
+.af-form small{font-weight:400;color:#666}
+.af-form input{font-size:18px;padding:10px 12px;border:1px solid #ccc;border-radius:10px;width:100%;box-sizing:border-box}
+.af-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.af-result{margin-top:18px;padding:18px;border-radius:14px;background:#f6f1e7;border:1px solid #e6d8bd}
+.af-big{font-size:30px;font-weight:800;margin:4px 0 2px}
+.af-two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.af-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:15px}
+.af-table td{padding:6px 0;border-bottom:1px solid #e6d8bd}
+.af-table td:last-child{text-align:right}
+@media (max-width:560px){.af-row,.af-two{grid-template-columns:1fr}}
+</style></head>
+<body><a class="skip" href="#main">跳到主要内容</a><header class="site-header"><nav class="wrap nav" aria-label="主导航"><a class="logo" href="/">Loan<span>InCA</span></a><button class="button-secondary menu-btn" aria-expanded="false" aria-controls="navlinks">菜单</button><div class="nav-links" id="navlinks"><a href="/mortgage">房贷指南</a><a href="/loan-finder">看看怎么贷</a><a href="/calculators">计算工具</a><a href="/questions">常见问题</a><a href="/news">贷款知识</a><a href="/videos">视频</a><a href="/about">关于</a></div><a class="button" href="/loan-finder">免费问问 David</a></nav></header><main id="main"><div class="wrap"><nav class="breadcrumbs"><a href="/">首页</a> / 能买多少钱的房</nav><header class="page-hero"><p class="label">David Dai · 免费工具 · 不用留电话</p><h1>能买多少钱的房？30 秒估算你的买房预算</h1><p>填 3 个数字，马上看到大概能买多少钱的房、每个月要还多少。结果只在你的浏览器里计算，不上传、不查信用。</p></header><div class="content-grid"><article class="prose">
+<form class="af-form" id="af" onsubmit="return false">
+<label>家庭税前月收入（美元）<small>夫妻一起贷就加在一起；自雇按报税后的收入算</small><input id="inc" type="number" inputmode="decimal" min="0" placeholder="例如 15000"></label>
+<label>每月已有的还款（美元）<small>车贷、学生贷、信用卡最低还款、其他房子的月供；没有就填 0</small><input id="debt" type="number" inputmode="decimal" min="0" placeholder="例如 600"></label>
+<label>手头能拿出的首付（美元）<small>不算过户手续费，那笔另外准备</small><input id="down" type="number" inputmode="decimal" min="0" placeholder="例如 150000"></label>
+<details><summary>更多设置（可以不改）</summary>
+<div class="af-row"><label>利率（%）<small id="rate-note">30 年固定</small><input id="rate" type="number" step="0.01" value="7.0"></label>
+<label>地税率（% / 年）<small>加州多数地区 1.1%–1.3%</small><input id="tax" type="number" step="0.01" value="1.2"></label></div>
+<div class="af-row"><label>房屋保险（美元 / 月）<input id="ins" type="number" value="150"></label>
+<label>HOA 管理费（美元 / 月）<input id="hoa" type="number" value="0"></label></div>
+</details>
+</form>
+<section class="af-result" id="out" aria-live="polite"><p>填好上面 3 个数字，结果会马上出现在这里。</p></section>
+<h2>这个估算是怎么算的</h2>
+<p>银行看的核心是「每个月所有还款占收入多少」（负债收入比，DTI）。这里用两档：<strong>稳妥</strong>按 36%，月供压力比较轻；<strong>最多能到</strong>按 45%，是常规贷款常见的审核上限。信用和存款很好时，有的贷款能批得更高，但月供会很紧。</p>
+<p>月供包括本金和利息、地税、房屋保险、HOA；首付不到两成时，再加一笔房贷保险（这里按贷款额每年 0.5% 粗估）。常规贷款第一次买房、符合条件时首付最低 3%，所以首付太少时，能买的房价会被首付卡住。</p>
+<h2>估算之后，下一步做什么</h2>
+<ul><li>结果只是粗估。真实能贷多少，要看信用分、收入怎么算（工资、自雇、海外收入算法都不一样）、存款和贷款种类。</li><li>贷款金额比较高时，可能要走 Jumbo 贷款，首付和存款要求更高。</li><li>H1B、OPT、自雇的朋友，先看对应的说明：<a href="/mortgage/h1b-opt/">H1B / OPT</a>、<a href="/mortgage/self-employed/">自雇收入</a>。</li></ul>
+<p><small>本页为一般估算，不构成贷款承诺。实际利率、费用和贷款条件以 lender 审核为准。David Dai, NMLS# 2454756。</small></p>
+</article><aside class="aside"><h2>想要一个准一点的数字？</h2><p>把收入类型、身份和首付情况告诉 David，免费帮你按真实规则算一次。</p><a class="button" href="/loan-finder">请 David 帮我核对</a><a href="tel:+19496561278">或直接打电话</a></aside></div></div>
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id) }
+  fetch('/assets/market-rates.json').then(function (r) { return r.json() }).then(function (d) {
+    var m = (d.fed_rates || []).find(function (x) { return x.rate_type === 'mortgage_30yr_fixed' })
+    if (m && m.rate_value) { $('rate').value = m.rate_value; $('rate-note').textContent = '30 年固定，全美平均（' + m.effective_date + '）'; calc() }
+  }).catch(function () {})
+  function num(id) { var v = parseFloat($(id).value); return isFinite(v) && v > 0 ? v : 0 }
+  function money(v) { return '$' + Math.round(v).toLocaleString('en-US') }
+  // 某个房价下的每月总支出
+  function pay(price, o) {
+    var loan = Math.max(price - o.down, 0), r = o.rate / 1200, n = 360
+    var pi = r > 0 ? loan * r / (1 - Math.pow(1 + r, -n)) : loan / n
+    var pmi = o.down < price * 0.2 ? loan * 0.005 / 12 : 0
+    var tax = price * o.tax / 1200
+    return { loan: loan, pi: pi, tax: tax, ins: o.ins, hoa: o.hoa, pmi: pmi, total: pi + tax + o.ins + o.hoa + pmi }
+  }
+  // 在月供预算内能买的最高房价；首付最低 3% 也是上限
+  function maxPrice(ratio, o) {
+    var budget = o.inc * ratio - o.debt
+    var hi = o.down / 0.03
+    if (budget <= 0 || hi <= 0) return null
+    if (pay(hi, o).total <= budget) return { price: hi, limit: 'down', p: pay(hi, o) }
+    var lo = 0
+    for (var i = 0; i < 60; i++) { var mid = (lo + hi) / 2; if (pay(mid, o).total <= budget) lo = mid; else hi = mid }
+    return lo > 0 ? { price: lo, limit: 'income', p: pay(lo, o) } : null
+  }
+  function col(title, x) {
+    if (!x) return '<div><p>' + title + '</p><p class="af-big">—</p></div>'
+    return '<div><p>' + title + '</p><p class="af-big">' + money(x.price) + '</p><p>月供约 ' + money(x.p.total) + '</p></div>'
+  }
+  function calc() {
+    var o = { inc: num('inc'), debt: num('debt'), down: num('down'), rate: num('rate'), tax: num('tax'), ins: num('ins'), hoa: num('hoa') }
+    var out = $('out')
+    if (!o.inc || !o.down) { out.innerHTML = '<p>填好上面 3 个数字，结果会马上出现在这里。</p>'; return }
+    var a = maxPrice(0.36, o), b = maxPrice(0.45, o)
+    if (!b) { out.innerHTML = '<p>按现在的收入和已有还款，每个月剩下的空间不够付房贷。可以先还掉一些其他贷款，或者加上家人的收入一起算。</p>'; return }
+    var p = b.p
+    var limit = b.limit === 'down' ? '<p>你的首付比较少，能买的房价被首付卡住了（常规贷款首付最低 3%）。多存一点首付，能买的房价会马上上去。</p>' : ''
+    out.innerHTML = '<div class="af-two">' + col('稳妥预算（月供占收入 36%）', a) + col('最多能到（月供占收入 45%）', b) + '</div>' + limit +
+      '<table class="af-table"><tr><td colspan="2"><strong>按「最多能到」拆开看</strong></td></tr>' +
+      '<tr><td>贷款金额</td><td>' + money(p.loan) + '</td></tr>' +
+      '<tr><td>本金 + 利息</td><td>' + money(p.pi) + '</td></tr>' +
+      '<tr><td>地税</td><td>' + money(p.tax) + '</td></tr>' +
+      '<tr><td>房屋保险</td><td>' + money(p.ins) + '</td></tr>' +
+      (p.hoa ? '<tr><td>HOA</td><td>' + money(p.hoa) + '</td></tr>' : '') +
+      (p.pmi ? '<tr><td>房贷保险（首付不到两成）</td><td>' + money(p.pmi) + '</td></tr>' : '') +
+      '<tr><td><strong>每月合计</strong></td><td><strong>' + money(p.total) + '</strong></td></tr></table>' +
+      '<p style="margin-top:12px">这是粗估。想按你的收入类型和身份算准一点，<a href="/loan-finder">请 David 免费帮你核对</a>。</p>'
+  }
+  $('af').addEventListener('input', calc)
+})()
+</script>
+</main><footer class="footer"><div class="wrap footer-grid"><div><a class="logo" href="/">Loan<span>InCA</span></a><p>给加州华人讲清楚买房贷款、重贷和投资房贷款。</p><p class="status">David Dai, Mortgage Advisor, NMLS# 2454756 · NDF Lending（新梦想）NMLS# 1952245</p></div><div><strong>常见情况</strong><a href="/mortgage/dscr/">投资房</a><a href="/mortgage/h1b-opt/">H1B / OPT</a><a href="/mortgage/self-employed/">自雇收入</a><a href="/mortgage/refinance/">重贷</a></div><div><strong>网站信息</strong><a href="/david-dai">David Dai</a><a href="/about">关于</a><a href="/disclosures">披露</a><a href="/privacy">隐私</a></div></div></footer><script src="/assets/site-v2.js" defer></script></body></html>
