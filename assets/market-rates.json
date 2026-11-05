@@ -1,103 +1,103 @@
 {
-  "generated_at": "2026-10-29T22:59:31.177Z",
+  "generated_at": "2026-11-05T23:51:29.710Z",
   "source": "FRED public CSV data",
   "fed_rates": [
     {
       "rate_type": "fed_funds_rate",
-      "rate_value": 3.75,
-      "previous_value": 3.63,
-      "change": 0.12,
-      "change_percent": 3.31,
-      "effective_date": "2026-09-01",
+      "rate_value": 3.88,
+      "previous_value": 3.75,
+      "change": 0.13,
+      "change_percent": 3.47,
+      "effective_date": "2026-10-01",
       "source_url": "https://fred.stlouisfed.org/series/FEDFUNDS",
       "notes": "Federal Funds Effective Rate",
       "id": "market-fed_funds_rate",
-      "last_updated": "2026-10-29T22:59:31.177Z"
+      "last_updated": "2026-11-05T23:51:29.710Z"
     },
     {
       "rate_type": "mortgage_30yr_fixed",
-      "rate_value": 7.24,
-      "previous_value": 7.32,
-      "change": -0.08,
-      "change_percent": -1.09,
-      "effective_date": "2026-10-29",
+      "rate_value": 7.18,
+      "previous_value": 7.24,
+      "change": -0.06,
+      "change_percent": -0.83,
+      "effective_date": "2026-11-05",
       "source_url": "https://fred.stlouisfed.org/series/MORTGAGE30US",
       "notes": "30-Year Fixed Rate Mortgage Average",
       "id": "market-mortgage_30yr_fixed",
-      "last_updated": "2026-10-29T22:59:31.177Z"
+      "last_updated": "2026-11-05T23:51:29.710Z"
     },
     {
       "rate_type": "mortgage_15yr_fixed",
-      "rate_value": 6.6,
-      "previous_value": 6.68,
-      "change": -0.08,
-      "change_percent": -1.2,
-      "effective_date": "2026-10-29",
+      "rate_value": 6.57,
+      "previous_value": 6.6,
+      "change": -0.03,
+      "change_percent": -0.45,
+      "effective_date": "2026-11-05",
       "source_url": "https://fred.stlouisfed.org/series/MORTGAGE15US",
       "notes": "15-Year Fixed Rate Mortgage Average",
       "id": "market-mortgage_15yr_fixed",
-      "last_updated": "2026-10-29T22:59:31.177Z"
+      "last_updated": "2026-11-05T23:51:29.710Z"
     },
     {
       "rate_type": "treasury_10yr",
-      "rate_value": 5.05,
-      "previous_value": 4.99,
-      "change": 0.06,
-      "change_percent": 1.2,
-      "effective_date": "2026-10-28",
+      "rate_value": 4.9,
+      "previous_value": 4.95,
+      "change": -0.05,
+      "change_percent": -1.01,
+      "effective_date": "2026-11-04",
       "source_url": "https://fred.stlouisfed.org/series/DGS10",
       "notes": "10-Year Treasury Constant Maturity Rate",
       "id": "market-treasury_10yr",
-      "last_updated": "2026-10-29T22:59:31.177Z"
+      "last_updated": "2026-11-05T23:51:29.710Z"
     }
   ],
   "daily_rates": {
     "success": true,
-    "effective_date": "2026-10-29",
+    "effective_date": "2026-11-05",
     "rates": [
       {
         "id": "daily-market-30yr",
         "rate_name": "30 Year Fixed",
         "rate_name_cn": "30 年固定利率",
-        "rate_value": 7.24,
-        "apr": 7.24,
+        "rate_value": 7.18,
+        "apr": 7.18,
         "category": "market",
         "display_order": 1,
-        "effective_date": "2026-10-29",
-        "created_at": "2026-10-29T22:59:31.177Z"
+        "effective_date": "2026-11-05",
+        "created_at": "2026-11-05T23:51:29.710Z"
       },
       {
         "id": "daily-market-15yr",
         "rate_name": "15 Year Fixed",
         "rate_name_cn": "15 年固定利率",
-        "rate_value": 6.6,
-        "apr": 6.6,
+        "rate_value": 6.57,
+        "apr": 6.57,
         "category": "market",
         "display_order": 2,
-        "effective_date": "2026-10-29",
-        "created_at": "2026-10-29T22:59:31.177Z"
+        "effective_date": "2026-11-05",
+        "created_at": "2026-11-05T23:51:29.710Z"
       },
       {
         "id": "daily-market-fedfunds",
         "rate_name": "Fed Funds Rate",
         "rate_name_cn": "联邦基金利率",
-        "rate_value": 3.75,
+        "rate_value": 3.88,
         "apr": null,
         "category": "benchmark",
         "display_order": 3,
-        "effective_date": "2026-09-01",
-        "created_at": "2026-10-29T22:59:31.177Z"
+        "effective_date": "2026-10-01",
+        "created_at": "2026-11-05T23:51:29.710Z"
       },
       {
         "id": "daily-market-10yr",
         "rate_name": "10 Year Treasury",
         "rate_name_cn": "10 年国债收益率",
-        "rate_value": 5.05,
+        "rate_value": 4.9,
         "apr": null,
         "category": "benchmark",
         "display_order": 4,
-        "effective_date": "2026-10-28",
-        "created_at": "2026-10-29T22:59:31.177Z"
+        "effective_date": "2026-11-04",
+        "created_at": "2026-11-05T23:51:29.710Z"
       }
     ]
   }
