@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>本周房贷利率卡（David 自用）| LoanInCA</title>
+<link rel="icon" href="/assets/loaninca-icon-20260908.svg" type="image/svg+xml">
+<style>
+  body{margin:0;background:#eef2ef;color:#16302a;font:16px/1.7 system-ui,"PingFang SC","Microsoft YaHei",sans-serif}
+  main{max-width:560px;margin:0 auto;padding:20px 16px 60px}
+  h1{font-size:1.25rem;margin:0 0 6px}
+  p{margin:0 0 12px;color:#4d5f58}
+  canvas{display:block;width:100%;height:auto;border-radius:14px;box-shadow:0 10px 30px rgba(16,44,39,.18);background:#fff}
+  .row{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0}
+  a.btn,button{font:inherit;font-weight:700;padding:11px 20px;border-radius:999px;border:0;background:#16443a;color:#fff;text-decoration:none;cursor:pointer}
+  button.alt{background:#fff;color:#16443a;border:1.5px solid #16443a}
+  .note{font-size:.9rem}
+  #err{color:#9a2a2a}
+</style>
+</head>
+<body>
+<main>
+  <h1>本周房贷利率卡</h1>
+  <p class="note">这一页只给 David 自己用，不在网站上公开链接。数字每周四随网站的利率数据自动更新。点「保存图片」，发朋友圈或微信群。</p>
+  <canvas id="card" width="1080" height="1350" aria-label="本周美国房贷平均利率卡片"></canvas>
+  <div class="row">
+    <a id="save" class="btn" download="loaninca-rates.png" href="#">保存图片</a>
+    <button id="copy" class="alt" type="button">复制配文</button>
+  </div>
+  <p id="caption" class="note"></p>
+  <p id="err" role="alert"></p>
+  <p class="note">提醒：卡片上写的是 Freddie Mac 公布的全国平均利率，并注明了「不是报价」。发布前如公司对利率类宣传有审核要求，请先按公司规定走一遍。</p>
+</main>
+<script>
+(async function () {
+  var canvas = document.getElementById('card'), ctx = canvas.getContext('2d')
+  var W = 1080, H = 1350
+  var SANS = 'system-ui, "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif'
+
+  function pick(list, type) { return (list || []).find(function (r) { return r.rate_type === type }) }
+  function dateZh(iso) { var p = String(iso).slice(0, 10).split('-'); return p[0] + ' 年 ' + (+p[1]) + ' 月 ' + (+p[2]) + ' 日' }
+  function change(rate) {
+    var diff = Math.round((rate.rate_value - rate.previous_value) * 100) / 100
+    if (!isFinite(diff) || diff === 0) return { text: '与上周持平', color: '#5a6b64' }
+    return diff < 0
+      ? { text: '比上周低 ' + Math.abs(diff).toFixed(2), color: '#1d7a4c' }
+      : { text: '比上周高 ' + diff.toFixed(2), color: '#a8452a' }
+  }
+  function wrap(text, maxWidth) {
+    var lines = [], line = ''
+    Array.from(text).forEach(function (ch) {
+      if (ctx.measureText(line + ch).width > maxWidth && line) { lines.push(line); line = ch } else line += ch
+    })
+    if (line) lines.push(line)
+    return lines
+  }
+
+  var data
+  try {
+    var res = await fetch('/assets/market-rates.json?t=' + Date.now(), { cache: 'no-store' })
+    if (!res.ok) throw new Error('HTTP ' + res.status)
+    data = await res.json()
+  } catch (e) {
+    document.getElementById('err').textContent = '利率数据没读到（' + e.message + '），请稍后刷新。'
+    return
+  }
+  var r30 = pick(data.fed_rates, 'mortgage_30yr_fixed'), r15 = pick(data.fed_rates, 'mortgage_15yr_fixed')
+  if (!r30 || !r15) { document.getElementById('err').textContent = '利率数据不完整，暂时出不了图。'; return }
+
+  // 底色
+  var bg = ctx.createLinearGradient(0, 0, 0, H)
+  bg.addColorStop(0, '#12382f'); bg.addColorStop(1, '#0c2620')
+  ctx.fillStyle = bg; ctx.fillRect(0, 0, W, H)
+  ctx.fillStyle = '#c9a96e'; ctx.fillRect(80, 96, 72, 6)
+
+  ctx.textAlign = 'left'; ctx.fillStyle = '#d9c8a4'
+  ctx.font = '600 34px ' + SANS
+  ctx.fillText('LoanInCA · 每周利率', 80, 160)
+  ctx.fillStyle = '#ffffff'; ctx.font = '800 68px ' + SANS
+  ctx.fillText('本周美国房贷', 80, 262)
+  ctx.fillText('平均利率', 80, 350)
+  ctx.fillStyle = '#b9c9c2'; ctx.font = '400 32px ' + SANS
+  ctx.fillText('Freddie Mac 公布于 ' + dateZh(r30.effective_date), 80, 410)
+
+  function panel(y, label, rate) {
+    ctx.fillStyle = '#f7f4ec'
+    ctx.beginPath(); ctx.roundRect(80, y, W - 160, 250, 28); ctx.fill()
+    ctx.fillStyle = '#4d5f58'; ctx.font = '600 36px ' + SANS; ctx.textAlign = 'left'
+    ctx.fillText(label, 124, y + 78)
+    var c = change(rate)
+    ctx.fillStyle = c.color; ctx.font = '600 32px ' + SANS
+    ctx.fillText(c.text, 124, y + 190)
+    ctx.textAlign = 'right'; ctx.fillStyle = '#12382f'; ctx.font = '800 132px ' + SANS
+    ctx.fillText(Number(rate.rate_value).toFixed(2) + '%', W - 124, y + 178)
+  }
+  panel(470, '30 年固定', r30)
+  panel(752, '15 年固定', r15)
+
+  ctx.textAlign = 'left'; ctx.fillStyle = '#b9c9c2'; ctx.font = '400 28px ' + SANS
+  var foot = '全国平均利率，来源 Freddie Mac PMMS。这不是报价，也不代表你能拿到的利率；实际利率要看信用、首付、贷款类型和锁定时间。'
+  wrap(foot, W - 160).slice(0, 3).forEach(function (line, i) { ctx.fillText(line, 80, 1068 + i * 42) })
+
+  ctx.fillStyle = 'rgba(255,255,255,.14)'; ctx.fillRect(80, 1200, W - 160, 2)
+  ctx.fillStyle = '#ffffff'; ctx.font = '700 36px ' + SANS
+  ctx.fillText('David Dai · 加州华人房贷顾问', 80, 1258)
+  ctx.fillStyle = '#b9c9c2'; ctx.font = '400 26px ' + SANS
+  ctx.fillText('NMLS# 2454756 · NDF Lending（新梦想）NMLS# 1952245 · loaninca.com', 80, 1302)
+
+  document.getElementById('save').href = canvas.toDataURL('image/png')
+  document.getElementById('save').download = 'loaninca-rates-' + String(r30.effective_date).slice(0, 10) + '.png'
+
+  var caption = '本周美国房贷平均利率（Freddie Mac，' + dateZh(r30.effective_date) + '公布）：30 年固定 ' +
+    Number(r30.rate_value).toFixed(2) + '%，15 年固定 ' + Number(r15.rate_value).toFixed(2) +
+    '%。这是全国平均，不是报价。想知道按你的情况大概是多少，可以先在 loaninca.com/afford 算一下，或者直接问我。'
+  document.getElementById('caption').textContent = '配文：' + caption
+  document.getElementById('copy').addEventListener('click', function () {
+    navigator.clipboard.writeText(caption).then(function () { document.getElementById('copy').textContent = '已复制' })
+  })
+})()
+</script>
+</body>
+</html>
