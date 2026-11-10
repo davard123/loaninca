@@ -216,19 +216,43 @@ export async function onRequestPost({ request, env, waitUntil }) {
 </body>
 </html>`
 
-          await fetch('https://api.resend.com/emails', {
-            method: 'POST',
-            headers: {
-              Authorization: `Bearer ${env.RESEND_API_KEY}`,
-              'Content-Type': 'application/json; charset=utf-8',
-            },
-            body: JSON.stringify({
-              from: env.RESEND_FROM || 'onboarding@resend.dev',
-              to: data.email,
-              subject: `已收到您的房贷咨询 | LoanInCA`,
-              html,
-            }),
-          })
+          // 发不出去时不能悄悄失败：记日志，并在 Telegram 上提醒 David（只带状态码和 Resend 给的原因，不带客户信息）
+          let failure = ''
+          try {
+            const mailRes = await fetch('https://api.resend.com/emails', {
+              method: 'POST',
+              headers: {
+                Authorization: `Bearer ${env.RESEND_API_KEY}`,
+                'Content-Type': 'application/json; charset=utf-8',
+              },
+              body: JSON.stringify({
+                from: env.RESEND_FROM || 'onboarding@resend.dev',
+                to: data.email,
+                subject: `已收到您的房贷咨询 | LoanInCA`,
+                html,
+              }),
+            })
+            if (!mailRes.ok) {
+              const detail = (await mailRes.text().catch(() => '')).slice(0, 300)
+              failure = `HTTP ${mailRes.status} ${detail}`
+            }
+          } catch (error) {
+            failure = `请求出错：${error.message}`
+          }
+          if (failure) {
+            console.error('Auto-reply email failed:', failure)
+            if (env.TELEGRAM_BOT_TOKEN && env.TELEGRAM_CHAT_ID) {
+              await fetch(`https://api.telegram.org/bot${env.TELEGRAM_BOT_TOKEN}/sendMessage`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                  chat_id: env.TELEGRAM_CHAT_ID,
+                  text: `⚠️ LoanInCA 给客户的自动回复邮件没发出去（咨询本身已收到，见上一条）
+原因：${failure}`,
+                }),
+              }).catch(() => {})
+            }
+          }
         }
         if (waitUntil) {
           waitUntil(sendAutoReply())
