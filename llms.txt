@@ -18,6 +18,8 @@ LoanInCA 是由 David Dai（NMLS# 2454756）维护的中英双语加州房贷指
 
 - 计算器平台：https://www.loaninca.com/calculators
 - 房贷计算器：https://www.loaninca.com/calculator
+- 能买多少钱的房（30 秒预算估算）：https://www.loaninca.com/afford/
+- 看房风水快查（九宫风水参考工具 + 月供估算，传统文化参考，不构成房产价值判断）：https://www.loaninca.com/fengshui/
 - 第一次买房：https://www.loaninca.com/first-time-home-buyer-california
 - 房贷常见问题：https://www.loaninca.com/questions
 - 房贷术语：https://www.loaninca.com/glossary
