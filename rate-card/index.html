@@ -17,7 +17,13 @@
   button.alt{background:#fff;color:#16443a;border:1.5px solid #16443a}
   .note{font-size:.9rem}
   #err{color:#9a2a2a}
+  /* ?bare=1：只显示卡片本身，给自动截图用（1080×1350） */
+  .bare body{background:#0c2620}
+  .bare main{max-width:none;margin:0;padding:0}
+  .bare h1,.bare p,.bare .row{display:none}
+  .bare canvas{width:1080px;border-radius:0;box-shadow:none}
 </style>
+<script>if(/[?&]bare=1/.test(location.search))document.documentElement.classList.add('bare')</script>
 </head>
 <body>
 <main>
