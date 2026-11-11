@@ -69,6 +69,36 @@ LoanInCA 是由 David Dai（NMLS# 2454756）维护的中英双语加州房贷指
 - 信用分 680 和 740，月供差多少？：https://www.loaninca.com/blog/credit-score-680-vs-740-mortgage-payment
 - 父母没有美国收入，能和我一起在贷款上签字吗？：https://www.loaninca.com/blog/parents-non-occupant-co-borrower-no-us-income
 - 我已经有一套房，第二套算自住还是投资？首付和利率差多少？：https://www.loaninca.com/blog/second-property-primary-second-home-or-investment
+- Underwriter 要求护照上有有效的签证 stamp 才批，可我只有 I-797 批准件，怎么办？：https://www.loaninca.com/blog/expired-visa-stamp-i797-mortgage-approval
+- 不查收入的贷款（首付 40% 那种）比普通贷款利率高多少？批了之后会不会又要查税单？：https://www.loaninca.com/blog/no-income-verification-loan-cost-and-risk
+- 父母从国外给的首付，能不能直接汇进 escrow，不经过我的账户？：https://www.loaninca.com/blog/foreign-gift-funds-wire-directly-to-escrow
+- 首付要卖股票或 RSU，资本利得税怎么算？要提前多久卖？：https://www.loaninca.com/blog/sell-stock-rsu-down-payment-capital-gains-tax
+- 不想卖公司股票，用股票质押借钱付首付，贷款机构认吗？：https://www.loaninca.com/blog/pledge-stock-margin-loan-down-payment
+- 买第二套房差首付：从第一套房做 HELOC 还是 cash-out refinance？：https://www.loaninca.com/blog/second-home-down-payment-heloc-or-cash-out-refinance
+- 想换大房子，能不能先买新的再卖旧的？旧房贷款算不算进 DTI？：https://www.loaninca.com/blog/buy-new-home-before-selling-old-dti-bridge-loan-heloc
+- 年薪 30 万（或双职工 50 万）在湾区买多少钱的房合适？月供占收入多少算安全？：https://www.loaninca.com/blog/bay-area-income-how-much-house-dti
+- 湾区买房首付只付 10% 可行吗？Jumbo 贷款 10% 首付要不要 PMI？：https://www.loaninca.com/blog/bay-area-10-percent-down-jumbo-pmi
+- H1B 现在不能做 FHA 了，首付不够 20% 还有什么选择？：https://www.loaninca.com/blog/h1b-no-fha-low-down-payment-options
+- 加州 Dream For All / CalHFA 首付补助，H1B 能申请吗？湾区收入上限是多少？：https://www.loaninca.com/blog/calhfa-down-payment-assistance-h1b-eligible
+- 尔湾新房的 Mello-Roos 一个月上千，会让我的贷款额度少多少？：https://www.loaninca.com/blog/mello-roos-hoa-reduce-loan-amount
+- 夫妻买房，是两个人一起贷还是一个人贷？一起贷的话债务会不会重复算？：https://www.loaninca.com/blog/married-couple-joint-or-one-borrower-mortgage
+- 加州夫妻买房只用一个人的名字贷款，另一个人能上 title 吗？以后想加名字怎么办？：https://www.loaninca.com/blog/california-one-spouse-loan-both-on-title
+- 父亲想用我的名字和信用在美国贷款买房，有什么风险、怎么处理？：https://www.loaninca.com/blog/parent-wants-to-use-my-name-for-mortgage
+- 我拿到的利率报价算不算高？怎么判断自己的 quote 合不合理？：https://www.loaninca.com/blog/is-my-mortgage-rate-quote-too-high
+- 多家比价会被 hard pull 几次、掉多少分？经纪说是 soft pull 结果是 hard pull 怎么办？：https://www.loaninca.com/blog/mortgage-rate-shopping-hard-pull-credit-score
+- Lender 一开始承诺的利率和最后给的差了 0.5%，closing fee 也涨了一千多，这正常吗、能怎么办？：https://www.loaninca.com/blog/rate-and-closing-costs-changed-from-loan-estimate
+- 大银行的 relationship discount：存多少钱能降多少利率，值得把钱搬过去吗？：https://www.loaninca.com/blog/bank-relationship-discount-mortgage-worth-it
+- 新房 builder 指定的 lender 给 1 万 closing credit，但外面利率更低，该用谁？：https://www.loaninca.com/blog/builder-preferred-lender-closing-credit
+- Closing 前两天，lender 因为 condo 的 HOA 储备金或文件问题突然拒贷，还有什么办法救？：https://www.loaninca.com/blog/condo-hoa-loan-denied-before-closing
+- 贷款拖了，眼看不能按时 close，要什么时候告诉卖家？每天要赔多少、定金会不会被扣？：https://www.loaninca.com/blog/loan-delay-cannot-close-on-time-california
+- 加州房子买不到普通保险、只能上 FAIR Plan，贷款还能正常 close 吗？：https://www.loaninca.com/blog/california-fair-plan-insurance-mortgage-closing
+- Closing 想挑个黄道吉日，贷款和 rate lock 能配合改日期吗？：https://www.loaninca.com/blog/choose-auspicious-closing-date-rate-lock
+- 房贷的 escrow 账户每年都涨、月供越来越高是怎么回事？能不能取消 escrow 自己交地税和保险？：https://www.loaninca.com/blog/escrow-impound-account-payment-keeps-rising
+- 加州买房第一年收到 supplemental tax bill，escrow 会替我交吗？：https://www.loaninca.com/blog/california-supplemental-tax-bill-escrow
+- ARM 快到期了，利率会跳多少？到时候 refinance 不了怎么办？：https://www.loaninca.com/blog/arm-fixed-period-ending-rate-adjustment
+- 房价跌了、房子 underwater，银行会不会要求我补差价？：https://www.loaninca.com/blog/home-value-underwater-bank-demand-pay-difference
+- 自住房贷款，住不满一年（甚至半年）就想租出去行不行？银行是怎么发现的？：https://www.loaninca.com/blog/rent-out-primary-residence-before-one-year
+- 打算回国（或离开美国），房贷怎么还？人不在美国，银行会不会把贷款收回？：https://www.loaninca.com/blog/moving-back-to-china-paying-us-mortgage
 
 ## 地区指南
 
