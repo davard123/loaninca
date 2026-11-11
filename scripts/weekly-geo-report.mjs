@@ -1,21 +1,27 @@
 // 生成每周 AI 效果报表（Markdown）。
 //
 // 用法（在仓库根目录）：
-//   node scripts/weekly-geo-report.mjs                      从线上读数据，需要环境变量 LOANINCA_ADMIN_KEY
+//   node scripts/weekly-geo-report.mjs --from-d1            推荐：用本机已登录的 wrangler 直接查线上 D1，不需要任何密钥
+//   node scripts/weekly-geo-report.mjs                      从线上 /api/geo-report 读数据，需要环境变量 LOANINCA_ADMIN_KEY
 //   node scripts/weekly-geo-report.mjs --input data.json    用一份已有的数据文件，不联网
-//   可选：--out 报表路径   --days 7   --site https://www.loaninca.com   --now 2026-11-18T16:00:00Z
+//   可选：--out 报表路径   --days 7   --site https://www.loaninca.com   --now 2026-11-18T16:00:00Z   --db ndf-lending-db
 //
-// 只读：对线上只发一个 GET /api/geo-report 请求，不写任何东西。密钥只放在请求头里，不打印、不落盘。
-// 报表默认写到 geo-reports/（已在 .gitignore 里，不会进仓库——仓库是公开的）。
+// 只读：--from-d1 只发 SELECT（和 /api/geo-report 用同一套查询，咨询不取姓名、电话、邮箱、备注）；
+// 否则只发一个 GET /api/geo-report 请求。密钥只放在请求头里，不打印、不落盘。
+// --from-d1 的报表默认写到 D:\document\推广周报\GEO报表\<日期>.md；其他方式默认写到 geo-reports/
+// （已在 .gitignore 里）。报表都不进仓库——仓库是公开的。
 
 import fs from 'node:fs';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
-import { buildReport, pageFile, parseSitemap } from './lib/geo-report.mjs';
+import { buildReport, formatPacific, pageFile, parseSitemap } from './lib/geo-report.mjs';
+import { createWranglerDb, DEFAULT_DATABASE } from './lib/d1-cli.mjs';
+import { loadGeoReportData } from '../functions/api/geo-utils.mjs';
 
 const CRAWL_WINDOW_DAYS = 14;
 const NEW_PAGE_DAYS = 60;
+export const LOCAL_REPORT_DIR = 'D:/document/推广周报/GEO报表';
 
 function parseArgs(argv) {
   const args = {};
@@ -71,6 +77,14 @@ async function fetchData(site, days) {
   return response.json();
 }
 
+// 直接查线上 D1：复用 /api/geo-report 背后的同一个函数，结果形状完全一样。
+export async function fetchDataFromD1({ days, now, database = DEFAULT_DATABASE, run, cwd } = {}) {
+  const db = createWranglerDb({ database, run, cwd });
+  const data = await loadGeoReportData(db, days, now);
+  if (data.errors.length >= 3) throw new Error(`三张表都没读到，可能是 wrangler 没登录或连不上：${data.errors.join('；')}`);
+  return data;
+}
+
 async function main() {
   const args = parseArgs(process.argv.slice(2));
   const root = process.cwd();
@@ -78,15 +92,21 @@ async function main() {
   const now = args.now ? new Date(args.now) : new Date();
   if (Number.isNaN(now.getTime())) throw new Error('--now 的时间格式不对。');
 
-  const data = args.input
-    ? JSON.parse(fs.readFileSync(path.resolve(String(args.input)), 'utf8'))
-    : await fetchData(String(args.site || 'https://www.loaninca.com'), Math.max(days, CRAWL_WINDOW_DAYS) + 1);
+  const span = Math.max(days, CRAWL_WINDOW_DAYS) + 1;
+  let data;
+  if (args.input) data = JSON.parse(fs.readFileSync(path.resolve(String(args.input)), 'utf8'));
+  else if (args['from-d1']) data = await fetchDataFromD1({ days: span, now, database: typeof args.db === 'string' ? args.db : DEFAULT_DATABASE, cwd: root });
+  else data = await fetchData(String(args.site || 'https://www.loaninca.com'), span);
+  for (const error of data.errors || []) console.warn(`注意：${error}`);
 
   const { markdown, summary } = buildReport({
     data, pages: loadPages(root), now, days, crawlWindowDays: CRAWL_WINDOW_DAYS, newPageDays: NEW_PAGE_DAYS,
   });
 
-  const out = path.resolve(String(args.out || path.join('geo-reports', `geo-weekly-${now.toISOString().slice(0, 10)}.md`)));
+  const defaultOut = args['from-d1'] && !args.input
+    ? path.join(LOCAL_REPORT_DIR, `${formatPacific(now, false)}.md`)
+    : path.join('geo-reports', `geo-weekly-${now.toISOString().slice(0, 10)}.md`);
+  const out = path.resolve(String(args.out || defaultOut));
   fs.mkdirSync(path.dirname(out), { recursive: true });
   fs.writeFileSync(out, markdown, 'utf8');
   console.log(`报表已写到 ${out}`);
