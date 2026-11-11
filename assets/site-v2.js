@@ -31,6 +31,40 @@ function analyticsSession() {
   }
 }
 
+// 记住这位访客这次是从哪一页进站的、从哪个网站来的（只留域名）。
+// 只放在浏览器的 sessionStorage 里，关掉标签页就没了；不写 cookie，不记完整来源网址。
+// 用途：咨询或点电话时，能知道是哪篇文章把人带进来的。任何出错都返回空对象，不影响页面。
+function firstTouch() {
+  try {
+    const saved = sessionStorage.getItem('loaninca_first');
+    if (saved) return JSON.parse(saved) || {};
+
+    let refHost = '';
+    let refPath = '';
+    try {
+      if (document.referrer) {
+        const ref = new URL(document.referrer);
+        if (ref.host === location.host) refPath = ref.pathname;
+        else refHost = ref.hostname;
+      }
+    } catch {}
+
+    const first = {
+      // 有些老页面没有加载这个脚本：如果上一页也是本站的，就把上一页当作进站页（标记为推断）。
+      landing: (refPath || location.pathname).slice(0, 200),
+      landing_inferred: refPath ? 1 : 0,
+      ref_host: refHost.slice(0, 100),
+      utm_source: (new URLSearchParams(location.search).get('utm_source') || '').slice(0, 80),
+    };
+    sessionStorage.setItem('loaninca_first', JSON.stringify(first));
+    return first;
+  } catch {
+    return {};
+  }
+}
+
+firstTouch();
+
 function track(name, detail = {}) {
   const safe = {
     event: name,
@@ -44,9 +78,16 @@ function track(name, detail = {}) {
   document.dispatchEvent(new CustomEvent(`loaninca:${name}`, { detail: safe }));
 
   const query = new URLSearchParams(location.search);
+  const first = firstTouch();
   const payload = {
     calculator_type: name,
-    input_data: { path: location.pathname },
+    input_data: {
+      path: location.pathname,
+      landing: first.landing || '',
+      landing_inferred: first.landing_inferred ? 1 : 0,
+      ref_host: first.ref_host || '',
+      first_utm_source: first.utm_source || '',
+    },
     result_data: {},
     session_id: analyticsSession(),
     utm_source: query.get('utm_source') || '',

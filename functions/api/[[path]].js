@@ -7,6 +7,7 @@ import {
   parseFredCsvSeries
 } from './rate-utils.mjs';
 import { escapeHtml, validateLead } from './lead-utils.mjs';
+import { loadGeoReportData } from './geo-utils.mjs';
 
 // 管理接口鉴权：请求头 x-admin-key 必须等于 Pages secret ADMIN_KEY。
 // 没设置 ADMIN_KEY（或太短）时一律拒绝——默认锁死，避免客户资料被公开读取。
@@ -365,6 +366,11 @@ export async function onRequestGet({ request, env }) {
         hasTelegramToken: !!env.TELEGRAM_BOT_TOKEN,
         hasChatId: !!env.TELEGRAM_CHAT_ID,
       });
+    }
+
+    // 每周 GEO 报表用的只读数据（需要管理密钥）：AI 爬虫抓取、AI 来源访问、咨询来源页。不含客户姓名和联系方式。
+    if (path[1] === 'geo-report') {
+      return Response.json(await loadGeoReportData(env.DB, url.searchParams.get('days') || 14));
     }
 
     if (path[1] === 'leads') {

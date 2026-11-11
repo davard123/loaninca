@@ -21,3 +21,6 @@ DerivedData/
 *.xcresult/
 ios/LoanInCACalculator/archives/
 ios/LoanInCACalculator/artifacts/
+
+# 每周 AI 效果报表的本地输出（仓库是公开的，报表不要提交）
+geo-reports/
