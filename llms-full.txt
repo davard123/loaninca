@@ -53,6 +53,36 @@ LoanInCA 是由 David Dai（NMLS# 2454756）维护的中英双语加州房贷指
 - Bank Statement Loan 常见误区：https://www.loaninca.com/blog/bank-statement-loan-pitfalls-california
 - 南加州买房一定要 20% 首付吗：https://www.loaninca.com/blog/do-you-need-20-percent-down-southern-california
 - 估价低于买价怎么办：https://www.loaninca.com/blog/appraisal-below-purchase-price-california
+- H1B 不满两年、刚来美国一年，能贷款买房吗？：https://www.loaninca.com/blog/h1b-under-two-years-mortgage-california
+- H1B 还有半年到期，正在续签，能贷款吗？：https://www.loaninca.com/blog/h1b-expiring-extension-pending-mortgage
+- 绿卡在排期（I-140 批了 / I-485 pending），贷款和绿卡持有人有区别吗？：https://www.loaninca.com/blog/green-card-pending-i140-i485-mortgage
+- 夫妻一个 H1B 一个 H4 没工作，贷款写谁的名字？：https://www.loaninca.com/blog/h1b-h4-spouse-mortgage-whose-name-california
+- L1、O1、TN 签证能在加州贷款买房吗？：https://www.loaninca.com/blog/l1-o1-tn-visa-home-loan-california
+- OPT 的工资为什么有的银行不认？哪种情况能认？：https://www.loaninca.com/blog/opt-income-not-accepted-mortgage
+- 只有 I-797 回执、没有 EAD，能做 FHA 吗？：https://www.loaninca.com/blog/fha-loan-i797-no-ead
+- 没有 SSN、只有 ITIN，能贷款吗？：https://www.loaninca.com/blog/itin-mortgage-california
+- 外国人不住美国，能在加州贷款买投资房吗？首付多少？：https://www.loaninca.com/blog/foreign-national-investment-property-loan-california
+- RSU 能算收入吗？要满几年？：https://www.loaninca.com/blog/rsu-income-mortgage-california
+- 刚换公司，新公司的 RSU 和 sign-on bonus 算不算收入？：https://www.loaninca.com/blog/new-job-rsu-sign-on-bonus-mortgage-income
+- 奖金、加班费、佣金要拿满两年才算吗？：https://www.loaninca.com/blog/bonus-overtime-commission-income-mortgage
+- 我有 W-2 也有副业 1099，副业亏损会拉低贷款额度吗？：https://www.loaninca.com/blog/w2-plus-1099-side-business-loss-mortgage
+- 现金收入多、报税少（餐馆、美甲、装修），怎么贷？：https://www.loaninca.com/blog/cash-income-low-tax-returns-mortgage
+- 自雇刚满一年，只报过一次税，能贷吗？：https://www.loaninca.com/blog/self-employed-one-year-tax-return-mortgage
+- 我在美国、收入在中国（国内公司发工资），能贷吗？：https://www.loaninca.com/blog/income-from-china-us-mortgage
+- Pre-approval 之后、过户之前换工作，会怎样？：https://www.loaninca.com/blog/job-change-after-pre-approval-before-closing
+- 刚跳槽不到一个月，还在试用期，能贷款吗？：https://www.loaninca.com/blog/new-job-probation-period-mortgage-california
+- 被裁员了，房子已经在 escrow 里，怎么办？：https://www.loaninca.com/blog/laid-off-during-escrow-what-to-do
+- 父母从中国汇钱给我付首付，贷款要什么文件？：https://www.loaninca.com/blog/gift-funds-from-china-down-payment-documents
+- 每人每年 5 万美元额度，亲戚分几个人汇过来，贷款会有问题吗？：https://www.loaninca.com/blog/china-50k-quota-multiple-relatives-wire-down-payment
+- 支付宝/微信换汇、找人「对敲」换来的钱，能当首付吗？：https://www.loaninca.com/blog/alipay-wechat-currency-swap-down-payment
+- 父母给首付超过 10 万美元，要报 3520 表吗？会不会交税？：https://www.loaninca.com/blog/form-3520-parents-gift-over-100k-down-payment
+- 钱要在我账户里放多久才不用解释来源？：https://www.loaninca.com/blog/how-long-seasoning-down-payment-funds
+- 首付是卖国内房子的钱，要准备什么证明？：https://www.loaninca.com/blog/selling-home-in-china-down-payment-proof
+- 首付能不能用借的、用信用卡、用 401k？：https://www.loaninca.com/blog/down-payment-borrowed-credit-card-401k
+- 刚来美国没有信用分，能买房吗？：https://www.loaninca.com/blog/no-credit-score-buy-home-california
+- 信用分 680 和 740，月供差多少？：https://www.loaninca.com/blog/credit-score-680-vs-740-mortgage-payment
+- 父母没有美国收入，能和我一起在贷款上签字吗？：https://www.loaninca.com/blog/parents-non-occupant-co-borrower-no-us-income
+- 我已经有一套房，第二套算自住还是投资？首付和利率差多少？：https://www.loaninca.com/blog/second-property-primary-second-home-or-investment
 
 ## 标准问答
 
