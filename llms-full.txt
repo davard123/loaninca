@@ -151,6 +151,17 @@ A: 网站提供的是贷款知识和场景整理。具体资格、利率、费�
 - 重贷：用新贷款替换现有房贷，可能改变利率、期限或现金流结构。
 - Loan Estimate 比较：把利率、APR、points、lender fees、closing costs 和 cash to close 放在一起比较。
 
+## English guides
+
+English pages for California borrowers. Each one cites official sources (Fannie Mae Selling Guide, HUD, CalHFA, California BOE, County of Orange). General education only; not a commitment to lend or a rate quote.
+
+- What is Mello-Roos? How it works in Irvine and Orange County: https://www.loaninca.com/en/mello-roos-irvine
+- First-time home buyer in California: who qualifies and which programs fit (FHA, conventional, CalHFA): https://www.loaninca.com/en/first-time-home-buyer-california
+- California supplemental property tax bill: why you got one and whether escrow pays it: https://www.loaninca.com/en/california-supplemental-tax-bill
+- DSCR loans in California: how rental income qualifies an investment property: https://www.loaninca.com/en/dscr-loan-california
+- ITIN mortgage in California: can you get a home loan with an ITIN?: https://www.loaninca.com/en/itin-mortgage-california
+- Bridge loans in California: buying a new home before you sell: https://www.loaninca.com/en/bridge-loan-california
+
 ## 地区页面
 
 - Los Angeles：https://www.loaninca.com/los-angeles-mortgage

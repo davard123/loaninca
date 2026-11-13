@@ -100,6 +100,15 @@ LoanInCA 是由 David Dai（NMLS# 2454756）维护的中英双语加州房贷指
 - 自住房贷款，住不满一年（甚至半年）就想租出去行不行？银行是怎么发现的？：https://www.loaninca.com/blog/rent-out-primary-residence-before-one-year
 - 打算回国（或离开美国），房贷怎么还？人不在美国，银行会不会把贷款收回？：https://www.loaninca.com/blog/moving-back-to-china-paying-us-mortgage
 
+## English guides
+
+- What is Mello-Roos? How it works in Irvine and Orange County: https://www.loaninca.com/en/mello-roos-irvine
+- First-time home buyer in California: who qualifies and which programs fit (FHA, conventional, CalHFA): https://www.loaninca.com/en/first-time-home-buyer-california
+- California supplemental property tax bill: why you got one and whether escrow pays it: https://www.loaninca.com/en/california-supplemental-tax-bill
+- DSCR loans in California: how rental income qualifies an investment property: https://www.loaninca.com/en/dscr-loan-california
+- ITIN mortgage in California: can you get a home loan with an ITIN?: https://www.loaninca.com/en/itin-mortgage-california
+- Bridge loans in California: buying a new home before you sell: https://www.loaninca.com/en/bridge-loan-california
+
 ## 地区指南
 
 - Los Angeles：https://www.loaninca.com/los-angeles-mortgage
