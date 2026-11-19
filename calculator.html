@@ -442,21 +442,19 @@
                 display: block;
             }
         }
-        .app-card { display: flex; align-items: center; flex-wrap: wrap; gap: 14px 16px; background: #fff; border: 1px solid var(--border-color); border-radius: var(--radius-medium); padding: 18px 20px; margin-top: 24px; text-align: left; }
-        .app-card img { width: 60px; height: 60px; border-radius: 14px; flex: none; }
-        .app-card-text { flex: 1 1 150px; min-width: 0; }
-        .app-card-text strong { display: block; color: var(--text-primary); font-size: 16px; }
-        .app-card-text span { display: block; color: #4A4A4F; font-size: 14px; line-height: 1.6; margin-top: 2px; }
-        .app-card-btn, .app-store-btn { flex: none; display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-height: 40px; padding: 8px 14px; border-radius: 10px; background: #000; color: #fff; font-size: 15px; font-weight: 600; text-decoration: none; white-space: nowrap; }
-        .app-card-btn:hover, .app-store-btn:hover { background: #262626; }
-        .app-card-btn svg, .app-store-btn svg { width: 17px; height: 17px; fill: #fff; flex: none; }
-        .app-bar { display: grid; grid-template-columns: 40px minmax(0, 1fr) auto; grid-template-areas: "i n b" "i t b"; column-gap: 12px; align-items: center; max-width: 720px; margin: -16px auto 24px; padding: 10px 14px; background: rgba(255, 255, 255, 0.9); border: 1px solid var(--border-color); border-radius: var(--radius-small); text-align: left; }
-        .app-bar img { grid-area: i; width: 40px; height: 40px; border-radius: 10px; }
-        .app-bar strong { grid-area: n; color: var(--text-primary); font-size: 15px; line-height: 1.35; }
-        .app-bar .app-bar-text { grid-area: t; color: #4A4A4F; font-size: 13.5px; line-height: 1.45; }
-        .app-bar .app-store-btn { grid-area: b; }
-        @media (max-width: 600px) { .app-bar { grid-template-areas: "i n b" "t t t"; column-gap: 10px; row-gap: 8px; padding: 10px; } .app-bar strong { font-size: 14px; white-space: nowrap; } .app-bar .app-store-btn { font-size: 13px; padding: 8px 10px; gap: 5px; } }
-        @media (max-width: 768px) { .app-card-btn { width: 100%; } }
+        .app-bar{position:relative;display:grid;grid-template-columns:40px minmax(0,1fr) auto;grid-template-areas:"i h b" "i t b";column-gap:12px;row-gap:2px;align-items:center;max-width:720px;margin:-16px auto 24px;padding:12px 14px;border-radius:14px;background:#0A6CFF;background:linear-gradient(to top right,#0A6CFF 55%,#3D8BFF);color:#fff;box-shadow:0 8px 22px rgba(10,108,255,.32);text-align:left;cursor:pointer}
+        .app-bar img{grid-area:i;width:40px;height:40px;border-radius:10px;border:2px solid #fff;box-sizing:border-box;background:#fff}
+        .app-bar-head{grid-area:h;display:flex;align-items:center;flex-wrap:wrap;gap:4px 8px;min-width:0}
+        .app-tag{display:inline-block;padding:2px 8px;border-radius:999px;background:#FFD60A;color:#000;font-size:11.5px;font-weight:800;line-height:1.45;letter-spacing:.02em;white-space:nowrap}
+        .app-bar strong{color:#fff;font-size:17px;font-weight:800;line-height:1.3}
+        .app-bar p.app-bar-text,.page-hero .app-bar p.app-bar-text,.app-bar .app-bar-text{grid-area:t;margin:0;max-width:none;color:#fff;font-size:14px;font-weight:400;line-height:1.45}
+        .app-store-btn{grid-area:b;display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:42px;padding:8px 15px;border-radius:10px;background:#fff;color:#000;font-size:15px;font-weight:800;text-decoration:none;white-space:nowrap;box-shadow:0 2px 6px rgba(0,0,0,.18)}
+        .app-store-btn:hover{background:#EEF4FF;color:#000}
+        .app-store-btn svg{width:17px;height:17px;fill:#000;flex:none}
+        .app-store-btn::after{content:"";position:absolute;inset:0;border-radius:14px}
+        .app-btn-short{display:none}
+        @media(max-width:600px){.app-bar{grid-template-areas:"i h b" "t t t";column-gap:10px;row-gap:6px;padding:10px 12px}.app-bar-head{flex-direction:column;align-items:flex-start;gap:2px}.app-bar strong{font-size:17px;white-space:nowrap;max-width:100%;overflow:hidden;text-overflow:ellipsis}.app-bar .app-bar-text,.app-bar p.app-bar-text,.page-hero .app-bar p.app-bar-text{font-size:13.5px}.app-store-btn{padding:8px 12px;font-size:15px}.app-btn-long{display:none}.app-btn-short{display:inline}}
+        .app-bar.in-modal{margin:20px 0 0;max-width:none}
     </style>
 </head>
 <body>
@@ -514,9 +512,9 @@
 
         <aside class="app-bar">
             <img src="/assets/app-icon-mortgage.jpg" width="40" height="40" alt="">
-            <strong data-i18n="appCardName">美国房贷计算器</strong>
+            <div class="app-bar-head"><span class="app-tag">iPhone App</span><strong data-i18n="appCardName">美国房贷计算器</strong></div>
             <span class="app-bar-text" data-i18n="appCardText">把计算器装进手机，看房路上也能算月供。iPhone App，免费下载。</span>
-            <a class="app-store-btn" href="https://apps.apple.com/us/app/id6777146586" target="_blank" rel="noopener" data-app-store="mortgage"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7.2c-1.6-1.1-4.3-1.2-5.9.6C4.3 9.9 4.6 13.6 6 16.4c1 2 2.4 3.8 4 3.8.8 0 1.2-.5 2-.5s1.2.5 2 .5c1.6 0 3-1.8 4-3.8 1.4-2.8 1.7-6.5-.1-8.6-1.6-1.8-4.3-1.7-5.9-.6z"/><path d="M12.3 6.2c0-1.9 1.3-3.5 3.2-3.8.1 1.9-1.3 3.6-3.2 3.8z"/></svg><span data-i18n="appCardBtn">App Store 下载</span></a>
+            <a class="app-store-btn" href="https://apps.apple.com/us/app/id6777146586" target="_blank" rel="noopener" data-app-store="mortgage"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7.2c-1.6-1.1-4.3-1.2-5.9.6C4.3 9.9 4.6 13.6 6 16.4c1 2 2.4 3.8 4 3.8.8 0 1.2-.5 2-.5s1.2.5 2 .5c1.6 0 3-1.8 4-3.8 1.4-2.8 1.7-6.5-.1-8.6-1.6-1.8-4.3-1.7-5.9-.6z"/><path d="M12.3 6.2c0-1.9 1.3-3.5 3.2-3.8.1 1.9-1.3 3.6-3.2 3.8z"/></svg><span class="app-btn-long" data-i18n="appBtnLong">App Store 免费下载</span><span class="app-btn-short" data-i18n="appBtnShort">免费下载</span></a>
         </aside>
 
         <div class="ad-banner-top">
@@ -1221,10 +1219,11 @@
             </div>
 
             <div id="modal-body"></div>
-            <aside class="app-card">
-                <img src="/assets/app-icon-mortgage.jpg" width="60" height="60" alt="" loading="lazy">
-                <div class="app-card-text"><strong data-i18n="appCardName">美国房贷计算器</strong><span data-i18n="appCardText">把计算器装进手机，看房路上也能算月供。iPhone App，免费下载。</span></div>
-                <a class="app-card-btn" href="https://apps.apple.com/us/app/id6777146586" target="_blank" rel="noopener" data-app-store="mortgage"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7.2c-1.6-1.1-4.3-1.2-5.9.6C4.3 9.9 4.6 13.6 6 16.4c1 2 2.4 3.8 4 3.8.8 0 1.2-.5 2-.5s1.2.5 2 .5c1.6 0 3-1.8 4-3.8 1.4-2.8 1.7-6.5-.1-8.6-1.6-1.8-4.3-1.7-5.9-.6z"/><path d="M12.3 6.2c0-1.9 1.3-3.5 3.2-3.8.1 1.9-1.3 3.6-3.2 3.8z"/></svg><span data-i18n="appCardBtn">App Store 下载</span></a>
+            <aside class="app-bar in-modal">
+                <img src="/assets/app-icon-mortgage.jpg" width="40" height="40" alt="">
+                <div class="app-bar-head"><span class="app-tag">iPhone App</span><strong data-i18n="appCardName">美国房贷计算器</strong></div>
+                <span class="app-bar-text" data-i18n="appCardText">把计算器装进手机，看房路上也能算月供。iPhone App，免费下载。</span>
+                <a class="app-store-btn" href="https://apps.apple.com/us/app/id6777146586" target="_blank" rel="noopener" data-app-store="mortgage"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7.2c-1.6-1.1-4.3-1.2-5.9.6C4.3 9.9 4.6 13.6 6 16.4c1 2 2.4 3.8 4 3.8.8 0 1.2-.5 2-.5s1.2.5 2 .5c1.6 0 3-1.8 4-3.8 1.4-2.8 1.7-6.5-.1-8.6-1.6-1.8-4.3-1.7-5.9-.6z"/><path d="M12.3 6.2c0-1.9 1.3-3.5 3.2-3.8.1 1.9-1.3 3.6-3.2 3.8z"/></svg><span class="app-btn-long" data-i18n="appBtnLong">App Store 免费下载</span><span class="app-btn-short" data-i18n="appBtnShort">免费下载</span></a>
             </aside>
         </div>
     </div>
@@ -1233,7 +1232,7 @@
         // ==================== 多语言翻译包 ====================
         const translations = {
             zh: {
-                'appCardName': '美国房贷计算器', 'appCardText': '把计算器装进手机，看房路上也能算月供。iPhone App，免费下载。', 'appCardBtn': 'App Store 下载',
+                'appCardName': '美国房贷计算器', 'appCardText': '把计算器装进手机，看房路上也能算月供。iPhone App，免费下载。', 'appBtnLong': 'App Store 免费下载', 'appBtnShort': '免费下载',
                 'tabBuySell': '🏡 买卖房地产', 'tabRefinance': '💰 重贷 (Refinance)', 'tabIncome': '💵 收入计算', 'tabClosingCost': '📋 Closing Cost', 'tabAbout': 'ℹ️ About',
                 'navBuySell': '买卖', 'navIncome': '收入', 'navRefinance': '重贷', 'navClosing': 'Closing', 'navAbout': '关于',
                 'headerTitle': '🏠 LoanInCA 房贷计算器', 'headerSubtitle': '帮助你更快看懂月供、收入、首付与过户成本',
@@ -1286,7 +1285,7 @@
                 'alertLanguageDeveloping': '语言切换功能开发中...\n当前选择：'
             },
             en: {
-                'appCardName': '美国房贷计算器 · Mortgage Calculator', 'appCardText': 'Keep this calculator on your phone. Free iPhone app.', 'appCardBtn': 'Download on the App Store',
+                'appCardName': '美国房贷计算器', 'appCardText': 'Mortgage Calculator on your phone. Free iPhone app.', 'appBtnLong': 'Free on the App Store', 'appBtnShort': 'Free download',
                 'tabBuySell': '🏡 Buy/Sell Real Estate', 'tabRefinance': '💰 Refinance', 'tabIncome': '💵 Income Calculator', 'tabClosingCost': '📋 Closing Cost', 'tabAbout': 'ℹ️ About',
                 'navBuySell': 'Buy', 'navIncome': 'Income', 'navRefinance': 'Refi', 'navClosing': 'Closing', 'navAbout': 'About',
                 'headerTitle': '🏠 LoanInCA Mortgage Calculator', 'headerSubtitle': 'Estimate payment, income, down payment, and closing costs more clearly',
@@ -1339,7 +1338,7 @@
                 'alertLanguageDeveloping': 'Language switching feature in development...\nCurrent selection: '
             },
             es: {
-                'appCardName': '美国房贷计算器 · Calculadora de hipoteca', 'appCardText': 'Lleva esta calculadora en tu teléfono. App gratuita para iPhone.', 'appCardBtn': 'Descargar en el App Store',
+                'appCardName': '美国房贷计算器', 'appCardText': 'Calculadora de hipoteca en tu teléfono. App gratuita para iPhone.', 'appBtnLong': 'Gratis en el App Store', 'appBtnShort': 'Descarga gratis',
                 'tabBuySell': '🏡 Comprar y Vender', 'tabRefinance': '💰 Refinanciar', 'tabIncome': '💵 Calculadora de Ingresos', 'tabClosingCost': '📋 Costos de Cierre', 'tabAbout': 'ℹ️ Acerca de',
                 'navBuySell': 'Compra', 'navIncome': 'Ingreso', 'navRefinance': 'Refi', 'navClosing': 'Cierre', 'navAbout': 'Acerca',
                 'headerTitle': '🏠 Suite de Calculadoras de Préstamos', 'headerSubtitle': 'Calculadora de Hipotecas Profesional - Diseño Estilo Apple',
