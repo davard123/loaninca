@@ -135,3 +135,10 @@ main section { scroll-margin-top:90px; }
   .cta-band { border-radius:16px; padding:24px; }
   .news-item { padding:20px 18px; }
 }
+.app-card{display:flex;align-items:center;flex-wrap:wrap;gap:14px 16px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;margin:28px 0}
+.app-card img{width:60px;height:60px;border-radius:14px;flex:none}
+.app-card div{flex:1 1 160px;min-width:0}
+.app-card strong{display:block;color:var(--ink);font-size:1.05rem}
+.app-card p{margin:2px 0 0;color:var(--ink-2);font-size:.95rem;line-height:1.6}
+.app-card .button{flex:none}
+@media(max-width:600px){.app-card .button{width:100%}}

@@ -123,4 +123,14 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// App Store 下载按钮的点击统计。用事件委托，后来才插进页面的按钮（比如计算结果弹窗里的）也算得到。
+document.addEventListener('click', (event) => {
+  const link = event.target.closest ? event.target.closest('a[data-app-store]') : null;
+  if (!link) return;
+  window.gtag('event', 'app_store_click', {
+    app: link.dataset.appStore,
+    page: location.pathname,
+  });
+});
+
 window.LoanInCA = { track };

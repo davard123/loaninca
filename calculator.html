@@ -442,6 +442,14 @@
                 display: block;
             }
         }
+        .app-card { display: flex; align-items: center; flex-wrap: wrap; gap: 14px 16px; background: #fff; border: 1px solid var(--border-color); border-radius: var(--radius-medium); padding: 18px 20px; margin-top: 24px; text-align: left; }
+        .app-card img { width: 60px; height: 60px; border-radius: 14px; flex: none; }
+        .app-card-text { flex: 1 1 150px; min-width: 0; }
+        .app-card-text strong { display: block; color: var(--text-primary); font-size: 16px; }
+        .app-card-text span { display: block; color: #4A4A4F; font-size: 14px; line-height: 1.6; margin-top: 2px; }
+        .app-card-btn { flex: none; display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 10px 18px; border-radius: var(--radius-small); background: #0062CC; color: #fff; font-size: 15px; font-weight: 600; text-decoration: none; }
+        .app-card-btn:hover { background: #004F9F; }
+        @media (max-width: 768px) { .app-card-btn { width: 100%; } }
     </style>
 </head>
 <body>
@@ -1187,6 +1195,12 @@
                 <p data-i18n="footerCopyright">&copy; 2026 LoanInCA. All rights reserved.</p>
             </div>
         </div>
+
+        <aside class="app-card">
+            <img src="/assets/app-icon-mortgage.jpg" width="60" height="60" alt="" loading="lazy">
+            <div class="app-card-text"><strong data-i18n="appCardName">美国房贷计算器</strong><span data-i18n="appCardText">把计算器装进手机，看房路上也能算月供。iPhone App，免费下载。</span></div>
+            <a class="app-card-btn" href="https://apps.apple.com/us/app/id6777146586" target="_blank" rel="noopener" data-app-store="mortgage" data-i18n="appCardBtn">App Store 下载</a>
+        </aside>
     </div>
 
     <div class="results-modal" id="results-modal">
@@ -1199,6 +1213,11 @@
             </div>
 
             <div id="modal-body"></div>
+            <aside class="app-card">
+                <img src="/assets/app-icon-mortgage.jpg" width="60" height="60" alt="" loading="lazy">
+                <div class="app-card-text"><strong data-i18n="appCardName">美国房贷计算器</strong><span data-i18n="appCardText">把计算器装进手机，看房路上也能算月供。iPhone App，免费下载。</span></div>
+                <a class="app-card-btn" href="https://apps.apple.com/us/app/id6777146586" target="_blank" rel="noopener" data-app-store="mortgage" data-i18n="appCardBtn">App Store 下载</a>
+            </aside>
         </div>
     </div>
 
@@ -1206,6 +1225,7 @@
         // ==================== 多语言翻译包 ====================
         const translations = {
             zh: {
+                'appCardName': '美国房贷计算器', 'appCardText': '把计算器装进手机，看房路上也能算月供。iPhone App，免费下载。', 'appCardBtn': 'App Store 下载',
                 'tabBuySell': '🏡 买卖房地产', 'tabRefinance': '💰 重贷 (Refinance)', 'tabIncome': '💵 收入计算', 'tabClosingCost': '📋 Closing Cost', 'tabAbout': 'ℹ️ About',
                 'navBuySell': '买卖', 'navIncome': '收入', 'navRefinance': '重贷', 'navClosing': 'Closing', 'navAbout': '关于',
                 'headerTitle': '🏠 LoanInCA 房贷计算器', 'headerSubtitle': '帮助你更快看懂月供、收入、首付与过户成本',
@@ -1258,6 +1278,7 @@
                 'alertLanguageDeveloping': '语言切换功能开发中...\n当前选择：'
             },
             en: {
+                'appCardName': '美国房贷计算器 · Mortgage Calculator', 'appCardText': 'Keep this calculator on your phone. Free iPhone app.', 'appCardBtn': 'Download on the App Store',
                 'tabBuySell': '🏡 Buy/Sell Real Estate', 'tabRefinance': '💰 Refinance', 'tabIncome': '💵 Income Calculator', 'tabClosingCost': '📋 Closing Cost', 'tabAbout': 'ℹ️ About',
                 'navBuySell': 'Buy', 'navIncome': 'Income', 'navRefinance': 'Refi', 'navClosing': 'Closing', 'navAbout': 'About',
                 'headerTitle': '🏠 LoanInCA Mortgage Calculator', 'headerSubtitle': 'Estimate payment, income, down payment, and closing costs more clearly',
@@ -1310,6 +1331,7 @@
                 'alertLanguageDeveloping': 'Language switching feature in development...\nCurrent selection: '
             },
             es: {
+                'appCardName': '美国房贷计算器 · Calculadora de hipoteca', 'appCardText': 'Lleva esta calculadora en tu teléfono. App gratuita para iPhone.', 'appCardBtn': 'Descargar en el App Store',
                 'tabBuySell': '🏡 Comprar y Vender', 'tabRefinance': '💰 Refinanciar', 'tabIncome': '💵 Calculadora de Ingresos', 'tabClosingCost': '📋 Costos de Cierre', 'tabAbout': 'ℹ️ Acerca de',
                 'navBuySell': 'Compra', 'navIncome': 'Ingreso', 'navRefinance': 'Refi', 'navClosing': 'Cierre', 'navAbout': 'Acerca',
                 'headerTitle': '🏠 Suite de Calculadoras de Préstamos', 'headerSubtitle': 'Calculadora de Hipotecas Profesional - Diseño Estilo Apple',
@@ -2984,5 +3006,6 @@
             alert(translations[lang].alertDisclaimerTitle + translations[lang].alertDisclaimerContent);
         }
     </script>
+    <script src="/assets/site-v2.js" defer></script>
 </body>
 </html>
