@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12T23:53:36.283Z",
+  "generated_at": "2026-11-20T00:56:12.561Z",
   "source": "FRED public CSV data",
   "fed_rates": [
     {
@@ -12,70 +12,70 @@
       "source_url": "https://fred.stlouisfed.org/series/FEDFUNDS",
       "notes": "Federal Funds Effective Rate",
       "id": "market-fed_funds_rate",
-      "last_updated": "2026-11-12T23:53:36.283Z"
+      "last_updated": "2026-11-20T00:56:12.561Z"
     },
     {
       "rate_type": "mortgage_30yr_fixed",
-      "rate_value": 7.11,
-      "previous_value": 7.18,
-      "change": -0.07,
-      "change_percent": -0.97,
-      "effective_date": "2026-11-12",
+      "rate_value": 7.28,
+      "previous_value": 7.11,
+      "change": 0.17,
+      "change_percent": 2.39,
+      "effective_date": "2026-11-19",
       "source_url": "https://fred.stlouisfed.org/series/MORTGAGE30US",
       "notes": "30-Year Fixed Rate Mortgage Average",
       "id": "market-mortgage_30yr_fixed",
-      "last_updated": "2026-11-12T23:53:36.283Z"
+      "last_updated": "2026-11-20T00:56:12.561Z"
     },
     {
       "rate_type": "mortgage_15yr_fixed",
-      "rate_value": 6.45,
-      "previous_value": 6.57,
-      "change": -0.12,
-      "change_percent": -1.83,
-      "effective_date": "2026-11-12",
+      "rate_value": 6.66,
+      "previous_value": 6.45,
+      "change": 0.21,
+      "change_percent": 3.26,
+      "effective_date": "2026-11-19",
       "source_url": "https://fred.stlouisfed.org/series/MORTGAGE15US",
       "notes": "15-Year Fixed Rate Mortgage Average",
       "id": "market-mortgage_15yr_fixed",
-      "last_updated": "2026-11-12T23:53:36.283Z"
+      "last_updated": "2026-11-20T00:56:12.561Z"
     },
     {
       "rate_type": "treasury_10yr",
-      "rate_value": 4.98,
-      "previous_value": 4.88,
-      "change": 0.1,
-      "change_percent": 2.05,
-      "effective_date": "2026-11-10",
+      "rate_value": 5.07,
+      "previous_value": 5.1,
+      "change": -0.03,
+      "change_percent": -0.59,
+      "effective_date": "2026-11-18",
       "source_url": "https://fred.stlouisfed.org/series/DGS10",
       "notes": "10-Year Treasury Constant Maturity Rate",
       "id": "market-treasury_10yr",
-      "last_updated": "2026-11-12T23:53:36.283Z"
+      "last_updated": "2026-11-20T00:56:12.561Z"
     }
   ],
   "daily_rates": {
     "success": true,
-    "effective_date": "2026-11-12",
+    "effective_date": "2026-11-19",
     "rates": [
       {
         "id": "daily-market-30yr",
         "rate_name": "30 Year Fixed",
         "rate_name_cn": "30 年固定利率",
-        "rate_value": 7.11,
-        "apr": 7.11,
+        "rate_value": 7.28,
+        "apr": 7.28,
         "category": "market",
         "display_order": 1,
-        "effective_date": "2026-11-12",
-        "created_at": "2026-11-12T23:53:36.283Z"
+        "effective_date": "2026-11-19",
+        "created_at": "2026-11-20T00:56:12.561Z"
       },
       {
         "id": "daily-market-15yr",
         "rate_name": "15 Year Fixed",
         "rate_name_cn": "15 年固定利率",
-        "rate_value": 6.45,
-        "apr": 6.45,
+        "rate_value": 6.66,
+        "apr": 6.66,
         "category": "market",
         "display_order": 2,
-        "effective_date": "2026-11-12",
-        "created_at": "2026-11-12T23:53:36.283Z"
+        "effective_date": "2026-11-19",
+        "created_at": "2026-11-20T00:56:12.561Z"
       },
       {
         "id": "daily-market-fedfunds",
@@ -86,18 +86,18 @@
         "category": "benchmark",
         "display_order": 3,
         "effective_date": "2026-10-01",
-        "created_at": "2026-11-12T23:53:36.283Z"
+        "created_at": "2026-11-20T00:56:12.561Z"
       },
       {
         "id": "daily-market-10yr",
         "rate_name": "10 Year Treasury",
         "rate_name_cn": "10 年国债收益率",
-        "rate_value": 4.98,
+        "rate_value": 5.07,
         "apr": null,
         "category": "benchmark",
         "display_order": 4,
-        "effective_date": "2026-11-10",
-        "created_at": "2026-11-12T23:53:36.283Z"
+        "effective_date": "2026-11-18",
+        "created_at": "2026-11-20T00:56:12.561Z"
       }
     ]
   }
