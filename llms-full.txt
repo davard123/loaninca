@@ -113,6 +113,9 @@ LoanInCA 是由 David Dai（NMLS# 2454756）维护的中英双语加州房贷指
 - 房价跌了、房子 underwater，银行会不会要求我补差价？：https://www.loaninca.com/blog/home-value-underwater-bank-demand-pay-difference
 - 自住房贷款，住不满一年（甚至半年）就想租出去行不行？银行是怎么发现的？：https://www.loaninca.com/blog/rent-out-primary-residence-before-one-year
 - 打算回国（或离开美国），房贷怎么还？人不在美国，银行会不会把贷款收回？：https://www.loaninca.com/blog/moving-back-to-china-paying-us-mortgage
+- 手上有一笔钱，提前还一大笔本金，能不能让银行重算月供、不用重新贷款？：https://www.loaninca.com/blog/mortgage-recast-lump-sum-lower-payment
+- 老伴走了，房贷上只有他（她）的名字，银行会不会收回房子？要不要重新贷款？：https://www.loaninca.com/blog/spouse-died-mortgage-only-in-their-name
+- 退休了没有工资，存款和退休账户能不能当收入来贷款？：https://www.loaninca.com/blog/retired-no-paycheck-qualify-mortgage-with-savings
 
 ## 标准问答
 
