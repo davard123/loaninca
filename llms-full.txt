@@ -34,7 +34,6 @@ LoanInCA 是由 David Dai（NMLS# 2454756）维护的中英双语加州房贷指
 - 医生贷款：https://www.loaninca.com/doctor-loan-california
 - 贷款场景整理：https://www.loaninca.com/loan-finder
 - 计算器平台：https://www.loaninca.com/calculators
-- 房贷计算器：https://www.loaninca.com/calculator
 - 房贷常见问题：https://www.loaninca.com/questions
 - 房贷术语：https://www.loaninca.com/glossary
 - 买房场景：https://www.loaninca.com/scenarios
